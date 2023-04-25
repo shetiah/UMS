@@ -122,18 +122,22 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AddCourseForm.cpp" />
+    <ClCompile Include="Admin.cpp" />
     <ClCompile Include="Course.cpp" />
     <ClCompile Include="Login.cpp" />
     <ClCompile Include="Source.cpp" />
+    <ClCompile Include="Student.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AddCourseForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="Admin.h" />
     <ClInclude Include="Course.h" />
     <ClInclude Include="Login.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="Student.h" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="AddCourseForm.resx">
