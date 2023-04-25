@@ -1,5 +1,6 @@
 //#include "pch.h"
 #include"Course.h"
+#include"Login.h"
 #include "AddCourseForm.h"
 
 using namespace System;
@@ -21,7 +22,7 @@ int main()
 	//loadCourseDataFromFile();
 	Application::EnableVisualStyles();
 	Application::SetCompatibleTextRenderingDefault(false);
-	Application::Run(gcnew UMS::AddCourseForm());
-
+	
+	Application::Run(gcnew UMS::Login());
 	return 0;
 }

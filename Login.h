@@ -1,20 +1,6 @@
 #pragma once
 #include"Course.h"
-#include<string>
-#include<fstream>
-#include<iostream>
-using namespace System;
-using namespace System::ComponentModel;
-using namespace System::Collections;
-using namespace System::Collections::Generic;
-using namespace System::Windows::Forms;
-using namespace System::Data;
-using namespace System::Drawing;
-using namespace std;
-
-
-
-
+#include"AddCourseForm.h"
 namespace UMS {
 
 	using namespace System;
@@ -25,12 +11,12 @@ namespace UMS {
 	using namespace System::Drawing;
 
 	/// <summary>
-	/// Summary for AddCourseForm
+	/// Summary for Login
 	/// </summary>
-	public ref class AddCourseForm : public System::Windows::Forms::Form
+	public ref class Login : public System::Windows::Forms::Form
 	{
 	public:
-		AddCourseForm(void)
+		Login(void)
 		{
 			InitializeComponent();
 			//
@@ -42,17 +28,14 @@ namespace UMS {
 		/// <summary>
 		/// Clean up any resources being used.
 		/// </summary>
-		~AddCourseForm()
+		~Login()
 		{
 			if (components)
 			{
 				delete components;
 			}
-		}/*
-	private: System::Windows::Forms::Label^ label1;
-	private: System::Windows::Forms::Button^ addCourseBtn;*/
-
-
+		}
+	private: System::Windows::Forms::Button^ button1;
 	protected:
 
 	private:
@@ -68,21 +51,35 @@ namespace UMS {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
-			// AddCourseForm
+			// button1
+			// 
+			this->button1->Location = System::Drawing::Point(537, 94);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(282, 88);
+			this->button1->TabIndex = 0;
+			this->button1->Text = L"button1";
+			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &Login::button1_Click);
+			// 
+			// Login
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(282, 253);
-			this->Name = L"AddCourseForm";
-			this->Text = L"AddCourseForm";
-			this->Load += gcnew System::EventHandler(this, &AddCourseForm::AddCourseForm_Load);
+			this->ClientSize = System::Drawing::Size(1135, 253);
+			this->Controls->Add(this->button1);
+			this->Name = L"Login";
+			this->Text = L"Login";
 			this->ResumeLayout(false);
 
 		}
 #pragma endregion
-	private: System::Void AddCourseForm_Load(System::Object^ sender, System::EventArgs^ e) {
+	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->Close();
+		Application::Run(gcnew UMS::AddCourseForm());
+
 	}
 	};
 }

@@ -123,6 +123,7 @@
   <ItemGroup>
     <ClCompile Include="AddCourseForm.cpp" />
     <ClCompile Include="Course.cpp" />
+    <ClCompile Include="Login.cpp" />
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -130,10 +131,16 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="Course.h" />
+    <ClInclude Include="Login.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="AddCourseForm.resx">
       <DependentUpon>AddCourseForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
