@@ -239,27 +239,38 @@ namespace UMS {
 		
 		//getting data
 		String^ Name = nametx->Text;
-		String^ email = nametx->Text;
+		String^ email = emailtxb->Text;
 		String^ Password = passwordtxb->Text;
 		String^ idtext = idtxb->Text;
+		int id;
 		//validate if empty:
-		if (email->Length == 0 || Password->Length == 0 || Name->Length == 0 || idtext->Length == 0) {
-			MessageBox::Show("Please fill all the fields",
-				"one field or more is empty", MessageBoxButtons::OK);
-			return;
-		}
-		else if ( idtext->Length == 0) {
+		if (email->Length == 0 || Password->Length == 0 || Name->Length == 0 ) {
 			MessageBox::Show("Please fill all the fields",
 				"one field or more is empty", MessageBoxButtons::OK);
 			return;
 		}
 		else {
+			bool isAllNums = true;
+			for each (char c in idtext)
+			{
+				if (c < '0' || c > '9')
+					isAllNums = false;
 
+			}
+			if (!isAllNums || idtext->Length == 0)
+			{
+				MessageBox::Show("idIsOnlyDigits",
+					"enterIdAsDigits", MessageBoxButtons::OK);
+				return;
+			}
+			else {
+
+				//possible exception here: 
+				id = int::Parse(idtxb->Text);
+			}
 			this->Close();
 		}
-
-		//possible exception here: 
-		int id = int::Parse(idtxb->Text);
+		
 
 		//to do : validate data
 		//store to obj student defined in this form if valid
