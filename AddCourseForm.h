@@ -595,6 +595,7 @@ namespace UMS {
 			// 
 			// panel5
 			// 
+			this->panel5->BackColor = System::Drawing::SystemColors::ButtonFace;
 			this->panel5->Controls->Add(this->label1);
 			this->panel5->Controls->Add(this->menuButton);
 			this->panel5->Location = System::Drawing::Point(3, 3);
