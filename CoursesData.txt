@@ -1,0 +1,43 @@
+Structured Programming-
+Electronics-
+Archi-
+Object Oriented Programming-
+Data Structure-
+Calculus II-
+Discrete-
+Statistical Analysis-
+Artificial Intelligence-
+Operating system-
+Computer Network-
+System Analysis-
+Computer graphics-
+Data mining-
+Software Engneering-
+Analysis and design of algorithm-
+Pattern Recognition-
+Natural Language Processing-
+Compiler Theory-
+Concept of programming languages-
+Data security-
+Digital Multimedia-
+Machine learning-
+High Performance computing-
+Image processing-
+Neural network and deep learning-
+Cyber security-
+Cloud computing-
+Numerical computing-
+Mobile computing-
+Microprocessors and interfacing-
+Embded system-
+RealTime systems-
+intro to cs-
+Physics I-
+Logic Design-
+Calculus I-
+Probability-
+Database-
+Linear-
+finalTest-
+abc-
+yarrab-abs

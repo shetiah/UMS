@@ -1,8 +1,9 @@
 //#include "pch.h"
 #include "Course.h"
+
 Course::Course()
 {
-	name = "3esh2";
+	name = "";
 	code = "";
 	instructor = "";
 	isRequirement = true;

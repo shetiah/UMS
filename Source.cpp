@@ -1,4 +1,5 @@
 //#include "pch.h"
+#pragma once
 #include"Course.h"
 #include "AddCourseForm.h"
 
@@ -10,15 +11,14 @@ using namespace System::Windows::Forms;
 [STAThread]
 //to do:
 /*
-
 in the txt file: first element is the course name  - the list after it are the preRequirements of the course
-
 */
+
 int main()
 {
 	Course::preRequires = gcnew Dictionary<String^, List<String^>^>();
 
-	//loadCourseDataFromFile();
+	loadCourseDataFromFile();
 	Application::EnableVisualStyles();
 	Application::SetCompatibleTextRenderingDefault(false);
 	Application::Run(gcnew UMS::AddCourseForm());
