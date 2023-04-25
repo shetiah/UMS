@@ -1,10 +1,6 @@
 #pragma once
-#include "Admin.h"
-#include "Course.h"
 using namespace System;
-using namespace std;
-using namespace System::Runtime::InteropServices;
-
+using namespace System::Collections::Generic;
 ref class Student
 {
 
@@ -17,4 +13,25 @@ ref class Student
 	List<String^>^ CoursesInProgress;
 	int MaxHoursAllowed;
 	float GPA;
-};
+	Student();
+	Student(int ID, int AcademicYear, int MaxHoursAllowed, float GPA, String^ Name, String^ Email, String^ Password, List<String^>^ FinishedCourses, List<String^>^ CoursesInProgress);
+	void setName(String^ Name);
+	void setAcademicYear(int AcademicYear);
+	void setEmail(String^ Email);
+	void setPassword(String^ Password);
+	void setID(int ID);
+	void setCoursesINProgress(List<String^>^ CoursesInProgress);
+	void setFinishedCourses(List<String^>^ FinishedCourses);
+	void setMaxHoursAllowed(int MaxHoursAllowed);
+	void setGPA(float GPA);
+	
+	String^ getName();
+	int getAcademicYear();
+	String^ getEmail();
+	String^ getPassword();
+	int getID();
+	List<String^>^ getCoursesINProgress();
+	List<String^>^ getFinishedCourses();
+	int getMaxHoursAllowed();
+	float getGPA();
+ };
