@@ -1,0 +1,43 @@
+Structured Programming-intro to cs
+Electronics-Physics I
+Archi-Logic Design,Electronics
+Object Oriented Programming-Structured Programming
+Data Structure-Structured Programming 
+Calculus II-Calculus I
+Discrete-Calculus II,Calculus I
+Statistical Analysis-Probability
+Artificial Intelligence-Statistical Analysis
+Operating system-Archi
+Computer Network-intro to cs
+System Analysis-Database
+Computer graphics-Structured Programming,Linear
+Data mining-Database
+Software Engneering-Structured Programming
+Analysis and design of algorithm-Structured Programming
+Pattern Recognition-Structured Programming,Probability
+Natural Language Processing-Structured Programming
+Compiler Theory-Discrete
+Concept of programming languages-Object Oriented Programming
+Data security-Computer Network
+Digital Multimedia-Structured Programming
+Machine learning-Probability
+High Performance computing-Operating system
+Image processing-Structured Programming
+Neural network and deep learning-Artificial Intelligence
+Cyber security-Computer Network
+Cloud computing-Computer Network
+Numerical computing-Structured Programming,Linear
+Mobile computing-Structured Programming,Computer Network
+Microprocessors and interfacing-Archi
+Embded system-Microprocessors and interfacing
+RealTime systems-Embded system
+intro to cs
+Physics I
+Electronics
+Logic Design
+Calculus I
+Probability
+Database
+Linear
+ 
+
