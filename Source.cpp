@@ -38,7 +38,7 @@ int main()
 			UMS::SignUp signForm;
 			signForm.ShowDialog();
 		 
-			if (logform.switchToRegister)
+			if (signForm.switchToLogin)
 			{
 				continue;
 			}
@@ -52,13 +52,15 @@ int main()
 			stud = logform.student;
 			break;
 		}
-		if (stud != nullptr) {
-			UMS::StudentDataForm StudForm(stud);
-			Application::Run(% StudForm);
-		}
-		else {
-			MessageBox::Show("Authentication Canceled","Source.cpp", MessageBoxButtons::OK);
-		}
+	
+	}
+	if (stud != nullptr) {
+		UMS::StudentDataForm StudForm(stud);/*
+		Application::Run(% StudForm);*/
+		StudForm.ShowDialog();
+	}
+	else {
+		MessageBox::Show("Authentication Canceled", "Source.cpp", MessageBoxButtons::OK);
 	}
 	/*Application::Run(gcnew UMS::AddCourseForm());
 	Application::Run(gcnew UMS::SignUp());

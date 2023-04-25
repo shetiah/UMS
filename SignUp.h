@@ -37,7 +37,9 @@ namespace UMS {
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::LinkLabel^ linkLabel1;
+	private: System::Windows::Forms::LinkLabel^ toLoginlink;
+	protected:
+
 	private: System::Windows::Forms::TextBox^ passwordtxb;
 	protected:
 
@@ -46,7 +48,8 @@ namespace UMS {
 	private: System::Windows::Forms::Label^ label3;
 	private: System::Windows::Forms::Label^ lbemail;
 	private: System::Windows::Forms::Button^ Cancelbt;
-	private: System::Windows::Forms::Button^ okbt;
+	private: System::Windows::Forms::Button^ SignUpbt;
+
 	private: System::Windows::Forms::TextBox^ idtxb;
 
 	private: System::Windows::Forms::TextBox^ nametx;
@@ -70,32 +73,32 @@ namespace UMS {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			this->linkLabel1 = (gcnew System::Windows::Forms::LinkLabel());
+			this->toLoginlink = (gcnew System::Windows::Forms::LinkLabel());
 			this->passwordtxb = (gcnew System::Windows::Forms::TextBox());
 			this->emailtxb = (gcnew System::Windows::Forms::TextBox());
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->lbemail = (gcnew System::Windows::Forms::Label());
 			this->Cancelbt = (gcnew System::Windows::Forms::Button());
-			this->okbt = (gcnew System::Windows::Forms::Button());
+			this->SignUpbt = (gcnew System::Windows::Forms::Button());
 			this->idtxb = (gcnew System::Windows::Forms::TextBox());
 			this->nametx = (gcnew System::Windows::Forms::TextBox());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->SuspendLayout();
 			// 
-			// linkLabel1
+			// toLoginlink
 			// 
-			this->linkLabel1->ActiveLinkColor = System::Drawing::Color::Red;
-			this->linkLabel1->AutoSize = true;
-			this->linkLabel1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->toLoginlink->ActiveLinkColor = System::Drawing::Color::Red;
+			this->toLoginlink->AutoSize = true;
+			this->toLoginlink->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->linkLabel1->Location = System::Drawing::Point(755, 431);
-			this->linkLabel1->Name = L"linkLabel1";
-			this->linkLabel1->Size = System::Drawing::Size(108, 64);
-			this->linkLabel1->TabIndex = 13;
-			this->linkLabel1->TabStop = true;
-			this->linkLabel1->Text = L"SignUp\r\n\r\n";
-			this->linkLabel1->LinkClicked += gcnew System::Windows::Forms::LinkLabelLinkClickedEventHandler(this, &SignUp::linkLabel1_LinkClicked);
+			this->toLoginlink->Location = System::Drawing::Point(755, 431);
+			this->toLoginlink->Name = L"toLoginlink";
+			this->toLoginlink->Size = System::Drawing::Size(85, 32);
+			this->toLoginlink->TabIndex = 13;
+			this->toLoginlink->TabStop = true;
+			this->toLoginlink->Text = L"Login";
+			this->toLoginlink->LinkClicked += gcnew System::Windows::Forms::LinkLabelLinkClickedEventHandler(this, &SignUp::linkLabel1_LinkClicked);
 			// 
 			// passwordtxb
 			// 
@@ -122,7 +125,7 @@ namespace UMS {
 				static_cast<System::Byte>(0)));
 			this->label3->Location = System::Drawing::Point(32, 257);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(151, 38);
+			this->label3->Size = System::Drawing::Size(169, 38);
 			this->label3->TabIndex = 10;
 			this->label3->Text = L"Password";
 			// 
@@ -133,7 +136,7 @@ namespace UMS {
 				static_cast<System::Byte>(0)));
 			this->lbemail->Location = System::Drawing::Point(32, 199);
 			this->lbemail->Name = L"lbemail";
-			this->lbemail->Size = System::Drawing::Size(102, 38);
+			this->lbemail->Size = System::Drawing::Size(151, 38);
 			this->lbemail->TabIndex = 9;
 			this->lbemail->Text = L"e-mail";
 			// 
@@ -147,15 +150,15 @@ namespace UMS {
 			this->Cancelbt->UseVisualStyleBackColor = true;
 			this->Cancelbt->Click += gcnew System::EventHandler(this, &SignUp::Cancelbt_Click);
 			// 
-			// okbt
+			// SignUpbt
 			// 
-			this->okbt->Location = System::Drawing::Point(262, 344);
-			this->okbt->Name = L"okbt";
-			this->okbt->Size = System::Drawing::Size(172, 65);
-			this->okbt->TabIndex = 7;
-			this->okbt->Text = L"OK";
-			this->okbt->UseVisualStyleBackColor = true;
-			this->okbt->Click += gcnew System::EventHandler(this, &SignUp::okbt_Click);
+			this->SignUpbt->Location = System::Drawing::Point(262, 344);
+			this->SignUpbt->Name = L"SignUpbt";
+			this->SignUpbt->Size = System::Drawing::Size(172, 65);
+			this->SignUpbt->TabIndex = 7;
+			this->SignUpbt->Text = L"SignUp";
+			this->SignUpbt->UseVisualStyleBackColor = true;
+			this->SignUpbt->Click += gcnew System::EventHandler(this, &SignUp::okbt_Click);
 			// 
 			// idtxb
 			// 
@@ -206,13 +209,13 @@ namespace UMS {
 			this->Controls->Add(this->nametx);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->label2);
-			this->Controls->Add(this->linkLabel1);
+			this->Controls->Add(this->toLoginlink);
 			this->Controls->Add(this->passwordtxb);
 			this->Controls->Add(this->emailtxb);
 			this->Controls->Add(this->label3);
 			this->Controls->Add(this->lbemail);
 			this->Controls->Add(this->Cancelbt);
-			this->Controls->Add(this->okbt);
+			this->Controls->Add(this->SignUpbt);
 			this->Name = L"SignUp";
 			this->Text = L"SignUp";
 			this->Load += gcnew System::EventHandler(this, &SignUp::SignUp_Load);
@@ -232,32 +235,54 @@ namespace UMS {
 	private: System::Void Cancelbt_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->Close();
 	}
-private: System::Void okbt_Click(System::Object^ sender, System::EventArgs^ e) {
-	
-	String^ Name = nametx->Text;
-	String^ email = nametx->Text;
-	int id = int::Parse(idtxb->Text);
-	String^ Password = passwordtxb->Text;
-	
-	//to do : validate req
-	//store to obj student defined in this form if valid
-	student = gcnew Student;
-	student->setName(Name);
-	student->setEmail(email);
-	student->setPassword(Password);
-	student->setID(id);
-	//to do : store to file
+	private: System::Void okbt_Click(System::Object^ sender, System::EventArgs^ e) {
+		
+		//getting data
+		String^ Name = nametx->Text;
+		String^ email = nametx->Text;
+		String^ Password = passwordtxb->Text;
+		String^ idtext = idtxb->Text;
+		//validate if empty:
+		if (email->Length == 0 || Password->Length == 0 || Name->Length == 0 || idtext->Length == 0) {
+			MessageBox::Show("Please fill all the fields",
+				"one field or more is empty", MessageBoxButtons::OK);
+			return;
+		}
+		else if ( idtext->Length == 0) {
+			MessageBox::Show("Please fill all the fields",
+				"one field or more is empty", MessageBoxButtons::OK);
+			return;
+		}
+		else {
 
+			this->Close();
+		}
 
-}
-private: System::Void SignUp_Load(System::Object^ sender, System::EventArgs^ e) {
+		//possible exception here: 
+		int id = int::Parse(idtxb->Text);
 
-}
-private: System::Void linkLabel1_LinkClicked(System::Object^ sender, System::Windows::Forms::LinkLabelLinkClickedEventArgs^ e) {
-	//to do : if data is valid do this:
-	this->switchToLogin = true;
-	this->Close();
-	// else view a message box:
-}
+		//to do : validate data
+		//store to obj student defined in this form if valid
+		student = gcnew Student;
+
+		student->setName(Name);
+		student->setEmail(email);
+		student->setPassword(Password);
+		student->setID(id);
+
+			
+
+		//to do : store to file
+
+	}
+	private: System::Void SignUp_Load(System::Object^ sender, System::EventArgs^ e) {
+
+	}
+	private: System::Void linkLabel1_LinkClicked(System::Object^ sender, System::Windows::Forms::LinkLabelLinkClickedEventArgs^ e) {
+		//to do : if data is valid do this:
+		this->switchToLogin = true;
+		this->Close();
+		// else view a message box: 
+	}
 };
 }
