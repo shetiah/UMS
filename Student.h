@@ -1,7 +1,7 @@
 #pragma once
 using namespace System;
 using namespace System::Collections::Generic;
-ref class Student
+public ref class Student
 {
 
 	String^ Name;
@@ -13,6 +13,7 @@ ref class Student
 	List<String^>^ CoursesInProgress;
 	int MaxHoursAllowed;
 	float GPA;
+public :
 	Student();
 	Student(int ID, int AcademicYear, int MaxHoursAllowed, float GPA, String^ Name, String^ Email, String^ Password, List<String^>^ FinishedCourses, List<String^>^ CoursesInProgress);
 	void setName(String^ Name);

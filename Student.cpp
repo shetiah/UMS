@@ -1,7 +1,16 @@
 #include "Student.h"
 
-Student::Student()
+ inline Student::Student()
 {
+	this->ID = 0;
+	this->AcademicYear = 0;
+	this->MaxHoursAllowed = 0;
+	this->GPA = 0;
+	this->Name = "";
+	this->Email = "";
+	this->Password = "";
+	this->FinishedCourses = nullptr;
+	this->CoursesInProgress = nullptr;
 }
 
 Student::Student(int ID, int AcademicYear, int MaxHoursAllowed, float GPA, String^ Name, String^ Email, String^ Password, List<String^>^ FinishedCourses, List<String^>^ CoursesInProgress)

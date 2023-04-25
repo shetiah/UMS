@@ -2,7 +2,9 @@
 #pragma once
 #include"Course.h"
 #include"Login.h"
+#include"SignUp.h"
 #include "AddCourseForm.h"
+#include "StudentDataForm.h"
 
 using namespace System;
 using namespace std;
@@ -17,12 +19,49 @@ in the txt file: first element is the course name  - the list after it are the p
 
 int main()
 {
+	//vars
 	Course::preRequires = gcnew Dictionary<String^, List<String^>^>();
+	Student^ stud=nullptr;
 
+	//fncs
 	loadCourseDataFromFile();
+
 	Application::EnableVisualStyles();
 	Application::SetCompatibleTextRenderingDefault(false);
 	
-	Application::Run(gcnew UMS::AddCourseForm());
+	while (true)
+	{
+		UMS::Login logform;
+		logform.ShowDialog();
+		if (logform.switchToRegister) {
+
+			UMS::SignUp signForm;
+			signForm.ShowDialog();
+		 
+			if (logform.switchToRegister)
+			{
+				continue;
+			}
+			else {
+				stud = signForm.student;
+				break;
+			}
+		}
+		else
+		{
+			stud = logform.student;
+			break;
+		}
+		if (stud != nullptr) {
+			UMS::StudentDataForm StudForm(stud);
+			Application::Run(% StudForm);
+		}
+		else {
+			MessageBox::Show("Authentication Canceled","Source.cpp", MessageBoxButtons::OK);
+		}
+	}
+	/*Application::Run(gcnew UMS::AddCourseForm());
+	Application::Run(gcnew UMS::SignUp());
+	Application::Run(gcnew UMS::Login());*/
 	return 0;
 }
