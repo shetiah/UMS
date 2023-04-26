@@ -115,3 +115,51 @@ float Student::getGPA()
 {
 	return GPA;
 }
+
+List<String^>^ Student::CoursesAV()
+{
+	
+	List<String^>^ AvCourses = gcnew List<String^>();
+
+	//to-do:
+	// 
+	//1-check his FinishedCourses and compare it with Course::preRequires 
+	//
+	//2-after validation put it in AvCourses
+	//
+
+	//reminder: -he could have no av courses or no finished courses
+	//- the list carries only the name of the courses as string systemtype
+	return AvCourses;
+}
+
+void Student::viewCoursesAV()
+{   
+	//to-do:
+	// 
+	//1-uses Student::CoursesAV to know the list
+	//2-view it
+	 
+	
+	
+}
+
+bool Student::validateIfCourseCanBeTaken(Course^ course)
+{
+	//to-do:
+	// 
+	//check Student::CoursesAV() for the required course
+	return true;
+}
+
+void Student::registerForCourse(Course^ course)
+{
+	//to-do :
+	//1-use Student::validateIfCourseCanBeTaken 
+	//2- handle if it's false
+	//3-if true then put it in CoursesInProgress 
+}
+
+
+
+

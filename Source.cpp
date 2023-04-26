@@ -21,47 +21,70 @@ int main()
 {
 	//vars
 	Course::preRequires = gcnew Dictionary<String^, List<String^>^>();
-	Student^ stud=nullptr;
+	Student^ stud = nullptr;
 
 	//fncs
 	loadCourseDataFromFile();
 
 	Application::EnableVisualStyles();
 	Application::SetCompatibleTextRenderingDefault(false);
-	
+
+	/*	while (true)
+		{
+			UMS::Login logform;
+			logform.ShowDialog();
+			if (logform.switchToRegister) {
+
+				UMS::SignUp signForm;
+				signForm.ShowDialog();
+
+				if (signForm.switchToLogin)
+				{
+					continue;
+				}
+				else {
+					stud = signForm.student;
+					break;
+				}
+			}
+			else
+			{
+				stud = logform.student;
+				break;
+			}
+
+		}	*/
 	while (true)
 	{
 		UMS::Login logform;
 		logform.ShowDialog();
-		if (logform.switchToRegister) {
+		if (UMS::Login::loggedIn) {
 
-			UMS::SignUp signForm;
-			signForm.ShowDialog();
-		 
-			if (signForm.switchToLogin)
-			{
-				continue;
-			}
-			else {
-				stud = signForm.student;
-				break;
-			}
-		}
-		else
-		{
 			stud = logform.student;
-			break;
+
+			UMS::StudentDataForm studForm(stud);
+			studForm.ShowDialog();
+
+			if (studForm.loggedOut)
+				continue;
+			else
+				break;
 		}
-	
+
+
+		else
+			break;
+
+
 	}
-	if (stud != nullptr) {
-		UMS::StudentDataForm StudForm(stud);/*
-		Application::Run(% StudForm);*/
-		StudForm.ShowDialog();
-	}
-	else {
-		MessageBox::Show("Authentication Canceled", "Source.cpp", MessageBoxButtons::OK);
-	}
+	//if (stud != nullptr) {
+	//	UMS::StudentDataForm StudForm(stud);/*
+	//	Application::Run(% StudForm);*/
+	//	StudForm.ShowDialog();
+	//}
+	//else {
+	//	MessageBox::Show("Authentication Canceled", "Source.cpp", MessageBoxButtons::OK);
+	//}
 	/*Application::Run(gcnew UMS::AddCourseForm());
 	Application::Run(gcnew UMS::SignUp());
 	Application::Run(gcnew UMS::Login());*/

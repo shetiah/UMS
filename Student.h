@@ -1,4 +1,5 @@
 #pragma once
+#include "Course.h"
 using namespace System;
 using namespace System::Collections::Generic;
 public ref class Student
@@ -35,4 +36,33 @@ public :
 	List<String^>^ getFinishedCourses();
 	int getMaxHoursAllowed();
 	float getGPA();
+	 
+
+
+
+
+	List<String^>^ CoursesAV();
+	void viewCoursesAV();
+
+	bool validateIfCourseCanBeTaken(Course^ course);
+	void registerForCourse(Course^ course);
+
+    
+/*
+1- Log in.
+
+2- View List of all available courses.
+   
+3- Filter courses.
+
+4-		View details of a specific course.
+
+5-		Register for a course.
+
+	View all his / her courses.
+
+		View his / her courses grades and cumulative GPA.
+
+		Edit his / her data.*/
+
  };

@@ -1,5 +1,14 @@
 #pragma once
 #include "Student.h"
+#include "Login.h"
+
+inline void viewAvCourses();
+inline void filter();
+inline void viewDetailsOfaCourse();
+inline void viewAllCoursesInProgress();
+inline void viewEveryCourseGrade();
+inline void viewCGPA();
+inline void StudentEditDAta();
 
 namespace UMS {
 
@@ -40,6 +49,7 @@ namespace UMS {
 			}
 		}
 	private: System::Windows::Forms::Label^ lbUserInfo;
+	private: System::Windows::Forms::Button^ button1;
 	protected:
 
 	private:
@@ -56,6 +66,7 @@ namespace UMS {
 		void InitializeComponent(void)
 		{
 			this->lbUserInfo = (gcnew System::Windows::Forms::Label());
+			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
 			// lbUserInfo
@@ -68,11 +79,22 @@ namespace UMS {
 			this->lbUserInfo->Text = L"label1";
 			this->lbUserInfo->Click += gcnew System::EventHandler(this, &StudentDataForm::lbUserInfo_Click);
 			// 
+			// button1
+			// 
+			this->button1->Location = System::Drawing::Point(347, 352);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(174, 93);
+			this->button1->TabIndex = 1;
+			this->button1->Text = L"button1";
+			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &StudentDataForm::button1_Click);
+			// 
 			// StudentDataForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(699, 534);
+			this->Controls->Add(this->button1);
 			this->Controls->Add(this->lbUserInfo);
 			this->Name = L"StudentDataForm";
 			this->Text = L"StudentDataForm";
@@ -82,9 +104,15 @@ namespace UMS {
 
 		}
 #pragma endregion
+	public:static bool loggedOut = false;
 	private: System::Void StudentDataForm_Load(System::Object^ sender, System::EventArgs^ e) {
 	}
 	private: System::Void lbUserInfo_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->loggedOut = true;
+		UMS::Login::loggedIn = false;
+		this->Close();
 	}
 	};
 }
