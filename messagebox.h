@@ -76,10 +76,12 @@ namespace UMS {
 			// 
 			// Okbutton
 			// 
-			this->Okbutton->BackColor = System::Drawing::SystemColors::ScrollBar;
-			this->Okbutton->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->Okbutton->BackColor = System::Drawing::Color::DodgerBlue;
+			this->Okbutton->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;
+			this->Okbutton->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->Okbutton->Font = (gcnew System::Drawing::Font(L"Microsoft YaHei", 7.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
+			this->Okbutton->ForeColor = System::Drawing::Color::White;
 			this->Okbutton->Location = System::Drawing::Point(259, 8);
 			this->Okbutton->Name = L"Okbutton";
 			this->Okbutton->Size = System::Drawing::Size(84, 30);
@@ -103,7 +105,7 @@ namespace UMS {
 			this->panel1->BackColor = System::Drawing::SystemColors::ControlLight;
 			this->panel1->Controls->Add(this->Okbutton);
 			this->panel1->Dock = System::Windows::Forms::DockStyle::Bottom;
-			this->panel1->Location = System::Drawing::Point(0, 126);
+			this->panel1->Location = System::Drawing::Point(0, 93);
 			this->panel1->Name = L"panel1";
 			this->panel1->Size = System::Drawing::Size(363, 41);
 			this->panel1->TabIndex = 3;
@@ -113,7 +115,7 @@ namespace UMS {
 			this->AutoScaleDimensions = System::Drawing::SizeF(9, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::ButtonFace;
-			this->ClientSize = System::Drawing::Size(363, 167);
+			this->ClientSize = System::Drawing::Size(363, 134);
 			this->Controls->Add(this->panel1);
 			this->Controls->Add(this->pictureBox1);
 			this->Controls->Add(this->label1);
