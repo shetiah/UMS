@@ -125,6 +125,7 @@
     <ClCompile Include="Admin.cpp" />
     <ClCompile Include="Course.cpp" />
     <ClCompile Include="Login.cpp" />
+    <ClCompile Include="messagebox.cpp" />
     <ClCompile Include="SignUp.cpp" />
     <ClCompile Include="Source.cpp" />
     <ClCompile Include="Student.cpp" />
@@ -137,6 +138,9 @@
     <ClInclude Include="Admin.h" />
     <ClInclude Include="Course.h" />
     <ClInclude Include="Login.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="messagebox.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="SignUp.h">
@@ -153,6 +157,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="messagebox.resx">
+      <DependentUpon>messagebox.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SignUp.resx">
       <DependentUpon>SignUp.h</DependentUpon>

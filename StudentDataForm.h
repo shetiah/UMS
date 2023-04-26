@@ -66,6 +66,7 @@ namespace UMS {
 			this->lbUserInfo->Size = System::Drawing::Size(44, 16);
 			this->lbUserInfo->TabIndex = 0;
 			this->lbUserInfo->Text = L"label1";
+			this->lbUserInfo->Click += gcnew System::EventHandler(this, &StudentDataForm::lbUserInfo_Click);
 			// 
 			// StudentDataForm
 			// 
@@ -82,6 +83,8 @@ namespace UMS {
 		}
 #pragma endregion
 	private: System::Void StudentDataForm_Load(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void lbUserInfo_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
 	};
 }

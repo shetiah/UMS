@@ -39,6 +39,9 @@
     <ClCompile Include="StudentDataForm.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="messagebox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Course.h">
@@ -60,6 +63,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="StudentDataForm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="messagebox.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

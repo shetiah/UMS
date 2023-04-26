@@ -52,7 +52,7 @@ inline void loadCourseDataFromFile() {
 		}
 
 		String^ mo3ak = gcnew String(cName.c_str());
-		Course::preRequires->Add(mo3ak, preReq);
+		//Course::preRequires->Add(mo3ak, preReq);
 
 	}
 

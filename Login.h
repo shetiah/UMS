@@ -2,6 +2,7 @@
 #include"Course.h"
 #include"AddCourseForm.h"
 #include "Student.h"
+#include "messagebox.h"
 namespace UMS {
 
 	using namespace System;
@@ -84,11 +85,12 @@ namespace UMS {
 			this->tbemail = (gcnew System::Windows::Forms::TextBox());
 			this->tbpassword = (gcnew System::Windows::Forms::TextBox());
 			this->toSignUplink = (gcnew System::Windows::Forms::LinkLabel());
+			
 			this->SuspendLayout();
 			// 
 			// LOGINbt
 			// 
-			this->LOGINbt->Location = System::Drawing::Point(305, 411);
+			this->LOGINbt->Location = System::Drawing::Point(186, 409);
 			this->LOGINbt->Name = L"LOGINbt";
 			this->LOGINbt->Size = System::Drawing::Size(172, 65);
 			this->LOGINbt->TabIndex = 0;
@@ -98,7 +100,7 @@ namespace UMS {
 			// 
 			// Cancelbt
 			// 
-			this->Cancelbt->Location = System::Drawing::Point(666, 407);
+			this->Cancelbt->Location = System::Drawing::Point(485, 397);
 			this->Cancelbt->Name = L"Cancelbt";
 			this->Cancelbt->Size = System::Drawing::Size(165, 69);
 			this->Cancelbt->TabIndex = 1;
@@ -182,30 +184,32 @@ namespace UMS {
 		}
 #pragma endregion
     public: Student^ student = nullptr;
-
+	 public: messagebox^ m;
     public: bool switchToRegister = false;
 
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 	    //getting data
 		String^ email = this->tbemail->Text;
 		String^ password = this->tbpassword->Text;
-
+		
 		//to do : validate email and password
 		//if it's valid login to studentDataForm
 		//not valid give a message box 
-		student = gcnew Student;
-		//temporary:
-		student->setEmail(email);
-		student->setPassword(password);
+		
         //can be helpful:
 		if (email->Length == 0 || password->Length == 0) {
-			MessageBox::Show("Please enter email and password",
+			/*MessageBox::Show("Please enter email and password",
 				"Email or Password Empty", MessageBoxButtons::OK);
-			return;
+			return;*/
+			m = gcnew messagebox;
+			m->Show();
 		}
 		else {
-
-		this->Close();
+			student = gcnew Student;
+			//temporary:
+			student->setEmail(email);
+			student->setPassword(password);
+			this->Close();
 		}
 
 
