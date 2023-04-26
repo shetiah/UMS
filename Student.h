@@ -42,7 +42,6 @@ public :
 
 
 	List<String^>^ CoursesAV();
-	void viewCoursesAV();
 
 	bool validateIfCourseCanBeTaken(Course^ course);
 	void registerForCourse(Course^ course);
