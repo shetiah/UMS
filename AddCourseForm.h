@@ -50,9 +50,12 @@ inline void loadCourseDataFromFile() {
 			preReqName += wholeLine[i];
 			i++;
 		}
+		//to add the last course in the line (not followed by a comma)
+		String^ mo3akReq = gcnew String(preReqName.c_str());
+		preReq->Add(mo3akReq);
 
 		String^ mo3ak = gcnew String(cName.c_str());
-		//Course::preRequires->Add(mo3ak, preReq);
+		Course::preRequires->Add(mo3ak, preReq);
 
 	}
 
@@ -76,7 +79,7 @@ inline void addCourse(Course^ newCourse) { //farah and maya
 inline void saveCourseDataToFile() {//Maya and Farah:
 
 	// Open the output file
-	ofstream outFile("coursesData.txt");
+	ofstream outFile("coursesData.txt",ios::app);
 
 	// Loop through each course in the dictionary
 	for each (auto i in Course::preRequires)
@@ -112,7 +115,7 @@ inline void saveCourseDataToFile() {//Maya and Farah:
 
 		// Construct the output string
 		std::string outputStr = courseNameStr + "-" + prereqsStr + "\n";
-
+						
 		// Write the output string to the file
 		outFile << outputStr;
 	}

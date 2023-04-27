@@ -70,9 +70,9 @@ namespace UMS {
 				static_cast<System::Byte>(0)));
 			this->label1->Location = System::Drawing::Point(54, 34);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(306, 20);
+			this->label1->Size = System::Drawing::Size(300, 20);
 			this->label1->TabIndex = 0;
-			this->label1->Text = L"PLease Enter Email and Password!";
+			this->label1->Text = L"Please Enter Email and Password!";
 			// 
 			// Okbutton
 			// 

@@ -31,13 +31,3 @@ Mobile computing-Structured Programming,Computer Network
 Microprocessors and interfacing-Archi
 Embded system-Microprocessors and interfacing
 RealTime systems-Embded system
-intro to cs
-Physics I
-Electronics
-Logic Design
-Calculus I
-Probability
-Database
-Linear
- 
-

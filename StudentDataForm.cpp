@@ -1,4 +1,5 @@
 #include "StudentDataForm.h"
+#include <fstream>
 
 inline void viewAvCourses()
 {

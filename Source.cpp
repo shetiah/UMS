@@ -1,8 +1,8 @@
 //#include "pch.h"
 #pragma once
-#include"Course.h"
-#include"Login.h"
-#include"SignUp.h"
+#include "Course.h"
+#include "Login.h"
+#include "SignUp.h"
 #include "AddCourseForm.h"
 #include "StudentDataForm.h"
 
@@ -22,10 +22,13 @@ int main()
 	//vars
 	Course::preRequires = gcnew Dictionary<String^, List<String^>^>();
 	Student^ stud = nullptr;
+	Student::allStudents = gcnew List<Student^>();
+
 
 	//fncs
 	loadCourseDataFromFile();
-
+	loadStudentDataFromFile();
+	saveStudentDataToFile();
 	Application::EnableVisualStyles();
 	Application::SetCompatibleTextRenderingDefault(false);
 

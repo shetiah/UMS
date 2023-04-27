@@ -1,0 +1,10 @@
+1)hassan Muhammad
+2)2023001@cis.com
+3)abcdedf
+4)2023001
+5)2
+6)21
+7)3.700000
+8)SP,intro,to,CS,logic
+9)Ai,Data,Structures,Linear
+x

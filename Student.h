@@ -2,19 +2,37 @@
 #include "Course.h"
 using namespace System;
 using namespace System::Collections::Generic;
+	/*
+	
+	data in text file is in the following form:
+	1)name
+	2)email
+	3)password
+	4)id
+	5)academicYear
+	6)maxHours
+	7)gpa
+	8)finished courses,separated by, commas
+	9)courses in progress,separated by,commas
+	x to end the student
+
+	*/
 public ref class Student
 {
-
 	String^ Name;
 	String^ Email;
 	String^ Password;
 	int ID;
 	int AcademicYear;
-	List<String^>^ FinishedCourses;
-	List<String^>^ CoursesInProgress;
 	int MaxHoursAllowed;
 	float GPA;
+	List<String^>^ FinishedCourses;
+	List<String^>^ CoursesInProgress;
 public :
+	//static variable to hold all the students from the students textFile 
+	static List<Student^>^ allStudents;
+
+
 	Student();
 	Student(int ID, int AcademicYear, int MaxHoursAllowed, float GPA, String^ Name, String^ Email, String^ Password, List<String^>^ FinishedCourses, List<String^>^ CoursesInProgress);
 	void setName(String^ Name);

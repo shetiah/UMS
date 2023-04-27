@@ -21,8 +21,6 @@ private:
 
 public:
 	//static adjacency list for course prerequirements
-	//static unordered_map<string, vector<string>>* preRequires;
-	//static List<List<int>^>^ preRequires;
 	static Dictionary<String^, List<String^>^>^ preRequires;
 	//constructor
 	Course();
