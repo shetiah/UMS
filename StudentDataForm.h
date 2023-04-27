@@ -65,7 +65,7 @@ inline void loadStudentDataFromFile() {
 			string push;
 			while (i < wholeLine.size())
 			{
-				if (wholeLine[i] == ' ')
+				if (wholeLine[i] == ',')
 				{
 					i++;
 					String^ sysVar = gcnew String(push.c_str());

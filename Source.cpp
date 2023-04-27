@@ -28,6 +28,8 @@ int main()
 	//fncs
 	loadCourseDataFromFile();
 	loadStudentDataFromFile();
+	saveStudentDataToFile();
+
 	Application::EnableVisualStyles();
 	Application::SetCompatibleTextRenderingDefault(false);
 

@@ -29,6 +29,7 @@ public ref class Student
 	List<String^>^ FinishedCourses;
 	List<String^>^ CoursesInProgress;
 public :
+
 	//static variable to hold all the students from the students textFile 
 	static List<Student^>^ allStudents;
 
