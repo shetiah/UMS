@@ -133,16 +133,6 @@ List<String^>^ Student::CoursesAV()
 	return AvCourses;
 }
 
-void Student::viewCoursesAV()
-{   
-	//to-do:
-	// 
-	//1-uses Student::CoursesAV to know the list
-	//2-view it
-	 
-	
-	
-}
 
 bool Student::validateIfCourseCanBeTaken(Course^ course)
 {

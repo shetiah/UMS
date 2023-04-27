@@ -2,8 +2,10 @@
 #include <fstream>
 
 inline void viewAvCourses()
-{
-    throw gcnew System::NotImplementedException();
+{	//to-do:
+	// 
+	//1-uses Student::CoursesAV to know the list
+	//2-view it
 }
 
 inline void filter()
