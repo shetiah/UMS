@@ -35,14 +35,26 @@ void Admin::editCourseData(Course^ c, String^ name,
 }
 
 //incomplete "Hassan"
-void Admin::createStudent(Student^ s)
+void Admin::createStudent(String^ name, String^ password,int academicYear,int maxHoursAllowed,float GPA,List<String^>^finishedCourses, List<String^>^coursesInProgress)
 {
+	Student^ s = gcnew Student();
 	//getting the id from the file
 	int id = getNextStudentID();
 	//updating the id in the file with id+1
 	saveNextStudentID(id + 1);
-
-	s->setID(id);
+	
+	//setting ID and email with the auto id from the text file
 	String^ email = id + "@cis.com";
+	s->setID(id);
 	s->setEmail(email);
+	s->setName(name);
+	s->setPassword(password);
+	s->setAcademicYear(academicYear);
+	s->setMaxHoursAllowed(maxHoursAllowed);
+	s->setGPA(GPA);
+	s->setFinishedCourses(finishedCourses);
+	s->setCoursesINProgress(coursesInProgress);
+
+	//add the student to the list
+	Student::allStudents->Add(s);
 }

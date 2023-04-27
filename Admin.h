@@ -18,5 +18,5 @@ public:
 	//view list of (finished - inProgress) courses for any student
 	//DONE ==== edit all course data
 	void editCourseData(Course^ c, String^ name, String^ code, String^ instructor, int maxNumberOfStudents, int hours);
-	void createStudent(Student^ s);
+	void createStudent(String^ name, String^ password, int academicYear, int maxHoursAllowed, float GPA, List<String^>^ finishedCourses, List<String^>^ coursesInProgress);
 };
