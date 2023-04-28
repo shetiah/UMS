@@ -15,53 +15,8 @@ using namespace System::Drawing;
 using namespace std;
 
 
-inline void loadCourseDataFromFile() {
 
-	//loading data from file
-	ifstream coursesData("coursesData.txt");
-	string wholeLine;
-
-	while (getline(coursesData, wholeLine))
-	{
-		string cName;
-		int i = 0;
-		//getting the key of the adj list (Course)
-		for (i = 0; i < wholeLine.size(); i++)
-		{
-			if (wholeLine[i] == '-')
-			{
-				i++;
-				break;
-			}
-			cName += wholeLine[i];
-		}
-		List<String^>^ preReq = gcnew List<String^>();
-		string preReqName;
-		//getting the vector of values of the adj list of each course (pre Requirements)
-		while (i < wholeLine.size())
-		{
-			if (wholeLine[i] == ',')
-			{
-				i++;
-				String^ mo3akReq = gcnew String(preReqName.c_str());
-				preReq->Add(mo3akReq);
-				preReqName = "";
-			}
-			preReqName += wholeLine[i];
-			i++;
-		}
-		//to add the last course in the line (not followed by a comma)
-		String^ mo3akReq = gcnew String(preReqName.c_str());
-		preReq->Add(mo3akReq);
-
-		String^ mo3ak = gcnew String(cName.c_str());
-		Course::preRequires->Add(mo3ak, preReq);
-
-	}
-
-
-}
-
+//To Do: Move the function add course to the Admin class (After finishing the admin)
 inline void addCourse(Course^ newCourse) { //farah and maya
 	String^ courseName = newCourse->getName();
 	List<String^>^ prerequisites = newCourse->getPrerequisites();
@@ -76,55 +31,7 @@ inline void addCourse(Course^ newCourse) { //farah and maya
 
 }
 
-inline void saveCourseDataToFile() {//Maya and Farah:
 
-	// Open the output file
-	ofstream outFile("coursesData.txt",ios::app);
-
-	// Loop through each course in the dictionary
-	for each (auto i in Course::preRequires)
-	{
-		// Get the course name and prerequisites for the current course
-		String^ courseName = i.Key;
-		List<String^>^ prerequisites = i.Value;
-
-		// Convert course name to std::string
-		std::string courseNameStr;
-		for each (wchar_t c in courseName)
-		{
-			courseNameStr += static_cast<char>(c);
-		}
-
-		// Convert prerequisites to std::string
-		std::string prereqsStr;
-		for each (String ^ prereq in prerequisites)
-		{
-			// Separate prerequisites with commas
-			if (!prereqsStr.empty())
-			{
-				prereqsStr += ",";
-			}
-			std::string prereqStr;
-			for each (wchar_t c in prereq)
-			{
-				prereqStr += static_cast<char>(c);
-			}
-			prereqsStr += prereqStr;
-
-		}
-
-		// Construct the output string
-		std::string outputStr = courseNameStr + "-" + prereqsStr + "\n";
-						
-		// Write the output string to the file
-		outFile << outputStr;
-	}
-
-	// Close the output file
-	outFile.close();
-
-
-}
 
 namespace UMS {
 
@@ -839,7 +746,7 @@ namespace UMS {
 	private: System::Void label7_Click(System::Object^ sender, System::EventArgs^ e)
 	{}
 private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
-	saveCourseDataToFile();
+	Course::saveCourseDataToFile();
 	Environment::Exit(0);
 }
 	private: System::Void label9_Click(System::Object^ sender, System::EventArgs^ e) {

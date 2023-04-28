@@ -58,3 +58,4 @@ void Admin::createStudent(String^ name, String^ password,int academicYear,int ma
 	//add the student to the list
 	Student::allStudents->Add(s);
 }
+

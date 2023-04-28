@@ -6,6 +6,7 @@
 #include "AddCourseForm.h"
 #include "StudentDataForm.h"
 #include "Admin.h"
+
 using namespace System;
 using namespace std;
 using namespace System::Windows::Forms;
@@ -26,8 +27,8 @@ int main()
 
 
 	//fncs
-	loadCourseDataFromFile();
-	loadStudentDataFromFile();
+	Course::loadCourseDataFromFile();
+	Student::loadStudentDataFromFile();
 	
 	Application::EnableVisualStyles();
 	Application::SetCompatibleTextRenderingDefault(false);

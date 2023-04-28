@@ -43,6 +43,9 @@ public:
 	int getMaxNumberOfStudents();
 	int getHours();
 	List<String^>^ getPrerequisites();
+
+	static void loadCourseDataFromFile();
+	static void saveCourseDataToFile();
 };
 
 

@@ -65,7 +65,9 @@ public :
 	bool validateIfCourseCanBeTaken(Course^ course);
 	void registerForCourse(Course^ course);
 
-    
+	static void loadStudentDataFromFile();
+	static void saveStudentDataToFile();
+
 /*
 1- Log in.
 
