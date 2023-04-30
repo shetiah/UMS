@@ -169,10 +169,10 @@ namespace UMS {
 			this->menuButton = (gcnew System::Windows::Forms::PictureBox());
 			this->panel7 = (gcnew System::Windows::Forms::Panel());
 			this->button6 = (gcnew System::Windows::Forms::Button());
-			this->panel4 = (gcnew System::Windows::Forms::Panel());
-			this->button4 = (gcnew System::Windows::Forms::Button());
 			this->panel6 = (gcnew System::Windows::Forms::Panel());
 			this->button5 = (gcnew System::Windows::Forms::Button());
+			this->panel4 = (gcnew System::Windows::Forms::Panel());
+			this->button4 = (gcnew System::Windows::Forms::Button());
 			this->SidebarTimer = (gcnew System::Windows::Forms::Timer(this->components));
 			this->panel1->SuspendLayout();
 			this->panel2->SuspendLayout();
@@ -181,8 +181,8 @@ namespace UMS {
 			this->panel5->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->menuButton))->BeginInit();
 			this->panel7->SuspendLayout();
-			this->panel4->SuspendLayout();
 			this->panel6->SuspendLayout();
+			this->panel4->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// addCourseBtn
@@ -213,6 +213,7 @@ namespace UMS {
 			this->nameTextBox->Name = L"nameTextBox";
 			this->nameTextBox->Size = System::Drawing::Size(132, 22);
 			this->nameTextBox->TabIndex = 3;
+			this->nameTextBox->TextChanged += gcnew System::EventHandler(this, &AddCourseForm::nameTextBox_TextChanged);
 			// 
 			// label3
 			// 
@@ -487,6 +488,7 @@ namespace UMS {
 			this->panel3->Name = L"panel3";
 			this->panel3->Size = System::Drawing::Size(430, 283);
 			this->panel3->TabIndex = 23;
+			this->panel3->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &AddCourseForm::panel3_Paint);
 			// 
 			// sidebar
 			// 
@@ -559,29 +561,6 @@ namespace UMS {
 			this->button6->UseVisualStyleBackColor = false;
 			this->button6->Click += gcnew System::EventHandler(this, &AddCourseForm::button4_Click);
 			// 
-			// panel4
-			// 
-			this->panel4->Controls->Add(this->button4);
-			this->panel4->Location = System::Drawing::Point(3, 183);
-			this->panel4->Name = L"panel4";
-			this->panel4->Size = System::Drawing::Size(143, 52);
-			this->panel4->TabIndex = 0;
-			// 
-			// button4
-			// 
-			this->button4->BackColor = System::Drawing::SystemColors::ButtonFace;
-			this->button4->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->button4->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button4->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button4.Image")));
-			this->button4->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->button4->Location = System::Drawing::Point(0, 6);
-			this->button4->Name = L"button4";
-			this->button4->Size = System::Drawing::Size(143, 43);
-			this->button4->TabIndex = 25;
-			this->button4->Text = L"Student";
-			this->button4->UseVisualStyleBackColor = false;
-			this->button4->Click += gcnew System::EventHandler(this, &AddCourseForm::button4_Click);
-			// 
 			// panel6
 			// 
 			this->panel6->Controls->Add(this->button5);
@@ -604,6 +583,29 @@ namespace UMS {
 			this->button5->Text = L"Admin";
 			this->button5->UseVisualStyleBackColor = false;
 			this->button5->Click += gcnew System::EventHandler(this, &AddCourseForm::button4_Click);
+			// 
+			// panel4
+			// 
+			this->panel4->Controls->Add(this->button4);
+			this->panel4->Location = System::Drawing::Point(3, 183);
+			this->panel4->Name = L"panel4";
+			this->panel4->Size = System::Drawing::Size(143, 52);
+			this->panel4->TabIndex = 0;
+			// 
+			// button4
+			// 
+			this->button4->BackColor = System::Drawing::SystemColors::ButtonFace;
+			this->button4->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->button4->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button4->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button4.Image")));
+			this->button4->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->button4->Location = System::Drawing::Point(0, 6);
+			this->button4->Name = L"button4";
+			this->button4->Size = System::Drawing::Size(143, 43);
+			this->button4->TabIndex = 25;
+			this->button4->Text = L"Student";
+			this->button4->UseVisualStyleBackColor = false;
+			this->button4->Click += gcnew System::EventHandler(this, &AddCourseForm::button4_Click);
 			// 
 			// SidebarTimer
 			// 
@@ -638,8 +640,8 @@ namespace UMS {
 			this->panel5->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->menuButton))->EndInit();
 			this->panel7->ResumeLayout(false);
-			this->panel4->ResumeLayout(false);
 			this->panel6->ResumeLayout(false);
+			this->panel4->ResumeLayout(false);
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -783,6 +785,10 @@ private: System::Void SidebarTimer_Tick(System::Object^ sender, System::EventArg
 
 private: System::Void menuButton_Click(System::Object^ sender, System::EventArgs^ e) {
 	SidebarTimer->Start();
+}
+private: System::Void nameTextBox_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void panel3_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
 }
 };
 }
