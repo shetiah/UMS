@@ -82,23 +82,34 @@ namespace UMS {
 	private: System::Windows::Forms::Panel^ panel2;
 	private: System::Windows::Forms::PictureBox^ pictureBox1;
 	private: System::Windows::Forms::Panel^ panel3;
-	private: System::Windows::Forms::TextBox^ textBox7;
-	private: System::Windows::Forms::TextBox^ textBox6;
-	private: System::Windows::Forms::TextBox^ textBox5;
-	private: System::Windows::Forms::TextBox^ textBox4;
-	private: System::Windows::Forms::TextBox^ textBox3;
-	private: System::Windows::Forms::TextBox^ textBox2;
+	private: System::Windows::Forms::TextBox^ CITextBox;
+
+	private: System::Windows::Forms::TextBox^ CTextBox;
+
+	private: System::Windows::Forms::TextBox^ gpaTextBox;
+
+	private: System::Windows::Forms::TextBox^ HTextBox;
+
+	private: System::Windows::Forms::TextBox^ AYTextBox;
+
+	private: System::Windows::Forms::TextBox^ SPassTextBox;
+
 	private: System::Windows::Forms::Label^ label7;
 	private: System::Windows::Forms::Label^ label6;
 	private: System::Windows::Forms::Label^ label5;
 	private: System::Windows::Forms::Label^ label4;
 	private: System::Windows::Forms::Label^ label3;
 	private: System::Windows::Forms::Label^ label2;
-	private: System::Windows::Forms::TextBox^ textBox1;
+	private: System::Windows::Forms::TextBox^ SnameTextBox;
+
 	private: System::Windows::Forms::Label^ label1;
 	private: System::Windows::Forms::Label^ label8;
 	private: System::Windows::Forms::Button^ button1;
 	private: System::Windows::Forms::PictureBox^ pictureBox2;
+	private: System::Windows::Forms::Label^ label9;
+	private: System::Windows::Forms::Label^ gpaError;
+	private: System::Windows::Forms::Label^ HError;
+	private: System::Windows::Forms::Label^ AError;
 
 	protected:
 
@@ -119,24 +130,28 @@ namespace UMS {
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->panel2 = (gcnew System::Windows::Forms::Panel());
+			this->label9 = (gcnew System::Windows::Forms::Label());
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->label8 = (gcnew System::Windows::Forms::Label());
-			this->textBox7 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox6 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox5 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
+			this->CITextBox = (gcnew System::Windows::Forms::TextBox());
+			this->CTextBox = (gcnew System::Windows::Forms::TextBox());
+			this->gpaTextBox = (gcnew System::Windows::Forms::TextBox());
+			this->HTextBox = (gcnew System::Windows::Forms::TextBox());
+			this->AYTextBox = (gcnew System::Windows::Forms::TextBox());
+			this->SPassTextBox = (gcnew System::Windows::Forms::TextBox());
 			this->label7 = (gcnew System::Windows::Forms::Label());
 			this->label6 = (gcnew System::Windows::Forms::Label());
 			this->label5 = (gcnew System::Windows::Forms::Label());
 			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->label2 = (gcnew System::Windows::Forms::Label());
-			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
+			this->SnameTextBox = (gcnew System::Windows::Forms::TextBox());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->panel3 = (gcnew System::Windows::Forms::Panel());
 			this->pictureBox2 = (gcnew System::Windows::Forms::PictureBox());
+			this->AError = (gcnew System::Windows::Forms::Label());
+			this->HError = (gcnew System::Windows::Forms::Label());
+			this->gpaError = (gcnew System::Windows::Forms::Label());
 			this->panel1->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->panel2->SuspendLayout();
@@ -146,6 +161,9 @@ namespace UMS {
 			// 
 			// panel1
 			// 
+			this->panel1->Controls->Add(this->gpaError);
+			this->panel1->Controls->Add(this->HError);
+			this->panel1->Controls->Add(this->AError);
 			this->panel1->Controls->Add(this->pictureBox1);
 			this->panel1->Dock = System::Windows::Forms::DockStyle::Left;
 			this->panel1->Location = System::Drawing::Point(0, 0);
@@ -166,21 +184,22 @@ namespace UMS {
 			// 
 			// panel2
 			// 
+			this->panel2->Controls->Add(this->label9);
 			this->panel2->Controls->Add(this->button1);
 			this->panel2->Controls->Add(this->label8);
-			this->panel2->Controls->Add(this->textBox7);
-			this->panel2->Controls->Add(this->textBox6);
-			this->panel2->Controls->Add(this->textBox5);
-			this->panel2->Controls->Add(this->textBox4);
-			this->panel2->Controls->Add(this->textBox3);
-			this->panel2->Controls->Add(this->textBox2);
+			this->panel2->Controls->Add(this->CITextBox);
+			this->panel2->Controls->Add(this->CTextBox);
+			this->panel2->Controls->Add(this->gpaTextBox);
+			this->panel2->Controls->Add(this->HTextBox);
+			this->panel2->Controls->Add(this->AYTextBox);
+			this->panel2->Controls->Add(this->SPassTextBox);
 			this->panel2->Controls->Add(this->label7);
 			this->panel2->Controls->Add(this->label6);
 			this->panel2->Controls->Add(this->label5);
 			this->panel2->Controls->Add(this->label4);
 			this->panel2->Controls->Add(this->label3);
 			this->panel2->Controls->Add(this->label2);
-			this->panel2->Controls->Add(this->textBox1);
+			this->panel2->Controls->Add(this->SnameTextBox);
 			this->panel2->Controls->Add(this->label1);
 			this->panel2->Controls->Add(this->panel3);
 			this->panel2->Dock = System::Windows::Forms::DockStyle::Right;
@@ -188,6 +207,19 @@ namespace UMS {
 			this->panel2->Name = L"panel2";
 			this->panel2->Size = System::Drawing::Size(503, 489);
 			this->panel2->TabIndex = 4;
+			// 
+			// label9
+			// 
+			this->label9->AutoSize = true;
+			this->label9->Font = (gcnew System::Drawing::Font(L"Segoe UI", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label9->ForeColor = System::Drawing::Color::Red;
+			this->label9->Location = System::Drawing::Point(198, 440);
+			this->label9->Name = L"label9";
+			this->label9->Size = System::Drawing::Size(145, 15);
+			this->label9->TabIndex = 17;
+			this->label9->Text = L"Please fill all the textBoxes";
+			this->label9->Visible = false;
 			// 
 			// button1
 			// 
@@ -205,6 +237,7 @@ namespace UMS {
 			this->button1->TabIndex = 16;
 			this->button1->Text = L"ADD";
 			this->button1->UseVisualStyleBackColor = false;
+			this->button1->Click += gcnew System::EventHandler(this, &StudentDataForm::button1_Click_1);
 			// 
 			// label8
 			// 
@@ -219,54 +252,54 @@ namespace UMS {
 			this->label8->TabIndex = 15;
 			this->label8->Text = L"Add New Student";
 			// 
-			// textBox7
+			// CITextBox
 			// 
-			this->textBox7->Location = System::Drawing::Point(108, 334);
-			this->textBox7->Multiline = true;
-			this->textBox7->Name = L"textBox7";
-			this->textBox7->Size = System::Drawing::Size(383, 20);
-			this->textBox7->TabIndex = 14;
+			this->CITextBox->Location = System::Drawing::Point(108, 334);
+			this->CITextBox->Multiline = true;
+			this->CITextBox->Name = L"CITextBox";
+			this->CITextBox->Size = System::Drawing::Size(383, 20);
+			this->CITextBox->TabIndex = 14;
 			// 
-			// textBox6
+			// CTextBox
 			// 
-			this->textBox6->Location = System::Drawing::Point(108, 299);
-			this->textBox6->Multiline = true;
-			this->textBox6->Name = L"textBox6";
-			this->textBox6->Size = System::Drawing::Size(383, 20);
-			this->textBox6->TabIndex = 13;
+			this->CTextBox->Location = System::Drawing::Point(108, 299);
+			this->CTextBox->Multiline = true;
+			this->CTextBox->Name = L"CTextBox";
+			this->CTextBox->Size = System::Drawing::Size(383, 20);
+			this->CTextBox->TabIndex = 13;
 			// 
-			// textBox5
+			// gpaTextBox
 			// 
-			this->textBox5->Location = System::Drawing::Point(108, 270);
-			this->textBox5->Multiline = true;
-			this->textBox5->Name = L"textBox5";
-			this->textBox5->Size = System::Drawing::Size(383, 20);
-			this->textBox5->TabIndex = 12;
+			this->gpaTextBox->Location = System::Drawing::Point(108, 270);
+			this->gpaTextBox->Multiline = true;
+			this->gpaTextBox->Name = L"gpaTextBox";
+			this->gpaTextBox->Size = System::Drawing::Size(383, 20);
+			this->gpaTextBox->TabIndex = 12;
 			// 
-			// textBox4
+			// HTextBox
 			// 
-			this->textBox4->Location = System::Drawing::Point(108, 238);
-			this->textBox4->Multiline = true;
-			this->textBox4->Name = L"textBox4";
-			this->textBox4->Size = System::Drawing::Size(383, 20);
-			this->textBox4->TabIndex = 11;
+			this->HTextBox->Location = System::Drawing::Point(108, 238);
+			this->HTextBox->Multiline = true;
+			this->HTextBox->Name = L"HTextBox";
+			this->HTextBox->Size = System::Drawing::Size(383, 20);
+			this->HTextBox->TabIndex = 11;
 			// 
-			// textBox3
+			// AYTextBox
 			// 
-			this->textBox3->Location = System::Drawing::Point(108, 205);
-			this->textBox3->Multiline = true;
-			this->textBox3->Name = L"textBox3";
-			this->textBox3->Size = System::Drawing::Size(383, 20);
-			this->textBox3->TabIndex = 10;
+			this->AYTextBox->Location = System::Drawing::Point(108, 205);
+			this->AYTextBox->Multiline = true;
+			this->AYTextBox->Name = L"AYTextBox";
+			this->AYTextBox->Size = System::Drawing::Size(383, 20);
+			this->AYTextBox->TabIndex = 10;
 			// 
-			// textBox2
+			// SPassTextBox
 			// 
-			this->textBox2->Location = System::Drawing::Point(108, 166);
-			this->textBox2->Multiline = true;
-			this->textBox2->Name = L"textBox2";
-			this->textBox2->PasswordChar = '*';
-			this->textBox2->Size = System::Drawing::Size(383, 20);
-			this->textBox2->TabIndex = 9;
+			this->SPassTextBox->Location = System::Drawing::Point(108, 166);
+			this->SPassTextBox->Multiline = true;
+			this->SPassTextBox->Name = L"SPassTextBox";
+			this->SPassTextBox->PasswordChar = '*';
+			this->SPassTextBox->Size = System::Drawing::Size(383, 20);
+			this->SPassTextBox->TabIndex = 9;
 			// 
 			// label7
 			// 
@@ -340,13 +373,13 @@ namespace UMS {
 			this->label2->TabIndex = 3;
 			this->label2->Text = L"Password :";
 			// 
-			// textBox1
+			// SnameTextBox
 			// 
-			this->textBox1->Location = System::Drawing::Point(108, 128);
-			this->textBox1->Multiline = true;
-			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(383, 20);
-			this->textBox1->TabIndex = 2;
+			this->SnameTextBox->Location = System::Drawing::Point(108, 128);
+			this->SnameTextBox->Multiline = true;
+			this->SnameTextBox->Name = L"SnameTextBox";
+			this->SnameTextBox->Size = System::Drawing::Size(383, 20);
+			this->SnameTextBox->TabIndex = 2;
 			// 
 			// label1
 			// 
@@ -382,6 +415,45 @@ namespace UMS {
 			this->pictureBox2->TabStop = false;
 			this->pictureBox2->Click += gcnew System::EventHandler(this, &StudentDataForm::pictureBox2_Click);
 			// 
+			// AError
+			// 
+			this->AError->AutoSize = true;
+			this->AError->Font = (gcnew System::Drawing::Font(L"Segoe UI", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->AError->ForeColor = System::Drawing::Color::Red;
+			this->AError->Location = System::Drawing::Point(341, 208);
+			this->AError->Name = L"AError";
+			this->AError->Size = System::Drawing::Size(124, 13);
+			this->AError->TabIndex = 18;
+			this->AError->Text = L"\"Accept numbers Only\"";
+			this->AError->Visible = false;
+			// 
+			// HError
+			// 
+			this->HError->AutoSize = true;
+			this->HError->Font = (gcnew System::Drawing::Font(L"Segoe UI", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->HError->ForeColor = System::Drawing::Color::Red;
+			this->HError->Location = System::Drawing::Point(341, 241);
+			this->HError->Name = L"HError";
+			this->HError->Size = System::Drawing::Size(124, 13);
+			this->HError->TabIndex = 19;
+			this->HError->Text = L"\"Accept numbers Only\"";
+			this->HError->Visible = false;
+			// 
+			// gpaError
+			// 
+			this->gpaError->AutoSize = true;
+			this->gpaError->Font = (gcnew System::Drawing::Font(L"Segoe UI", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->gpaError->ForeColor = System::Drawing::Color::Red;
+			this->gpaError->Location = System::Drawing::Point(341, 273);
+			this->gpaError->Name = L"gpaError";
+			this->gpaError->Size = System::Drawing::Size(124, 13);
+			this->gpaError->TabIndex = 20;
+			this->gpaError->Text = L"\"Accept numbers Only\"";
+			this->gpaError->Visible = false;
+			// 
 			// StudentDataForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -398,6 +470,7 @@ namespace UMS {
 			this->Text = L"StudentDataForm";
 			this->Load += gcnew System::EventHandler(this, &StudentDataForm::StudentDataForm_Load);
 			this->panel1->ResumeLayout(false);
+			this->panel1->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			this->panel2->ResumeLayout(false);
 			this->panel2->PerformLayout();
@@ -423,6 +496,93 @@ namespace UMS {
 	}
 private: System::Void pictureBox2_Click(System::Object^ sender, System::EventArgs^ e) {
 	this->Close();
+}
+private: System::Void button1_Click_1(System::Object^ sender, System::EventArgs^ e) {
+
+	// All textboxes are filled, don't show the label massege
+
+	if (SnameTextBox->Text->Length > 0 && SPassTextBox->Text->Length > 0
+		&& AYTextBox->Text->Length > 0 && HTextBox->Text->Length > 0
+		&& gpaTextBox->Text->Length > 0 && CTextBox->Text->Length > 0
+		&& CITextBox->Text->Length > 0)
+	{
+		label9->Visible = false;
+
+	}
+	// At least one textbox is empty, show error message
+	else
+	{
+
+		label9->Visible = true;
+		return;
+	}
+
+
+
+	// retrieve the string values from the textbox and convert it to int
+	int AcademicYearInt;
+	int Hours;
+
+	bool isHoursNum = int::TryParse(HTextBox->Text, Hours);
+	bool isAcademicYearNum = int::TryParse(AYTextBox->Text, AcademicYearInt);
+
+
+	if (isHoursNum==false)
+	{
+		HError->Visible = true;
+	}
+	else
+	{
+		HError->Visible = false;
+	}
+	if (isAcademicYearNum == false)
+	{
+		AError->Visible = true;
+	}
+	else
+	{
+		AError->Visible = false;
+	}
+
+
+	// convert the string to float
+	float GPAfloat;
+	bool isGpANum = float::TryParse(gpaTextBox->Text, GPAfloat);
+
+	if (isGpANum == false)
+	{
+		gpaError->Visible = true;
+	}
+	else
+	{
+		gpaError->Visible = false;
+	}
+
+
+
+
+	//convert the string values to list
+	String^ finishedString = CTextBox->Text;
+	cli::array<String^>^ finishedArray = finishedString->Split(',');
+	List<String^>^ finishedList = gcnew List<String^>();
+	for each (String ^ str in finishedArray) {
+		finishedList->Add(str);
+	}
+
+	String^ InprogressString = CITextBox->Text;
+	cli::array<String^>^ InprogressArray = InprogressString->Split(',');
+	List<String^>^ InprogressList = gcnew List<String^>();
+	for each (String ^ str in InprogressArray) {
+		InprogressList->Add(str);
+	}
+
+	String^ Sname = SnameTextBox->Text;
+	String^ Spass = SPassTextBox->Text;
+
+
+	Admin::createStudent(Sname,Spass, AcademicYearInt, Hours,GPAfloat,finishedList,InprogressList);
+
+
 }
 };
 }
