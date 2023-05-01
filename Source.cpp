@@ -22,16 +22,26 @@ int main()
 {
 	//vars
 	Course::preRequires = gcnew Dictionary<String^, List<String^>^>();
+	Course::eachCourseHours = gcnew Dictionary<String^, int>();
+	Course::allCourses = gcnew List<Course^>();
 	Student^ stud = nullptr;
 	Student::allStudents = gcnew List<Student^>();
 
 
 	//fncs
 	Course::loadCourseDataFromFile();
+	Course::loadCourseContentFromFile();
+	Course::loadCourseHoursFromFile();
 	Student::loadStudentDataFromFile();
+
+	//Course::saveCourseContentToFile();
+	//Course::saveCourseDataToFile();
+	//Course::saveCourseHoursToFile();
+	//Student::saveStudentDataToFile();
 	
 	Application::EnableVisualStyles();
 	Application::SetCompatibleTextRenderingDefault(false);
+	Application::Run(gcnew UMS::AddCourseForm());
 
 	/*	while (true)
 		{

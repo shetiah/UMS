@@ -6,7 +6,7 @@ using namespace std;
 using namespace System;
 using namespace System::Collections::Generic;
 
-
+//To add: Courses list, GPA for finished courses, Graph for what opens what
 ref class Course
 {
 private:
@@ -17,11 +17,12 @@ private:
 	bool isRequirement;
 	int maxNumberOfStudents;
 	int hours;
-	List<String^>^ prerequisites; // new member variable to store prerequisite course names
 
 public:
 	//static adjacency list for course prerequirements
 	static Dictionary<String^, List<String^>^>^ preRequires;
+	static Dictionary<String^, int>^ eachCourseHours;
+	static List<Course^>^ allCourses;
 	//constructor
 	Course();
 	Course(String^ name, String^ code, String^ instructor, bool isRequirement, int maxNumberOfStudents, int hours);
@@ -34,7 +35,6 @@ public:
 	void setIsRequirement(bool isRequirement);
 	void setMaxNumberOfStudents(int maxNumberOfStudents);
 	void setHours(int hours);
-	void setPrerequisites(List<String^>^ prerequisites);
 
 	String^ getName();
 	String^ getCode();
@@ -42,10 +42,13 @@ public:
 	bool getIsRequirement();
 	int getMaxNumberOfStudents();
 	int getHours();
-	List<String^>^ getPrerequisites();
 
 	static void loadCourseDataFromFile();
 	static void saveCourseDataToFile();
+	static void loadCourseHoursFromFile();
+	static void saveCourseHoursToFile();
+	static void loadCourseContentFromFile();
+	static void saveCourseContentToFile();
 };
 
 

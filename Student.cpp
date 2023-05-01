@@ -2,7 +2,7 @@
 #include <fstream>
 #include <iostream>
 #include <string>
-
+#include <iomanip>
  inline Student::Student()
 {
 	this->ID = 0;
@@ -64,6 +64,11 @@ void Student::setFinishedCourses(List<String^>^ FinishedCourses)
 	this->FinishedCourses = FinishedCourses;
 }
 
+void Student::setCoursesGPA(List<float>^ coursesGPA)
+{
+	this->coursesGPA = coursesGPA;
+}
+
 void Student::setMaxHoursAllowed(int MaxHoursAllowed)
 {
 	this->MaxHoursAllowed = MaxHoursAllowed;
@@ -107,6 +112,10 @@ List<String^>^ Student::getCoursesINProgress()
 List<String^>^ Student::getFinishedCourses()
 {
 	return FinishedCourses;
+}
+
+List<float>^ Student::getCoursesGPA() {
+	return coursesGPA;
 }
 
 int Student::getMaxHoursAllowed()
@@ -153,6 +162,7 @@ void Student::registerForCourse(Course^ course)
 	//3-if true then put it in CoursesInProgress 
 }
 
+
 void Student::saveStudentDataToFile() {
 
 	// Open the output file
@@ -171,6 +181,7 @@ void Student::saveStudentDataToFile() {
 		float GPA = i->getGPA();
 		List<String^>^ finishedCourses = i->getFinishedCourses();
 		List<String^>^ coursesInProgress = i->getCoursesINProgress();
+		List<float>^   coursesGPA = i->getCoursesGPA();
 
 		//convert from system::string to std::string
 		string name;
@@ -198,7 +209,7 @@ void Student::saveStudentDataToFile() {
 		outFile << "4)" << to_string(id) << endl;
 		outFile << "5)" << to_string(academicYear) << endl;
 		outFile << "6)" << to_string(maxHours) << endl;
-		outFile << "7)" << to_string(GPA) << endl;
+		outFile << "7)" << GPA<<setprecision(3) << endl;
 
 		//outputting the vectos
 		outFile << "8)";
@@ -223,7 +234,23 @@ void Student::saveStudentDataToFile() {
 		outFile << line << endl;
 
 		outFile << "9)";
+		//output gpas
+		string line3;
+		for each (float gpa in coursesGPA)
+		{
+			// Separate courses with commas
+			if (!line3.empty())
+			{
+				outFile<<",";
+			}
+			outFile << gpa << setprecision(3);
+			line3 += to_string(gpa);
 
+		}
+		outFile<<endl;
+
+
+		outFile << "c)";
 		string line2;
 		for each (String ^ course in coursesInProgress)
 		{
@@ -253,7 +280,9 @@ void Student::saveStudentDataToFile() {
 
 
 }
- void Student::loadStudentDataFromFile() {
+
+
+void Student::loadStudentDataFromFile() {
 
 	//loading data from file
 	ifstream stdData("StudentsData.txt");
@@ -272,7 +301,7 @@ void Student::saveStudentDataToFile() {
 		}
 
 		//if one word per line (not a list)
-		if (wholeLine[0] != '8' && wholeLine[0] != '9')
+		if (wholeLine[0] != '8' && wholeLine[0] != '9' && wholeLine[0]!='c')
 		{
 			string var;
 			while (i < wholeLine.size())
@@ -282,8 +311,7 @@ void Student::saveStudentDataToFile() {
 			}
 
 			String^ sysVar = gcnew String(var.c_str());
-
-			if (wholeLine[0] == '1')
+			if (wholeLine[0] == '1'&&wholeLine[1]==')')
 				temp->setName(sysVar);
 			if (wholeLine[0] == '2')
 				temp->setEmail(sysVar);
@@ -321,8 +349,23 @@ void Student::saveStudentDataToFile() {
 			if (wholeLine[0] == '8')// add to finished courses
 				temp->setFinishedCourses(tempp);
 
-			if (wholeLine[0] == '9')//add courses in progress
+			if (wholeLine[0] == 'c')//add courses in progress
 				temp->setCoursesINProgress(tempp);
+			if (wholeLine[0] == '9')//add gpa for each course
+			{ 
+				List<float>^ temppGpa = gcnew List<float>();
+
+				for each(auto it in tempp)//convert from String^ to float
+				{
+					string y;
+					for each (wchar_t c in it)//convert from String^ to std::string
+					{
+						y += static_cast<char>(c);
+					}
+					temppGpa->Add(stof(y));//add to list<float>
+				}
+				temp->setCoursesGPA(temppGpa);//add to student object
+			}
 		}
 	}
 }

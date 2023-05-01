@@ -19,7 +19,7 @@ using namespace std;
 //To Do: Move the function add course to the Admin class (After finishing the admin)
 inline void addCourse(Course^ newCourse) { //farah and maya
 	String^ courseName = newCourse->getName();
-	List<String^>^ prerequisites = newCourse->getPrerequisites();
+	List<String^>^ prerequisites = Course::preRequires[courseName];
 
 	// If the course already exists in the dictionary, do nothing
 	if (Course::preRequires->ContainsKey(courseName))
@@ -28,7 +28,7 @@ inline void addCourse(Course^ newCourse) { //farah and maya
 	}
 	// Add the new course to the dictionary with an empty list of prerequisites
 	Course::preRequires->Add(courseName, prerequisites);
-
+	Course::allCourses->Add(newCourse);
 }
 
 
@@ -724,10 +724,10 @@ namespace UMS {
 
 			   // Set the properties using the setters
 			   newCourse->setName(courseName);
-			   //newCourse->setHours(hours);
-			   //newCourse->setMaxNumberOfStudents(maxStudents);
+			   newCourse->setHours(hours);
+			   newCourse->setMaxNumberOfStudents(maxStudents);
 			   newCourse->setInstructor(instructor);
-			   newCourse->setPrerequisites(prerequisitesList);
+			   Course::preRequires[courseName] = prerequisitesList;
 			   newCourse->setCode(code);
 
 			   if (radioButton1->Checked == true)
@@ -742,6 +742,8 @@ namespace UMS {
 			   }
 			   label13->Visible = true;
 			   addCourse(newCourse);
+			   Course::allCourses->Add(newCourse);
+			   Course::eachCourseHours->Add(courseName, hours);
 		   }
 
 
@@ -749,6 +751,8 @@ namespace UMS {
 	{}
 private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
 	Course::saveCourseDataToFile();
+	Course::saveCourseContentToFile();
+	Course::saveCourseHoursToFile();
 	Environment::Exit(0);
 }
 	private: System::Void label9_Click(System::Object^ sender, System::EventArgs^ e) {

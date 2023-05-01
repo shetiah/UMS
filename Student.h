@@ -13,7 +13,8 @@ using namespace System::Collections::Generic;
 	6)maxHours
 	7)gpa
 	8)finished courses,separated by, commas
-	9)courses in progress,separated by,commas
+	9)each course gpa,separated by, commas
+	c)courses in progress,separated by,commas
 	x to end the student
 
 	*/
@@ -27,6 +28,7 @@ public ref class Student
 	int MaxHoursAllowed;
 	float GPA;
 	List<String^>^ FinishedCourses;
+	List<float>^ coursesGPA;
 	List<String^>^ CoursesInProgress;
 public :
 
@@ -45,15 +47,17 @@ public :
 	void setFinishedCourses(List<String^>^ FinishedCourses);
 	void setMaxHoursAllowed(int MaxHoursAllowed);
 	void setGPA(float GPA);
-	
+	void setCoursesGPA(List<float>^ coursesGPA);
+
 	String^ getName();
-	int getAcademicYear();
 	String^ getEmail();
 	String^ getPassword();
+	int getAcademicYear();
+	int getMaxHoursAllowed();
 	int getID();
 	List<String^>^ getCoursesINProgress();
 	List<String^>^ getFinishedCourses();
-	int getMaxHoursAllowed();
+	List<float>^ getCoursesGPA();
 	float getGPA();
 	 
 
