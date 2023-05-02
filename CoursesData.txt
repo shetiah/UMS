@@ -31,6 +31,4 @@ Mobile computing-Structured Programming,Computer Network
 Microprocessors and interfacing-Archi
 Embded system-Microprocessors and interfacing
 RealTime systems-Embded system
--
-test-a,b
-hrsTest-x,y
+

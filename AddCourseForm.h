@@ -1,6 +1,7 @@
 #pragma once
 //#using <mscorlib.dll>
 #include"Course.h"
+#include "Student.h"
 #include<string>
 #include<fstream>
 #include<iostream>
@@ -753,6 +754,7 @@ private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e
 	Course::saveCourseDataToFile();
 	Course::saveCourseContentToFile();
 	Course::saveCourseHoursToFile();
+	Student::saveStudentDataToFile();
 	Environment::Exit(0);
 }
 	private: System::Void label9_Click(System::Object^ sender, System::EventArgs^ e) {
