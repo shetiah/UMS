@@ -34,7 +34,6 @@ void Admin::editCourseData(Course^ c, String^ name,
 	c->setHours(hours);
 }
 
-//incomplete "Hassan"
 void Admin::createStudent(String^ name, String^ password,int academicYear,int maxHoursAllowed,float GPA,List<String^>^finishedCourses, List<String^>^coursesInProgress)
 {
 	Student^ s = gcnew Student();
