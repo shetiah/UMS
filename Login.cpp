@@ -1,31 +1,45 @@
 #include "Login.h"
 #include "StudentDataForm.h"
+#include "StudentPageForm.h"
 
-bool validateStudentData()
-{
-	//to-do (Osama)
-	//1-open the file and search on the email and password 
-	//2-validate if found or not
-	//3-if found return true
 
-	 return false;
-
-}
-bool validateData()
+ bool validateData()
 {
 	return false;
 }
 
-void studentLogin()
+ void UMS::Login::studentLogin(Student^ stud)
+ {
+
+	 Student::saveStudentDataToFile();
+	 if (UMS::Login::validateStudentData(stud))
+	 {
+		 UMS::Login::loggedIn = true;
+
+		 UMS::StudentPageForm::loggedOut = false;
+
+	 }
+	 else
+	 {
+		 m = gcnew messagebox;
+
+		 m->ShowDialog();
+	 }
+ }
+
+ bool UMS::Login::validateStudentData(Student^ stud)
 {
-	/*
-	
-	to-do : (osama)
-	- handle if not found
-	-if found launch StudentDataForm
-
-	*/
-	 UMS::Login::loggedIn = true;
-
-	 UMS::StudentDataForm::loggedOut = false;
+	bool valid = false;
+	for (int i = 0; i < Student::allStudents->Count; i++)
+	{
+		if (stud->getName()==Student::allStudents[i]->getName() &&
+			stud->getPassword()== Student::allStudents[i]->getPassword())
+		{
+			valid = true;
+		}
+	}
+	if (valid)
+		return true;
+	else
+		return false;
 }

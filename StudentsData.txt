@@ -1,11 +1,11 @@
-1)hassan Muhammad
-2)2023002@cis.com
-3)abcdedf
-4)2023002
-5)2
-6)21
-7)3
-8)SP,intro to CS,logic
-9)3.4,2.7,3
-c)Ai,Data,Structures,Linear
+1)Abdelrahamn shetiah
+2)abd@sot.com
+3)abd@sot.com
+4)12
+5)3
+6)5
+7)gpa
+8)finished courses,separated by, commas
+9)3.4,4,3,5
+c)sat,sp,math1
 x

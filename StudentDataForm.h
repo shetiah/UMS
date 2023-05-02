@@ -7,13 +7,6 @@
 #include<iostream>
 
 
-inline void viewAvCourses();
-inline void filter();
-inline void viewDetailsOfaCourse();
-inline void viewAllCoursesInProgress();
-inline void viewEveryCourseGrade();
-inline void viewCGPA();
-inline void StudentEditDAta();
 
 
 
@@ -34,16 +27,10 @@ namespace UMS {
 	public ref class StudentDataForm : public System::Windows::Forms::Form
 	{
 	public:
-		StudentDataForm(Student^ stud)
+		StudentDataForm()
 		{
 			InitializeComponent();
-			//
-			//TODO: Add the constructor code here
-			//
 			this->CenterToScreen();
-
-			//lbUserInfo->Text = "ID=" + stud->getID() + ", Name=" + stud->getName() +
-				//", email=" + stud->getEmail() + ", address=" + stud->getPassword();
 		}
 
 	protected:
@@ -480,16 +467,12 @@ namespace UMS {
 
 		}
 #pragma endregion
-	public:static bool loggedOut = false;
 	private: System::Void StudentDataForm_Load(System::Object^ sender, System::EventArgs^ e) {
 	}
 	private: System::Void lbUserInfo_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-		this->loggedOut = true;
-		UMS::Login::loggedIn = false;
-		this->Close();
-
+		
 		
 	}
 	private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {

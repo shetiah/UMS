@@ -6,6 +6,7 @@
 #include "AddCourseForm.h"
 #include "StudentDataForm.h"
 #include "Admin.h"
+#include "StudentPageForm.h"
 
 using namespace System;
 using namespace std;
@@ -35,15 +36,15 @@ int main()
 	Student::loadStudentDataFromFile();
 
 	//Course::saveCourseContentToFile();
-	//Course::saveCourseDataToFile();
-	//Course::saveCourseHoursToFile();
+	////Course::saveCourseDataToFile();
+	////Course::saveCourseHoursToFile();
 	//Student::saveStudentDataToFile();
-	
+	//
 	Application::EnableVisualStyles();
 	Application::SetCompatibleTextRenderingDefault(false);
 
-	//Application::Run(gcnew UMS::AddCourseForm());
-	Application::Run(gcnew UMS::StudentDataForm(stud));
+	////Application::Run(gcnew UMS::AddCourseForm());
+	//Application::Run(gcnew UMS::Login);
 
 	/*	while (true)
 		{
@@ -78,13 +79,13 @@ int main()
 
 			stud = logform.student;
 
-			UMS::StudentDataForm studForm(stud);
+			UMS::StudentPageForm studForm(stud);
 			studForm.ShowDialog();
 
-			if (studForm.loggedOut)
+			/*if (studForm.loggedOut)
 				continue;
 			else
-				break;
+				break;*/
 		}
 
 

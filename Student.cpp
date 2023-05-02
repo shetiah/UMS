@@ -130,18 +130,34 @@ float Student::getGPA()
 
 List<String^>^ Student::CoursesAV()
 {
-	
+
 	List<String^>^ AvCourses = gcnew List<String^>();
 
-	//to-do:
-	// 
-	//1-check his FinishedCourses and compare it with Course::preRequires 
-	//
-	//2-after validation put it in AvCourses
-	//
+	//return an empty list if no finished courses
+	if (FinishedCourses->Count == 0);
+	  return nullptr;
 
-	//reminder: -he could have no av courses or no finished courses
-	//- the list carries only the name of the courses as string systemtype
+	for each (auto line in Course::preRequires)
+	{
+		//line = { course Name to be taken, list of its preRequisites}
+		String^ courseToAdd = line.Key;
+		List<String^>^ preReqs = line.Value;
+		bool canBeAdded = true;
+		for each (auto course in preReqs)
+		{
+			//searching if each preRequisite is in the student's finished courses
+			if (!FinishedCourses->Contains(course))
+			{
+				canBeAdded = false;
+				break;
+			}
+		}
+		if (canBeAdded)
+		{
+			AvCourses->Add(courseToAdd);
+		}
+	}
+
 	return AvCourses;
 }
 

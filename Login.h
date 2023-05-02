@@ -4,8 +4,6 @@
 #include "Student.h"
 #include "messagebox.h"
 
-inline bool validateData();
-inline void studentLogin();
  
 namespace UMS {
 
@@ -373,31 +371,22 @@ namespace UMS {
 		}
 #pragma endregion
     public: Student^ student = nullptr;
-    public: messagebox^ m;
+    public: static messagebox^ m;
     public: bool switchToRegister = false;
     public:static bool loggedIn = false;
-
+    public:static bool validateStudentData(Student^ stud);
+    public:static void studentLogin(Student^ stud);
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 	    //getting data
 		String^ email = this->tbemail->Text;
 		String^ password = this->tbpassword->Text;
-		
-		
-		//to do : validate email and password
-		
-		//7atet elfnc hena awrehalk bs
-		validateData();
-		//if it's valid login to studentDataForm
-		
-		//not valid give a message box 
-		
-        //can be helpful:
 		if (email->Length == 0 || password->Length == 0) {
 			/*MessageBox::Show("Please enter email and password",
 				"Email or Password Empty", MessageBoxButtons::OK);
 			return;*/
 			m = gcnew messagebox;
 			m->Show();
+
 		}
 		else {
 			student = gcnew Student;
@@ -405,8 +394,9 @@ namespace UMS {
 			student->setEmail(email);
 			student->setPassword(password);
 
-			this->Close();
-            studentLogin();
+            UMS::Login::studentLogin(student);
+			if (UMS::Login::loggedIn)
+				this->Close();
 			
 		}
 
