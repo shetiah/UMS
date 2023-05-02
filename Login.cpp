@@ -1,17 +1,8 @@
 #include "Login.h"
-#include "StudentDataForm.h"
 #include "StudentPageForm.h"
-
-
- bool validateData()
-{
-	return false;
-}
-
+ 
  void UMS::Login::studentLogin(Student^ stud)
  {
-
-	 Student::saveStudentDataToFile();
 	 if (UMS::Login::validateStudentData(stud))
 	 {
 		 UMS::Login::loggedIn = true;
@@ -22,7 +13,6 @@
 	 else
 	 {
 		 m = gcnew messagebox;
-
 		 m->ShowDialog();
 	 }
  }
@@ -32,8 +22,10 @@
 	bool valid = false;
 	for (int i = 0; i < Student::allStudents->Count; i++)
 	{
-		if (stud->getName()==Student::allStudents[i]->getName() &&
-			stud->getPassword()== Student::allStudents[i]->getPassword())
+		if (
+			stud->getEmail()==Student::allStudents[i]->getEmail() &&
+			stud->getPassword()== Student::allStudents[i]->getPassword()
+			)
 		{
 			valid = true;
 		}

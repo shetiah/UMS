@@ -134,9 +134,13 @@ List<String^>^ Student::CoursesAV()
 	List<String^>^ AvCourses = gcnew List<String^>();
 	
 	//return an empty list if no finished courses
-	if(FinishedCourses->Count == 0);
-		return AvCourses;
-
+	if(FinishedCourses==nullptr)
+		return nullptr;
+	else
+	{
+		if (FinishedCourses->Count == 0)
+			return nullptr;
+	}
 		for each (auto line in Course::preRequires)
 		{
 			//line = { course Name to be taken, list of its preRequisites}

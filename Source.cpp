@@ -82,10 +82,10 @@ int main()
 			UMS::StudentPageForm studForm(stud);
 			studForm.ShowDialog();
 
-			/*if (studForm.loggedOut)
+			if (studForm.loggedOut)
 				continue;
 			else
-				break;*/
+				break;
 		}
 
 

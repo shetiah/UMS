@@ -4,8 +4,8 @@
 4)12
 5)3
 6)5
-7)gpa
-8)finished courses,separated by, commas
+7)3.4
+8)sp2,math2,ga5
 9)3.4,4,3,5
 c)sat,sp,math1
 x
