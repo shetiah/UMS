@@ -197,17 +197,31 @@ bool Student::validateIfCourseCanBeTaken(Course^ course)
 	//to-do:
 	// 
 	//check Student::CoursesAV() for the required course
-	return true;
+	List<String^>^ AvCourses = CoursesAV();
+	if (AvCourses->Contains(course->getName()))	
+		return true;
+	
+
+	return false;
 }
 
-void Student::registerForCourse(Course^ course)
+bool Student::registerForCourse(Course^ course)
 {
 	//to-do :
 	//1-use Student::validateIfCourseCanBeTaken 
 	//2- handle if it's false
 	//3-if true then put it in CoursesInProgress 
-}
+	if (!validateIfCourseCanBeTaken(course))
+	{
+		return false;
+	}
+	else
+	{
+		CoursesInProgress->Add(course->getName());
+	}
+	return true;
 
+}
 
 void Student::saveStudentDataToFile() {
 

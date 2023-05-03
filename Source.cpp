@@ -34,7 +34,7 @@ int main()
 	Course::loadCourseContentFromFile();
 	Course::loadCourseHoursFromFile();
 	Student::loadStudentDataFromFile();
-	
+
 	//Course::saveCourseContentToFile();
 	////Course::saveCourseDataToFile();
 	////Course::saveCourseHoursToFile();
@@ -43,8 +43,46 @@ int main()
 	Application::EnableVisualStyles();
 	Application::SetCompatibleTextRenderingDefault(false);
 
-	////Application::Run(gcnew UMS::AddCourseForm());
-	//Application::Run(gcnew UMS::Login);
+	while (true)
+	{
+		UMS::Login logform;
+		logform.ShowDialog();
+		if (UMS::Login::loggedIn) {
+
+			stud = logform.student;
+
+			UMS::StudentPageForm studForm(stud);
+			studForm.ShowDialog();
+
+			if (studForm.loggedOut)
+				continue;
+			else
+				break;
+		}
+		else
+			break;
+	}
+
+	
+//Application::Run(gcnew UMS::AddCourseForm());
+//Application::Run(gcnew UMS::Login);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 	/*	while (true)
 		{
@@ -71,29 +109,16 @@ int main()
 			}
 
 		}	*/
-	while (true)
-	{
-		UMS::Login logform;
-		logform.ShowDialog();
-		if (UMS::Login::loggedIn) {
-
-			stud = logform.student;
-
-			UMS::StudentPageForm studForm(stud);
-			studForm.ShowDialog();
-
-			if (studForm.loggedOut)
-				continue;
-			else
-				break;
-		}
 
 
-		else
-			break;
 
 
-	}
+
+
+
+
+
+
 	//if (stud != nullptr) {
 	//	UMS::StudentDataForm StudForm(stud);/*
 	//	Application::Run(% StudForm);*/

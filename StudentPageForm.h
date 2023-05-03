@@ -51,6 +51,18 @@ namespace UMS {
 			}
 		}
 	private: System::Windows::Forms::Label^ label1;
+	private: System::Windows::Forms::Label^ courseName;
+	private: System::Windows::Forms::Label^ hours;
+	private: System::Windows::Forms::Label^ req_courses;
+	private: System::Windows::Forms::Label^ instructor;
+	private: System::Windows::Forms::Label^ code;
+	private: System::Windows::Forms::Label^ isRequirement;
+	private: System::Windows::Forms::Label^ maxNumberOfStudents;
+	private: System::Windows::Forms::ListBox^ reqCoursesList;
+	private: System::Windows::Forms::Button^ button1;
+
+
+
 	protected:
 
 	private:
@@ -61,15 +73,37 @@ namespace UMS {
 
 #pragma region Windows Form Designer generated code
 	public:
-     void viewAvCourses(Student^ stud)
-	{
-		if (stud->CoursesAV() == nullptr)
-			this->label1->Text = "no";
-		else {
-			List<String^>^ Av = stud->CoursesAV();
-			this->label1->Text = Av[0];
+		void viewAvCourses(Student^ stud)
+		{
+			if (stud->CoursesAV() == nullptr)
+				this->label1->Text = "no";
+			else {
+				List<String^>^ Av = stud->CoursesAV();
+				this->label1->Text = Av[0];
+			}
 		}
-	}
+
+		void viewSpecificCourse(Course^ course) {
+
+			this->courseName->Text = course->getName();
+			
+			this->hours->Text = Convert::ToString(course->getHours());
+
+			this->code->Text = Convert::ToString(course->getCode());
+			
+			this->reqCoursesList->DataSource = Course::preRequires[course->getName()];
+			
+			this->instructor->Text = course->getInstructor();
+	
+			if(course->getIsRequirement())
+				this->isRequirement->Text = "Yes";
+			else
+				this->isRequirement->Text = "NO";
+
+			this->maxNumberOfStudents->Text = Convert::ToString(course->getMaxNumberOfStudents());
+	
+
+		}
 		/// <summary>
 		/// Required method for Designer support - do not modify
 		/// the contents of this method with the code editor.
@@ -77,23 +111,126 @@ namespace UMS {
 		void InitializeComponent(void)
 		{
 			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->courseName = (gcnew System::Windows::Forms::Label());
+			this->hours = (gcnew System::Windows::Forms::Label());
+			this->req_courses = (gcnew System::Windows::Forms::Label());
+			this->instructor = (gcnew System::Windows::Forms::Label());
+			this->code = (gcnew System::Windows::Forms::Label());
+			this->isRequirement = (gcnew System::Windows::Forms::Label());
+			this->maxNumberOfStudents = (gcnew System::Windows::Forms::Label());
+			this->reqCoursesList = (gcnew System::Windows::Forms::ListBox());
+			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Location = System::Drawing::Point(61, 25);
+			this->label1->Location = System::Drawing::Point(226, 9);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(44, 16);
 			this->label1->TabIndex = 0;
 			this->label1->Text = L"label1";
 			this->label1->Click += gcnew System::EventHandler(this, &StudentPageForm::label1_Click);
 			// 
+			// courseName
+			// 
+			this->courseName->AutoSize = true;
+			this->courseName->Location = System::Drawing::Point(12, 9);
+			this->courseName->Name = L"courseName";
+			this->courseName->Size = System::Drawing::Size(87, 16);
+			this->courseName->TabIndex = 1;
+			this->courseName->Text = L"CourseName";
+			this->courseName->Click += gcnew System::EventHandler(this, &StudentPageForm::courseName_Click);
+			// 
+			// hours
+			// 
+			this->hours->AutoSize = true;
+			this->hours->Location = System::Drawing::Point(14, 39);
+			this->hours->Name = L"hours";
+			this->hours->Size = System::Drawing::Size(40, 16);
+			this->hours->TabIndex = 2;
+			this->hours->Text = L"hours";
+			// 
+			// req_courses
+			// 
+			this->req_courses->AutoSize = true;
+			this->req_courses->Location = System::Drawing::Point(12, 74);
+			this->req_courses->Name = L"req_courses";
+			this->req_courses->Size = System::Drawing::Size(78, 16);
+			this->req_courses->TabIndex = 3;
+			this->req_courses->Text = L"req courses";
+			// 
+			// instructor
+			// 
+			this->instructor->AutoSize = true;
+			this->instructor->Location = System::Drawing::Point(12, 90);
+			this->instructor->Name = L"instructor";
+			this->instructor->Size = System::Drawing::Size(60, 16);
+			this->instructor->TabIndex = 4;
+			this->instructor->Text = L"instructor";
+			// 
+			// code
+			// 
+			this->code->AutoSize = true;
+			this->code->Location = System::Drawing::Point(14, 116);
+			this->code->Name = L"code";
+			this->code->Size = System::Drawing::Size(38, 16);
+			this->code->TabIndex = 5;
+			this->code->Text = L"code";
+			// 
+			// isRequirement
+			// 
+			this->isRequirement->AutoSize = true;
+			this->isRequirement->Location = System::Drawing::Point(14, 153);
+			this->isRequirement->Name = L"isRequirement";
+			this->isRequirement->Size = System::Drawing::Size(94, 16);
+			this->isRequirement->TabIndex = 6;
+			this->isRequirement->Text = L"isRequirement";
+			// 
+			// maxNumberOfStudents
+			// 
+			this->maxNumberOfStudents->AutoSize = true;
+			this->maxNumberOfStudents->Location = System::Drawing::Point(8, 178);
+			this->maxNumberOfStudents->Name = L"maxNumberOfStudents";
+			this->maxNumberOfStudents->Size = System::Drawing::Size(145, 16);
+			this->maxNumberOfStudents->TabIndex = 7;
+			this->maxNumberOfStudents->Text = L"maxNumberOfStudents";
+			// 
+			// reqCoursesList
+			// 
+			this->reqCoursesList->FormattingEnabled = true;
+			this->reqCoursesList->ItemHeight = 16;
+			this->reqCoursesList->Location = System::Drawing::Point(187, 54);
+			this->reqCoursesList->Name = L"reqCoursesList";
+			this->reqCoursesList->Size = System::Drawing::Size(85, 164);
+			this->reqCoursesList->TabIndex = 8;
+			this->reqCoursesList->SelectedIndexChanged += gcnew System::EventHandler(this, &StudentPageForm::reqCoursesList_SelectedIndexChanged);
+			// 
+			// button1
+			// 
+			this->button1->Location = System::Drawing::Point(147, 15);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(75, 23);
+			this->button1->TabIndex = 9;
+			this->button1->Text = L"button1";
+			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &StudentPageForm::button1_Click);
+			// 
 			// StudentPageForm
 			// 
+			this->AccessibleName = L"code";
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(282, 253);
+			this->Controls->Add(this->button1);
+			this->Controls->Add(this->reqCoursesList);
+			this->Controls->Add(this->maxNumberOfStudents);
+			this->Controls->Add(this->isRequirement);
+			this->Controls->Add(this->code);
+			this->Controls->Add(this->instructor);
+			this->Controls->Add(this->req_courses);
+			this->Controls->Add(this->hours);
+			this->Controls->Add(this->courseName);
 			this->Controls->Add(this->label1);
 			this->Name = L"StudentPageForm";
 			this->Text = L"StudentPageForm";
@@ -105,6 +242,12 @@ namespace UMS {
 #pragma endregion
 
 	public:static bool loggedOut = false;
+		  
+		  /*
+		  4. View details of a specific course.
+			  view(coures name, hours, req courses, instructor, code, isRequirement, maxNumberOfStudents)*/
+	
+
 	private: System::Void StudentPageForm_Load(System::Object^ sender, System::EventArgs^ e) {
 	}
 	private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -113,5 +256,19 @@ namespace UMS {
 		this->Close();
 
 	}
-	};
+	private: System::Void label2_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+private: System::Void courseName_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void reqlist_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void listBox1_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void reqCoursesList_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+	viewSpecificCourse(Course::allCourses[0]);
+
+}
+};
 }

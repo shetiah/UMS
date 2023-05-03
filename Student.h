@@ -67,7 +67,7 @@ public :
 	List<String^>^ CoursesAV();
 
 	bool validateIfCourseCanBeTaken(Course^ course);
-	void registerForCourse(Course^ course);
+	bool registerForCourse(Course^ course);
 
 	static void loadStudentDataFromFile();
 	static void saveStudentDataToFile();
