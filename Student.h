@@ -37,7 +37,7 @@ public :
 
 
 	Student();
-	Student(int ID, int AcademicYear, int MaxHoursAllowed, float GPA, String^ Name, String^ Email, String^ Password, List<String^>^ FinishedCourses, List<String^>^ CoursesInProgress);
+	Student(int ID, int AcademicYear, int MaxHoursAllowed, float GPA, String^ Name, String^ Email, String^ Password, List<String^>^ FinishedCourses, List<String^>^ CoursesInProgress, List<float>^ coursesGPA);
 	void setName(String^ Name);
 	void setAcademicYear(int AcademicYear);
 	void setEmail(String^ Email);

@@ -19,5 +19,5 @@ public:
 	//DONE ==== edit all course data
 	
 	void editCourseData(Course^ c, String^ name, String^ code, String^ instructor, int maxNumberOfStudents, int hours);
-	static void createStudent(String^ name, String^ password, int academicYear, int maxHoursAllowed, float GPA, List<String^>^ finishedCourses, List<String^>^ coursesInProgress);
+	static void createStudent(String^ name, String^ password, int academicYear, int maxHoursAllowed, float GPA, List<String^>^ finishedCourses, List<String^>^ coursesInProgress, List<float>^ coursesGPA);
 };

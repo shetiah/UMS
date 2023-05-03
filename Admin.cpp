@@ -34,7 +34,7 @@ void Admin::editCourseData(Course^ c, String^ name,
 	c->setHours(hours);
 }
 
-void Admin::createStudent(String^ name, String^ password,int academicYear,int maxHoursAllowed,float GPA,List<String^>^finishedCourses, List<String^>^coursesInProgress)
+void Admin::createStudent(String^ name, String^ password,int academicYear,int maxHoursAllowed,float GPA,List<String^>^finishedCourses, List<String^>^coursesInProgress, List<float>^ coursesGPA)
 {
 	Student^ s = gcnew Student();
 	//getting the id from the file
@@ -52,6 +52,7 @@ void Admin::createStudent(String^ name, String^ password,int academicYear,int ma
 	s->setMaxHoursAllowed(maxHoursAllowed);
 	s->setGPA(GPA);
 	s->setFinishedCourses(finishedCourses);
+	s->setCoursesGPA(coursesGPA);
 	s->setCoursesINProgress(coursesInProgress);
 
 	//add the student to the list

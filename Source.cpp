@@ -44,7 +44,7 @@ int main()
 	Application::SetCompatibleTextRenderingDefault(false);
 
 	////Application::Run(gcnew UMS::AddCourseForm());
-	//Application::Run(gcnew UMS::Login);
+	Application::Run(gcnew UMS::StudentDataForm);
 
 	/*	while (true)
 		{
