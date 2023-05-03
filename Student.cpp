@@ -16,7 +16,7 @@
 	this->CoursesInProgress = nullptr;
 }
 
-Student::Student(int ID, int AcademicYear, int MaxHoursAllowed, float GPA, String^ Name, String^ Email, String^ Password, List<String^>^ FinishedCourses, List<String^>^ CoursesInProgress)
+Student::Student(int ID, int AcademicYear, int MaxHoursAllowed, float GPA, String^ Name, String^ Email, String^ Password, List<String^>^ FinishedCourses, List<String^>^ CoursesInProgress, List<float>^ coursesGPA)
 {
 	this->ID = ID;
 	this->AcademicYear = AcademicYear;
@@ -27,6 +27,7 @@ Student::Student(int ID, int AcademicYear, int MaxHoursAllowed, float GPA, Strin
 	this->Password = Password;
 	this->FinishedCourses = FinishedCourses;
 	this->CoursesInProgress = CoursesInProgress;
+	this->coursesGPA = coursesGPA;
 }
 
 void Student::setName(String^ Name)
@@ -273,29 +274,31 @@ void Student::saveStudentDataToFile() {
 
 		//outputting the vectos
 		outFile << "8)";
-
 		string line;
-		for each (String ^ course in finishedCourses)
-		{
-			// Separate courses with commas
-			if (!line.empty())
-			{
-				line += ",";
-			}
-			std::string x;
-			for each (wchar_t c in course)
-			{
-				x += static_cast<char>(c);
-			}
-			line += x;
 
-		}
+	
+			for each (String ^ course in finishedCourses)
+			{
+				// Separate courses with commas
+				if (!line.empty())
+				{
+					line += ",";
+				}
+				std::string x;
+				for each (wchar_t c in course)
+				{
+					x += static_cast<char>(c);
+				}
+				line += x;
 
+			}
+		
 		outFile << line << endl;
 
 		outFile << "9)";
 		//output gpas
 		string line3;
+	
 		for each (float gpa in coursesGPA)
 		{
 			// Separate courses with commas
@@ -307,6 +310,7 @@ void Student::saveStudentDataToFile() {
 			line3 += to_string(gpa);
 
 		}
+		
 		outFile<<endl;
 
 
@@ -353,7 +357,6 @@ void Student::loadStudentDataFromFile() {
 		// to skip 'number' and ')' 
 		// ex: 1), 2), 3)
 		int i = 2;
-
 		//if the student is finished
 		if (wholeLine[0] == 'x')
 		{
