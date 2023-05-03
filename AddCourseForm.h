@@ -189,7 +189,7 @@ namespace UMS {
 			// addCourseBtn
 			// 
 			this->addCourseBtn->Location = System::Drawing::Point(302, 323);
-			this->addCourseBtn->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->addCourseBtn->Margin = System::Windows::Forms::Padding(2);
 			this->addCourseBtn->Name = L"addCourseBtn";
 			this->addCourseBtn->Size = System::Drawing::Size(104, 45);
 			this->addCourseBtn->TabIndex = 1;
@@ -373,7 +373,7 @@ namespace UMS {
 			this->panel1->Controls->Add(this->button1);
 			this->panel1->Dock = System::Windows::Forms::DockStyle::Top;
 			this->panel1->Location = System::Drawing::Point(0, 0);
-			this->panel1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->panel1->Margin = System::Windows::Forms::Padding(2);
 			this->panel1->Name = L"panel1";
 			this->panel1->Size = System::Drawing::Size(708, 28);
 			this->panel1->TabIndex = 20;
@@ -403,7 +403,7 @@ namespace UMS {
 				static_cast<System::Byte>(0)));
 			this->button3->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
 			this->button3->Location = System::Drawing::Point(677, 8);
-			this->button3->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->button3->Margin = System::Windows::Forms::Padding(2);
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(22, 17);
 			this->button3->TabIndex = 0;
@@ -417,7 +417,7 @@ namespace UMS {
 			this->button2->FlatAppearance->BorderSize = 0;
 			this->button2->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button2->Location = System::Drawing::Point(677, 8);
-			this->button2->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->button2->Margin = System::Windows::Forms::Padding(2);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(22, 17);
 			this->button2->TabIndex = 0;
@@ -429,7 +429,7 @@ namespace UMS {
 			this->button1->FlatAppearance->BorderSize = 0;
 			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button1->Location = System::Drawing::Point(677, 8);
-			this->button1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->button1->Margin = System::Windows::Forms::Padding(2);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(22, 17);
 			this->button1->TabIndex = 0;
@@ -453,7 +453,7 @@ namespace UMS {
 			this->panel2->Controls->Add(this->radioButton2);
 			this->panel2->Controls->Add(this->radioButton1);
 			this->panel2->Location = System::Drawing::Point(484, 50);
-			this->panel2->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->panel2->Margin = System::Windows::Forms::Padding(2);
 			this->panel2->Name = L"panel2";
 			this->panel2->Size = System::Drawing::Size(205, 98);
 			this->panel2->TabIndex = 22;
@@ -475,7 +475,7 @@ namespace UMS {
 			this->panel3->Controls->Add(this->nameTextBox);
 			this->panel3->Controls->Add(this->label2);
 			this->panel3->Location = System::Drawing::Point(128, 50);
-			this->panel3->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->panel3->Margin = System::Windows::Forms::Padding(2);
 			this->panel3->Name = L"panel3";
 			this->panel3->Size = System::Drawing::Size(322, 230);
 			this->panel3->TabIndex = 23;
@@ -490,7 +490,7 @@ namespace UMS {
 			this->sidebar->Controls->Add(this->panel4);
 			this->sidebar->Dock = System::Windows::Forms::DockStyle::Left;
 			this->sidebar->Location = System::Drawing::Point(0, 28);
-			this->sidebar->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->sidebar->Margin = System::Windows::Forms::Padding(2);
 			this->sidebar->MaximumSize = System::Drawing::Size(110, 375);
 			this->sidebar->MinimumSize = System::Drawing::Size(30, 375);
 			this->sidebar->Name = L"sidebar";
@@ -503,7 +503,7 @@ namespace UMS {
 			this->panel5->Controls->Add(this->label1);
 			this->panel5->Controls->Add(this->menuButton);
 			this->panel5->Location = System::Drawing::Point(2, 2);
-			this->panel5->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->panel5->Margin = System::Windows::Forms::Padding(2);
 			this->panel5->Name = L"panel5";
 			this->panel5->Size = System::Drawing::Size(107, 47);
 			this->panel5->TabIndex = 1;
@@ -525,7 +525,7 @@ namespace UMS {
 			this->menuButton->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->menuButton->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"menuButton.Image")));
 			this->menuButton->Location = System::Drawing::Point(2, 11);
-			this->menuButton->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->menuButton->Margin = System::Windows::Forms::Padding(2);
 			this->menuButton->Name = L"menuButton";
 			this->menuButton->Size = System::Drawing::Size(20, 21);
 			this->menuButton->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
@@ -537,7 +537,7 @@ namespace UMS {
 			// 
 			this->panel7->Controls->Add(this->button6);
 			this->panel7->Location = System::Drawing::Point(2, 53);
-			this->panel7->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->panel7->Margin = System::Windows::Forms::Padding(2);
 			this->panel7->Name = L"panel7";
 			this->panel7->Size = System::Drawing::Size(107, 42);
 			this->panel7->TabIndex = 0;
@@ -550,7 +550,7 @@ namespace UMS {
 			this->button6->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button6.Image")));
 			this->button6->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->button6->Location = System::Drawing::Point(0, 2);
-			this->button6->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->button6->Margin = System::Windows::Forms::Padding(2);
 			this->button6->Name = L"button6";
 			this->button6->Size = System::Drawing::Size(107, 35);
 			this->button6->TabIndex = 25;
@@ -562,7 +562,7 @@ namespace UMS {
 			// 
 			this->panel6->Controls->Add(this->button5);
 			this->panel6->Location = System::Drawing::Point(2, 99);
-			this->panel6->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->panel6->Margin = System::Windows::Forms::Padding(2);
 			this->panel6->Name = L"panel6";
 			this->panel6->Size = System::Drawing::Size(107, 42);
 			this->panel6->TabIndex = 0;
@@ -575,7 +575,7 @@ namespace UMS {
 			this->button5->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button5.Image")));
 			this->button5->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->button5->Location = System::Drawing::Point(-2, 5);
-			this->button5->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->button5->Margin = System::Windows::Forms::Padding(2);
 			this->button5->Name = L"button5";
 			this->button5->Size = System::Drawing::Size(107, 35);
 			this->button5->TabIndex = 25;
@@ -587,7 +587,7 @@ namespace UMS {
 			// 
 			this->panel4->Controls->Add(this->button4);
 			this->panel4->Location = System::Drawing::Point(2, 145);
-			this->panel4->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->panel4->Margin = System::Windows::Forms::Padding(2);
 			this->panel4->Name = L"panel4";
 			this->panel4->Size = System::Drawing::Size(107, 42);
 			this->panel4->TabIndex = 0;
@@ -600,7 +600,7 @@ namespace UMS {
 			this->button4->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button4.Image")));
 			this->button4->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->button4->Location = System::Drawing::Point(0, 5);
-			this->button4->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->button4->Margin = System::Windows::Forms::Padding(2);
 			this->button4->Name = L"button4";
 			this->button4->Size = System::Drawing::Size(107, 35);
 			this->button4->TabIndex = 25;
@@ -625,7 +625,7 @@ namespace UMS {
 			this->Controls->Add(this->label9);
 			this->Controls->Add(this->addCourseBtn);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
-			this->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->Margin = System::Windows::Forms::Padding(2);
 			this->Name = L"AddCourseForm";
 			this->Text = L"UMS";
 			this->WindowState = System::Windows::Forms::FormWindowState::Maximized;
