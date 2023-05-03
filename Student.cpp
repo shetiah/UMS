@@ -169,6 +169,98 @@ List<String^>^ Student::CoursesAV()
 }
 
 
+List<Course^>^ Student::FilterCourses(String^ filterOption) //farah
+{
+
+	// Create a new list to store the filtered courses
+	List<Course^>^ filteredCourses = gcnew List<Course^>();
+
+	if (filterOption == "Finished Courses")
+	{
+		for each (Course ^ course in Course::allCourses) 
+		{
+			// Check if the current course is in the list of finished courses
+			if (FinishedCourses->Contains(course->getName()) )
+			{
+				// If it is, add the course to the filtered list
+				filteredCourses->Add(course);
+			}
+
+
+		}
+	}
+	else if (filterOption == "Available Courses") 
+	{
+		// Get the list of available courses
+		List<String^>^ availableCourses = CoursesAV();
+		for each (Course ^ course in Course::allCourses)
+		{
+			// Check if the current course is in the list of available courses
+			if (availableCourses->Contains(course->getName()))
+			{
+				filteredCourses->Add(course);
+			}
+		}
+
+	}
+	else if (filterOption == "Required Courses")
+	{
+		for each (Course ^ course in Course::allCourses)
+		{
+			// Check if the current course is marked as a requirement
+			if (course->getIsRequirement())
+			{
+				// If it is, add the course to the filtered list
+				filteredCourses->Add(course);
+			}
+		}
+	}
+	else if (filterOption == "Elective Courses")
+	{
+		for each (Course ^ course in Course::allCourses)
+		{
+			// Check if the current course is marked as a requirement
+			if (!course->getIsRequirement())
+			{
+				// If it is, add the course to the filtered list
+				filteredCourses->Add(course);
+			}
+		}
+	}
+	else 
+	{
+		// If the user has not selected a filter, return the full list of courses
+		filteredCourses = Course::allCourses;
+	}
+
+
+	return filteredCourses;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 bool Student::validateIfCourseCanBeTaken(Course^ course)
 {
 	//to-do:
