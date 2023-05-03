@@ -137,32 +137,7 @@ List<String^>^ Student::CoursesAV()
 	//return an empty list if no finished courses
 	if(FinishedCourses==nullptr)
 		return nullptr;
-	else
-	{
-		if (FinishedCourses->Count == 0)
-			return nullptr;
-	}
-		for each (auto line in Course::preRequires)
-		{
-			//line = { course Name to be taken, list of its preRequisites}
-			String^ courseToAdd = line.Key;
-			List<String^>^ preReqs = line.Value;
-			
-			bool canBeAdded = true;
-			for each (auto course in preReqs)
-			{
-				//searching if each preRequisite is in the student's finished courses
-				if (!FinishedCourses->Contains(course))
-				{
-					canBeAdded = false;
-					break;
-				}
-			}
-			if (canBeAdded)
-			{
-				AvCourses->Add(courseToAdd);
-			}
-		}
+		
 
 	//return an empty list if no finished courses
 	if (FinishedCourses->Count == 0);
