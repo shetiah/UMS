@@ -581,6 +581,7 @@ private: System::Void button1_Click_1(System::Object^ sender, System::EventArgs^
 	if (isHoursNum==false)
 	{
 		HError->Visible = true;
+		return;
 	}
 	else
 	{
@@ -589,6 +590,7 @@ private: System::Void button1_Click_1(System::Object^ sender, System::EventArgs^
 	if (isAcademicYearNum == false)
 	{
 		AError->Visible = true;
+		return;
 	}
 	else
 	{
@@ -603,6 +605,7 @@ private: System::Void button1_Click_1(System::Object^ sender, System::EventArgs^
 	if (isGpANum == false)
 	{
 		gpaError->Visible = true;
+		return;
 	}
 	else
 	{
@@ -668,6 +671,7 @@ private: System::Void button1_Click_1(System::Object^ sender, System::EventArgs^
 			{
 				// handle the case where the input is not a valid float
 				GradesError->Visible = true;
+				return;
 			}
 		}
 	}

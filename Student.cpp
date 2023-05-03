@@ -137,32 +137,7 @@ List<String^>^ Student::CoursesAV()
 	//return an empty list if no finished courses
 	if(FinishedCourses==nullptr)
 		return nullptr;
-	else
-	{
-		if (FinishedCourses->Count == 0)
-			return nullptr;
-	}
-		for each (auto line in Course::preRequires)
-		{
-			//line = { course Name to be taken, list of its preRequisites}
-			String^ courseToAdd = line.Key;
-			List<String^>^ preReqs = line.Value;
-			
-			bool canBeAdded = true;
-			for each (auto course in preReqs)
-			{
-				//searching if each preRequisite is in the student's finished courses
-				if (!FinishedCourses->Contains(course))
-				{
-					canBeAdded = false;
-					break;
-				}
-			}
-			if (canBeAdded)
-			{
-				AvCourses->Add(courseToAdd);
-			}
-		}
+		
 
 	//return an empty list if no finished courses
 	if (FinishedCourses->Count == 0);
@@ -176,14 +151,15 @@ List<String^>^ Student::CoursesAV()
 		bool canBeAdded = true;
 		for each (auto course in preReqs)
 		{
-			//searching if each preRequisite is in the student's finished courses
-			if (!FinishedCourses->Contains(course))
+			//searching if each preRequisite is in the student's finished courses or in progress
+			if (!FinishedCourses->Contains(course) || CoursesInProgress->Contains(course))
 			{
 				canBeAdded = false;
 				break;
 			}
 		}
-		if (canBeAdded)
+		//checking if the course can be added and not already in progress
+		if (canBeAdded && !CoursesInProgress->Contains(courseToAdd))
 		{
 			AvCourses->Add(courseToAdd);
 		}
@@ -361,6 +337,7 @@ void Student::loadStudentDataFromFile() {
 		if (wholeLine[0] == 'x')
 		{
 			Student::allStudents->Add(temp);
+			temp = gcnew Student();
 		}
 
 		//if one word per line (not a list)
