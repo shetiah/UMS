@@ -1,6 +1,17 @@
-1)fgbkuyg
+1)shetiah
+2)2023020@cis.com
+3)abcd
+4)2023020
+5)2
+6)18
+7)3.9
+8)Structured Programming,intro to CS
+9)3.7,3.4
+c)archi,linear
+x
+1)Hassan Muhammad
 2)2023021@cis.com
-3)hjfby
+3)123456
 4)2023021
 5)1
 6)50
@@ -9,36 +20,14 @@
 9)0
 c)fb,teuty
 x
-1)fgbkuyg
-2)2023021@cis.com
-3)hjfby
-4)2023021
-5)1
-6)50
-7)3.6
-8)0
-9)0
-c)fb,teuty
-x
-1)sgfv
-2)2023022@cis.com
-3)fsvdf
-4)2023022
-5)5
-6)20
-7)5
-8)0
-9)0
-c)sg,sgwe,dsg
-x
-1)asgv
-2)2023023@cis.com
-3)vgasv
-4)2023023
-5)5
-6)50
-7)1
-8)0
-9)0
-c)sg,sgwe,dsg
+1)maya mohamed
+2)2023025@cis.com
+3)123
+4)2023025
+5)2
+6)21
+7)4
+8)Structured Programming,intro to CS
+9)4,3.7
+c)linear,archi
 x

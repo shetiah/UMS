@@ -176,14 +176,15 @@ List<String^>^ Student::CoursesAV()
 		bool canBeAdded = true;
 		for each (auto course in preReqs)
 		{
-			//searching if each preRequisite is in the student's finished courses
-			if (!FinishedCourses->Contains(course))
+			//searching if each preRequisite is in the student's finished courses or in progress
+			if (!FinishedCourses->Contains(course) || CoursesInProgress->Contains(course))
 			{
 				canBeAdded = false;
 				break;
 			}
 		}
-		if (canBeAdded)
+		//checking if the course can be added and not already in progress
+		if (canBeAdded && !CoursesInProgress->Contains(courseToAdd))
 		{
 			AvCourses->Add(courseToAdd);
 		}
@@ -347,6 +348,7 @@ void Student::loadStudentDataFromFile() {
 		if (wholeLine[0] == 'x')
 		{
 			Student::allStudents->Add(temp);
+			temp = gcnew Student();
 		}
 
 		//if one word per line (not a list)
