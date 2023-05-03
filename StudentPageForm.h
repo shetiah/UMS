@@ -28,14 +28,16 @@ namespace UMS {
 	/// </summary>
 	public ref class StudentPageForm : public System::Windows::Forms::Form
 	{
+	private:Student^ stud;
 	public:
+
 		StudentPageForm(Student^ stud)
 		{
 			InitializeComponent();
 			//
 			//TODO: Add the constructor code here
 			//
-
+			this->stud = stud;
 			viewAvCourses(stud);
 		}
 
@@ -59,7 +61,10 @@ namespace UMS {
 	private: System::Windows::Forms::Label^ isRequirement;
 	private: System::Windows::Forms::Label^ maxNumberOfStudents;
 	private: System::Windows::Forms::ListBox^ reqCoursesList;
-	private: System::Windows::Forms::Button^ button1;
+	private: System::Windows::Forms::Button^ ViewCourseProp;
+	private: System::Windows::Forms::Button^ registerCourse;
+
+
 
 
 
@@ -104,6 +109,24 @@ namespace UMS {
 	
 
 		}
+		
+		void registerCoures(Course^ course)
+		{
+			int x;
+			List<String^>^ courseAV = this->stud->CoursesAV();
+			for (int i = 0; i <courseAV->Count; i++)
+			{
+				if (courseAV[i] == course->getName())
+				{
+					x = i;
+					break;
+				}
+			}
+		}
+		
+		
+		
+		
 		/// <summary>
 		/// Required method for Designer support - do not modify
 		/// the contents of this method with the code editor.
@@ -119,7 +142,8 @@ namespace UMS {
 			this->isRequirement = (gcnew System::Windows::Forms::Label());
 			this->maxNumberOfStudents = (gcnew System::Windows::Forms::Label());
 			this->reqCoursesList = (gcnew System::Windows::Forms::ListBox());
-			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->ViewCourseProp = (gcnew System::Windows::Forms::Button());
+			this->registerCourse = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
 			// label1
@@ -200,29 +224,40 @@ namespace UMS {
 			// 
 			this->reqCoursesList->FormattingEnabled = true;
 			this->reqCoursesList->ItemHeight = 16;
-			this->reqCoursesList->Location = System::Drawing::Point(187, 54);
+			this->reqCoursesList->Location = System::Drawing::Point(209, 39);
 			this->reqCoursesList->Name = L"reqCoursesList";
-			this->reqCoursesList->Size = System::Drawing::Size(85, 164);
+			this->reqCoursesList->Size = System::Drawing::Size(121, 164);
 			this->reqCoursesList->TabIndex = 8;
 			this->reqCoursesList->SelectedIndexChanged += gcnew System::EventHandler(this, &StudentPageForm::reqCoursesList_SelectedIndexChanged);
 			// 
-			// button1
+			// ViewCourseProp
 			// 
-			this->button1->Location = System::Drawing::Point(147, 15);
-			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(75, 23);
-			this->button1->TabIndex = 9;
-			this->button1->Text = L"button1";
-			this->button1->UseVisualStyleBackColor = true;
-			this->button1->Click += gcnew System::EventHandler(this, &StudentPageForm::button1_Click);
+			this->ViewCourseProp->Location = System::Drawing::Point(376, 67);
+			this->ViewCourseProp->Name = L"ViewCourseProp";
+			this->ViewCourseProp->Size = System::Drawing::Size(162, 23);
+			this->ViewCourseProp->TabIndex = 9;
+			this->ViewCourseProp->Text = L"ViewCourseProp";
+			this->ViewCourseProp->UseVisualStyleBackColor = true;
+			this->ViewCourseProp->Click += gcnew System::EventHandler(this, &StudentPageForm::button1_Click);
+			// 
+			// registerCourse
+			// 
+			this->registerCourse->Location = System::Drawing::Point(387, 305);
+			this->registerCourse->Name = L"registerCourse";
+			this->registerCourse->Size = System::Drawing::Size(171, 23);
+			this->registerCourse->TabIndex = 10;
+			this->registerCourse->Text = L"registerCourse";
+			this->registerCourse->UseVisualStyleBackColor = true;
+			this->registerCourse->Click += gcnew System::EventHandler(this, &StudentPageForm::button2_Click);
 			// 
 			// StudentPageForm
 			// 
 			this->AccessibleName = L"code";
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(282, 253);
-			this->Controls->Add(this->button1);
+			this->ClientSize = System::Drawing::Size(594, 408);
+			this->Controls->Add(this->registerCourse);
+			this->Controls->Add(this->ViewCourseProp);
 			this->Controls->Add(this->reqCoursesList);
 			this->Controls->Add(this->maxNumberOfStudents);
 			this->Controls->Add(this->isRequirement);
@@ -269,6 +304,8 @@ private: System::Void reqCoursesList_SelectedIndexChanged(System::Object^ sender
 private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 	viewSpecificCourse(Course::allCourses[0]);
 
+}
+private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }
