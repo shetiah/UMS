@@ -69,6 +69,8 @@ public :
 	bool validateIfCourseCanBeTaken(Course^ course);
 	bool registerForCourse(Course^ course);
 
+	List<Course^>^ FilterCourses(String^ filterOption);
+
 	static void loadStudentDataFromFile();
 	static void saveStudentDataToFile();
 
