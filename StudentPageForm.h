@@ -110,18 +110,12 @@ namespace UMS {
 
 		}
 		
-		void registerCoures(Course^ course)
+		void registerCourse(Course^ course)
 		{
-			int x;
-			List<String^>^ courseAV = this->stud->CoursesAV();
-			for (int i = 0; i <courseAV->Count; i++)
-			{
-				if (courseAV[i] == course->getName())
-				{
-					x = i;
-					break;
-				}
-			}
+			List<String^>^ temp= stud->getCoursesINProgress();
+			temp->Add(course->getName());
+			stud->setCoursesINProgress(temp);
+			course->allStudentInProgress->Add(stud);
 		}
 		
 		

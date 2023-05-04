@@ -2,6 +2,7 @@
 #include<vector>
 #include<iostream>
 #include<unordered_map>
+#include "Student.h"
 using namespace std;
 using namespace System;
 using namespace System::Collections::Generic;
@@ -22,7 +23,10 @@ public:
 	//static adjacency list for course prerequirements
 	static Dictionary<String^, List<String^>^>^ preRequires;
 	static Dictionary<String^, int>^ eachCourseHours;
+	static Dictionary<String^, String^>^ eachCourseGrade;
 	static List<Course^>^ allCourses;
+    List<Student^>^ allStudentInProgress;
+
 	//constructor
 	Course();
 	Course(String^ name, String^ code, String^ instructor, bool isRequirement, int maxNumberOfStudents, int hours);
