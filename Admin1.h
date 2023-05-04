@@ -47,6 +47,7 @@ namespace UMS {
 	private: System::Windows::Forms::TextBox^ textBox5;
 	private: System::Windows::Forms::TextBox^ textBox6;
 	private: System::Windows::Forms::TextBox^ textBox7;
+	private: System::Windows::Forms::ListBox^ studentsList;
 	protected:
 
 	private:
@@ -56,6 +57,21 @@ namespace UMS {
 		System::ComponentModel::Container ^components;
 
 #pragma region Windows Form Designer generated code
+		void viewAllStudinaCourse(Course^ course) {
+			this->studentsList->DataSource = course->allStudentInProgress;
+		}
+		
+		void viewCoursesFinishedofaStudent(Student^ student) {
+			student->getFinishedCourses();
+		}
+
+		void viewAllStudInACourse(Student^ student) {
+			student->getCoursesINProgress();
+		}
+
+
+
+
 		/// <summary>
 		/// Required method for Designer support - do not modify
 		/// the contents of this method with the code editor.
@@ -69,6 +85,7 @@ namespace UMS {
 			this->textBox5 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox6 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox7 = (gcnew System::Windows::Forms::TextBox());
+			this->studentsList = (gcnew System::Windows::Forms::ListBox());
 			this->SuspendLayout();
 			// 
 			// textBox1
@@ -121,11 +138,22 @@ namespace UMS {
 			this->textBox7->Size = System::Drawing::Size(100, 22);
 			this->textBox7->TabIndex = 6;
 			// 
+			// studentsList
+			// 
+			this->studentsList->FormattingEnabled = true;
+			this->studentsList->ItemHeight = 16;
+			this->studentsList->Location = System::Drawing::Point(147, 106);
+			this->studentsList->Name = L"studentsList";
+			this->studentsList->Size = System::Drawing::Size(120, 84);
+			this->studentsList->TabIndex = 7;
+			this->studentsList->SelectedIndexChanged += gcnew System::EventHandler(this, &Admin::studentsList_SelectedIndexChanged);
+			// 
 			// Admin
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(282, 253);
+			this->Controls->Add(this->studentsList);
 			this->Controls->Add(this->textBox7);
 			this->Controls->Add(this->textBox6);
 			this->Controls->Add(this->textBox5);
@@ -145,5 +173,7 @@ namespace UMS {
 	}
 	private: System::Void textBox3_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 	}
+private: System::Void studentsList_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
+}
 };
 }
