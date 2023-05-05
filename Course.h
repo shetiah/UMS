@@ -2,12 +2,13 @@
 #include<vector>
 #include<iostream>
 #include<unordered_map>
+
 using namespace std;
 using namespace System;
 using namespace System::Collections::Generic;
 
 //To add: Courses list, GPA for finished courses, Graph for what opens what
-ref class Course
+ ref class Course
 {
 private:
 	String^ name;
@@ -16,13 +17,18 @@ private:
 
 	bool isRequirement;
 	int maxNumberOfStudents;
-	int hours;
+    int hours;
+	
 
 public:
+	
 	//static adjacency list for course prerequirements
-	static Dictionary<String^, List<String^>^>^ preRequires;
+	
+	static Dictionary<String^, List<String^>^>^ preRequires; 
 	static Dictionary<String^, int>^ eachCourseHours;
+
 	static List<Course^>^ allCourses;
+	 List<int>^ allStudentInProgress;
 	//constructor
 	Course();
 	Course(String^ name, String^ code, String^ instructor, bool isRequirement, int maxNumberOfStudents, int hours);
@@ -49,6 +55,9 @@ public:
 	static void saveCourseHoursToFile();
 	static void loadCourseContentFromFile();
 	static void saveCourseContentToFile();
+
+
+
 };
 
 

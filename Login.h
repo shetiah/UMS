@@ -3,7 +3,7 @@
 #include"AddCourseForm.h"
 #include "Student.h"
 #include "messagebox.h"
-
+#include "welcomeForm.h"
  
 namespace UMS {
 
@@ -60,6 +60,7 @@ namespace UMS {
 	private: System::Windows::Forms::PictureBox^ pictureBox2;
 	private: System::Windows::Forms::Panel^ panel2;
 	private: System::Windows::Forms::PictureBox^ pictureBox1;
+	private: System::Windows::Forms::Button^ gobackbt;
 
 
 
@@ -108,6 +109,7 @@ namespace UMS {
 			this->pictureBox2 = (gcnew System::Windows::Forms::PictureBox());
 			this->panel2 = (gcnew System::Windows::Forms::Panel());
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
+			this->gobackbt = (gcnew System::Windows::Forms::Button());
 			this->panel1->SuspendLayout();
 			this->panel3->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox4))->BeginInit();
@@ -229,7 +231,7 @@ namespace UMS {
 			this->panel1->Controls->Add(this->panel3);
 			this->panel1->Controls->Add(this->panel2);
 			this->panel1->Location = System::Drawing::Point(16, 15);
-			this->panel1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->panel1->Margin = System::Windows::Forms::Padding(4);
 			this->panel1->Name = L"panel1";
 			this->panel1->Size = System::Drawing::Size(1295, 620);
 			this->panel1->TabIndex = 7;
@@ -250,7 +252,7 @@ namespace UMS {
 			this->panel3->Controls->Add(this->label1);
 			this->panel3->Dock = System::Windows::Forms::DockStyle::Right;
 			this->panel3->Location = System::Drawing::Point(624, 0);
-			this->panel3->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->panel3->Margin = System::Windows::Forms::Padding(4);
 			this->panel3->Name = L"panel3";
 			this->panel3->Size = System::Drawing::Size(671, 620);
 			this->panel3->TabIndex = 1;
@@ -269,6 +271,7 @@ namespace UMS {
 			this->label3->Size = System::Drawing::Size(111, 46);
 			this->label3->TabIndex = 10;
 			this->label3->Text = L"LogIn";
+			this->label3->Click += gcnew System::EventHandler(this, &Login::label3_Click);
 			// 
 			// label2
 			// 
@@ -286,7 +289,7 @@ namespace UMS {
 			// 
 			this->pictureBox4->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox4.Image")));
 			this->pictureBox4->Location = System::Drawing::Point(540, 331);
-			this->pictureBox4->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->pictureBox4->Margin = System::Windows::Forms::Padding(4);
 			this->pictureBox4->Name = L"pictureBox4";
 			this->pictureBox4->Size = System::Drawing::Size(48, 36);
 			this->pictureBox4->SizeMode = System::Windows::Forms::PictureBoxSizeMode::CenterImage;
@@ -297,7 +300,7 @@ namespace UMS {
 			// 
 			this->pictureBox3->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox3.Image")));
 			this->pictureBox3->Location = System::Drawing::Point(540, 217);
-			this->pictureBox3->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->pictureBox3->Margin = System::Windows::Forms::Padding(4);
 			this->pictureBox3->Name = L"pictureBox3";
 			this->pictureBox3->Size = System::Drawing::Size(48, 36);
 			this->pictureBox3->SizeMode = System::Windows::Forms::PictureBoxSizeMode::CenterImage;
@@ -309,7 +312,7 @@ namespace UMS {
 			this->panel4->Controls->Add(this->pictureBox2);
 			this->panel4->Dock = System::Windows::Forms::DockStyle::Top;
 			this->panel4->Location = System::Drawing::Point(0, 0);
-			this->panel4->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->panel4->Margin = System::Windows::Forms::Padding(4);
 			this->panel4->Name = L"panel4";
 			this->panel4->Size = System::Drawing::Size(671, 36);
 			this->panel4->TabIndex = 6;
@@ -320,7 +323,7 @@ namespace UMS {
 			this->pictureBox2->Dock = System::Windows::Forms::DockStyle::Right;
 			this->pictureBox2->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox2.Image")));
 			this->pictureBox2->Location = System::Drawing::Point(620, 0);
-			this->pictureBox2->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->pictureBox2->Margin = System::Windows::Forms::Padding(4);
 			this->pictureBox2->Name = L"pictureBox2";
 			this->pictureBox2->Size = System::Drawing::Size(51, 36);
 			this->pictureBox2->SizeMode = System::Windows::Forms::PictureBoxSizeMode::CenterImage;
@@ -330,10 +333,11 @@ namespace UMS {
 			// 
 			// panel2
 			// 
+			this->panel2->Controls->Add(this->gobackbt);
 			this->panel2->Controls->Add(this->pictureBox1);
 			this->panel2->Dock = System::Windows::Forms::DockStyle::Left;
 			this->panel2->Location = System::Drawing::Point(0, 0);
-			this->panel2->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->panel2->Margin = System::Windows::Forms::Padding(4);
 			this->panel2->Name = L"panel2";
 			this->panel2->Size = System::Drawing::Size(624, 620);
 			this->panel2->TabIndex = 0;
@@ -343,13 +347,26 @@ namespace UMS {
 			this->pictureBox1->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
 			this->pictureBox1->Location = System::Drawing::Point(0, 0);
-			this->pictureBox1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->pictureBox1->Margin = System::Windows::Forms::Padding(4);
 			this->pictureBox1->Name = L"pictureBox1";
 			this->pictureBox1->Size = System::Drawing::Size(624, 620);
 			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->pictureBox1->TabIndex = 0;
 			this->pictureBox1->TabStop = false;
 			this->pictureBox1->Click += gcnew System::EventHandler(this, &Login::pictureBox1_Click);
+			// 
+			// gobackbt
+			// 
+			this->gobackbt->BackColor = System::Drawing::Color::DeepSkyBlue;
+			this->gobackbt->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)),
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->gobackbt->Location = System::Drawing::Point(3, 3);
+			this->gobackbt->Name = L"gobackbt";
+			this->gobackbt->Size = System::Drawing::Size(175, 74);
+			this->gobackbt->TabIndex = 1;
+			this->gobackbt->Text = L"<-Go back\r\n";
+			this->gobackbt->UseVisualStyleBackColor = false;
+			this->gobackbt->Click += gcnew System::EventHandler(this, &Login::gobackbt_Click);
 			// 
 			// Login
 			// 
@@ -380,33 +397,12 @@ namespace UMS {
 #pragma endregion
     public: Student^ student = nullptr;
     public: static messagebox^ m;
-    public: bool switchToRegister = false;
+    public:static  bool gobacktoWelcomeForm = false;
     public:static bool loggedIn = false;
     public:static bool validateStudentData(Student^ stud);
     public:static void studentLogin(Student^ stud);
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-	    //getting data
-		String^ email = this->tbemail->Text;
-		String^ password = this->tbpassword->Text;
-		if (email->Length == 0 || password->Length == 0) {
-			/*MessageBox::Show("Please enter email and password",
-				"Email or Password Empty", MessageBoxButtons::OK);
-			return;*/
-			m = gcnew messagebox;
-			m->Show();
-
-		}
-		else {
-			student = gcnew Student;
-			//temporary:
-			student->setEmail(email);
-			student->setPassword(password);
-
-            UMS::Login::studentLogin(student);
-			if (UMS::Login::loggedIn)
-				this->Close();
-			
-		}
+		//Login bt
 
 
 		
@@ -415,6 +411,27 @@ namespace UMS {
 
 
 	}
+	private: System::Void gobackbt_Click(System::Object^ sender, System::EventArgs^ e) {
+		//go back to welcomeForm button
+
+
+
+		
+		//go back to welcome form 
+		this->gobacktoWelcomeForm = true;
+		UMS::welcomeForm welcForm;
+		welcForm.toStudentLogin = false;
+
+		
+		//close the login form
+		this->Close();
+	}
+	private: System::Void Cancelbt_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->Close();
+	}
+
+
+
 
 
 	private: System::Void Login_Load(System::Object^ sender, System::EventArgs^ e) {
@@ -424,12 +441,9 @@ namespace UMS {
 	private: System::Void linkLabel1_LinkClicked(System::Object^ sender, System::Windows::Forms::LinkLabelLinkClickedEventArgs^ e) {
 		//register(sign up)
 
-		this->switchToRegister = true;
-		this->Close();
+	
 	}
-	private: System::Void Cancelbt_Click(System::Object^ sender, System::EventArgs^ e) {
-		this->Close();
-	}
+	
 
 private: System::Void pictureBox2_click(System::Object^ sender, System::EventArgs^ e) {
 	this->Close();
@@ -438,5 +452,8 @@ private: System::Void panel3_Paint(System::Object^ sender, System::Windows::Form
 }
 private: System::Void pictureBox1_Click(System::Object^ sender, System::EventArgs^ e) {
 }
+private: System::Void label3_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+
 };
 }

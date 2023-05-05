@@ -123,6 +123,7 @@
   <ItemGroup>
     <ClCompile Include="AddCourseForm.cpp" />
     <ClCompile Include="Admin.cpp" />
+    <ClCompile Include="AdminForm.cpp" />
     <ClCompile Include="Course.cpp" />
     <ClCompile Include="Login.cpp" />
     <ClCompile Include="messagebox.cpp" />
@@ -131,12 +132,16 @@
     <ClCompile Include="Student.cpp" />
     <ClCompile Include="StudentDataForm.cpp" />
     <ClCompile Include="StudentPageForm.cpp" />
+    <ClCompile Include="welcomeForm.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AddCourseForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="Admin.h" />
+    <ClInclude Include="AdminForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="Course.h" />
     <ClInclude Include="Login.h">
       <FileType>CppForm</FileType>
@@ -154,10 +159,16 @@
     <ClInclude Include="StudentPageForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="welcomeForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="AddCourseForm.resx">
       <DependentUpon>AddCourseForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForm.resx">
+      <DependentUpon>AdminForm.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.h</DependentUpon>
@@ -173,6 +184,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="StudentPageForm.resx">
       <DependentUpon>StudentPageForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="welcomeForm.resx">
+      <DependentUpon>welcomeForm.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

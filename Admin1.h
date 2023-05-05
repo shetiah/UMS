@@ -57,7 +57,7 @@ namespace UMS {
 		System::ComponentModel::Container ^components;
 
 #pragma region Windows Form Designer generated code
-		void viewAllStudinaCourse(Course^ course) {
+		/*void viewAllStudinaCourse(Course^ course) {
 			this->studentsList->DataSource = course->allStudentInProgress;
 		}
 		
@@ -68,7 +68,7 @@ namespace UMS {
 		void viewAllStudInACourse(Student^ student) {
 			student->getCoursesINProgress();
 		}
-
+*/
 
 
 

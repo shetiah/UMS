@@ -45,6 +45,12 @@
     <ClCompile Include="StudentPageForm.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="AdminForm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="welcomeForm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Course.h">
@@ -72,6 +78,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="StudentPageForm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AdminForm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="welcomeForm.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

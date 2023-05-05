@@ -58,4 +58,16 @@ void Admin::createStudent(String^ name, String^ password,int academicYear,int ma
 	//add the student to the list
 	Student::allStudents->Add(s);
 }
+void Admin::addCourse(Course^ course)
+{
+	Course::allCourses->Add(course);
+}
+void Admin::addCourseGrade(Course^ course, String^ grade,Student^ student) {
+Dictionary< Course^, String^ > ^temp= student->getEachCourseGrade();
+temp->Add(course, grade);
+student->setEachCourseGrade(temp);
+}
+void Admin::addCoursePreReq(Course^ course, List<String^>^ preList) {
+	Course::preRequires->Add(course->getName(), preList);
+}
 

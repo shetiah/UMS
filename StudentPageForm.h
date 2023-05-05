@@ -28,15 +28,16 @@ namespace UMS {
 	/// </summary>
 	public ref class StudentPageForm : public System::Windows::Forms::Form
 	{
+	private:Student^ stud;
 	public:
 		StudentPageForm(Student^ stud)
 		{
+			this->stud = stud;
 			InitializeComponent();
 			//
 			//TODO: Add the constructor code here
 			//
 
-			viewAvCourses(stud);
 		}
 
 	protected:
@@ -61,15 +62,25 @@ namespace UMS {
 
 #pragma region Windows Form Designer generated code
 	public:
-     void viewAvCourses(Student^ stud)
-	{
-		if (stud->CoursesAV() == nullptr)
-			this->label1->Text = "no";
-		else {
-			List<String^>^ Av = stud->CoursesAV();
-			this->label1->Text = Av[0];
+
+		void viewAvCourses()
+		{
+			if (this->stud->CoursesAV() == nullptr)
+				this->label1->Text = "no";
+			else {
+				List<String^>^ Av = this->stud->CoursesAV();
+				this->label1->Text = Av[0];
+			}
 		}
-	}
+		void registerCourse(Course^ course)
+		{
+
+			List<String^>^ temp = this->stud->getCoursesINProgress();
+			temp->Add(course->getName());
+			stud->setCoursesINProgress(temp);
+			course->allStudentInProgress->Add(this->stud->getID());
+		
+		}
 		/// <summary>
 		/// Required method for Designer support - do not modify
 		/// the contents of this method with the code editor.

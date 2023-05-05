@@ -30,6 +30,7 @@ public ref class Student
 	List<String^>^ FinishedCourses;
 	List<float>^ coursesGPA;
 	List<String^>^ CoursesInProgress;
+	Dictionary<Course^, String^>^ eachCourseGrade;
 public :
 
 	//static variable to hold all the students from the students textFile 
@@ -48,6 +49,8 @@ public :
 	void setMaxHoursAllowed(int MaxHoursAllowed);
 	void setGPA(float GPA);
 	void setCoursesGPA(List<float>^ coursesGPA);
+	void setEachCourseGrade(Dictionary<Course^, String^>^ eachCourseGrade);
+
 
 	String^ getName();
 	String^ getEmail();
@@ -59,7 +62,7 @@ public :
 	List<String^>^ getFinishedCourses();
 	List<float>^ getCoursesGPA();
 	float getGPA();
-	 
+	Dictionary<Course^, String^>^ getEachCourseGrade();
 
 
 
@@ -68,6 +71,9 @@ public :
 
 	bool validateIfCourseCanBeTaken(Course^ course);
 	void registerForCourse(Course^ course);
+	
+	
+
 
 	List<Course^>^ FilterCourses(String^ filterOption);
 

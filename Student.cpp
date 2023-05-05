@@ -70,6 +70,11 @@ void Student::setCoursesGPA(List<float>^ coursesGPA)
 	this->coursesGPA = coursesGPA;
 }
 
+void Student::setEachCourseGrade(Dictionary<Course^, String^>^ eachCourseGrade)
+{
+	this->eachCourseGrade = eachCourseGrade;
+}
+
 void Student::setMaxHoursAllowed(int MaxHoursAllowed)
 {
 	this->MaxHoursAllowed = MaxHoursAllowed;
@@ -127,6 +132,11 @@ int Student::getMaxHoursAllowed()
 float Student::getGPA()
 {
 	return GPA;
+}
+
+Dictionary<Course^, String^>^ Student::getEachCourseGrade()
+{
+	return eachCourseGrade;
 }
 
 List<String^>^ Student::CoursesAV()
@@ -227,54 +237,50 @@ List<Course^>^ Student::FilterCourses(String^ filterOption) //farah
 			}
 		}
 	}
+	else if (filterOption == "CoursesInProgress") {
+		// If the user has not selected a filter, return his courses
+		for each (Course ^ course in Course::allCourses)
+		{
+			if (CoursesInProgress->Contains(course->getName()))
+			{
+				filteredCourses->Add(course);
+			}
+
+
+		}
+	}
 	else 
 	{
-		// If the user has not selected a filter, return the full list of courses
-		filteredCourses = Course::allCourses;
+		// If the user has not selected a filter, return his courses
+		for each (Course ^ course in Course::allCourses)
+		{
+			if (CoursesInProgress->Contains(course->getName()))
+			{
+				filteredCourses->Add(course);
+			}
+
+
+		}
 	}
 
 
 	return filteredCourses;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-bool Student::validateIfCourseCanBeTaken(Course^ course)
+void loadStudentCourseInProgress(Course^ course, List<int>^ allStudentInProgress)
 {
-	//to-do:
-	// 
-	//check Student::CoursesAV() for the required course
-	return true;
-}
 
-void Student::registerForCourse(Course^ course)
-{
-	//to-do :
-	//1-use Student::validateIfCourseCanBeTaken 
-	//2- handle if it's false
-	//3-if true then put it in CoursesInProgress 
+	for each (Course ^ course in Course::allCourses)
+	{
+		for each (Student ^ student in Student::allStudents)
+		{
+			for each (String ^ s in student->getCoursesINProgress())
+			{
+				if (s == course->getName())
+					allStudentInProgress->Add(student->getID());
+			}
+		}
+	}
 }
 
 
@@ -489,5 +495,32 @@ void Student::loadStudentDataFromFile() {
 }
 
 
+bool Student::validateIfCourseCanBeTaken(Course^ course)
+{
+	//to-do:
+	// 
+	//check Student::CoursesAV() for the required course
+	List<String^>^ AvCourses = CoursesAV();
+	if (AvCourses->Contains(course->getName()))
+	{
+		return true;
+	}
+}
 
+void Student::registerForCourse(Course^ course)
+{
+	//to-do :
+	//1-use Student::validateIfCourseCanBeTaken 
+	//2- handle if it's false
+	//3-if true then put it in CoursesInProgress 
+	if (!validateIfCourseCanBeTaken(course))
+	{
+
+	}
+	else
+	{
+		CoursesInProgress->Add(course->getName());
+	}
+
+}
 

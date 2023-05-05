@@ -7,6 +7,8 @@
 #include "StudentDataForm.h"
 #include "Admin.h"
 #include "StudentPageForm.h"
+#include "welcomeForm.h"
+#include "AdminForm.h"
 
 using namespace System;
 using namespace std;
@@ -34,7 +36,7 @@ int main()
 	Course::loadCourseContentFromFile();
 	Course::loadCourseHoursFromFile();
 	Student::loadStudentDataFromFile();
-	
+
 	//Course::saveCourseContentToFile();
 	////Course::saveCourseDataToFile();
 	////Course::saveCourseHoursToFile();
@@ -43,67 +45,96 @@ int main()
 	Application::EnableVisualStyles();
 	Application::SetCompatibleTextRenderingDefault(false);
 
-	////Application::Run(gcnew UMS::AddCourseForm());
-	Application::Run(gcnew UMS::StudentDataForm);
 
-	/*	while (true)
+
+
+	//Application::Run(gcnew UMS::AddCourseForm());
+
+
+
+
+
+
+
+
+
+
+		while (true)
 		{
-			UMS::Login logform;
-			logform.ShowDialog();
-			if (logform.switchToRegister) {
+			UMS::welcomeForm welcForm;
+			welcForm.ShowDialog();
+			if (welcForm.toadminLogin) {
 
-				UMS::SignUp signForm;
-				signForm.ShowDialog();
+				UMS::AdminForm adminForm;
+				adminForm.ShowDialog();
 
-				if (signForm.switchToLogin)
-				{
+				if (adminForm.gobacktoWelcomeForm)
 					continue;
+				
+				else 
+					break;
+				
+
+			}
+			else if (welcForm.toStudentLogin)
+			{
+				UMS::Login StudentLoginForm;
+				StudentLoginForm.ShowDialog();
+
+				if (StudentLoginForm.gobacktoWelcomeForm)
+					continue;
+				
+				else 
+					break;
+				
+			}
+			else
+				break;
+			
+
+		}	
+
+
+
+
+
+
+
+
+		/*	while (true)
+			{
+				UMS::Login logform;
+				logform.ShowDialog();
+				if (logform.switchToRegister) {
+
+					UMS::SignUp signForm;
+					signForm.ShowDialog();
+
+					if (signForm.switchToLogin)
+					{
+						continue;
+					}
+					else {
+						stud = signForm.student;
+						break;
+					}
 				}
-				else {
-					stud = signForm.student;
+				else
+				{
+					stud = logform.student;
 					break;
 				}
-			}
-			else
-			{
-				stud = logform.student;
-				break;
-			}
 
-		}	*/
-	while (true)
-	{
-		UMS::Login logform;
-		logform.ShowDialog();
-		if (UMS::Login::loggedIn) {
-
-			stud = logform.student;
-
-			UMS::StudentPageForm studForm(stud);
-			studForm.ShowDialog();
-
-			if (studForm.loggedOut)
-				continue;
-			else
-				break;
-		}
+			}	*/
 
 
-		else
-			break;
 
 
-	}
-	//if (stud != nullptr) {
-	//	UMS::StudentDataForm StudForm(stud);/*
-	//	Application::Run(% StudForm);*/
-	//	StudForm.ShowDialog();
-	//}
-	//else {
-	//	MessageBox::Show("Authentication Canceled", "Source.cpp", MessageBoxButtons::OK);
-	//}
-	/*Application::Run(gcnew UMS::AddCourseForm());
-	Application::Run(gcnew UMS::SignUp());
-	Application::Run(gcnew UMS::Login());*/
+
+
+
+
+
+
 	return 0;
 }
