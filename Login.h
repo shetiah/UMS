@@ -397,8 +397,8 @@ namespace UMS {
 #pragma endregion
     public: Student^ student = nullptr;
     public: static messagebox^ m;
-    public:static  bool gobacktoWelcomeForm = false;
-    public:static bool loggedIn = false;
+    public:  bool gobacktoWelcomeForm = false;
+    public: bool loggedIn = false;
     public:static bool validateStudentData(Student^ stud);
     public:static void studentLogin(Student^ stud);
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {

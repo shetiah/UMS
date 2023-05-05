@@ -128,7 +128,7 @@ namespace UMS {
 		}
 #pragma endregion
 
-	public: static bool gobacktoWelcomeForm = false;
+	public:  bool gobacktoWelcomeForm = false;
 
 	private: System::Void gobackbt_Click(System::Object^ sender, System::EventArgs^ e) {
 		

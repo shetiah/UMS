@@ -115,12 +115,13 @@ namespace UMS {
 		}
 #pragma endregion
 
-	public:static bool loggedOut = false;
+	public: bool loggedOut = false;
 	private: System::Void StudentPageForm_Load(System::Object^ sender, System::EventArgs^ e) {
 	}
 	private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->loggedOut = true;
-		UMS::Login::loggedIn = false;
+		UMS::Login loginform;
+			loginform.loggedIn= false;
 		this->Close();
 
 	}

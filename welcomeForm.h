@@ -101,8 +101,8 @@ namespace UMS {
 
 		}
 #pragma endregion
-	public: static bool toStudentLogin = false;
-	public: static bool toadminLogin = false;
+	public:  bool toStudentLogin = false;
+	public:  bool toadminLogin = false;
 
 	private: System::Void studentbt_Click(System::Object^ sender, System::EventArgs^ e) {
 		//go to student login form
