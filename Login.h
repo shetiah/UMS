@@ -395,7 +395,6 @@ namespace UMS {
 			m = gcnew messagebox;
 			m->Show();
 
-
 		}
 		else {
 			student = gcnew Student;
@@ -425,7 +424,7 @@ namespace UMS {
 	private: System::Void linkLabel1_LinkClicked(System::Object^ sender, System::Windows::Forms::LinkLabelLinkClickedEventArgs^ e) {
 		//register(sign up)
 
-		//this->switchToRegister = true;
+		this->switchToRegister = true;
 		this->Close();
 	}
 	private: System::Void Cancelbt_Click(System::Object^ sender, System::EventArgs^ e) {

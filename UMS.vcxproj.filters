@@ -45,9 +45,6 @@
     <ClCompile Include="StudentPageForm.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Admin1.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Course.h">
@@ -75,9 +72,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="StudentPageForm.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Admin1.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

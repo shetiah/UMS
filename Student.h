@@ -67,7 +67,7 @@ public :
 	List<String^>^ CoursesAV();
 
 	bool validateIfCourseCanBeTaken(Course^ course);
-	bool registerForCourse(Course^ course);
+	void registerForCourse(Course^ course);
 
 	List<Course^>^ FilterCourses(String^ filterOption);
 

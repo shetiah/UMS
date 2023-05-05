@@ -123,7 +123,6 @@
   <ItemGroup>
     <ClCompile Include="AddCourseForm.cpp" />
     <ClCompile Include="Admin.cpp" />
-    <ClCompile Include="Admin1.cpp" />
     <ClCompile Include="Course.cpp" />
     <ClCompile Include="Login.cpp" />
     <ClCompile Include="messagebox.cpp" />
@@ -138,9 +137,6 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="Admin.h" />
-    <ClInclude Include="Admin1.h">
-      <FileType>CppForm</FileType>
-    </ClInclude>
     <ClInclude Include="Course.h" />
     <ClInclude Include="Login.h">
       <FileType>CppForm</FileType>
@@ -162,9 +158,6 @@
   <ItemGroup>
     <EmbeddedResource Include="AddCourseForm.resx">
       <DependentUpon>AddCourseForm.h</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Admin1.resx">
-      <DependentUpon>Admin1.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.h</DependentUpon>

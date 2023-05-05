@@ -20,7 +20,4 @@ public:
 	
 	void editCourseData(Course^ c, String^ name, String^ code, String^ instructor, int maxNumberOfStudents, int hours);
 	static void createStudent(String^ name, String^ password, int academicYear, int maxHoursAllowed, float GPA, List<String^>^ finishedCourses, List<String^>^ coursesInProgress, List<float>^ coursesGPA);
-	static void addCourse(Course^ course);
-	static void addCourseGrade(Course^ course,String ^ grade);
-	static void addCoursePreReq(Course^ course,List<String^>^ preList);
 };
