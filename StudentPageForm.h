@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include "Student.h"
 #include "Login.h"
 #include "Admin.h"
@@ -7,12 +7,7 @@
 #include<iostream>
 //
 //inline void viewAvCourses(Student^ stud);
-inline void filter();
-inline void viewDetailsOfaCourse();
-inline void viewAllCoursesInProgress();
-inline void viewEveryCourseGrade();
-inline void viewCGPA();
-inline void StudentEditDAta();
+
 
 namespace UMS {
 
@@ -81,6 +76,30 @@ namespace UMS {
 			course->allStudentInProgress->Add(this->stud->getID());
 		
 		}
+	
+		
+		
+		/*● Marina : ->*/
+
+
+		void viewAllHisCourses() {/*
+			6. View all his / her courses.
+				- just view the courses name, it's hours , code and instructor*/
+			stud->getCoursesINProgress();
+			
+		}
+		void viewAllCoursesGradeCGpa() {
+			/*7. View his / her courses grades and cumulative GPA.
+				- view each course name, grade and finaly CGPA*/
+			
+			
+		}
+
+
+
+
+
+
 		/// <summary>
 		/// Required method for Designer support - do not modify
 		/// the contents of this method with the code editor.
