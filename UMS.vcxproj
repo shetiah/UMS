@@ -124,6 +124,7 @@
     <ClCompile Include="AddCourseForm.cpp" />
     <ClCompile Include="Admin.cpp" />
     <ClCompile Include="AdminForm.cpp" />
+    <ClCompile Include="adminHome.cpp" />
     <ClCompile Include="Course.cpp" />
     <ClCompile Include="Login.cpp" />
     <ClCompile Include="messagebox.cpp" />
@@ -132,6 +133,7 @@
     <ClCompile Include="Student.cpp" />
     <ClCompile Include="StudentDataForm.cpp" />
     <ClCompile Include="StudentPageForm.cpp" />
+    <ClCompile Include="testtest.cpp" />
     <ClCompile Include="welcomeForm.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -140,6 +142,9 @@
     </ClInclude>
     <ClInclude Include="Admin.h" />
     <ClInclude Include="AdminForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="adminHome.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="Course.h" />
@@ -159,6 +164,9 @@
     <ClInclude Include="StudentPageForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="testtest.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="welcomeForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -169,6 +177,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdminForm.resx">
       <DependentUpon>AdminForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adminHome.resx">
+      <DependentUpon>adminHome.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.aa-DJ.resx">
+      <DependentUpon>Login.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.aa-ER.resx">
+      <DependentUpon>Login.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.aa.resx">
+      <DependentUpon>Login.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.h</DependentUpon>
@@ -184,6 +204,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="StudentPageForm.resx">
       <DependentUpon>StudentPageForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="testtest.resx">
+      <DependentUpon>testtest.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="welcomeForm.resx">
       <DependentUpon>welcomeForm.h</DependentUpon>

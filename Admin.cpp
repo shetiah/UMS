@@ -70,4 +70,15 @@ student->setEachCourseGrade(temp);
 void Admin::addCoursePreReq(Course^ course, List<String^>^ preList) {
 	Course::preRequires->Add(course->getName(), preList);
 }
-
+void Admin::setNameAdmin(String^ name) {
+	this->name = name;
+}
+void Admin::setPasswordAdmin(String^ password) {
+	this->password = password;
+}
+String^ Admin::getNameAdmin() {
+	return name;
+}
+String^ Admin::getPasswordAdmin() {
+	return password;
+}

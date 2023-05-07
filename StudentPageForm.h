@@ -32,7 +32,6 @@ namespace UMS {
 			//
 			//TODO: Add the constructor code here
 			//
-
 		}
 
 	protected:
@@ -47,6 +46,7 @@ namespace UMS {
 			}
 		}
 	private: System::Windows::Forms::Label^ label1;
+	private: System::Windows::Forms::Button^ button1;
 	protected:
 
 	private:
@@ -78,7 +78,6 @@ namespace UMS {
 		}
 	
 		
-		
 		/*● Marina : ->*/
 
 
@@ -107,6 +106,7 @@ namespace UMS {
 		void InitializeComponent(void)
 		{
 			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
 			// label1
@@ -119,11 +119,22 @@ namespace UMS {
 			this->label1->Text = L"label1";
 			this->label1->Click += gcnew System::EventHandler(this, &StudentPageForm::label1_Click);
 			// 
+			// button1
+			// 
+			this->button1->Location = System::Drawing::Point(201, 127);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(58, 34);
+			this->button1->TabIndex = 1;
+			this->button1->Text = L"button1";
+			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &StudentPageForm::button1_Click);
+			// 
 			// StudentPageForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(282, 253);
+			this->Controls->Add(this->button1);
 			this->Controls->Add(this->label1);
 			this->Name = L"StudentPageForm";
 			this->Text = L"StudentPageForm";
@@ -135,14 +146,16 @@ namespace UMS {
 #pragma endregion
 
 	public: bool loggedOut = false;
+
 	private: System::Void StudentPageForm_Load(System::Object^ sender, System::EventArgs^ e) {
+
 	}
 	private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
-		this->loggedOut = true;
-		UMS::Login loginform;
-			loginform.loggedIn= false;
+	
+	}
+	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->Close();
 
 	}
-	};
+};
 }

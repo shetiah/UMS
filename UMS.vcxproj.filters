@@ -51,6 +51,12 @@
     <ClCompile Include="welcomeForm.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="testtest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="adminHome.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Course.h">
@@ -84,6 +90,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="welcomeForm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="testtest.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="adminHome.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

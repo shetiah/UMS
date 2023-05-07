@@ -9,6 +9,7 @@
 #include "StudentPageForm.h"
 #include "welcomeForm.h"
 #include "AdminForm.h"
+#include "adminHome.h"
 
 using namespace System;
 using namespace std;
@@ -63,27 +64,37 @@ int main()
 		{
 			UMS::welcomeForm welcForm;
 			welcForm.ShowDialog();
-			if (welcForm.toadminLogin) {
+
+			if (welcForm.toadmLogin) {
 
 				UMS::AdminForm adminForm;
 				adminForm.ShowDialog();
-
-				if (adminForm.gobacktoWelcomeForm)
+				if (welcForm.gobacktoWelc)
 					continue;
-				
-				else 
+				else if (welcForm.toadminHome)
+				{
+					UMS::adminHome adminpgForm(adminForm.admin);
+					adminpgForm.ShowDialog();
 					break;
-				
+				}
+				else
+					break;
+
 
 			}
-			else if (welcForm.toStudentLogin)
+			else if (welcForm.tostdLogin)
 			{
 				UMS::Login StudentLoginForm;
 				StudentLoginForm.ShowDialog();
 
-				if (StudentLoginForm.gobacktoWelcomeForm)
+				if (welcForm.gobacktoWelc)
 					continue;
-				
+				else if (welcForm.tostdHomeForm)
+				{
+					UMS::StudentPageForm studentPgForm(StudentLoginForm.student);
+					studentPgForm.ShowDialog();
+					break;
+				}
 				else 
 					break;
 				

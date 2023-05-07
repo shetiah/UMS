@@ -10,6 +10,11 @@ private:
 	String^ name = "admin";
 	String^ password = "admin";
 public:
+	void setNameAdmin(String^ name);
+	void setPasswordAdmin(String^ password);
+	String^ getNameAdmin();
+	String^ getPasswordAdmin();
+
 	//log in
 	//DONE === create student
 	//add course and enter course prerequisite
@@ -23,4 +28,5 @@ public:
 	static void addCourse(Course^ course);
 	static void addCourseGrade(Course^ course, String^ grade,Student^ student);
 	static void addCoursePreReq(Course^ course, List<String^>^ preList);
+	static List<Admin^>^ allAdmins;
 };
