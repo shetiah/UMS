@@ -1,6 +1,9 @@
 #include "Admin.h"
 #include "Course.h"
 #include <fstream>
+
+
+
 using namespace System;
 using namespace std;
 
@@ -70,6 +73,17 @@ student->setEachCourseGrade(temp);
 void Admin::addCoursePreReq(Course^ course, List<String^>^ preList) {
 	Course::preRequires->Add(course->getName(), preList);
 }
+
+Admin::Admin(String^name,String^ password)
+{
+		this->name = name;
+		this->password = password;	
+}
+
+Admin::Admin() {
+	name = "";
+	password = "";
+}
 void Admin::setNameAdmin(String^ name) {
 	this->name = name;
 }
@@ -81,4 +95,42 @@ String^ Admin::getNameAdmin() {
 }
 String^ Admin::getPasswordAdmin() {
 	return password;
+}
+
+void Admin::loadAdminDataFromFile()
+{
+	ifstream file;
+	file.open("AdminData.txt");
+	string name, password;
+	while (file >> name >> password)
+	{
+		String^ sysname = gcnew String(name.c_str());
+		String^ syspass = gcnew String(password.c_str());
+
+		Admin^ admin = gcnew Admin(sysname,syspass);
+		Admin::allAdmins->Add(admin);
+	}
+	file.close();
+}
+
+void Admin::saveAdminDataToFile()
+{
+	ofstream file;
+	file.open("AdminData.txt");
+	for each (auto it in Admin::allAdmins)
+	{
+
+		string name;
+		for each (wchar_t c in it->getNameAdmin())//convert from String^ to std::string
+		{
+			name += static_cast<char>(c);
+		}
+		string password;
+		for each (wchar_t c in it->getPasswordAdmin())//convert from String^ to std::string
+		{
+			password += static_cast<char>(c);
+		}
+		file << name << " " << password << endl;
+	}
+	file.close();
 }

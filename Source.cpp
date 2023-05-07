@@ -17,10 +17,7 @@ using namespace System::Windows::Forms;
 
 
 [STAThread]
-//to do:
-/*
-in the txt file: first element is the course name  - the list after it are the preRequirements of the course
-*/
+
 
 int main()
 {
@@ -30,18 +27,16 @@ int main()
 	Course::allCourses = gcnew List<Course^>();
 	Student^ stud = nullptr;
 	Student::allStudents = gcnew List<Student^>();
-
+	Admin::allAdmins = gcnew List<Admin^>();
 
 	//fncs
 	Course::loadCourseDataFromFile();
 	Course::loadCourseContentFromFile();
 	Course::loadCourseHoursFromFile();
 	Student::loadStudentDataFromFile();
+	Admin::loadAdminDataFromFile();
 
-	//Course::saveCourseContentToFile();
-	////Course::saveCourseDataToFile();
-	////Course::saveCourseHoursToFile();
-	//Student::saveStudentDataToFile();
+	
 	//
 	Application::EnableVisualStyles();
 	Application::SetCompatibleTextRenderingDefault(false);
