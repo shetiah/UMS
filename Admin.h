@@ -7,14 +7,28 @@ using namespace System;
 ref class Admin
 {
 private:
-	String^ name = "admin";
-	String^ password = "admin";
+	String^ name;
+	String^ password;
 public:
+	Admin();
+	Admin(String^ name, String^ password);
+
 	void setNameAdmin(String^ name);
 	void setPasswordAdmin(String^ password);
 	String^ getNameAdmin();
 	String^ getPasswordAdmin();
+	
+	static List<Admin^>^ allAdmins;
 
+	
+	void editCourseData(Course^ c, String^ name, String^ code, String^ instructor, int maxNumberOfStudents, int hours);
+	static void createStudent(String^ name, String^ password, int academicYear, int maxHoursAllowed, float GPA, List<String^>^ finishedCourses, List<String^>^ coursesInProgress, List<float>^ coursesGPA);
+	static void addCourse(Course^ course);
+	static void addCourseGrade(Course^ course, String^ grade,Student^ student);
+	static void addCoursePreReq(Course^ course, List<String^>^ preList);
+	static void loadAdminDataFromFile();
+	static void saveAdminDataToFile();
+	
 	//log in
 	//DONE === create student
 	//add course and enter course prerequisite
@@ -22,11 +36,4 @@ public:
 	//add course grade for each student
 	//view list of (finished - inProgress) courses for any student
 	//DONE ==== edit all course data
-	
-	void editCourseData(Course^ c, String^ name, String^ code, String^ instructor, int maxNumberOfStudents, int hours);
-	static void createStudent(String^ name, String^ password, int academicYear, int maxHoursAllowed, float GPA, List<String^>^ finishedCourses, List<String^>^ coursesInProgress, List<float>^ coursesGPA);
-	static void addCourse(Course^ course);
-	static void addCourseGrade(Course^ course, String^ grade,Student^ student);
-	static void addCoursePreReq(Course^ course, List<String^>^ preList);
-	static List<Admin^>^ allAdmins;
 };
