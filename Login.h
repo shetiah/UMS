@@ -247,6 +247,7 @@ namespace UMS {
 			this->LOGINbt->ForeColor = System::Drawing::Color::AliceBlue;
 			this->LOGINbt->Name = L"LOGINbt";
 			this->LOGINbt->UseVisualStyleBackColor = false;
+			this->LOGINbt->Click += gcnew System::EventHandler(this, &Login::LOGINbt_Click_1);
 			// 
 			// label3
 			// 
@@ -268,6 +269,7 @@ namespace UMS {
 			resources->ApplyResources(this->tbemail, L"tbemail");
 			this->tbemail->ForeColor = System::Drawing::SystemColors::GrayText;
 			this->tbemail->Name = L"tbemail";
+			this->tbemail->TextChanged += gcnew System::EventHandler(this, &Login::tbemail_TextChanged_1);
 			this->tbemail->Enter += gcnew System::EventHandler(this, &Login::tbemail_enter);
 			this->tbemail->Leave += gcnew System::EventHandler(this, &Login::tbemail_leave);
 			// 
@@ -334,7 +336,7 @@ namespace UMS {
     public: static messagebox^ m;
     public: bool loggedIn = false;
     public:static bool validateStudentData(Student^ stud);
-    public:static void studentLogin(Student^ stud);
+    public:static bool studentLogin(Student^ stud);
 
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 		//Login bt
@@ -394,13 +396,7 @@ private: System::Void label4_Click(System::Object^ sender, System::EventArgs^ e)
 private: System::Void panel3_Paint_1(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
 }
 private: System::Void LOGINbt_Click(System::Object^ sender, System::EventArgs^ e) {
-	//student = gcnew Student;
-	//student->setEmail(tbemail->Text);
-	//student->setPassword(tbpassword->Text);
-	//
-	//studentLogin(student);
-	//this->Close();
-
+	
 }
 private: System::Void tbemail_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 
@@ -473,6 +469,27 @@ private: System::Void tbpassword_leave(System::Object^ sender, System::EventArgs
 	if (tbpassword->Text == "")
 	{
 		tbpassword->Text = "Enter your password"; 
+		tbpassword->PasswordChar = NULL;
+		tbpassword->ForeColor = Color::Gray;
+	}
+}
+private: System::Void tbemail_TextChanged_1(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void LOGINbt_Click_1(System::Object^ sender, System::EventArgs^ e) {
+	student = gcnew Student;
+	student->setEmail(tbemail->Text);
+	student->setPassword(tbpassword->Text);
+	if (studentLogin(student))
+	{
+		this->Close();
+
+	}
+	else {
+
+		tbemail->Text = "Enter your email";
+		tbemail->ForeColor = Color::Gray;
+
+		tbpassword->Text = "Enter your password";
 		tbpassword->PasswordChar = NULL;
 		tbpassword->ForeColor = Color::Gray;
 	}

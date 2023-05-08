@@ -8,18 +8,20 @@ bool UMS::AdminForm::validatAdmintData(Admin^ admin)
 	return false;
 }
 
-void UMS::AdminForm::adminLogin(Admin^ admin)
-{/*
-	validatAdmintData(admin)*/
-	if (true)
+bool UMS::AdminForm::adminLogin(Admin^ admin)
+{
+	
+	if (validatAdmintData(admin))
 	{
 		welcomeForm::toadmLogin = false;
 		welcomeForm::toadminHome = true;
+		return true;
 	}
 	else
 	{
 		m = gcnew messagebox;
 		m->ShowDialog();
+		return false;
 	}
 }
 

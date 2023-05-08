@@ -43,19 +43,22 @@ namespace UMS {
 	private: System::Windows::Forms::Panel^ panel3;
 	protected:
 
-	private: System::Windows::Forms::Label^ label5;
+
 	private: System::Windows::Forms::Button^ Cancelbt;
 	private: System::Windows::Forms::Button^ LOGINbt;
 	private: System::Windows::Forms::Label^ label3;
 	private: System::Windows::Forms::PictureBox^ pictureBox4;
 	private: System::Windows::Forms::PictureBox^ pictureBox3;
 	private: System::Windows::Forms::Label^ lbemail;
-	private: System::Windows::Forms::TextBox^ tbemail;
-	private: System::Windows::Forms::TextBox^ tbpassword;
+
+
 	private: System::Windows::Forms::Label^ label1;
 	private: System::Windows::Forms::PictureBox^ pictureBox1;
 	private: System::Windows::Forms::PictureBox^ pictureBox2;
-	private: System::Windows::Forms::Label^ label2;
+	private: System::Windows::Forms::TextBox^ textBox1;
+	private: System::Windows::Forms::TextBox^ textBox2;
+	private: System::Windows::Forms::PictureBox^ pictureBox5;
+
 
 
 
@@ -230,38 +233,36 @@ namespace UMS {
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(AdminForm::typeid));
 			this->panel3 = (gcnew System::Windows::Forms::Panel());
 			this->pictureBox3 = (gcnew System::Windows::Forms::PictureBox());
-			this->label5 = (gcnew System::Windows::Forms::Label());
-			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->Cancelbt = (gcnew System::Windows::Forms::Button());
 			this->LOGINbt = (gcnew System::Windows::Forms::Button());
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->pictureBox4 = (gcnew System::Windows::Forms::PictureBox());
 			this->lbemail = (gcnew System::Windows::Forms::Label());
-			this->tbemail = (gcnew System::Windows::Forms::TextBox());
-			this->tbpassword = (gcnew System::Windows::Forms::TextBox());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->pictureBox2 = (gcnew System::Windows::Forms::PictureBox());
+			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
+			this->pictureBox5 = (gcnew System::Windows::Forms::PictureBox());
 			this->panel3->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox4))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox5))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// panel3
 			// 
 			this->panel3->Controls->Add(this->pictureBox3);
-			this->panel3->Controls->Add(this->label5);
-			this->panel3->Controls->Add(this->label2);
+			this->panel3->Controls->Add(this->textBox1);
 			this->panel3->Controls->Add(this->Cancelbt);
 			this->panel3->Controls->Add(this->LOGINbt);
 			this->panel3->Controls->Add(this->label3);
 			this->panel3->Controls->Add(this->pictureBox4);
 			this->panel3->Controls->Add(this->lbemail);
-			this->panel3->Controls->Add(this->tbemail);
-			this->panel3->Controls->Add(this->tbpassword);
 			this->panel3->Controls->Add(this->label1);
+			this->panel3->Controls->Add(this->textBox2);
 			this->panel3->Location = System::Drawing::Point(720, 118);
 			this->panel3->Margin = System::Windows::Forms::Padding(4);
 			this->panel3->Name = L"panel3";
@@ -273,7 +274,7 @@ namespace UMS {
 			// 
 			this->pictureBox3->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox3.Image")));
 			this->pictureBox3->ImeMode = System::Windows::Forms::ImeMode::NoControl;
-			this->pictureBox3->Location = System::Drawing::Point(518, 195);
+			this->pictureBox3->Location = System::Drawing::Point(512, 198);
 			this->pictureBox3->Margin = System::Windows::Forms::Padding(4);
 			this->pictureBox3->Name = L"pictureBox3";
 			this->pictureBox3->Size = System::Drawing::Size(59, 36);
@@ -281,31 +282,6 @@ namespace UMS {
 			this->pictureBox3->TabIndex = 7;
 			this->pictureBox3->TabStop = false;
 			this->pictureBox3->Click += gcnew System::EventHandler(this, &AdminForm::pictureBox3_Click);
-			// 
-			// label5
-			// 
-			this->label5->AutoSize = true;
-			this->label5->BackColor = System::Drawing::Color::Transparent;
-			this->label5->Font = (gcnew System::Drawing::Font(L"High Tower Text", 13.8F));
-			this->label5->ForeColor = System::Drawing::SystemColors::GrayText;
-			this->label5->Location = System::Drawing::Point(11, 200);
-			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(500, 27);
-			this->label5->TabIndex = 12;
-			this->label5->Text = L"Enter your name                                                       ";
-			this->label5->Click += gcnew System::EventHandler(this, &AdminForm::label5_Click);
-			// 
-			// label2
-			// 
-			this->label2->AutoSize = true;
-			this->label2->Font = (gcnew System::Drawing::Font(L"High Tower Text", 13.8F));
-			this->label2->ForeColor = System::Drawing::SystemColors::GrayText;
-			this->label2->Location = System::Drawing::Point(11, 318);
-			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(497, 27);
-			this->label2->TabIndex = 13;
-			this->label2->Text = L"Enter your password                                                ";
-			this->label2->Click += gcnew System::EventHandler(this, &AdminForm::label2_Click_1);
 			// 
 			// Cancelbt
 			// 
@@ -355,18 +331,18 @@ namespace UMS {
 			this->label3->Location = System::Drawing::Point(244, 86);
 			this->label3->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(111, 46);
+			this->label3->Size = System::Drawing::Size(110, 46);
 			this->label3->TabIndex = 10;
-			this->label3->Text = L"LogIn";
+			this->label3->Text = L"Login";
 			// 
 			// pictureBox4
 			// 
 			this->pictureBox4->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox4.Image")));
 			this->pictureBox4->ImeMode = System::Windows::Forms::ImeMode::NoControl;
-			this->pictureBox4->Location = System::Drawing::Point(518, 313);
+			this->pictureBox4->Location = System::Drawing::Point(512, 314);
 			this->pictureBox4->Margin = System::Windows::Forms::Padding(4);
 			this->pictureBox4->Name = L"pictureBox4";
-			this->pictureBox4->Size = System::Drawing::Size(59, 36);
+			this->pictureBox4->Size = System::Drawing::Size(65, 36);
 			this->pictureBox4->SizeMode = System::Windows::Forms::PictureBoxSizeMode::CenterImage;
 			this->pictureBox4->TabIndex = 8;
 			this->pictureBox4->TabStop = false;
@@ -384,41 +360,13 @@ namespace UMS {
 			this->lbemail->TabIndex = 2;
 			this->lbemail->Text = L"Name";
 			// 
-			// tbemail
-			// 
-			this->tbemail->Cursor = System::Windows::Forms::Cursors::IBeam;
-			this->tbemail->Font = (gcnew System::Drawing::Font(L"Segoe UI", 12));
-			this->tbemail->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(63)), static_cast<System::Int32>(static_cast<System::Byte>(61)),
-				static_cast<System::Int32>(static_cast<System::Byte>(86)));
-			this->tbemail->Location = System::Drawing::Point(11, 195);
-			this->tbemail->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
-			this->tbemail->Multiline = true;
-			this->tbemail->Name = L"tbemail";
-			this->tbemail->Size = System::Drawing::Size(568, 36);
-			this->tbemail->TabIndex = 4;
-			this->tbemail->TextChanged += gcnew System::EventHandler(this, &AdminForm::tbemail_TextChanged);
-			// 
-			// tbpassword
-			// 
-			this->tbpassword->Cursor = System::Windows::Forms::Cursors::IBeam;
-			this->tbpassword->Font = (gcnew System::Drawing::Font(L"Segoe UI", 12));
-			this->tbpassword->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(63)), static_cast<System::Int32>(static_cast<System::Byte>(61)),
-				static_cast<System::Int32>(static_cast<System::Byte>(86)));
-			this->tbpassword->Location = System::Drawing::Point(9, 313);
-			this->tbpassword->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
-			this->tbpassword->Multiline = true;
-			this->tbpassword->Name = L"tbpassword";
-			this->tbpassword->PasswordChar = '*';
-			this->tbpassword->Size = System::Drawing::Size(568, 36);
-			this->tbpassword->TabIndex = 5;
-			// 
 			// label1
 			// 
 			this->label1->Cursor = System::Windows::Forms::Cursors::Default;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Segoe UI", 12, System::Drawing::FontStyle::Bold));
 			this->label1->ForeColor = System::Drawing::Color::SteelBlue;
 			this->label1->ImeMode = System::Windows::Forms::ImeMode::NoControl;
-			this->label1->Location = System::Drawing::Point(4, 263);
+			this->label1->Location = System::Drawing::Point(5, 262);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(135, 38);
 			this->label1->TabIndex = 3;
@@ -450,6 +398,48 @@ namespace UMS {
 			this->pictureBox2->TabStop = false;
 			this->pictureBox2->Click += gcnew System::EventHandler(this, &AdminForm::pictureBox2_Click_1);
 			// 
+			// textBox1
+			// 
+			this->textBox1->Cursor = System::Windows::Forms::Cursors::IBeam;
+			this->textBox1->Font = (gcnew System::Drawing::Font(L"High Tower Text", 13.8F));
+			this->textBox1->ForeColor = System::Drawing::SystemColors::GrayText;
+			this->textBox1->Location = System::Drawing::Point(3, 198);
+			this->textBox1->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->textBox1->Multiline = true;
+			this->textBox1->Name = L"textBox1";
+			this->textBox1->Size = System::Drawing::Size(568, 36);
+			this->textBox1->TabIndex = 11;
+			this->textBox1->Text = L"Enter your name";
+			this->textBox1->TextChanged += gcnew System::EventHandler(this, &AdminForm::textBox1_TextChanged);
+			this->textBox1->Enter += gcnew System::EventHandler(this, &AdminForm::tbnameEnter);
+			this->textBox1->Leave += gcnew System::EventHandler(this, &AdminForm::tbname_leave);
+			// 
+			// textBox2
+			// 
+			this->textBox2->Cursor = System::Windows::Forms::Cursors::IBeam;
+			this->textBox2->Font = (gcnew System::Drawing::Font(L"High Tower Text", 13.8F));
+			this->textBox2->ForeColor = System::Drawing::SystemColors::GrayText;
+			this->textBox2->Location = System::Drawing::Point(9, 314);
+			this->textBox2->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->textBox2->Multiline = true;
+			this->textBox2->Name = L"textBox2";
+			this->textBox2->Size = System::Drawing::Size(568, 36);
+			this->textBox2->TabIndex = 12;
+			this->textBox2->Text = L"Enter your password";
+			this->textBox2->TextChanged += gcnew System::EventHandler(this, &AdminForm::textBox2_TextChanged);
+			this->textBox2->Enter += gcnew System::EventHandler(this, &AdminForm::tbpassword_enter);
+			this->textBox2->Leave += gcnew System::EventHandler(this, &AdminForm::tbpassword_leave);
+			// 
+			// pictureBox5
+			// 
+			this->pictureBox5->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox5.Image")));
+			this->pictureBox5->Location = System::Drawing::Point(101, 118);
+			this->pictureBox5->Name = L"pictureBox5";
+			this->pictureBox5->Size = System::Drawing::Size(601, 561);
+			this->pictureBox5->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+			this->pictureBox5->TabIndex = 5;
+			this->pictureBox5->TabStop = false;
+			// 
 			// AdminForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
@@ -458,6 +448,7 @@ namespace UMS {
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->ClientSize = System::Drawing::Size(1420, 800);
+			this->Controls->Add(this->pictureBox5);
 			this->Controls->Add(this->pictureBox2);
 			this->Controls->Add(this->pictureBox1);
 			this->Controls->Add(this->panel3);
@@ -475,13 +466,14 @@ namespace UMS {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox4))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox5))->EndInit();
 			this->ResumeLayout(false);
 
 		}
 #pragma endregion
 		
 	public:static inline bool validatAdmintData(Admin^ admin);
-	public:static inline void adminLogin(Admin^ admin);
+	public:static inline bool adminLogin(Admin^ admin);
 	public: Admin^ admin = nullptr;
 	public: static messagebox^ m;
 	private: System::Void pictureBox1_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -533,8 +525,22 @@ private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e
 private: System::Void LOGINbt_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void LOGINbt_Click_1(System::Object^ sender, System::EventArgs^ e) {
-	adminLogin(admin);
-	this->Close();
+	admin = gcnew Admin;
+	admin->setNameAdmin(textBox1->Text);
+	admin->setPasswordAdmin(textBox2->Text);
+    if (adminLogin(admin))
+	{
+		this->Close();
+	}
+	else {
+
+		textBox1->Text = "Enter your name";
+		textBox1->ForeColor = Color::Gray;
+
+		textBox2->Text = "Enter your password";
+		textBox2->PasswordChar = NULL;
+		textBox2->ForeColor = Color::Gray;
+	}
 }
 private: System::Void Cancelbt_Click(System::Object^ sender, System::EventArgs^ e) {
 	this->Close();
@@ -543,40 +549,28 @@ private: System::Void pictureBox2_Click_1(System::Object^ sender, System::EventA
 	this->Close();
 }
 private: System::Void tbemail_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-		this->label5->Hide();
-		this->tbemail->Focus();
-		if (this->tbemail->Text == "")
-			label5->Show();
-		this->tbemail->Focused;
-
-			this->label5->Hide();
+	
 }
 private: System::Void tbemail_GotFocus(System::Object^ sender, System::EventArgs^ e)
 {
-		this->label5->Hide();
-		if (this->tbemail->Text == "")
-			label5->Show();
+		
 }
 private: System::Void tbemail_LostFocus(System::Object^ sender, System::EventArgs^ e)
 {
-	this->label5->Show();
 	
 }
 
 private: System::Void label5_Click(System::Object^ sender, System::EventArgs^ e) {
-	this->label5->Hide();
-	this->tbemail->Focus();
+
 }
 private: System::Void label2_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void label2_Click_1(System::Object^ sender, System::EventArgs^ e) {
-	this->label2->Hide();
-	this->tbpassword->Focus();
+	
 }
 	
 private: System::Void pictureBox3_Click(System::Object^ sender, System::EventArgs^ e) {
-	this->label5->Hide();
-	this->tbemail->Focus();
+	
 }
 private: System::Void panel1_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
 
@@ -584,6 +578,40 @@ private: System::Void panel1_Paint(System::Object^ sender, System::Windows::Form
 private: System::Void pictureBox4_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void panel3_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
+}
+private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void textBox2_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void tbnameEnter(System::Object^ sender, System::EventArgs^ e) {
+	if (textBox1->Text == "Enter your name")
+	{
+		textBox1->Text = "";
+		textBox1->ForeColor = Color::Black;
+	}
+}
+private: System::Void tbname_leave(System::Object^ sender, System::EventArgs^ e) {
+	if (textBox1->Text == "")
+	{
+		textBox1->Text = "Enter your name";
+		textBox1->ForeColor = Color::Gray;
+	}
+}
+private: System::Void tbpassword_enter(System::Object^ sender, System::EventArgs^ e) {
+	if (textBox2->Text == "Enter your password")
+	{
+		textBox2->Text = "";
+		textBox2->ForeColor = Color::Black;
+		textBox2->PasswordChar = '*';
+	}
+}
+private: System::Void tbpassword_leave(System::Object^ sender, System::EventArgs^ e) {
+	if (textBox2->Text == "")
+	{
+		textBox2->Text = "Enter your password";
+		textBox2->PasswordChar = NULL;
+		textBox2->ForeColor = Color::Gray;
+	}
 }
 };
 }

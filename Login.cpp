@@ -16,19 +16,20 @@ bool UMS::Login::validateStudentData(Student^ student)
 		return true;
 	return false;
 }
- void UMS::Login::studentLogin(Student^ stud)
+ bool UMS::Login::studentLogin(Student^ stud)
  {
 	 if (validateStudentData(stud))
 	 {
 		 welcomeForm::tostdHomeForm = true;
 		 welcomeForm::tostdLogin = false;
 		 welcomeForm::gobacktoWelc = false;
-
+		 return true;
 		 
 	 }
 	 else {
 		 m = gcnew messagebox;
 		 m->ShowDialog();
+		 return false;
 	 }
  }
 
