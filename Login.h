@@ -27,7 +27,8 @@ namespace UMS {
 			//TODO: Add the constructor code here
 			//
 
-			this->CenterToScreen();
+			this->CenterToScreen();/*
+			this->axWindowsMediaPlayer1->URL = "U:\\UMS\\images\\rep.mp4";*/
 		}
 
 	protected:
@@ -41,22 +42,46 @@ namespace UMS {
 				delete components;
 			}
 		}
-
-
-	private: System::Windows::Forms::Label^ label6;
-	private: System::Windows::Forms::TextBox^ tbpassword;
-	private: System::Windows::Forms::TextBox^ tbemail;
-	private: System::Windows::Forms::Label^ label2;
-	private: System::Windows::Forms::Button^ LOGINbt;
-	private: System::Windows::Forms::Panel^ panel4;
-	private: System::Windows::Forms::PictureBox^ pictureBox2;
-	private: System::Windows::Forms::Button^ Cancelbt;
-	private: System::Windows::Forms::PictureBox^ pictureBox3;
-	private: System::Windows::Forms::PictureBox^ pictureBox4;
-	private: System::Windows::Forms::Label^ label1;
-
-
+	private: System::Windows::Forms::PictureBox^ pictureBox1;
 	private: System::Windows::Forms::Panel^ panel3;
+	private: System::Windows::Forms::PictureBox^ pictureBox3;
+
+
+	private: System::Windows::Forms::Button^ Cancelbt;
+	private: System::Windows::Forms::Button^ LOGINbt;
+	private: System::Windows::Forms::Label^ label3;
+
+	private: System::Windows::Forms::Label^ lbemail;
+	private: System::Windows::Forms::TextBox^ tbemail;
+	private: System::Windows::Forms::TextBox^ tbpassword;
+	private: System::Windows::Forms::Label^ label1;
+	private: System::Windows::Forms::PictureBox^ pictureBox2;
+	private: System::Windows::Forms::PictureBox^ pictureBox5;
+	private: System::Windows::Forms::PictureBox^ pictureBox6;
+	protected:
+
+
+
+
+	protected:
+
+	protected:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -144,56 +169,73 @@ namespace UMS {
 		void InitializeComponent(void)
 		{
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(Login::typeid));
-			this->label6 = (gcnew System::Windows::Forms::Label());
-			this->tbpassword = (gcnew System::Windows::Forms::TextBox());
-			this->tbemail = (gcnew System::Windows::Forms::TextBox());
-			this->label2 = (gcnew System::Windows::Forms::Label());
-			this->LOGINbt = (gcnew System::Windows::Forms::Button());
-			this->panel4 = (gcnew System::Windows::Forms::Panel());
-			this->pictureBox2 = (gcnew System::Windows::Forms::PictureBox());
-			this->Cancelbt = (gcnew System::Windows::Forms::Button());
-			this->pictureBox3 = (gcnew System::Windows::Forms::PictureBox());
-			this->pictureBox4 = (gcnew System::Windows::Forms::PictureBox());
-			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->panel3 = (gcnew System::Windows::Forms::Panel());
-			this->panel4->SuspendLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->BeginInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox4))->BeginInit();
+			this->pictureBox6 = (gcnew System::Windows::Forms::PictureBox());
+			this->pictureBox3 = (gcnew System::Windows::Forms::PictureBox());
+			this->Cancelbt = (gcnew System::Windows::Forms::Button());
+			this->LOGINbt = (gcnew System::Windows::Forms::Button());
+			this->label3 = (gcnew System::Windows::Forms::Label());
+			this->lbemail = (gcnew System::Windows::Forms::Label());
+			this->tbemail = (gcnew System::Windows::Forms::TextBox());
+			this->tbpassword = (gcnew System::Windows::Forms::TextBox());
+			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->pictureBox2 = (gcnew System::Windows::Forms::PictureBox());
+			this->pictureBox5 = (gcnew System::Windows::Forms::PictureBox());
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->panel3->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox6))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox5))->BeginInit();
 			this->SuspendLayout();
 			// 
-			// label6
+			// pictureBox1
 			// 
-			this->label6->Cursor = System::Windows::Forms::Cursors::Default;
-			resources->ApplyResources(this->label6, L"label6");
-			this->label6->ForeColor = System::Drawing::Color::SteelBlue;
-			this->label6->Name = L"label6";
+			resources->ApplyResources(this->pictureBox1, L"pictureBox1");
+			this->pictureBox1->Name = L"pictureBox1";
+			this->pictureBox1->TabStop = false;
 			// 
-			// tbpassword
+			// panel3
 			// 
-			this->tbpassword->Cursor = System::Windows::Forms::Cursors::IBeam;
-			resources->ApplyResources(this->tbpassword, L"tbpassword");
-			this->tbpassword->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(63)), static_cast<System::Int32>(static_cast<System::Byte>(61)),
-				static_cast<System::Int32>(static_cast<System::Byte>(86)));
-			this->tbpassword->Name = L"tbpassword";
-			this->tbpassword->TextChanged += gcnew System::EventHandler(this, &Login::tbpassword_TextChanged);
+			this->panel3->Controls->Add(this->pictureBox6);
+			this->panel3->Controls->Add(this->pictureBox3);
+			this->panel3->Controls->Add(this->Cancelbt);
+			this->panel3->Controls->Add(this->LOGINbt);
+			this->panel3->Controls->Add(this->label3);
+			this->panel3->Controls->Add(this->lbemail);
+			this->panel3->Controls->Add(this->tbemail);
+			this->panel3->Controls->Add(this->tbpassword);
+			this->panel3->Controls->Add(this->label1);
+			resources->ApplyResources(this->panel3, L"panel3");
+			this->panel3->Name = L"panel3";
+			this->panel3->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &Login::panel3_Paint);
 			// 
-			// tbemail
+			// pictureBox6
 			// 
-			this->tbemail->Cursor = System::Windows::Forms::Cursors::IBeam;
-			resources->ApplyResources(this->tbemail, L"tbemail");
-			this->tbemail->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(63)), static_cast<System::Int32>(static_cast<System::Byte>(61)),
-				static_cast<System::Int32>(static_cast<System::Byte>(86)));
-			this->tbemail->Name = L"tbemail";
-			this->tbemail->TextChanged += gcnew System::EventHandler(this, &Login::tbemail_TextChanged);
+			resources->ApplyResources(this->pictureBox6, L"pictureBox6");
+			this->pictureBox6->Name = L"pictureBox6";
+			this->pictureBox6->TabStop = false;
+			this->pictureBox6->Click += gcnew System::EventHandler(this, &Login::pictureBox6_Click);
 			// 
-			// label2
+			// pictureBox3
 			// 
-			this->label2->Cursor = System::Windows::Forms::Cursors::Default;
-			resources->ApplyResources(this->label2, L"label2");
-			this->label2->ForeColor = System::Drawing::Color::SteelBlue;
-			this->label2->Name = L"label2";
+			resources->ApplyResources(this->pictureBox3, L"pictureBox3");
+			this->pictureBox3->Name = L"pictureBox3";
+			this->pictureBox3->TabStop = false;
+			this->pictureBox3->Click += gcnew System::EventHandler(this, &Login::pictureBox3_Click);
+			// 
+			// Cancelbt
+			// 
+			this->Cancelbt->BackColor = System::Drawing::Color::Firebrick;
+			this->Cancelbt->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->Cancelbt->FlatAppearance->BorderSize = 0;
+			this->Cancelbt->FlatAppearance->MouseOverBackColor = System::Drawing::Color::Navy;
+			resources->ApplyResources(this->Cancelbt, L"Cancelbt");
+			this->Cancelbt->ForeColor = System::Drawing::SystemColors::ControlLight;
+			this->Cancelbt->Name = L"Cancelbt";
+			this->Cancelbt->UseVisualStyleBackColor = false;
+			this->Cancelbt->Click += gcnew System::EventHandler(this, &Login::Cancelbt_Click_1);
 			// 
 			// LOGINbt
 			// 
@@ -202,86 +244,88 @@ namespace UMS {
 			this->LOGINbt->FlatAppearance->BorderSize = 0;
 			this->LOGINbt->FlatAppearance->MouseOverBackColor = System::Drawing::Color::Navy;
 			resources->ApplyResources(this->LOGINbt, L"LOGINbt");
-			this->LOGINbt->ForeColor = System::Drawing::Color::White;
+			this->LOGINbt->ForeColor = System::Drawing::Color::AliceBlue;
 			this->LOGINbt->Name = L"LOGINbt";
 			this->LOGINbt->UseVisualStyleBackColor = false;
-			this->LOGINbt->Click += gcnew System::EventHandler(this, &Login::LOGINbt_Click);
 			// 
-			// panel4
+			// label3
 			// 
-			this->panel4->Controls->Add(this->pictureBox2);
-			resources->ApplyResources(this->panel4, L"panel4");
-			this->panel4->Name = L"panel4";
+			resources->ApplyResources(this->label3, L"label3");
+			this->label3->BackColor = System::Drawing::Color::Transparent;
+			this->label3->ForeColor = System::Drawing::Color::SteelBlue;
+			this->label3->Name = L"label3";
+			// 
+			// lbemail
+			// 
+			this->lbemail->Cursor = System::Windows::Forms::Cursors::Default;
+			resources->ApplyResources(this->lbemail, L"lbemail");
+			this->lbemail->ForeColor = System::Drawing::Color::SteelBlue;
+			this->lbemail->Name = L"lbemail";
+			// 
+			// tbemail
+			// 
+			this->tbemail->Cursor = System::Windows::Forms::Cursors::IBeam;
+			resources->ApplyResources(this->tbemail, L"tbemail");
+			this->tbemail->ForeColor = System::Drawing::SystemColors::GrayText;
+			this->tbemail->Name = L"tbemail";
+			this->tbemail->Enter += gcnew System::EventHandler(this, &Login::tbemail_enter);
+			this->tbemail->Leave += gcnew System::EventHandler(this, &Login::tbemail_leave);
+			// 
+			// tbpassword
+			// 
+			this->tbpassword->Cursor = System::Windows::Forms::Cursors::IBeam;
+			resources->ApplyResources(this->tbpassword, L"tbpassword");
+			this->tbpassword->ForeColor = System::Drawing::SystemColors::GrayText;
+			this->tbpassword->Name = L"tbpassword";
+			this->tbpassword->Enter += gcnew System::EventHandler(this, &Login::tbpassword_enter);
+			this->tbpassword->Leave += gcnew System::EventHandler(this, &Login::tbpassword_leave);
+			// 
+			// label1
+			// 
+			this->label1->Cursor = System::Windows::Forms::Cursors::Default;
+			resources->ApplyResources(this->label1, L"label1");
+			this->label1->ForeColor = System::Drawing::Color::SteelBlue;
+			this->label1->Name = L"label1";
 			// 
 			// pictureBox2
 			// 
+			this->pictureBox2->BackColor = System::Drawing::Color::Transparent;
 			this->pictureBox2->Cursor = System::Windows::Forms::Cursors::Hand;
 			resources->ApplyResources(this->pictureBox2, L"pictureBox2");
 			this->pictureBox2->Name = L"pictureBox2";
 			this->pictureBox2->TabStop = false;
+			this->pictureBox2->Click += gcnew System::EventHandler(this, &Login::pictureBox2_Click_1);
 			// 
-			// Cancelbt
+			// pictureBox5
 			// 
-			this->Cancelbt->BackColor = System::Drawing::Color::SteelBlue;
-			this->Cancelbt->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->Cancelbt->FlatAppearance->BorderSize = 0;
-			this->Cancelbt->FlatAppearance->MouseOverBackColor = System::Drawing::Color::Navy;
-			resources->ApplyResources(this->Cancelbt, L"Cancelbt");
-			this->Cancelbt->ForeColor = System::Drawing::Color::White;
-			this->Cancelbt->Name = L"Cancelbt";
-			this->Cancelbt->UseVisualStyleBackColor = false;
-			// 
-			// pictureBox3
-			// 
-			resources->ApplyResources(this->pictureBox3, L"pictureBox3");
-			this->pictureBox3->Name = L"pictureBox3";
-			this->pictureBox3->TabStop = false;
-			// 
-			// pictureBox4
-			// 
-			resources->ApplyResources(this->pictureBox4, L"pictureBox4");
-			this->pictureBox4->Name = L"pictureBox4";
-			this->pictureBox4->TabStop = false;
-			// 
-			// label1
-			// 
-			resources->ApplyResources(this->label1, L"label1");
-			this->label1->BackColor = System::Drawing::Color::Transparent;
-			this->label1->ForeColor = System::Drawing::Color::SteelBlue;
-			this->label1->Name = L"label1";
-			// 
-			// panel3
-			// 
-			this->panel3->Controls->Add(this->label1);
-			this->panel3->Controls->Add(this->pictureBox4);
-			this->panel3->Controls->Add(this->pictureBox3);
-			this->panel3->Controls->Add(this->Cancelbt);
-			this->panel3->Controls->Add(this->panel4);
-			this->panel3->Controls->Add(this->LOGINbt);
-			this->panel3->Controls->Add(this->label2);
-			this->panel3->Controls->Add(this->tbemail);
-			this->panel3->Controls->Add(this->tbpassword);
-			this->panel3->Controls->Add(this->label6);
-			resources->ApplyResources(this->panel3, L"panel3");
-			this->panel3->Name = L"panel3";
-			this->panel3->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &Login::panel3_Paint_2);
+			this->pictureBox5->BackColor = System::Drawing::Color::Transparent;
+			this->pictureBox5->Cursor = System::Windows::Forms::Cursors::Hand;
+			resources->ApplyResources(this->pictureBox5, L"pictureBox5");
+			this->pictureBox5->Name = L"pictureBox5";
+			this->pictureBox5->TabStop = false;
+			this->pictureBox5->Click += gcnew System::EventHandler(this, &Login::pictureBox5_Click);
 			// 
 			// Login
 			// 
 			resources->ApplyResources(this, L"$this");
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::White;
+			this->Controls->Add(this->pictureBox5);
+			this->Controls->Add(this->pictureBox2);
 			this->Controls->Add(this->panel3);
+			this->Controls->Add(this->pictureBox1);
+			this->DoubleBuffered = true;
 			this->ForeColor = System::Drawing::SystemColors::ControlLight;
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
 			this->Name = L"Login";
 			this->Load += gcnew System::EventHandler(this, &Login::Login_Load);
-			this->panel4->ResumeLayout(false);
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->EndInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->EndInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox4))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			this->panel3->ResumeLayout(false);
 			this->panel3->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox6))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox5))->EndInit();
 			this->ResumeLayout(false);
 
 		}
@@ -291,6 +335,7 @@ namespace UMS {
     public: bool loggedIn = false;
     public:static bool validateStudentData(Student^ stud);
     public:static void studentLogin(Student^ stud);
+
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 		//Login bt
 
@@ -338,26 +383,23 @@ namespace UMS {
 private: System::Void pictureBox2_click(System::Object^ sender, System::EventArgs^ e) {
 	this->Close();
 }
-private: System::Void panel3_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
-}
-private: System::Void pictureBox1_Click(System::Object^ sender, System::EventArgs^ e) {
-}
+
+
 private: System::Void label3_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 
 private: System::Void label4_Click(System::Object^ sender, System::EventArgs^ e) {
 }
-private: System::Void label5_Click(System::Object^ sender, System::EventArgs^ e) {
-}
+
 private: System::Void panel3_Paint_1(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
 }
 private: System::Void LOGINbt_Click(System::Object^ sender, System::EventArgs^ e) {
-	student = gcnew Student;
-	student->setEmail(tbemail->Text);
-	student->setPassword(tbpassword->Text);
-	
-	studentLogin(student);
-	this->Close();
+	//student = gcnew Student;
+	//student->setEmail(tbemail->Text);
+	//student->setPassword(tbpassword->Text);
+	//
+	//studentLogin(student);
+	//this->Close();
 
 }
 private: System::Void tbemail_TextChanged(System::Object^ sender, System::EventArgs^ e) {
@@ -366,6 +408,74 @@ private: System::Void tbemail_TextChanged(System::Object^ sender, System::EventA
 private: System::Void tbpassword_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void panel3_Paint_2(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
+}
+private: System::Void axWindowsMediaPlayer1_Enter(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void button1_Click_1(System::Object^ sender, System::EventArgs^ e) {
+	
+}
+private: System::Void axWindowsMediaPlayer1_Enter_1(System::Object^ sender, System::EventArgs^ e) {
+
+}
+private: System::Void pictureBox5_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->Close();
+}
+private: System::Void pictureBox2_Click_1(System::Object^ sender, System::EventArgs^ e) {
+	//go back bt
+	welcomeForm::gobacktoWelc = true;
+	welcomeForm::tostdLogin = false;
+	this->Close();
+}
+private: System::Void label5_Click(System::Object^ sender, System::EventArgs^ e) {
+
+}
+private: System::Void label2_Click(System::Object^ sender, System::EventArgs^ e) {
+
+}
+private: System::Void pictureBox3_Click(System::Object^ sender, System::EventArgs^ e) {
+
+}
+private: System::Void pictureBox4_Click(System::Object^ sender, System::EventArgs^ e) {
+
+}
+private: System::Void panel3_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
+}
+private: System::Void Cancelbt_Click_1(System::Object^ sender, System::EventArgs^ e) {
+	this->Close();
+}
+private: System::Void pictureBox6_Click(System::Object^ sender, System::EventArgs^ e) {
+
+}
+
+private: System::Void tbemail_enter(System::Object^ sender, System::EventArgs^ e) {
+	if (tbemail->Text == "Enter your email")
+	{
+		tbemail->Text = "";
+		tbemail->ForeColor =Color::Black;
+	}
+}
+private: System::Void tbemail_leave(System::Object^ sender, System::EventArgs^ e) {
+	if (tbemail->Text =="")
+	{
+		 tbemail->Text = "Enter your email";
+		tbemail->ForeColor = Color::Gray;
+	}
+}
+private: System::Void tbpassword_enter(System::Object^ sender, System::EventArgs^ e) {
+	if (tbpassword->Text == "Enter your password")
+	{
+		tbpassword->Text = "";
+		tbpassword->ForeColor = Color::Black;
+		tbpassword->PasswordChar = '*';
+	}
+}
+private: System::Void tbpassword_leave(System::Object^ sender, System::EventArgs^ e) {
+	if (tbpassword->Text == "")
+	{
+		tbpassword->Text = "Enter your password"; 
+		tbpassword->PasswordChar = NULL;
+		tbpassword->ForeColor = Color::Gray;
+	}
 }
 };
 }
