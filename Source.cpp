@@ -18,7 +18,7 @@ using namespace System::Windows::Forms;
 
 [STAThread]
 
-
+//ah yama ah w ah yabaaaa de 3ela watya w nasabaaaa
 int main()
 {
 	//vars
