@@ -38,6 +38,9 @@ public :
 	static List<Student^>^ allStudents;
 
 
+
+
+
 	Student();
 	Student(int ID, int AcademicYear, int MaxHoursAllowed, float GPA, String^ Name, String^ Email, String^ Password, List<String^>^ FinishedCourses, List<String^>^ CoursesInProgress, List<float>^ coursesGPA);
 	void setName(String^ Name);
@@ -54,6 +57,9 @@ public :
 	void setEachFinishedCourseGPA(List<String^>^ FinishedCourses, List<float>^ coursesGPA);
 
 
+
+
+
 	String^ getName();
 	String^ getEmail();
 	String^ getPassword();
@@ -68,21 +74,19 @@ public :
 	Dictionary<String^, float>^ getEachFinishedCourseGPA();
 
 
-
 	List<String^>^ CoursesAV();
-
 	bool validateIfCourseCanBeTaken(Course^ course);
 	void registerForCourse(Course^ course);
-	
-	
-
-
 	List<Course^>^ FilterCourses(String^ filterOption);
 
+
+
+
+	//files
 	static void loadStudentDataFromFile();
 	static void saveStudentDataToFile();
 
-/*
+   /*
 1- Log in.
 
 2- View List of all available courses.

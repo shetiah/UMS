@@ -78,7 +78,6 @@ namespace UMS {
 		}
 	
 		
-		/*● Marina : ->*/
 
 
 		void viewAllHisCourses() {/*
