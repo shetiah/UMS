@@ -31,6 +31,7 @@ public ref class Student
 	List<float>^ coursesGPA;
 	List<String^>^ CoursesInProgress;
 	Dictionary<Course^, String^>^ eachCourseGrade;
+	Dictionary<String^, float>^ eachFinishedCourseGPA;
 public :
 
 	//static variable to hold all the students from the students textFile 
@@ -50,6 +51,7 @@ public :
 	void setGPA(float GPA);
 	void setCoursesGPA(List<float>^ coursesGPA);
 	void setEachCourseGrade(Dictionary<Course^, String^>^ eachCourseGrade);
+	void setEachFinishedCourseGPA(List<String^>^ FinishedCourses, List<float>^ coursesGPA);
 
 
 	String^ getName();
@@ -63,7 +65,7 @@ public :
 	List<float>^ getCoursesGPA();
 	float getGPA();
 	Dictionary<Course^, String^>^ getEachCourseGrade();
-
+	Dictionary<String^, float>^ getEachFinishedCourseGPA();
 
 
 

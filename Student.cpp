@@ -85,6 +85,19 @@ void Student::setGPA(float GPA)
 	this->GPA = GPA;
 }
 
+void Student::setEachFinishedCourseGPA(List<String^>^ FinishedCourses, List<float>^ coursesGPA)
+{
+	for (int i = 0; i < coursesGPA->Count; i++)
+	{
+		eachFinishedCourseGPA->Add(FinishedCourses[i], coursesGPA[i]);
+	}
+}
+
+Dictionary<String^, float>^ Student::getEachFinishedCourseGPA()
+{
+	return eachFinishedCourseGPA;
+}
+
 String^ Student::getName()
 {
 	return Name;
