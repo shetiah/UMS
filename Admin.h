@@ -26,6 +26,8 @@ public:
 	static void addCourse(Course^ course);
 	static void addCourseGrade(Course^ course, String^ grade,Student^ student);
 	static void addCoursePreReq(Course^ course, List<String^>^ preList);
+	
+	//files
 	static void loadAdminDataFromFile();
 	static void saveAdminDataToFile();
 	

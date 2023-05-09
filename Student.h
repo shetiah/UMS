@@ -31,10 +31,15 @@ public ref class Student
 	List<float>^ coursesGPA;
 	List<String^>^ CoursesInProgress;
 	Dictionary<Course^, String^>^ eachCourseGrade;
-public :
+
+public:
+
 
 	//static variable to hold all the students from the students textFile 
 	static List<Student^>^ allStudents;
+
+
+
 
 
 	Student();
@@ -52,6 +57,9 @@ public :
 	void setEachCourseGrade(Dictionary<Course^, String^>^ eachCourseGrade);
 
 
+
+
+
 	String^ getName();
 	String^ getEmail();
 	String^ getPassword();
@@ -66,21 +74,19 @@ public :
 
 
 
-
 	List<String^>^ CoursesAV();
-
 	bool validateIfCourseCanBeTaken(Course^ course);
 	void registerForCourse(Course^ course);
-	
-	
-
-
 	List<Course^>^ FilterCourses(String^ filterOption);
 
+
+
+
+	//files
 	static void loadStudentDataFromFile();
 	static void saveStudentDataToFile();
 
-/*
+   /*
 1- Log in.
 
 2- View List of all available courses.

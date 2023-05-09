@@ -51,7 +51,7 @@ void Admin::createStudent(String^ name, String^ password,int academicYear,int ma
 	s->setEmail(email);
 	s->setName(name);
 	s->setPassword(password);
-	s->setAcademicYear(academicYear);
+	s->setAcademicYear(academicYear); 
 	s->setMaxHoursAllowed(maxHoursAllowed);
 	s->setGPA(GPA);
 	s->setFinishedCourses(finishedCourses);
@@ -61,9 +61,20 @@ void Admin::createStudent(String^ name, String^ password,int academicYear,int ma
 	//add the student to the list
 	Student::allStudents->Add(s);
 }
-void Admin::addCourse(Course^ course)
-{
-	Course::allCourses->Add(course);
+void Admin::addCourse(Course^ newCourse)
+{   //farah and maya
+	String^ courseName = newCourse->getName();
+	List<String^>^ prerequisites = Course::preRequires[courseName];
+
+	// If the course already exists in the dictionary, do nothing
+	if (Course::preRequires->ContainsKey(courseName))
+	{
+		return;
+	}
+	// Add the new course to the dictionary with an empty list of prerequisites
+	Course::preRequires->Add(courseName, prerequisites);
+	Course::allCourses->Add(newCourse);
+
 }
 void Admin::addCourseGrade(Course^ course, String^ grade,Student^ student) {
 Dictionary< Course^, String^ > ^temp= student->getEachCourseGrade();
