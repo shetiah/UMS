@@ -197,7 +197,7 @@ namespace UMS {
 			this->panel1->ForeColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel1->Location = System::Drawing::Point(-1, 0);
 			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(255, 521);
+			this->panel1->Size = System::Drawing::Size(289, 521);
 			this->panel1->TabIndex = 0;
 			// 
 			// pnlbuttons
@@ -214,13 +214,13 @@ namespace UMS {
 			this->pnlbuttons->Controls->Add(this->panel2);
 			this->pnlbuttons->Location = System::Drawing::Point(0, 140);
 			this->pnlbuttons->Name = L"pnlbuttons";
-			this->pnlbuttons->Size = System::Drawing::Size(255, 277);
+			this->pnlbuttons->Size = System::Drawing::Size(289, 277);
 			this->pnlbuttons->TabIndex = 0;
 			// 
 			// panel4
 			// 
 			this->panel4->BackColor = System::Drawing::Color::White;
-			this->panel4->Location = System::Drawing::Point(0, 127);
+			this->panel4->Location = System::Drawing::Point(0, 133);
 			this->panel4->Name = L"panel4";
 			this->panel4->Size = System::Drawing::Size(12, 41);
 			this->panel4->TabIndex = 8;
@@ -236,9 +236,9 @@ namespace UMS {
 			this->btnDetailsOfCourse->Font = (gcnew System::Drawing::Font(L"Segoe UI", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->btnDetailsOfCourse->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"btnDetailsOfCourse.Image")));
-			this->btnDetailsOfCourse->Location = System::Drawing::Point(-15, 127);
+			this->btnDetailsOfCourse->Location = System::Drawing::Point(0, 133);
 			this->btnDetailsOfCourse->Name = L"btnDetailsOfCourse";
-			this->btnDetailsOfCourse->Size = System::Drawing::Size(390, 41);
+			this->btnDetailsOfCourse->Size = System::Drawing::Size(334, 41);
 			this->btnDetailsOfCourse->TabIndex = 7;
 			this->btnDetailsOfCourse->Text = L"Details Of Course";
 			this->btnDetailsOfCourse->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageBeforeText;
@@ -248,7 +248,7 @@ namespace UMS {
 			// panel11
 			// 
 			this->panel11->BackColor = System::Drawing::Color::White;
-			this->panel11->Location = System::Drawing::Point(0, 221);
+			this->panel11->Location = System::Drawing::Point(0, 236);
 			this->panel11->Name = L"panel11";
 			this->panel11->Size = System::Drawing::Size(12, 41);
 			this->panel11->TabIndex = 6;
@@ -256,7 +256,7 @@ namespace UMS {
 			// panel10
 			// 
 			this->panel10->BackColor = System::Drawing::Color::White;
-			this->panel10->Location = System::Drawing::Point(0, 174);
+			this->panel10->Location = System::Drawing::Point(0, 186);
 			this->panel10->Name = L"panel10";
 			this->panel10->Size = System::Drawing::Size(12, 41);
 			this->panel10->TabIndex = 5;
@@ -273,7 +273,7 @@ namespace UMS {
 			// panel9
 			// 
 			this->panel9->BackColor = System::Drawing::Color::White;
-			this->panel9->Location = System::Drawing::Point(0, 0);
+			this->panel9->Location = System::Drawing::Point(0, 9);
 			this->panel9->Name = L"panel9";
 			this->panel9->Size = System::Drawing::Size(12, 41);
 			this->panel9->TabIndex = 4;
@@ -288,9 +288,9 @@ namespace UMS {
 			this->btnCourseInProgress->Font = (gcnew System::Drawing::Font(L"Segoe UI", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->btnCourseInProgress->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"btnCourseInProgress.Image")));
-			this->btnCourseInProgress->Location = System::Drawing::Point(13, 174);
+			this->btnCourseInProgress->Location = System::Drawing::Point(13, 186);
 			this->btnCourseInProgress->Name = L"btnCourseInProgress";
-			this->btnCourseInProgress->Size = System::Drawing::Size(270, 41);
+			this->btnCourseInProgress->Size = System::Drawing::Size(273, 41);
 			this->btnCourseInProgress->TabIndex = 0;
 			this->btnCourseInProgress->Text = L"Courses in Progress";
 			this->btnCourseInProgress->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageBeforeText;
@@ -307,9 +307,9 @@ namespace UMS {
 			this->btnGPA->Font = (gcnew System::Drawing::Font(L"Segoe UI", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->btnGPA->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"btnGPA.Image")));
-			this->btnGPA->Location = System::Drawing::Point(-45, 221);
+			this->btnGPA->Location = System::Drawing::Point(-32, 233);
 			this->btnGPA->Name = L"btnGPA";
-			this->btnGPA->Size = System::Drawing::Size(352, 41);
+			this->btnGPA->Size = System::Drawing::Size(321, 41);
 			this->btnGPA->TabIndex = 4;
 			this->btnGPA->Text = L"GPA";
 			this->btnGPA->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageBeforeText;
@@ -335,9 +335,9 @@ namespace UMS {
 				static_cast<System::Byte>(0)));
 			this->btnCourseGrade->ForeColor = System::Drawing::SystemColors::ControlLight;
 			this->btnCourseGrade->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"btnCourseGrade.Image")));
-			this->btnCourseGrade->Location = System::Drawing::Point(-18, -6);
+			this->btnCourseGrade->Location = System::Drawing::Point(3, 0);
 			this->btnCourseGrade->Name = L"btnCourseGrade";
-			this->btnCourseGrade->Size = System::Drawing::Size(363, 50);
+			this->btnCourseGrade->Size = System::Drawing::Size(280, 50);
 			this->btnCourseGrade->TabIndex = 0;
 			this->btnCourseGrade->Text = L"  Course Grade";
 			this->btnCourseGrade->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageBeforeText;
@@ -350,13 +350,13 @@ namespace UMS {
 			this->panel2->Controls->Add(this->btnFilter);
 			this->panel2->Location = System::Drawing::Point(0, 27);
 			this->panel2->Name = L"panel2";
-			this->panel2->Size = System::Drawing::Size(255, 38);
+			this->panel2->Size = System::Drawing::Size(286, 38);
 			this->panel2->TabIndex = 0;
 			// 
 			// panel7
 			// 
 			this->panel7->BackColor = System::Drawing::Color::White;
-			this->panel7->Location = System::Drawing::Point(0, 3);
+			this->panel7->Location = System::Drawing::Point(0, 0);
 			this->panel7->Name = L"panel7";
 			this->panel7->Size = System::Drawing::Size(12, 44);
 			this->panel7->TabIndex = 2;
@@ -371,9 +371,9 @@ namespace UMS {
 			this->btnFilter->Font = (gcnew System::Drawing::Font(L"Segoe UI", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->btnFilter->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"btnFilter.Image")));
-			this->btnFilter->Location = System::Drawing::Point(-45, 3);
+			this->btnFilter->Location = System::Drawing::Point(0, -3);
 			this->btnFilter->Name = L"btnFilter";
-			this->btnFilter->Size = System::Drawing::Size(403, 41);
+			this->btnFilter->Size = System::Drawing::Size(229, 41);
 			this->btnFilter->TabIndex = 0;
 			this->btnFilter->Text = L"   Filter";
 			this->btnFilter->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageBeforeText;
@@ -383,9 +383,9 @@ namespace UMS {
 			// PnlOfFilter
 			// 
 			this->PnlOfFilter->Controls->Add(this->label1);
-			this->PnlOfFilter->Location = System::Drawing::Point(255, 65);
+			this->PnlOfFilter->Location = System::Drawing::Point(283, 65);
 			this->PnlOfFilter->Name = L"PnlOfFilter";
-			this->PnlOfFilter->Size = System::Drawing::Size(692, 456);
+			this->PnlOfFilter->Size = System::Drawing::Size(664, 456);
 			this->PnlOfFilter->TabIndex = 1;
 			// 
 			// label1
@@ -402,9 +402,9 @@ namespace UMS {
 			// pnlOfCourseGrades
 			// 
 			this->pnlOfCourseGrades->Controls->Add(this->label2);
-			this->pnlOfCourseGrades->Location = System::Drawing::Point(255, 62);
+			this->pnlOfCourseGrades->Location = System::Drawing::Point(283, 62);
 			this->pnlOfCourseGrades->Name = L"pnlOfCourseGrades";
-			this->pnlOfCourseGrades->Size = System::Drawing::Size(692, 456);
+			this->pnlOfCourseGrades->Size = System::Drawing::Size(664, 456);
 			this->pnlOfCourseGrades->TabIndex = 2;
 			// 
 			// label2
@@ -420,9 +420,9 @@ namespace UMS {
 			// pnlOfDetailsOfCourse
 			// 
 			this->pnlOfDetailsOfCourse->Controls->Add(this->label3);
-			this->pnlOfDetailsOfCourse->Location = System::Drawing::Point(255, 62);
+			this->pnlOfDetailsOfCourse->Location = System::Drawing::Point(283, 62);
 			this->pnlOfDetailsOfCourse->Name = L"pnlOfDetailsOfCourse";
-			this->pnlOfDetailsOfCourse->Size = System::Drawing::Size(692, 459);
+			this->pnlOfDetailsOfCourse->Size = System::Drawing::Size(664, 459);
 			this->pnlOfDetailsOfCourse->TabIndex = 3;
 			// 
 			// label3
@@ -438,9 +438,9 @@ namespace UMS {
 			// pnlOfCoursesInProgress
 			// 
 			this->pnlOfCoursesInProgress->Controls->Add(this->label4);
-			this->pnlOfCoursesInProgress->Location = System::Drawing::Point(255, 62);
+			this->pnlOfCoursesInProgress->Location = System::Drawing::Point(283, 62);
 			this->pnlOfCoursesInProgress->Name = L"pnlOfCoursesInProgress";
-			this->pnlOfCoursesInProgress->Size = System::Drawing::Size(692, 459);
+			this->pnlOfCoursesInProgress->Size = System::Drawing::Size(664, 459);
 			this->pnlOfCoursesInProgress->TabIndex = 4;
 			// 
 			// label4
@@ -456,9 +456,9 @@ namespace UMS {
 			// pnlOfGPA
 			// 
 			this->pnlOfGPA->Controls->Add(this->label5);
-			this->pnlOfGPA->Location = System::Drawing::Point(255, 65);
+			this->pnlOfGPA->Location = System::Drawing::Point(283, 65);
 			this->pnlOfGPA->Name = L"pnlOfGPA";
-			this->pnlOfGPA->Size = System::Drawing::Size(689, 456);
+			this->pnlOfGPA->Size = System::Drawing::Size(661, 456);
 			this->pnlOfGPA->TabIndex = 5;
 			// 
 			// label5
@@ -476,18 +476,18 @@ namespace UMS {
 			this->panel6->BackColor = System::Drawing::Color::DarkViolet;
 			this->panel6->Controls->Add(this->button1);
 			this->panel6->Controls->Add(this->pictureBox1);
-			this->panel6->Location = System::Drawing::Point(255, -5);
+			this->panel6->Location = System::Drawing::Point(283, -5);
 			this->panel6->Name = L"panel6";
-			this->panel6->Size = System::Drawing::Size(689, 83);
+			this->panel6->Size = System::Drawing::Size(661, 67);
 			this->panel6->TabIndex = 6;
 			// 
 			// button1
 			// 
 			this->button1->BackColor = System::Drawing::Color::Lavender;
 			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button1->Location = System::Drawing::Point(594, 44);
+			this->button1->Location = System::Drawing::Point(590, 44);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(98, 23);
+			this->button1->Size = System::Drawing::Size(59, 23);
 			this->button1->TabIndex = 2;
 			this->button1->Text = L"Edit Profile";
 			this->button1->UseVisualStyleBackColor = false;
@@ -495,7 +495,7 @@ namespace UMS {
 			// pictureBox1
 			// 
 			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
-			this->pictureBox1->Location = System::Drawing::Point(630, 5);
+			this->pictureBox1->Location = System::Drawing::Point(605, 6);
 			this->pictureBox1->Name = L"pictureBox1";
 			this->pictureBox1->Size = System::Drawing::Size(30, 32);
 			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
