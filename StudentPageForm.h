@@ -165,6 +165,8 @@ namespace UMS {
 			this->sideBar = (gcnew System::Windows::Forms::Panel());
 			this->btnMenu = (gcnew System::Windows::Forms::Button());
 			this->pnlbuttons = (gcnew System::Windows::Forms::Panel());
+			this->panel9 = (gcnew System::Windows::Forms::Panel());
+			this->panel7 = (gcnew System::Windows::Forms::Panel());
 			this->panel4 = (gcnew System::Windows::Forms::Panel());
 			this->btnDetailsOfCourse = (gcnew System::Windows::Forms::Button());
 			this->panel11 = (gcnew System::Windows::Forms::Panel());
@@ -174,7 +176,6 @@ namespace UMS {
 			this->panel3 = (gcnew System::Windows::Forms::Panel());
 			this->btnCourseGrade = (gcnew System::Windows::Forms::Button());
 			this->panel2 = (gcnew System::Windows::Forms::Panel());
-			this->panel7 = (gcnew System::Windows::Forms::Panel());
 			this->btnFilter = (gcnew System::Windows::Forms::Button());
 			this->PnlOfFilter = (gcnew System::Windows::Forms::Panel());
 			this->label1 = (gcnew System::Windows::Forms::Label());
@@ -192,7 +193,6 @@ namespace UMS {
 			this->pnlOfPanels = (gcnew System::Windows::Forms::Panel());
 			this->sideBarTimer = (gcnew System::Windows::Forms::Timer(this->components));
 			this->mstPanel = (gcnew System::Windows::Forms::Panel());
-			this->panel9 = (gcnew System::Windows::Forms::Panel());
 			this->sideBar->SuspendLayout();
 			this->pnlbuttons->SuspendLayout();
 			this->panel3->SuspendLayout();
@@ -211,7 +211,8 @@ namespace UMS {
 			// sideBar
 			// 
 			this->sideBar->AllowDrop = true;
-			this->sideBar->BackColor = System::Drawing::Color::DarkCyan;
+			this->sideBar->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
+				static_cast<System::Int32>(static_cast<System::Byte>(31)));
 			this->sideBar->Controls->Add(this->btnMenu);
 			this->sideBar->Controls->Add(this->pnlbuttons);
 			this->sideBar->ForeColor = System::Drawing::SystemColors::ControlLightLight;
@@ -250,6 +251,23 @@ namespace UMS {
 			this->pnlbuttons->Size = System::Drawing::Size(289, 277);
 			this->pnlbuttons->TabIndex = 0;
 			// 
+			// panel9
+			// 
+			this->panel9->BackColor = System::Drawing::Color::White;
+			this->panel9->Location = System::Drawing::Point(0, 74);
+			this->panel9->Name = L"panel9";
+			this->panel9->Size = System::Drawing::Size(7, 41);
+			this->panel9->TabIndex = 4;
+			// 
+			// panel7
+			// 
+			this->panel7->BackColor = System::Drawing::Color::White;
+			this->panel7->Location = System::Drawing::Point(0, 24);
+			this->panel7->Name = L"panel7";
+			this->panel7->Size = System::Drawing::Size(7, 41);
+			this->panel7->TabIndex = 2;
+			this->panel7->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &StudentPageForm::panel7_Paint);
+			// 
 			// panel4
 			// 
 			this->panel4->BackColor = System::Drawing::Color::White;
@@ -266,15 +284,15 @@ namespace UMS {
 			this->btnDetailsOfCourse->FlatAppearance->MouseDownBackColor = System::Drawing::Color::Silver;
 			this->btnDetailsOfCourse->FlatAppearance->MouseOverBackColor = System::Drawing::Color::Gainsboro;
 			this->btnDetailsOfCourse->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->btnDetailsOfCourse->Font = (gcnew System::Drawing::Font(L"Segoe UI", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->btnDetailsOfCourse->ForeColor = System::Drawing::Color::White;
-			this->btnDetailsOfCourse->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"btnDetailsOfCourse.Image")));
-			this->btnDetailsOfCourse->Location = System::Drawing::Point(24, 121);
+			this->btnDetailsOfCourse->Font = (gcnew System::Drawing::Font(L"Segoe UI", 11, System::Drawing::FontStyle::Bold));
+			this->btnDetailsOfCourse->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(233)),
+				static_cast<System::Int32>(static_cast<System::Byte>(234)), static_cast<System::Int32>(static_cast<System::Byte>(238)));
+			this->btnDetailsOfCourse->Location = System::Drawing::Point(9, 121);
 			this->btnDetailsOfCourse->Name = L"btnDetailsOfCourse";
-			this->btnDetailsOfCourse->Size = System::Drawing::Size(262, 41);
+			this->btnDetailsOfCourse->Size = System::Drawing::Size(277, 41);
 			this->btnDetailsOfCourse->TabIndex = 7;
-			this->btnDetailsOfCourse->Text = L"   Details Of Course";
+			this->btnDetailsOfCourse->Text = L"Courses Details";
+			this->btnDetailsOfCourse->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->btnDetailsOfCourse->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageBeforeText;
 			this->btnDetailsOfCourse->UseVisualStyleBackColor = true;
 			this->btnDetailsOfCourse->Click += gcnew System::EventHandler(this, &StudentPageForm::btnDetailsOfCourse_Click_1);
@@ -302,15 +320,15 @@ namespace UMS {
 			this->btnCourseInProgress->FlatAppearance->MouseDownBackColor = System::Drawing::Color::Silver;
 			this->btnCourseInProgress->FlatAppearance->MouseOverBackColor = System::Drawing::Color::Gainsboro;
 			this->btnCourseInProgress->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->btnCourseInProgress->Font = (gcnew System::Drawing::Font(L"Segoe UI", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->btnCourseInProgress->ForeColor = System::Drawing::Color::White;
-			this->btnCourseInProgress->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"btnCourseInProgress.Image")));
-			this->btnCourseInProgress->Location = System::Drawing::Point(24, 168);
+			this->btnCourseInProgress->Font = (gcnew System::Drawing::Font(L"Segoe UI", 11, System::Drawing::FontStyle::Bold));
+			this->btnCourseInProgress->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(233)),
+				static_cast<System::Int32>(static_cast<System::Byte>(234)), static_cast<System::Int32>(static_cast<System::Byte>(238)));
+			this->btnCourseInProgress->Location = System::Drawing::Point(9, 168);
 			this->btnCourseInProgress->Name = L"btnCourseInProgress";
-			this->btnCourseInProgress->Size = System::Drawing::Size(262, 41);
+			this->btnCourseInProgress->Size = System::Drawing::Size(280, 41);
 			this->btnCourseInProgress->TabIndex = 0;
-			this->btnCourseInProgress->Text = L"   Courses in Progress";
+			this->btnCourseInProgress->Text = L"Courses in Progress";
+			this->btnCourseInProgress->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->btnCourseInProgress->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageBeforeText;
 			this->btnCourseInProgress->UseVisualStyleBackColor = true;
 			this->btnCourseInProgress->Click += gcnew System::EventHandler(this, &StudentPageForm::btnCourseInProgress_Click);
@@ -322,14 +340,15 @@ namespace UMS {
 			this->btnGPA->FlatAppearance->MouseDownBackColor = System::Drawing::Color::Silver;
 			this->btnGPA->FlatAppearance->MouseOverBackColor = System::Drawing::Color::Gainsboro;
 			this->btnGPA->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->btnGPA->Font = (gcnew System::Drawing::Font(L"Segoe UI", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->btnGPA->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"btnGPA.Image")));
+			this->btnGPA->Font = (gcnew System::Drawing::Font(L"Segoe UI", 11, System::Drawing::FontStyle::Bold));
+			this->btnGPA->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(233)), static_cast<System::Int32>(static_cast<System::Byte>(234)),
+				static_cast<System::Int32>(static_cast<System::Byte>(238)));
 			this->btnGPA->Location = System::Drawing::Point(3, 215);
 			this->btnGPA->Name = L"btnGPA";
-			this->btnGPA->Size = System::Drawing::Size(203, 41);
+			this->btnGPA->Size = System::Drawing::Size(286, 41);
 			this->btnGPA->TabIndex = 4;
-			this->btnGPA->Text = L"   GPA";
+			this->btnGPA->Text = L"GPA";
+			this->btnGPA->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->btnGPA->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageBeforeText;
 			this->btnGPA->UseVisualStyleBackColor = true;
 			this->btnGPA->Click += gcnew System::EventHandler(this, &StudentPageForm::btnGPA_Click);
@@ -349,15 +368,15 @@ namespace UMS {
 			this->btnCourseGrade->FlatAppearance->MouseDownBackColor = System::Drawing::Color::Silver;
 			this->btnCourseGrade->FlatAppearance->MouseOverBackColor = System::Drawing::Color::Gainsboro;
 			this->btnCourseGrade->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->btnCourseGrade->Font = (gcnew System::Drawing::Font(L"Segoe UI", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->btnCourseGrade->ForeColor = System::Drawing::Color::White;
-			this->btnCourseGrade->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"btnCourseGrade.Image")));
-			this->btnCourseGrade->Location = System::Drawing::Point(6, -6);
+			this->btnCourseGrade->Font = (gcnew System::Drawing::Font(L"Segoe UI", 11, System::Drawing::FontStyle::Bold));
+			this->btnCourseGrade->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(233)), static_cast<System::Int32>(static_cast<System::Byte>(234)),
+				static_cast<System::Int32>(static_cast<System::Byte>(238)));
+			this->btnCourseGrade->Location = System::Drawing::Point(3, -6);
 			this->btnCourseGrade->Name = L"btnCourseGrade";
-			this->btnCourseGrade->Size = System::Drawing::Size(280, 44);
+			this->btnCourseGrade->Size = System::Drawing::Size(283, 44);
 			this->btnCourseGrade->TabIndex = 0;
-			this->btnCourseGrade->Text = L"   Course Grade";
+			this->btnCourseGrade->Text = L"Courses Grades";
+			this->btnCourseGrade->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->btnCourseGrade->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageBeforeText;
 			this->btnCourseGrade->UseVisualStyleBackColor = true;
 			this->btnCourseGrade->Click += gcnew System::EventHandler(this, &StudentPageForm::btnCourseGrade_Click);
@@ -370,15 +389,6 @@ namespace UMS {
 			this->panel2->Size = System::Drawing::Size(286, 38);
 			this->panel2->TabIndex = 0;
 			// 
-			// panel7
-			// 
-			this->panel7->BackColor = System::Drawing::Color::White;
-			this->panel7->Location = System::Drawing::Point(0, 24);
-			this->panel7->Name = L"panel7";
-			this->panel7->Size = System::Drawing::Size(7, 41);
-			this->panel7->TabIndex = 2;
-			this->panel7->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &StudentPageForm::panel7_Paint);
-			// 
 			// btnFilter
 			// 
 			this->btnFilter->AutoSize = true;
@@ -386,22 +396,24 @@ namespace UMS {
 			this->btnFilter->FlatAppearance->MouseDownBackColor = System::Drawing::Color::Silver;
 			this->btnFilter->FlatAppearance->MouseOverBackColor = System::Drawing::Color::Gainsboro;
 			this->btnFilter->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->btnFilter->Font = (gcnew System::Drawing::Font(L"Segoe UI", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->btnFilter->ForeColor = System::Drawing::Color::WhiteSmoke;
-			this->btnFilter->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"btnFilter.Image")));
-			this->btnFilter->Location = System::Drawing::Point(0, -3);
+			this->btnFilter->Font = (gcnew System::Drawing::Font(L"Segoe UI", 11, System::Drawing::FontStyle::Bold));
+			this->btnFilter->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(233)), static_cast<System::Int32>(static_cast<System::Byte>(234)),
+				static_cast<System::Int32>(static_cast<System::Byte>(238)));
+			this->btnFilter->Location = System::Drawing::Point(9, -3);
 			this->btnFilter->Name = L"btnFilter";
-			this->btnFilter->Size = System::Drawing::Size(234, 41);
+			this->btnFilter->Size = System::Drawing::Size(280, 41);
 			this->btnFilter->TabIndex = 0;
-			this->btnFilter->Text = L"   Filter";
+			this->btnFilter->Text = L"Filter Courses";
+			this->btnFilter->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->btnFilter->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageBeforeText;
+			this->btnFilter->UseCompatibleTextRendering = true;
 			this->btnFilter->UseVisualStyleBackColor = true;
 			this->btnFilter->Click += gcnew System::EventHandler(this, &StudentPageForm::btnFilter_Click);
 			// 
 			// PnlOfFilter
 			// 
-			this->PnlOfFilter->BackColor = System::Drawing::SystemColors::ButtonFace;
+			this->PnlOfFilter->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(233)), static_cast<System::Int32>(static_cast<System::Byte>(234)),
+				static_cast<System::Int32>(static_cast<System::Byte>(238)));
 			this->PnlOfFilter->Controls->Add(this->label1);
 			this->PnlOfFilter->Location = System::Drawing::Point(0, -9);
 			this->PnlOfFilter->Name = L"PnlOfFilter";
@@ -504,7 +516,8 @@ namespace UMS {
 			// Header
 			// 
 			this->Header->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
-			this->Header->BackColor = System::Drawing::SystemColors::ButtonFace;
+			this->Header->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(233)), static_cast<System::Int32>(static_cast<System::Byte>(234)),
+				static_cast<System::Int32>(static_cast<System::Byte>(238)));
 			this->Header->Controls->Add(this->button1);
 			this->Header->Controls->Add(this->pictureBox1);
 			this->Header->Location = System::Drawing::Point(-5, 0);
@@ -559,6 +572,8 @@ namespace UMS {
 			// 
 			this->mstPanel->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->mstPanel->AutoSize = true;
+			this->mstPanel->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(233)), static_cast<System::Int32>(static_cast<System::Byte>(234)),
+				static_cast<System::Int32>(static_cast<System::Byte>(238)));
 			this->mstPanel->Controls->Add(this->pnlOfPanels);
 			this->mstPanel->Controls->Add(this->Header);
 			this->mstPanel->Location = System::Drawing::Point(68, 0);
@@ -568,14 +583,6 @@ namespace UMS {
 			this->mstPanel->Size = System::Drawing::Size(878, 520);
 			this->mstPanel->TabIndex = 2;
 			this->mstPanel->UseWaitCursor = true;
-			// 
-			// panel9
-			// 
-			this->panel9->BackColor = System::Drawing::Color::White;
-			this->panel9->Location = System::Drawing::Point(0, 74);
-			this->panel9->Name = L"panel9";
-			this->panel9->Size = System::Drawing::Size(7, 41);
-			this->panel9->TabIndex = 4;
 			// 
 			// StudentPageForm
 			// 
