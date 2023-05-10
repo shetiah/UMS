@@ -109,7 +109,7 @@ namespace UMS {
 			this->tostudentbt->FlatAppearance->MouseOverBackColor = System::Drawing::Color::Navy;
 			this->tostudentbt->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->tostudentbt->Font = (gcnew System::Drawing::Font(L"Segoe UI", 12, System::Drawing::FontStyle::Bold));
-			this->tostudentbt->ForeColor = System::Drawing::Color::Pink;
+			this->tostudentbt->ForeColor = System::Drawing::Color::White;
 			this->tostudentbt->ImeMode = System::Windows::Forms::ImeMode::NoControl;
 			this->tostudentbt->Location = System::Drawing::Point(944, 531);
 			this->tostudentbt->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
@@ -130,7 +130,7 @@ namespace UMS {
 			this->toadminbt->FlatAppearance->MouseOverBackColor = System::Drawing::Color::Navy;
 			this->toadminbt->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->toadminbt->Font = (gcnew System::Drawing::Font(L"Segoe UI", 12, System::Drawing::FontStyle::Bold));
-			this->toadminbt->ForeColor = System::Drawing::Color::Pink;
+			this->toadminbt->ForeColor = System::Drawing::Color::White;
 			this->toadminbt->ImeMode = System::Windows::Forms::ImeMode::NoControl;
 			this->toadminbt->Location = System::Drawing::Point(746, 531);
 			this->toadminbt->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
