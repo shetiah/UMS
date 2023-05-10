@@ -108,6 +108,40 @@ String^ Admin::getPasswordAdmin() {
 	return password;
 }
 
+//returns true if course status is changed, otherwise false
+bool Admin::changeCourseStatus(Student^ std, String^ courseName, float GPA)
+{
+	for each (auto s in Student::allStudents)
+	{
+		if (s->getName() == std->getName())//got a match of the student in our students list
+		{
+			List<String^>^ coursesInProgress = s->getCoursesINProgress();
+			List<String^>^ tempFinishedCourses = s->getFinishedCourses();
+			List<float>^ tempCoursesGPA = s->getCoursesGPA();
+			List<String^>^ tempCoursesInProgress = gcnew List<String^>();
+
+				for each (auto course in coursesInProgress)//looping in the courses in progress list
+				{
+					if (course == courseName) // got a match of course name in the list
+					{
+						// add the course to our finished courses and coursesGPA
+						tempFinishedCourses->Add(course);
+						tempCoursesGPA->Add(GPA);
+					}
+					else
+						tempCoursesInProgress->Add(course);//updating the courses in progress with the new list
+
+				}
+				//updating the student with the new lists
+				s->setCoursesGPA(tempCoursesGPA);
+				s->setCoursesINProgress(tempCoursesInProgress);
+				s->setFinishedCourses(tempFinishedCourses);
+				return true;
+		}
+	}
+	return false;
+}
+
 void Admin::loadAdminDataFromFile()
 {
 	ifstream file;
