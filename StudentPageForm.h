@@ -76,8 +76,8 @@ namespace UMS {
 	private: System::Windows::Forms::Panel^ panel7;
 	private: System::Windows::Forms::Panel^ Header;
 
-	private: System::Windows::Forms::Button^ button1;
-	private: System::Windows::Forms::PictureBox^ pictureBox1;
+
+
 
 	private: System::Windows::Forms::Panel^ panel11;
 
@@ -93,6 +93,9 @@ namespace UMS {
 	private: System::Windows::Forms::Button^ btnMenu;
 	private: System::Windows::Forms::Panel^ mstPanel;
 	private: System::Windows::Forms::Panel^ panel9;
+	private: System::Windows::Forms::FlowLayoutPanel^ flowLayoutPanel1;
+	private: System::Windows::Forms::Button^ button1;
+	private: System::Windows::Forms::PictureBox^ pictureBox1;
 
 
 
@@ -188,11 +191,12 @@ namespace UMS {
 			this->pnlOfGPA = (gcnew System::Windows::Forms::Panel());
 			this->label5 = (gcnew System::Windows::Forms::Label());
 			this->Header = (gcnew System::Windows::Forms::Panel());
-			this->button1 = (gcnew System::Windows::Forms::Button());
-			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->pnlOfPanels = (gcnew System::Windows::Forms::Panel());
 			this->sideBarTimer = (gcnew System::Windows::Forms::Timer(this->components));
 			this->mstPanel = (gcnew System::Windows::Forms::Panel());
+			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
+			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->flowLayoutPanel1 = (gcnew System::Windows::Forms::FlowLayoutPanel());
 			this->sideBar->SuspendLayout();
 			this->pnlbuttons->SuspendLayout();
 			this->panel3->SuspendLayout();
@@ -203,9 +207,9 @@ namespace UMS {
 			this->pnlOfCoursesInProgress->SuspendLayout();
 			this->pnlOfGPA->SuspendLayout();
 			this->Header->SuspendLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->pnlOfPanels->SuspendLayout();
 			this->mstPanel->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// sideBar
@@ -415,9 +419,9 @@ namespace UMS {
 			this->PnlOfFilter->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(233)), static_cast<System::Int32>(static_cast<System::Byte>(234)),
 				static_cast<System::Int32>(static_cast<System::Byte>(238)));
 			this->PnlOfFilter->Controls->Add(this->label1);
-			this->PnlOfFilter->Location = System::Drawing::Point(0, -9);
+			this->PnlOfFilter->Location = System::Drawing::Point(228, 3);
 			this->PnlOfFilter->Name = L"PnlOfFilter";
-			this->PnlOfFilter->Size = System::Drawing::Size(883, 456);
+			this->PnlOfFilter->Size = System::Drawing::Size(655, 444);
 			this->PnlOfFilter->TabIndex = 1;
 			this->PnlOfFilter->UseWaitCursor = true;
 			// 
@@ -436,9 +440,9 @@ namespace UMS {
 			// pnlOfCourseGrades
 			// 
 			this->pnlOfCourseGrades->Controls->Add(this->label2);
-			this->pnlOfCourseGrades->Location = System::Drawing::Point(0, 0);
+			this->pnlOfCourseGrades->Location = System::Drawing::Point(231, 0);
 			this->pnlOfCourseGrades->Name = L"pnlOfCourseGrades";
-			this->pnlOfCourseGrades->Size = System::Drawing::Size(880, 447);
+			this->pnlOfCourseGrades->Size = System::Drawing::Size(649, 447);
 			this->pnlOfCourseGrades->TabIndex = 2;
 			this->pnlOfCourseGrades->UseWaitCursor = true;
 			// 
@@ -456,9 +460,9 @@ namespace UMS {
 			// pnlOfDetailsOfCourse
 			// 
 			this->pnlOfDetailsOfCourse->Controls->Add(this->label3);
-			this->pnlOfDetailsOfCourse->Location = System::Drawing::Point(0, 0);
+			this->pnlOfDetailsOfCourse->Location = System::Drawing::Point(228, 0);
 			this->pnlOfDetailsOfCourse->Name = L"pnlOfDetailsOfCourse";
-			this->pnlOfDetailsOfCourse->Size = System::Drawing::Size(883, 448);
+			this->pnlOfDetailsOfCourse->Size = System::Drawing::Size(655, 448);
 			this->pnlOfDetailsOfCourse->TabIndex = 3;
 			this->pnlOfDetailsOfCourse->UseWaitCursor = true;
 			// 
@@ -476,22 +480,26 @@ namespace UMS {
 			// pnlOfCoursesInProgress
 			// 
 			this->pnlOfCoursesInProgress->Controls->Add(this->label4);
-			this->pnlOfCoursesInProgress->Location = System::Drawing::Point(0, 3);
+			this->pnlOfCoursesInProgress->Controls->Add(this->flowLayoutPanel1);
+			this->pnlOfCoursesInProgress->Dock = System::Windows::Forms::DockStyle::Right;
+			this->pnlOfCoursesInProgress->Location = System::Drawing::Point(228, 0);
 			this->pnlOfCoursesInProgress->Name = L"pnlOfCoursesInProgress";
-			this->pnlOfCoursesInProgress->Size = System::Drawing::Size(883, 444);
+			this->pnlOfCoursesInProgress->Size = System::Drawing::Size(652, 448);
 			this->pnlOfCoursesInProgress->TabIndex = 4;
 			this->pnlOfCoursesInProgress->UseWaitCursor = true;
 			// 
 			// label4
 			// 
+			this->label4->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->label4->AutoSize = true;
 			this->label4->Cursor = System::Windows::Forms::Cursors::WaitCursor;
-			this->label4->Location = System::Drawing::Point(-3, 0);
+			this->label4->Location = System::Drawing::Point(19, 28);
 			this->label4->Name = L"label4";
 			this->label4->Size = System::Drawing::Size(122, 16);
 			this->label4->TabIndex = 1;
 			this->label4->Text = L"CoursesInProgress";
 			this->label4->UseWaitCursor = true;
+			this->label4->Click += gcnew System::EventHandler(this, &StudentPageForm::label4_Click);
 			// 
 			// pnlOfGPA
 			// 
@@ -515,48 +523,24 @@ namespace UMS {
 			// 
 			// Header
 			// 
-			this->Header->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->Header->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(233)), static_cast<System::Int32>(static_cast<System::Byte>(234)),
 				static_cast<System::Int32>(static_cast<System::Byte>(238)));
 			this->Header->Controls->Add(this->button1);
 			this->Header->Controls->Add(this->pictureBox1);
-			this->Header->Location = System::Drawing::Point(-5, 0);
+			this->Header->Dock = System::Windows::Forms::DockStyle::Top;
+			this->Header->Location = System::Drawing::Point(0, 0);
 			this->Header->Name = L"Header";
-			this->Header->Size = System::Drawing::Size(880, 67);
+			this->Header->Size = System::Drawing::Size(878, 67);
 			this->Header->TabIndex = 6;
 			this->Header->UseWaitCursor = true;
 			// 
-			// button1
-			// 
-			this->button1->BackColor = System::Drawing::Color::Lavender;
-			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button1->Location = System::Drawing::Point(818, 44);
-			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(59, 23);
-			this->button1->TabIndex = 2;
-			this->button1->Text = L"Edit Profile";
-			this->button1->UseVisualStyleBackColor = false;
-			this->button1->UseWaitCursor = true;
-			// 
-			// pictureBox1
-			// 
-			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
-			this->pictureBox1->Location = System::Drawing::Point(828, 12);
-			this->pictureBox1->Name = L"pictureBox1";
-			this->pictureBox1->Size = System::Drawing::Size(30, 32);
-			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
-			this->pictureBox1->TabIndex = 2;
-			this->pictureBox1->TabStop = false;
-			this->pictureBox1->UseWaitCursor = true;
-			// 
 			// pnlOfPanels
 			// 
-			this->pnlOfPanels->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
+			this->pnlOfPanels->Controls->Add(this->pnlOfCoursesInProgress);
+			this->pnlOfPanels->Controls->Add(this->pnlOfGPA);
 			this->pnlOfPanels->Controls->Add(this->PnlOfFilter);
 			this->pnlOfPanels->Controls->Add(this->pnlOfCourseGrades);
 			this->pnlOfPanels->Controls->Add(this->pnlOfDetailsOfCourse);
-			this->pnlOfPanels->Controls->Add(this->pnlOfCoursesInProgress);
-			this->pnlOfPanels->Controls->Add(this->pnlOfGPA);
 			this->pnlOfPanels->Location = System::Drawing::Point(-5, 73);
 			this->pnlOfPanels->Name = L"pnlOfPanels";
 			this->pnlOfPanels->Size = System::Drawing::Size(880, 448);
@@ -583,6 +567,37 @@ namespace UMS {
 			this->mstPanel->Size = System::Drawing::Size(878, 520);
 			this->mstPanel->TabIndex = 2;
 			this->mstPanel->UseWaitCursor = true;
+			// 
+			// pictureBox1
+			// 
+			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
+			this->pictureBox1->Location = System::Drawing::Point(828, 12);
+			this->pictureBox1->Name = L"pictureBox1";
+			this->pictureBox1->Size = System::Drawing::Size(30, 32);
+			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->pictureBox1->TabIndex = 2;
+			this->pictureBox1->TabStop = false;
+			this->pictureBox1->UseWaitCursor = true;
+			// 
+			// button1
+			// 
+			this->button1->BackColor = System::Drawing::Color::Lavender;
+			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button1->Location = System::Drawing::Point(818, 44);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(59, 23);
+			this->button1->TabIndex = 2;
+			this->button1->Text = L"Edit Profile";
+			this->button1->UseVisualStyleBackColor = false;
+			this->button1->UseWaitCursor = true;
+			// 
+			// flowLayoutPanel1
+			// 
+			this->flowLayoutPanel1->AutoScroll = true;
+			this->flowLayoutPanel1->Location = System::Drawing::Point(182, 0);
+			this->flowLayoutPanel1->Name = L"flowLayoutPanel1";
+			this->flowLayoutPanel1->Size = System::Drawing::Size(472, 447);
+			this->flowLayoutPanel1->TabIndex = 2;
 			// 
 			// StudentPageForm
 			// 
@@ -613,9 +628,9 @@ namespace UMS {
 			this->pnlOfGPA->ResumeLayout(false);
 			this->pnlOfGPA->PerformLayout();
 			this->Header->ResumeLayout(false);
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			this->pnlOfPanels->ResumeLayout(false);
 			this->mstPanel->ResumeLayout(false);
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -723,6 +738,8 @@ private: System::Void btnMenu_Click(System::Object^ sender, System::EventArgs^ e
 }
 	  
 private: System::Void panel7_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
+}
+private: System::Void label4_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 

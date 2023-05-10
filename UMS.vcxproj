@@ -126,6 +126,7 @@
     <ClCompile Include="AdminForm.cpp" />
     <ClCompile Include="adminHome.cpp" />
     <ClCompile Include="Course.cpp" />
+    <ClCompile Include="courselistitem.cpp" />
     <ClCompile Include="Login.cpp" />
     <ClCompile Include="messagebox.cpp" />
     <ClCompile Include="SignUp.cpp" />
@@ -148,6 +149,9 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="Course.h" />
+    <ClInclude Include="courselistitem.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
     <ClInclude Include="Login.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -180,6 +184,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="adminHome.resx">
       <DependentUpon>adminHome.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="courselistitem.resx">
+      <DependentUpon>courselistitem.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.aa-DJ.resx">
       <DependentUpon>Login.h</DependentUpon>
