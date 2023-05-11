@@ -103,6 +103,9 @@ namespace UMS {
 
 	private: System::Windows::Forms::Timer^ dropdowntimer;
 	private: System::Windows::Forms::Button^ button1;
+	private: System::Windows::Forms::FlowLayoutPanel^ flowLayoutPanel3;
+	private: System::Windows::Forms::Button^ button2;
+	private: System::Windows::Forms::Timer^ dropdowndet;
 
 
 
@@ -185,6 +188,8 @@ namespace UMS {
 			this->pnlOfCourseGrades = (gcnew System::Windows::Forms::Panel());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->pnlOfDetailsOfCourse = (gcnew System::Windows::Forms::Panel());
+			this->flowLayoutPanel3 = (gcnew System::Windows::Forms::FlowLayoutPanel());
+			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->pnlOfCoursesInProgress = (gcnew System::Windows::Forms::Panel());
 			this->label4 = (gcnew System::Windows::Forms::Label());
@@ -198,6 +203,7 @@ namespace UMS {
 			this->sideBarTimer = (gcnew System::Windows::Forms::Timer(this->components));
 			this->mstPanel = (gcnew System::Windows::Forms::Panel());
 			this->dropdowntimer = (gcnew System::Windows::Forms::Timer(this->components));
+			this->dropdowndet = (gcnew System::Windows::Forms::Timer(this->components));
 			this->sideBar->SuspendLayout();
 			this->pnlbuttons->SuspendLayout();
 			this->panel3->SuspendLayout();
@@ -205,6 +211,7 @@ namespace UMS {
 			this->PnlOfFilter->SuspendLayout();
 			this->pnlOfCourseGrades->SuspendLayout();
 			this->pnlOfDetailsOfCourse->SuspendLayout();
+			this->flowLayoutPanel3->SuspendLayout();
 			this->pnlOfCoursesInProgress->SuspendLayout();
 			this->pnlOfregCourse->SuspendLayout();
 			this->flowLayoutPanel2->SuspendLayout();
@@ -460,12 +467,35 @@ namespace UMS {
 			// 
 			// pnlOfDetailsOfCourse
 			// 
+			this->pnlOfDetailsOfCourse->Controls->Add(this->flowLayoutPanel3);
 			this->pnlOfDetailsOfCourse->Controls->Add(this->label3);
 			this->pnlOfDetailsOfCourse->Location = System::Drawing::Point(228, 0);
 			this->pnlOfDetailsOfCourse->Name = L"pnlOfDetailsOfCourse";
 			this->pnlOfDetailsOfCourse->Size = System::Drawing::Size(655, 448);
 			this->pnlOfDetailsOfCourse->TabIndex = 3;
 			this->pnlOfDetailsOfCourse->UseWaitCursor = true;
+			this->pnlOfDetailsOfCourse->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &StudentPageForm::pnlOfDetailsOfCourse_Paint);
+			// 
+			// flowLayoutPanel3
+			// 
+			this->flowLayoutPanel3->Controls->Add(this->button2);
+			this->flowLayoutPanel3->Location = System::Drawing::Point(257, 55);
+			this->flowLayoutPanel3->Name = L"flowLayoutPanel3";
+			this->flowLayoutPanel3->Size = System::Drawing::Size(240, 34);
+			this->flowLayoutPanel3->TabIndex = 3;
+			this->flowLayoutPanel3->UseWaitCursor = true;
+			// 
+			// button2
+			// 
+			this->button2->Dock = System::Windows::Forms::DockStyle::Top;
+			this->button2->Location = System::Drawing::Point(3, 3);
+			this->button2->Name = L"button2";
+			this->button2->Size = System::Drawing::Size(219, 30);
+			this->button2->TabIndex = 3;
+			this->button2->Text = L"button2";
+			this->button2->UseVisualStyleBackColor = true;
+			this->button2->UseWaitCursor = true;
+			this->button2->Click += gcnew System::EventHandler(this, &StudentPageForm::button2_Click_1);
 			// 
 			// label3
 			// 
@@ -568,11 +598,11 @@ namespace UMS {
 			// 
 			// pnlOfPanels
 			// 
-			this->pnlOfPanels->Controls->Add(this->pnlOfregCourse);
-			this->pnlOfPanels->Controls->Add(this->PnlOfFilter);
-			this->pnlOfPanels->Controls->Add(this->pnlOfCourseGrades);
 			this->pnlOfPanels->Controls->Add(this->pnlOfDetailsOfCourse);
 			this->pnlOfPanels->Controls->Add(this->pnlOfCoursesInProgress);
+			this->pnlOfPanels->Controls->Add(this->pnlOfregCourse);
+			this->pnlOfPanels->Controls->Add(this->pnlOfCourseGrades);
+			this->pnlOfPanels->Controls->Add(this->PnlOfFilter);
 			this->pnlOfPanels->Location = System::Drawing::Point(-5, 73);
 			this->pnlOfPanels->Name = L"pnlOfPanels";
 			this->pnlOfPanels->Size = System::Drawing::Size(880, 448);
@@ -599,10 +629,15 @@ namespace UMS {
 			this->mstPanel->Size = System::Drawing::Size(878, 520);
 			this->mstPanel->TabIndex = 2;
 			this->mstPanel->UseWaitCursor = true;
+			this->mstPanel->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &StudentPageForm::mstPanel_Paint);
 			// 
 			// dropdowntimer
 			// 
 			this->dropdowntimer->Tick += gcnew System::EventHandler(this, &StudentPageForm::dropdowntimer_Tick);
+			// 
+			// dropdowndet
+			// 
+			this->dropdowndet->Tick += gcnew System::EventHandler(this, &StudentPageForm::dropdowndet_Tick);
 			// 
 			// StudentPageForm
 			// 
@@ -628,6 +663,7 @@ namespace UMS {
 			this->pnlOfCourseGrades->PerformLayout();
 			this->pnlOfDetailsOfCourse->ResumeLayout(false);
 			this->pnlOfDetailsOfCourse->PerformLayout();
+			this->flowLayoutPanel3->ResumeLayout(false);
 			this->pnlOfCoursesInProgress->ResumeLayout(false);
 			this->pnlOfCoursesInProgress->PerformLayout();
 			this->pnlOfregCourse->ResumeLayout(false);
@@ -681,6 +717,18 @@ namespace UMS {
 
 
 			flowLayoutPanel2->Controls->Add(temp);
+
+		}
+		for (int i = 0; i < Course::allCourses->Count; i++)
+		{
+			courseButton^ temp = gcnew courseButton;
+
+			temp->setCourseName(Course::allCourses[i]->getName());
+			
+
+
+
+			flowLayoutPanel3->Controls->Add(temp);
 
 		}
 
@@ -820,6 +868,37 @@ private: System::Void button1_Click_1(System::Object^ sender, System::EventArgs^
 
 	dropdowntimer->Start();
 }
+private: System::Void mstPanel_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
+}
+private: System::Void button2_Click_1(System::Object^ sender, System::EventArgs^ e) {
+	dropdowndet->Start();
+}
+	   bool expand3 = false;
+private: System::Void dropdowndet_Tick(System::Object^ sender, System::EventArgs^ e) {
+
+	if (!expand3)
+	{
+		flowLayoutPanel3->Height += 15;
+		if (flowLayoutPanel3->Height >= Course::allCourses->Count * 35) {
+			dropdowndet->Stop();
+			expand3 = true;
+		}
+	}
+
+	else {
+		flowLayoutPanel3->Height -= 15;
+		if (flowLayoutPanel3->Height <= 30)
+		{
+			dropdowndet->Stop();
+			expand3 = false;
+		}
+
+	}
+}
+
+private: System::Void pnlOfDetailsOfCourse_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
+}
+};
 };
 
-}
+
