@@ -509,17 +509,14 @@ void Student::loadStudentDataFromFile() {
 
 
 
-bool Student::registerForCourse(Course^ course)
+void Student::registerForCourse(Course^ course)
 {
-		List<String^>^ temp = getCoursesINProgress();
-		if (CoursesAV())
+		if (CoursesAV()->Contains(course->getName()))
 		{
-			temp->Add(course->getName());
-			setCoursesINProgress(temp);
+			CoursesInProgress->Add(course->getName());
 			course->allStudentInProgress->Add(getID());
-			return true;
+		
 		}
-		return false;
 
 }
 

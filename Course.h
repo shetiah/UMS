@@ -28,7 +28,7 @@ public:
 	static Dictionary<String^, int>^ eachCourseHours;
 
 	static List<Course^>^ allCourses;
-	 List<int>^ allStudentInProgress;
+	static List<int>^ allStudentInProgress;
 	//constructor
 	Course();
 	Course(String^ name, String^ code, String^ instructor, bool isRequirement, int maxNumberOfStudents, int hours);

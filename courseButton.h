@@ -37,8 +37,11 @@ namespace UMS {
 		}
 #pragma region MyRegion
 	private:String^ coursename;
+	private:Button^ bt= gcnew System::Windows::Forms::Button();
 	public:void setCourseName(String^ cname);
 	public:String^ getCourseName();
+	public:Button^ getBt();
+
 #pragma endregion
 
 	private: System::Windows::Forms::Button^ courselab;
@@ -59,6 +62,10 @@ namespace UMS {
 		/// Required method for Designer support - do not modify
 		/// the contents of this method with the code editor.
 		/// </summary>
+		/// 
+		/// 
+		/// 
+		Button^ cslbtemp = (gcnew System::Windows::Forms::Button());
 		void InitializeComponent(void)
 		{
 			this->courselab = (gcnew System::Windows::Forms::Button());
@@ -84,6 +91,7 @@ namespace UMS {
 			this->Name = L"courseButton";
 			this->Size = System::Drawing::Size(219, 30);
 			this->ResumeLayout(false);
+			cslbtemp = this->courselab;
 
 		}
 #pragma endregion
