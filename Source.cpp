@@ -44,9 +44,7 @@ int main()
 
 
 
-	/*Application::Run(gcnew UMS::AddCourseForm);
-
-*/
+	Application::Run(gcnew UMS::AddCourseForm);
 
 
 
@@ -55,7 +53,9 @@ int main()
 
 
 
-		while (true)
+
+
+		/*while (true)
 		{
 			UMS::welcomeForm welcForm;
 			welcForm.ShowDialog();
@@ -98,7 +98,7 @@ int main()
 				break;
 			
 
-		}	
+		}	*/
 
 
 
