@@ -5,10 +5,8 @@ bool UMS::Login::validateStudentData(Student^ student)
 	
 	for each (auto i in Student::allStudents)
 	{
-		String^ sysmail = i->getEmail();
-		String^ syspassword = i->getPassword();
 		
-		if(sysmail == student->getEmail() && syspassword == student->getPassword()){
+		if(i->getEmail() == student->getEmail() && i->getPassword() == student->getPassword()){
 			
 
 			student = i;

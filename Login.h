@@ -332,7 +332,7 @@ namespace UMS {
 
 		}
 #pragma endregion
-    public:  Student^ student = gcnew Student;
+    public: static Student^ student = gcnew Student;
     public: static messagebox^ m;
     public: bool loggedIn = false;
     public:static bool validateStudentData(Student^ stud);
@@ -480,8 +480,13 @@ private: System::Void LOGINbt_Click_1(System::Object^ sender, System::EventArgs^
 	student->setPassword(tbpassword->Text);
 	if (studentLogin(student))
 	{
+		for each (auto i in Student::allStudents)
+		{
+			if (i->getEmail() == student->getEmail() && i->getPassword() == student->getPassword()) {
+				student = i;
+			}
+		}
 		this->Close();
-
 	}
 	else {
 

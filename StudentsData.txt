@@ -5,9 +5,9 @@
 5)2
 6)18
 7)3.9
-8)intro to cs
+8)Structured Programming,intro to cs
 9)3.7
-c)intro to cs
+c)linear
 x
 1)Hassan Muhammad
 2)2023021@cis.com
@@ -27,7 +27,7 @@ x
 5)2
 6)21
 7)4
-8)Structured Programming,intro to CS
+8)Structured Programming,intro to cs
 9)4,3.7
 c)linear,archi
 x

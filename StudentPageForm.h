@@ -709,65 +709,65 @@ namespace UMS {
 	public: bool loggedOut = false;
 
 	private: System::Void StudentPageForm_Load(System::Object^ sender, System::EventArgs^ e) {
-		/*populateItems();*/
+		populateItems();
 	}
 
 
 
 
-	//private:void populateItems()
-	//{
-
-	//	//List<courselistitem^>^ clist = gcnew List<courselistitem^>(Course::allCourses->Count);
-	//	// loop through each item
-	//	
-
-	//		for each (auto course in Course::allCourses)
-	//		{
-	//			List<String^>^ tempe = gcnew List<String^>();
-	//			tempe = stud->getCoursesINProgress();
-	//			if (tempe->Contains(course->getName()))
-	//			{
-	//				courselistitem^ temp = gcnew courselistitem;
-
-	//				temp->setName(course->getName());
-	//				temp->setCode(course->getCode());
-	//				temp->setInstructor(course->getInstructor());
-	//				temp->setIsRequirement(course->getIsRequirement());
-	//				temp->setName(course->getName());
-	//				temp->setMaxNumberOfStudents(course->getMaxNumberOfStudents());
-
-	//				flowLayoutPanel1->Controls->Add(temp);
-	//			}
-	//		}
-	//	/*
-	//	List<courseButton^>^ clist2 = gcnew List<courseButton^>(Course::allCourses->Count);*/
-	//	for (int i = 0; i < Course::allCourses->Count; i++)
-	//	{
-	//		courseButton^ temp = gcnew courseButton;
-
-	//		temp->setCourseName(Course::allCourses[i]->getName());
-	//		
+	private:void populateItems()
+	{
 
 
+			for each (auto course in Course::allCourses)
+			{
+					courselistitem^ temp = gcnew courselistitem;
 
-	//		flowLayoutPanel2->Controls->Add(temp);
+					temp->setName(course->getName());
+					temp->setCode(course->getCode());
+					temp->setInstructor(course->getInstructor());
+					temp->setIsRequirement(course->getIsRequirement());
+					temp->setName(course->getName());
+					temp->setMaxNumberOfStudents(course->getMaxNumberOfStudents());
 
-	//	}
-	//	for (int i = 0; i < Course::allCourses->Count; i++)
-	//	{
-	//		courseButton^ temp = gcnew courseButton;
+					flowLayoutPanel1->Controls->Add(temp);
+				
+			}
+		
+			
+			for each (auto course in Course::allCourses)
+			{
+				courseButton^ temp = gcnew courseButton;
 
-	//		temp->setCourseName(Course::allCourses[i]->getName());
-	//		
+				List<String^>^ tempe = gcnew List<String^>();
+				tempe = student->CoursesAV();
+				if (tempe->Contains(course->getName()))
+				{
+					courseButton^ temp = gcnew courseButton;
+
+
+					temp->setCourseName(course->getName());
+
+					flowLayoutPanel2->Controls->Add(temp);
+				}
+			}
+
+
+		
+		for (int i = 0; i < Course::allCourses->Count; i++)
+		{
+			courseButton^ temp = gcnew courseButton;
+
+			temp->setCourseName(Course::allCourses[i]->getName());
+			
 
 
 
-	//		flowLayoutPanel3->Controls->Add(temp);
+			flowLayoutPanel3->Controls->Add(temp);
 
-	//	}
+		}
 
-	//}
+	}
 	private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
 
 	}

@@ -1,4 +1,4 @@
 Structured Programming-intro to cs
 intro to cs-0
 operation systems-rgola,adab,trbya
-saba7saba7-Structured Programming,intro to CS
+saba7saba7-Structured Programming,intro to cs
