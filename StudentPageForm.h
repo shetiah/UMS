@@ -5,6 +5,7 @@
 #include<string>
 #include<fstream>
 #include<iostream>
+#include "courselistitem.h"
 //
 //inline void viewAvCourses(Student^ stud);
 
@@ -94,8 +95,8 @@ namespace UMS {
 	private: System::Windows::Forms::Panel^ mstPanel;
 	private: System::Windows::Forms::Panel^ panel9;
 	private: System::Windows::Forms::FlowLayoutPanel^ flowLayoutPanel1;
-	private: System::Windows::Forms::Button^ button1;
-	private: System::Windows::Forms::PictureBox^ pictureBox1;
+
+
 
 
 
@@ -164,7 +165,6 @@ namespace UMS {
 		void InitializeComponent(void)
 		{
 			this->components = (gcnew System::ComponentModel::Container());
-			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(StudentPageForm::typeid));
 			this->sideBar = (gcnew System::Windows::Forms::Panel());
 			this->btnMenu = (gcnew System::Windows::Forms::Button());
 			this->pnlbuttons = (gcnew System::Windows::Forms::Panel());
@@ -194,8 +194,6 @@ namespace UMS {
 			this->pnlOfPanels = (gcnew System::Windows::Forms::Panel());
 			this->sideBarTimer = (gcnew System::Windows::Forms::Timer(this->components));
 			this->mstPanel = (gcnew System::Windows::Forms::Panel());
-			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
-			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->flowLayoutPanel1 = (gcnew System::Windows::Forms::FlowLayoutPanel());
 			this->sideBar->SuspendLayout();
 			this->pnlbuttons->SuspendLayout();
@@ -206,10 +204,8 @@ namespace UMS {
 			this->pnlOfDetailsOfCourse->SuspendLayout();
 			this->pnlOfCoursesInProgress->SuspendLayout();
 			this->pnlOfGPA->SuspendLayout();
-			this->Header->SuspendLayout();
 			this->pnlOfPanels->SuspendLayout();
 			this->mstPanel->SuspendLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// sideBar
@@ -525,14 +521,13 @@ namespace UMS {
 			// 
 			this->Header->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(233)), static_cast<System::Int32>(static_cast<System::Byte>(234)),
 				static_cast<System::Int32>(static_cast<System::Byte>(238)));
-			this->Header->Controls->Add(this->button1);
-			this->Header->Controls->Add(this->pictureBox1);
 			this->Header->Dock = System::Windows::Forms::DockStyle::Top;
 			this->Header->Location = System::Drawing::Point(0, 0);
 			this->Header->Name = L"Header";
 			this->Header->Size = System::Drawing::Size(878, 67);
 			this->Header->TabIndex = 6;
 			this->Header->UseWaitCursor = true;
+			this->Header->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &StudentPageForm::Header_Paint);
 			// 
 			// pnlOfPanels
 			// 
@@ -567,29 +562,6 @@ namespace UMS {
 			this->mstPanel->Size = System::Drawing::Size(878, 520);
 			this->mstPanel->TabIndex = 2;
 			this->mstPanel->UseWaitCursor = true;
-			// 
-			// pictureBox1
-			// 
-			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
-			this->pictureBox1->Location = System::Drawing::Point(828, 12);
-			this->pictureBox1->Name = L"pictureBox1";
-			this->pictureBox1->Size = System::Drawing::Size(30, 32);
-			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
-			this->pictureBox1->TabIndex = 2;
-			this->pictureBox1->TabStop = false;
-			this->pictureBox1->UseWaitCursor = true;
-			// 
-			// button1
-			// 
-			this->button1->BackColor = System::Drawing::Color::Lavender;
-			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button1->Location = System::Drawing::Point(818, 44);
-			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(59, 23);
-			this->button1->TabIndex = 2;
-			this->button1->Text = L"Edit Profile";
-			this->button1->UseVisualStyleBackColor = false;
-			this->button1->UseWaitCursor = true;
 			// 
 			// flowLayoutPanel1
 			// 
@@ -627,10 +599,8 @@ namespace UMS {
 			this->pnlOfCoursesInProgress->PerformLayout();
 			this->pnlOfGPA->ResumeLayout(false);
 			this->pnlOfGPA->PerformLayout();
-			this->Header->ResumeLayout(false);
 			this->pnlOfPanels->ResumeLayout(false);
 			this->mstPanel->ResumeLayout(false);
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -642,6 +612,34 @@ namespace UMS {
 	private: System::Void StudentPageForm_Load(System::Object^ sender, System::EventArgs^ e) {
 
 	}
+
+
+
+
+	private:void populateItems()
+	{
+
+		////populate it here
+		//courselistitem* listItems = new courselistitem[20];
+		
+		List<courselistitem^>^ clist;
+			// loop through each item
+		for (int i = 0; i < Course::allCourses->Count; i++)
+		{
+			clist[i]->setName(Course::allCourses[i]->getName());
+			clist[i]->setCode(Course::allCourses[i]->getCode());
+			clist[i]->setInstructor(Course::allCourses[i]->getInstructor());
+			clist[i]->setIsRequirement(Course::allCourses[i]->getIsRequirement());
+			clist[i]->setName(Course::allCourses[i]->getName());
+			clist[i]->setMaxNumberOfStudents(Course::allCourses[i]->getMaxNumberOfStudents());
+			
+
+
+			flowLayoutPanel1->Controls->Add(clist[i]);
+		}
+
+	}
+
 	private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
 
 	}
@@ -740,6 +738,8 @@ private: System::Void btnMenu_Click(System::Object^ sender, System::EventArgs^ e
 private: System::Void panel7_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
 }
 private: System::Void label4_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void Header_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
 }
 };
 

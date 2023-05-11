@@ -1,21 +1,32 @@
 #include "courselistitem.h"
 void UMS::courselistitem::setName(String^ name) {
 	this->name = name;
+	coursenamelb->Text = name;
 }
 void UMS::courselistitem::setCode(String^ code) {
 	this->Code = code;
+	codelb->Text = code;
 }
 void UMS::courselistitem::setInstructor(String^ instructor) {
 	this->instructor = instructor;
+	instrData->Text = instructor;
 }
 void UMS::courselistitem::setIsRequirement(bool isRequirement) {
 	this->isRequirement = isRequirement;
+	if (isRequirement)
+	{
+		isreqdata->Text = "yes";
+	}
+	else
+		isreqdata->Text = "no";
 }
 void UMS::courselistitem::setMaxNumberOfStudents(int maxNumberOfStudents) {
 	this->maxNumberOfStudents = maxNumberOfStudents;
+	maxstdDt->Text = Convert::ToString(maxNumberOfStudents);
 }
 void UMS::courselistitem::setHours(int hours) {
 	this->hours = hours;
+	hoursdt->Text = Convert::ToString(hours) ;
 }
 
 String^ UMS::courselistitem::getName() {
