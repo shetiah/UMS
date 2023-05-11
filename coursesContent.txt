@@ -1,4 +1,4 @@
-intro to CS-CS101-Salsabil Amin-1-600-3
-SP-CS102-Wedad Hussein-0-800-3
-test-12-hassan-1-153-3
-hrsTest-IS12-hassan2-1-125-4
+Structured Programming-bsboba_34-ahmed hassan koka-1-300-3
+intro to cs-atayf_latayf-ahmed hassan koka-1-300-3
+operation systems-sya3a{x6)-hussen  beh-1-390-4
+saba7saba7-stdString-jeff bezoz-1-1-10

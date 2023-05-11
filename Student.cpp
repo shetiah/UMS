@@ -156,39 +156,39 @@ List<String^>^ Student::CoursesAV()
 {
 
 	List<String^>^ AvCourses = gcnew List<String^>();
-	
-	//return an empty list if no finished courses
-	if(FinishedCourses==nullptr)
-		return nullptr;
-		
+	//
+	////return an empty list if no finished courses
+	////if(FinishedCourses==nullptr)
+	////	return nullptr;
+	////	
 
-	//return an empty list if no finished courses
-	if (FinishedCourses->Count == 0);
-	  return nullptr;
+	//////return an empty list if no finished courses
+	////if (FinishedCourses->Count == 0);
+	////  return nullptr;
 
-	for each (auto line in Course::preRequires)
-	{
-		//line = { course Name to be taken, list of its preRequisites}
-		String^ courseToAdd = line.Key;
-		List<String^>^ preReqs = line.Value;
-		bool canBeAdded = true;
-		for each (auto course in preReqs)
-		{
-			//searching if each preRequisite is in the student's finished courses or in progress
-			if (!FinishedCourses->Contains(course) || CoursesInProgress->Contains(course))
-			{
-				canBeAdded = false;
-				break;
-			}
-		}
-		//checking if the course can be added and not already in progress
-		if (canBeAdded && !CoursesInProgress->Contains(courseToAdd))
-		{
-			AvCourses->Add(courseToAdd);
-		}
-	}
+	//for each (auto line in Course::preRequires)
+	//{
+	//	//line = { course Name to be taken, list of its preRequisites}
+	//	String^ courseToAdd = line.Key;
+	//	List<String^>^ preReqs = line.Value;
+	//	bool canBeAdded = true;
+	//	for each (auto course in preReqs)
+	//	{
+	//		//searching if each preRequisite is in the student's finished courses or in progress
+	//		if (!FinishedCourses->Contains(course) || CoursesInProgress->Contains(course))
+	//		{
+	//			canBeAdded = false;
+	//			break;
+	//		}
+	//	}
+	//	//checking if the course can be added and not already in progress
+	//	if (canBeAdded && !CoursesInProgress->Contains(courseToAdd))
+	//	{
+	//		AvCourses->Add(courseToAdd);
+	//	}
+	//}
 
-	return AvCourses;
+	return FinishedCourses;
 }
 
 

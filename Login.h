@@ -332,7 +332,7 @@ namespace UMS {
 
 		}
 #pragma endregion
-    public: Student^ student = nullptr;
+    public:  Student^ student = gcnew Student;
     public: static messagebox^ m;
     public: bool loggedIn = false;
     public:static bool validateStudentData(Student^ stud);
@@ -476,7 +476,6 @@ private: System::Void tbpassword_leave(System::Object^ sender, System::EventArgs
 private: System::Void tbemail_TextChanged_1(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void LOGINbt_Click_1(System::Object^ sender, System::EventArgs^ e) {
-	student = gcnew Student;
 	student->setEmail(tbemail->Text);
 	student->setPassword(tbpassword->Text);
 	if (studentLogin(student))

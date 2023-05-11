@@ -2,18 +2,20 @@
 #include "StudentPageForm.h"
 bool UMS::Login::validateStudentData(Student^ student)
 {
-	bool valid = false;
+	
 	for each (auto i in Student::allStudents)
 	{
 		String^ sysmail = i->getEmail();
 		String^ syspassword = i->getPassword();
 		
 		if(sysmail == student->getEmail() && syspassword == student->getPassword()){
-			valid = true;
+			
+
+			student = i;
+
+			return true;
 		}
 	}
-	if (valid)
-		return true;
 	return false;
 }
  bool UMS::Login::studentLogin(Student^ stud)
