@@ -653,32 +653,34 @@ namespace UMS {
 	private:void populateItems()
 	{
 
-		List<courselistitem^>^ clist = gcnew List<courselistitem^>(Course::allCourses->Count);
+		//List<courselistitem^>^ clist = gcnew List<courselistitem^>(Course::allCourses->Count);
 		// loop through each item
 		for (int i = 0; i < Course::allCourses->Count; i++)
 		{
-			clist[i]->setName(Course::allCourses[i]->getName());
-			clist[i]->setCode(Course::allCourses[i]->getCode());
-			clist[i]->setInstructor(Course::allCourses[i]->getInstructor());
-			clist[i]->setIsRequirement(Course::allCourses[i]->getIsRequirement());
-			clist[i]->setName(Course::allCourses[i]->getName());
-			clist[i]->setMaxNumberOfStudents(Course::allCourses[i]->getMaxNumberOfStudents());
+
+			courselistitem^ temp= gcnew courselistitem;
+			temp->setName(Course::allCourses[i]->getName());
+			temp->setCode(Course::allCourses[i]->getCode());
+			temp->setInstructor(Course::allCourses[i]->getInstructor());
+			temp->setIsRequirement(Course::allCourses[i]->getIsRequirement());
+			temp->setName(Course::allCourses[i]->getName());
+			temp->setMaxNumberOfStudents(Course::allCourses[i]->getMaxNumberOfStudents());
 			
 
 
-			flowLayoutPanel1->Controls->Add(clist[i]);
-		}
-		List<courseButton^>^ clist2 = gcnew List<courseButton^>(Course::allCourses->Count);
+			flowLayoutPanel1->Controls->Add(temp);
+		}/*
+		List<courseButton^>^ clist2 = gcnew List<courseButton^>(Course::allCourses->Count);*/
 		for (int i = 0; i < Course::allCourses->Count; i++)
 		{
-			courseButton^ c = gcnew courseButton;
+			courseButton^ temp = gcnew courseButton;
 
-			c->setCourseName(Course::allCourses[i]->getName());
-			clist2->Add(c);
+			temp->setCourseName(Course::allCourses[i]->getName());
+			
 
 
 
-			flowLayoutPanel2->Controls->Add(clist2[i]);
+			flowLayoutPanel2->Controls->Add(temp);
 
 		}
 
