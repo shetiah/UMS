@@ -508,32 +508,18 @@ void Student::loadStudentDataFromFile() {
 }
 
 
-bool Student::validateIfCourseCanBeTaken(Course^ course)
-{
-	//to-do:
-	// 
-	//check Student::CoursesAV() for the required course
-	List<String^>^ AvCourses = CoursesAV();
-	if (AvCourses->Contains(course->getName()))
-	{
-		return true;
-	}
-}
 
-void Student::registerForCourse(Course^ course)
+bool Student::registerForCourse(Course^ course)
 {
-	//to-do :
-	//1-use Student::validateIfCourseCanBeTaken 
-	//2- handle if it's false
-	//3-if true then put it in CoursesInProgress 
-	if (!validateIfCourseCanBeTaken(course))
-	{
-
-	}
-	else
-	{
-		CoursesInProgress->Add(course->getName());
-	}
+		List<String^>^ temp = getCoursesINProgress();
+		if (CoursesAV())
+		{
+			temp->Add(course->getName());
+			setCoursesINProgress(temp);
+			course->allStudentInProgress->Add(getID());
+			return true;
+		}
+		return false;
 
 }
 

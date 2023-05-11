@@ -6,6 +6,7 @@
 #include<fstream>
 #include<iostream>
 #include "courselistitem.h"
+#include "courseButton.h"
 //
 //inline void viewAvCourses(Student^ stud);
 
@@ -62,7 +63,8 @@ namespace UMS {
 
 	private: System::Windows::Forms::Panel^ panel2;
 	private: System::Windows::Forms::Button^ btnFilter;
-	private: System::Windows::Forms::Button^ btnGPA;
+	private: System::Windows::Forms::Button^ btnregister;
+
 	private: System::Windows::Forms::Panel^ PnlOfFilter;
 
 	private: System::Windows::Forms::Label^ label1;
@@ -72,8 +74,10 @@ namespace UMS {
 	private: System::Windows::Forms::Label^ label3;
 	private: System::Windows::Forms::Panel^ pnlOfCoursesInProgress;
 	private: System::Windows::Forms::Label^ label4;
-	private: System::Windows::Forms::Panel^ pnlOfGPA;
-	private: System::Windows::Forms::Label^ label5;
+	private: System::Windows::Forms::Panel^ pnlOfregCourse;
+
+	private: System::Windows::Forms::Label^ reglb;
+
 	private: System::Windows::Forms::Panel^ panel7;
 	private: System::Windows::Forms::Panel^ Header;
 
@@ -95,6 +99,10 @@ namespace UMS {
 	private: System::Windows::Forms::Panel^ mstPanel;
 	private: System::Windows::Forms::Panel^ panel9;
 	private: System::Windows::Forms::FlowLayoutPanel^ flowLayoutPanel1;
+	private: System::Windows::Forms::FlowLayoutPanel^ flowLayoutPanel2;
+
+	private: System::Windows::Forms::Timer^ dropdowntimer;
+	private: System::Windows::Forms::Button^ button1;
 
 
 
@@ -127,15 +135,7 @@ namespace UMS {
 				this->label1->Text = Av[0];
 			}
 		}
-		void registerCourse(Course^ course)
-		{
-
-			List<String^>^ temp = this->stud->getCoursesINProgress();
-			temp->Add(course->getName());
-			stud->setCoursesINProgress(temp);
-			course->allStudentInProgress->Add(this->stud->getID());
-
-		}
+		
 
 
 
@@ -175,7 +175,7 @@ namespace UMS {
 			this->panel11 = (gcnew System::Windows::Forms::Panel());
 			this->panel10 = (gcnew System::Windows::Forms::Panel());
 			this->btnCourseInProgress = (gcnew System::Windows::Forms::Button());
-			this->btnGPA = (gcnew System::Windows::Forms::Button());
+			this->btnregister = (gcnew System::Windows::Forms::Button());
 			this->panel3 = (gcnew System::Windows::Forms::Panel());
 			this->btnCourseGrade = (gcnew System::Windows::Forms::Button());
 			this->panel2 = (gcnew System::Windows::Forms::Panel());
@@ -188,13 +188,16 @@ namespace UMS {
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->pnlOfCoursesInProgress = (gcnew System::Windows::Forms::Panel());
 			this->label4 = (gcnew System::Windows::Forms::Label());
-			this->pnlOfGPA = (gcnew System::Windows::Forms::Panel());
-			this->label5 = (gcnew System::Windows::Forms::Label());
+			this->flowLayoutPanel1 = (gcnew System::Windows::Forms::FlowLayoutPanel());
+			this->pnlOfregCourse = (gcnew System::Windows::Forms::Panel());
+			this->flowLayoutPanel2 = (gcnew System::Windows::Forms::FlowLayoutPanel());
+			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->reglb = (gcnew System::Windows::Forms::Label());
 			this->Header = (gcnew System::Windows::Forms::Panel());
 			this->pnlOfPanels = (gcnew System::Windows::Forms::Panel());
 			this->sideBarTimer = (gcnew System::Windows::Forms::Timer(this->components));
 			this->mstPanel = (gcnew System::Windows::Forms::Panel());
-			this->flowLayoutPanel1 = (gcnew System::Windows::Forms::FlowLayoutPanel());
+			this->dropdowntimer = (gcnew System::Windows::Forms::Timer(this->components));
 			this->sideBar->SuspendLayout();
 			this->pnlbuttons->SuspendLayout();
 			this->panel3->SuspendLayout();
@@ -203,7 +206,8 @@ namespace UMS {
 			this->pnlOfCourseGrades->SuspendLayout();
 			this->pnlOfDetailsOfCourse->SuspendLayout();
 			this->pnlOfCoursesInProgress->SuspendLayout();
-			this->pnlOfGPA->SuspendLayout();
+			this->pnlOfregCourse->SuspendLayout();
+			this->flowLayoutPanel2->SuspendLayout();
 			this->pnlOfPanels->SuspendLayout();
 			this->mstPanel->SuspendLayout();
 			this->SuspendLayout();
@@ -222,6 +226,7 @@ namespace UMS {
 			this->sideBar->Name = L"sideBar";
 			this->sideBar->Size = System::Drawing::Size(289, 521);
 			this->sideBar->TabIndex = 0;
+			this->sideBar->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &StudentPageForm::sideBar_Paint);
 			// 
 			// btnMenu
 			// 
@@ -243,7 +248,7 @@ namespace UMS {
 			this->pnlbuttons->Controls->Add(this->panel11);
 			this->pnlbuttons->Controls->Add(this->panel10);
 			this->pnlbuttons->Controls->Add(this->btnCourseInProgress);
-			this->pnlbuttons->Controls->Add(this->btnGPA);
+			this->pnlbuttons->Controls->Add(this->btnregister);
 			this->pnlbuttons->Controls->Add(this->panel3);
 			this->pnlbuttons->Controls->Add(this->panel2);
 			this->pnlbuttons->Location = System::Drawing::Point(0, 140);
@@ -333,25 +338,25 @@ namespace UMS {
 			this->btnCourseInProgress->UseVisualStyleBackColor = true;
 			this->btnCourseInProgress->Click += gcnew System::EventHandler(this, &StudentPageForm::btnCourseInProgress_Click);
 			// 
-			// btnGPA
+			// btnregister
 			// 
-			this->btnGPA->AutoSize = true;
-			this->btnGPA->FlatAppearance->BorderSize = 0;
-			this->btnGPA->FlatAppearance->MouseDownBackColor = System::Drawing::Color::Silver;
-			this->btnGPA->FlatAppearance->MouseOverBackColor = System::Drawing::Color::Gainsboro;
-			this->btnGPA->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->btnGPA->Font = (gcnew System::Drawing::Font(L"Segoe UI", 11, System::Drawing::FontStyle::Bold));
-			this->btnGPA->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(233)), static_cast<System::Int32>(static_cast<System::Byte>(234)),
+			this->btnregister->AutoSize = true;
+			this->btnregister->FlatAppearance->BorderSize = 0;
+			this->btnregister->FlatAppearance->MouseDownBackColor = System::Drawing::Color::Silver;
+			this->btnregister->FlatAppearance->MouseOverBackColor = System::Drawing::Color::Gainsboro;
+			this->btnregister->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->btnregister->Font = (gcnew System::Drawing::Font(L"Segoe UI", 11, System::Drawing::FontStyle::Bold));
+			this->btnregister->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(233)), static_cast<System::Int32>(static_cast<System::Byte>(234)),
 				static_cast<System::Int32>(static_cast<System::Byte>(238)));
-			this->btnGPA->Location = System::Drawing::Point(3, 215);
-			this->btnGPA->Name = L"btnGPA";
-			this->btnGPA->Size = System::Drawing::Size(286, 41);
-			this->btnGPA->TabIndex = 4;
-			this->btnGPA->Text = L"GPA";
-			this->btnGPA->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->btnGPA->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageBeforeText;
-			this->btnGPA->UseVisualStyleBackColor = true;
-			this->btnGPA->Click += gcnew System::EventHandler(this, &StudentPageForm::btnGPA_Click);
+			this->btnregister->Location = System::Drawing::Point(3, 215);
+			this->btnregister->Name = L"btnregister";
+			this->btnregister->Size = System::Drawing::Size(286, 41);
+			this->btnregister->TabIndex = 4;
+			this->btnregister->Text = L" Register Course";
+			this->btnregister->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->btnregister->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageBeforeText;
+			this->btnregister->UseVisualStyleBackColor = true;
+			this->btnregister->Click += gcnew System::EventHandler(this, &StudentPageForm::btnGPA_Click);
 			// 
 			// panel3
 			// 
@@ -497,25 +502,57 @@ namespace UMS {
 			this->label4->UseWaitCursor = true;
 			this->label4->Click += gcnew System::EventHandler(this, &StudentPageForm::label4_Click);
 			// 
-			// pnlOfGPA
+			// flowLayoutPanel1
 			// 
-			this->pnlOfGPA->Controls->Add(this->label5);
-			this->pnlOfGPA->Location = System::Drawing::Point(0, 0);
-			this->pnlOfGPA->Name = L"pnlOfGPA";
-			this->pnlOfGPA->Size = System::Drawing::Size(883, 447);
-			this->pnlOfGPA->TabIndex = 5;
-			this->pnlOfGPA->UseWaitCursor = true;
+			this->flowLayoutPanel1->AutoScroll = true;
+			this->flowLayoutPanel1->Location = System::Drawing::Point(182, 0);
+			this->flowLayoutPanel1->Name = L"flowLayoutPanel1";
+			this->flowLayoutPanel1->Size = System::Drawing::Size(472, 447);
+			this->flowLayoutPanel1->TabIndex = 2;
+			this->flowLayoutPanel1->UseWaitCursor = true;
 			// 
-			// label5
+			// pnlOfregCourse
 			// 
-			this->label5->AutoSize = true;
-			this->label5->Cursor = System::Windows::Forms::Cursors::WaitCursor;
-			this->label5->Location = System::Drawing::Point(3, 0);
-			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(35, 16);
-			this->label5->TabIndex = 1;
-			this->label5->Text = L"GPA";
-			this->label5->UseWaitCursor = true;
+			this->pnlOfregCourse->Controls->Add(this->flowLayoutPanel2);
+			this->pnlOfregCourse->Controls->Add(this->reglb);
+			this->pnlOfregCourse->Location = System::Drawing::Point(228, 0);
+			this->pnlOfregCourse->Name = L"pnlOfregCourse";
+			this->pnlOfregCourse->Size = System::Drawing::Size(655, 447);
+			this->pnlOfregCourse->TabIndex = 5;
+			this->pnlOfregCourse->UseWaitCursor = true;
+			this->pnlOfregCourse->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &StudentPageForm::pnlOfregCourse_Paint);
+			// 
+			// flowLayoutPanel2
+			// 
+			this->flowLayoutPanel2->Controls->Add(this->button1);
+			this->flowLayoutPanel2->Location = System::Drawing::Point(284, 40);
+			this->flowLayoutPanel2->Name = L"flowLayoutPanel2";
+			this->flowLayoutPanel2->Size = System::Drawing::Size(240, 34);
+			this->flowLayoutPanel2->TabIndex = 2;
+			this->flowLayoutPanel2->UseWaitCursor = true;
+			// 
+			// button1
+			// 
+			this->button1->Dock = System::Windows::Forms::DockStyle::Top;
+			this->button1->Location = System::Drawing::Point(3, 3);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(219, 30);
+			this->button1->TabIndex = 3;
+			this->button1->Text = L"button1";
+			this->button1->UseVisualStyleBackColor = true;
+			this->button1->UseWaitCursor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &StudentPageForm::button1_Click_1);
+			// 
+			// reglb
+			// 
+			this->reglb->AutoSize = true;
+			this->reglb->Cursor = System::Windows::Forms::Cursors::WaitCursor;
+			this->reglb->Location = System::Drawing::Point(3, 0);
+			this->reglb->Name = L"reglb";
+			this->reglb->Size = System::Drawing::Size(95, 16);
+			this->reglb->TabIndex = 1;
+			this->reglb->Text = L"registerCourse";
+			this->reglb->UseWaitCursor = true;
 			// 
 			// Header
 			// 
@@ -531,11 +568,11 @@ namespace UMS {
 			// 
 			// pnlOfPanels
 			// 
-			this->pnlOfPanels->Controls->Add(this->pnlOfCoursesInProgress);
-			this->pnlOfPanels->Controls->Add(this->pnlOfGPA);
+			this->pnlOfPanels->Controls->Add(this->pnlOfregCourse);
 			this->pnlOfPanels->Controls->Add(this->PnlOfFilter);
 			this->pnlOfPanels->Controls->Add(this->pnlOfCourseGrades);
 			this->pnlOfPanels->Controls->Add(this->pnlOfDetailsOfCourse);
+			this->pnlOfPanels->Controls->Add(this->pnlOfCoursesInProgress);
 			this->pnlOfPanels->Location = System::Drawing::Point(-5, 73);
 			this->pnlOfPanels->Name = L"pnlOfPanels";
 			this->pnlOfPanels->Size = System::Drawing::Size(880, 448);
@@ -563,13 +600,9 @@ namespace UMS {
 			this->mstPanel->TabIndex = 2;
 			this->mstPanel->UseWaitCursor = true;
 			// 
-			// flowLayoutPanel1
+			// dropdowntimer
 			// 
-			this->flowLayoutPanel1->AutoScroll = true;
-			this->flowLayoutPanel1->Location = System::Drawing::Point(182, 0);
-			this->flowLayoutPanel1->Name = L"flowLayoutPanel1";
-			this->flowLayoutPanel1->Size = System::Drawing::Size(472, 447);
-			this->flowLayoutPanel1->TabIndex = 2;
+			this->dropdowntimer->Tick += gcnew System::EventHandler(this, &StudentPageForm::dropdowntimer_Tick);
 			// 
 			// StudentPageForm
 			// 
@@ -597,8 +630,9 @@ namespace UMS {
 			this->pnlOfDetailsOfCourse->PerformLayout();
 			this->pnlOfCoursesInProgress->ResumeLayout(false);
 			this->pnlOfCoursesInProgress->PerformLayout();
-			this->pnlOfGPA->ResumeLayout(false);
-			this->pnlOfGPA->PerformLayout();
+			this->pnlOfregCourse->ResumeLayout(false);
+			this->pnlOfregCourse->PerformLayout();
+			this->flowLayoutPanel2->ResumeLayout(false);
 			this->pnlOfPanels->ResumeLayout(false);
 			this->mstPanel->ResumeLayout(false);
 			this->ResumeLayout(false);
@@ -610,7 +644,7 @@ namespace UMS {
 	public: bool loggedOut = false;
 
 	private: System::Void StudentPageForm_Load(System::Object^ sender, System::EventArgs^ e) {
-
+		populateItems();
 	}
 
 
@@ -619,27 +653,39 @@ namespace UMS {
 	private:void populateItems()
 	{
 
-		////populate it here
-		//courselistitem* listItems = new courselistitem[20];
-		
-		List<courselistitem^>^ clist;
-			// loop through each item
+		List<courselistitem^>^ clist = gcnew List<courselistitem^>(Course::allCourses->Count);
+		// loop through each item
 		for (int i = 0; i < Course::allCourses->Count; i++)
 		{
-			clist[i]->setName(Course::allCourses[i]->getName());
-			clist[i]->setCode(Course::allCourses[i]->getCode());
-			clist[i]->setInstructor(Course::allCourses[i]->getInstructor());
-			clist[i]->setIsRequirement(Course::allCourses[i]->getIsRequirement());
-			clist[i]->setName(Course::allCourses[i]->getName());
-			clist[i]->setMaxNumberOfStudents(Course::allCourses[i]->getMaxNumberOfStudents());
-			
+			courselistitem^ c = gcnew courselistitem;
+
+			c->setName(Course::allCourses[i]->getName());
+			c->setCode(Course::allCourses[i]->getCode());
+			c->setInstructor(Course::allCourses[i]->getInstructor());
+			c->setIsRequirement(Course::allCourses[i]->getIsRequirement());
+			c->setHours(Course::allCourses[i]->getHours());
+			c->setMaxNumberOfStudents(Course::allCourses[i]->getMaxNumberOfStudents());
+			clist->Add(c);
+
 
 
 			flowLayoutPanel1->Controls->Add(clist[i]);
 		}
+		List<courseButton^>^ clist2 = gcnew List<courseButton^>(Course::allCourses->Count);
+		for (int i = 0; i < Course::allCourses->Count; i++)
+		{
+			courseButton^ c = gcnew courseButton;
+
+			c->setCourseName(Course::allCourses[i]->getName());
+			clist2->Add(c);
+
+
+
+			flowLayoutPanel2->Controls->Add(clist2[i]);
+
+		}
 
 	}
-
 	private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
 
 	}
@@ -657,7 +703,7 @@ namespace UMS {
 		pnlOfDetailsOfCourse->Visible = false;
 		pnlOfCoursesInProgress->Visible = false;
 		pnlOfCourseGrades->Visible = false;
-		pnlOfGPA->Visible = false;
+		pnlOfregCourse->Visible = false;
 
 	}
 
@@ -667,7 +713,7 @@ namespace UMS {
 		pnlOfDetailsOfCourse->Visible = false;
 		pnlOfCoursesInProgress->Visible = true;
 		pnlOfCourseGrades->Visible = false;
-		pnlOfGPA->Visible = false;
+		pnlOfregCourse->Visible = false;
 	}
 	private: System::Void btnCourseGrade_Click(System::Object^ sender, System::EventArgs^ e) {
 		sideBarTimer->Start();
@@ -675,7 +721,7 @@ namespace UMS {
 		pnlOfDetailsOfCourse->Visible = false;
 		pnlOfCoursesInProgress->Visible = false;
 		pnlOfCourseGrades->Visible = true;
-		pnlOfGPA->Visible = false;
+		pnlOfregCourse->Visible = false;
 	}
 	private: System::Void btnDetailsOfCourse_Click(System::Object^ sender, System::EventArgs^ e) {
 		sideBarTimer->Start();
@@ -683,7 +729,7 @@ namespace UMS {
 		pnlOfDetailsOfCourse->Visible = true;
 		pnlOfCoursesInProgress->Visible = false;
 		pnlOfCourseGrades->Visible = false;
-		pnlOfGPA->Visible = false;
+		pnlOfregCourse->Visible = false;
 	}
 	private: System::Void btnGPA_Click(System::Object^ sender, System::EventArgs^ e) {
 		sideBarTimer->Start();
@@ -692,7 +738,7 @@ namespace UMS {
 		pnlOfDetailsOfCourse->Visible = false;
 		pnlOfCoursesInProgress->Visible = false;
 		pnlOfCourseGrades->Visible = false;
-		pnlOfGPA->Visible = true;
+		pnlOfregCourse->Visible = true;
 	}
 
 
@@ -706,7 +752,7 @@ namespace UMS {
 		pnlOfDetailsOfCourse->Visible = true;
 		pnlOfCoursesInProgress->Visible = false;
 		pnlOfCourseGrades->Visible = false;
-		pnlOfGPA->Visible = false;
+		pnlOfregCourse->Visible = false;
 	}
 		   bool sideBarExpand;
 	private: System::Void sideBarTimer_Tick(System::Object^ sender, System::EventArgs^ e)
@@ -740,6 +786,40 @@ private: System::Void panel7_Paint(System::Object^ sender, System::Windows::Form
 private: System::Void label4_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void Header_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
+}
+private: System::Void sideBar_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
+}
+private: System::Void pnlOfregCourse_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
+}
+
+private: System::Void selectlb_Click(System::Object^ sender, System::EventArgs^ e) {
+	
+}
+	   bool expandd = false;
+private: System::Void dropdowntimer_Tick(System::Object^ sender, System::EventArgs^ e) {
+	
+	if (!expandd)
+	{
+		flowLayoutPanel2->Height += 15;
+		if (flowLayoutPanel2->Height >= Course::allCourses->Count * 35) {
+			dropdowntimer->Stop();
+			expandd = true;
+		}
+	}
+
+	else {
+		flowLayoutPanel2->Height -= 15;
+		if (flowLayoutPanel2->Height <= 30)
+		{
+			dropdowntimer->Stop();
+			expandd = false;
+		}
+
+	}
+}
+private: System::Void button1_Click_1(System::Object^ sender, System::EventArgs^ e) {
+
+	dropdowntimer->Start();
 }
 };
 
