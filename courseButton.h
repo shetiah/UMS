@@ -66,12 +66,14 @@ namespace UMS {
 			// 
 			// courselab
 			// 
+			this->courselab->BackColor = System::Drawing::Color::DeepSkyBlue;
+			this->courselab->ForeColor = System::Drawing::Color::Black;
 			this->courselab->Location = System::Drawing::Point(0, -1);
 			this->courselab->Name = L"courselab";
 			this->courselab->Size = System::Drawing::Size(219, 30);
 			this->courselab->TabIndex = 0;
 			this->courselab->Text = L"coursename";
-			this->courselab->UseVisualStyleBackColor = true;
+			this->courselab->UseVisualStyleBackColor = false;
 			this->courselab->Click += gcnew System::EventHandler(this, &courseButton::courselab_Click);
 			// 
 			// courseButton
@@ -87,7 +89,19 @@ namespace UMS {
 #pragma endregion
 	private: System::Void selectlb_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
+		   bool clicked = false;
 	private: System::Void courselab_Click(System::Object^ sender, System::EventArgs^ e) {
+		if(!clicked){
+			courselab->BackColor= Color::Red;
+			courselab->ForeColor = Color::White;
+			clicked = true;
+		}
+		else
+		{
+			courselab->BackColor = Color::DeepSkyBlue;
+			courselab->ForeColor = Color::Black;
+			clicked = false;
+		}
 	}
 	};
 }

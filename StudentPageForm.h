@@ -106,6 +106,7 @@ namespace UMS {
 	private: System::Windows::Forms::FlowLayoutPanel^ flowLayoutPanel3;
 	private: System::Windows::Forms::Button^ button2;
 	private: System::Windows::Forms::Timer^ dropdowndet;
+	private: System::Windows::Forms::Button^ savebt;
 
 
 
@@ -204,6 +205,7 @@ namespace UMS {
 			this->mstPanel = (gcnew System::Windows::Forms::Panel());
 			this->dropdowntimer = (gcnew System::Windows::Forms::Timer(this->components));
 			this->dropdowndet = (gcnew System::Windows::Forms::Timer(this->components));
+			this->savebt = (gcnew System::Windows::Forms::Button());
 			this->sideBar->SuspendLayout();
 			this->pnlbuttons->SuspendLayout();
 			this->panel3->SuspendLayout();
@@ -467,6 +469,7 @@ namespace UMS {
 			// 
 			// pnlOfDetailsOfCourse
 			// 
+			this->pnlOfDetailsOfCourse->Controls->Add(this->savebt);
 			this->pnlOfDetailsOfCourse->Controls->Add(this->flowLayoutPanel3);
 			this->pnlOfDetailsOfCourse->Controls->Add(this->label3);
 			this->pnlOfDetailsOfCourse->Location = System::Drawing::Point(228, 0);
@@ -638,6 +641,15 @@ namespace UMS {
 			// dropdowndet
 			// 
 			this->dropdowndet->Tick += gcnew System::EventHandler(this, &StudentPageForm::dropdowndet_Tick);
+			// 
+			// savebt
+			// 
+			this->savebt->Location = System::Drawing::Point(81, 315);
+			this->savebt->Name = L"savebt";
+			this->savebt->Size = System::Drawing::Size(146, 56);
+			this->savebt->TabIndex = 4;
+			this->savebt->Text = L"save";
+			this->savebt->UseVisualStyleBackColor = true;
 			// 
 			// StudentPageForm
 			// 
