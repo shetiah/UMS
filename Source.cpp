@@ -44,7 +44,7 @@ int main()
 
 
 
-	//Application::Run(gcnew UMS::AddCourseForm());
+	Application::Run(gcnew UMS::StudentPageForm(nullptr));
 
 
 
@@ -55,7 +55,7 @@ int main()
 
 
 
-		while (true)
+		/*while (true)
 		{
 			UMS::welcomeForm welcForm;
 			welcForm.ShowDialog();
@@ -98,40 +98,11 @@ int main()
 				break;
 			
 
-		}	
+		}	*/
 
 
 
 
-
-
-
-
-		/*	while (true)
-			{
-				UMS::Login logform;
-				logform.ShowDialog();
-				if (logform.switchToRegister) {
-
-					UMS::SignUp signForm;
-					signForm.ShowDialog();
-
-					if (signForm.switchToLogin)
-					{
-						continue;
-					}
-					else {
-						stud = signForm.student;
-						break;
-					}
-				}
-				else
-				{
-					stud = logform.student;
-					break;
-				}
-
-			}	*/
 
 
 

@@ -610,7 +610,7 @@ namespace UMS {
 	public: bool loggedOut = false;
 
 	private: System::Void StudentPageForm_Load(System::Object^ sender, System::EventArgs^ e) {
-
+		populateItems();
 	}
 
 
@@ -622,16 +622,19 @@ namespace UMS {
 		////populate it here
 		//courselistitem* listItems = new courselistitem[20];
 		
-		List<courselistitem^>^ clist;
+		List<courselistitem^>^ clist =gcnew List<courselistitem^>(Course::allCourses->Count);
 			// loop through each item
 		for (int i = 0; i < Course::allCourses->Count; i++)
 		{
-			clist[i]->setName(Course::allCourses[i]->getName());
-			clist[i]->setCode(Course::allCourses[i]->getCode());
-			clist[i]->setInstructor(Course::allCourses[i]->getInstructor());
-			clist[i]->setIsRequirement(Course::allCourses[i]->getIsRequirement());
-			clist[i]->setName(Course::allCourses[i]->getName());
-			clist[i]->setMaxNumberOfStudents(Course::allCourses[i]->getMaxNumberOfStudents());
+			courselistitem^ c = gcnew courselistitem;
+
+			c->setName(Course::allCourses[i]->getName());
+			c->setCode(Course::allCourses[i]->getCode());
+			c->setInstructor(Course::allCourses[i]->getInstructor());
+			c->setIsRequirement(Course::allCourses[i]->getIsRequirement());
+			c->setHours(Course::allCourses[i]->getHours());
+			c->setMaxNumberOfStudents(Course::allCourses[i]->getMaxNumberOfStudents());
+			clist->Add(c);
 			
 
 

@@ -113,6 +113,7 @@ namespace UMS {
 			this->coursenamelb->Size = System::Drawing::Size(48, 16);
 			this->coursenamelb->TabIndex = 1;
 			this->coursenamelb->Text = L"cname";
+			this->coursenamelb->Click += gcnew System::EventHandler(this, &courselistitem::coursenamelb_Click);
 			// 
 			// codelb
 			// 
@@ -230,5 +231,7 @@ namespace UMS {
 #pragma endregion
 	private: System::Void courselistitem_Load(System::Object^ sender, System::EventArgs^ e) {
 	}
+private: System::Void coursenamelb_Click(System::Object^ sender, System::EventArgs^ e) {
+}
 };
 }
