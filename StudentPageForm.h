@@ -203,10 +203,10 @@ namespace UMS {
 			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->flowLayoutPanel1 = (gcnew System::Windows::Forms::FlowLayoutPanel());
 			this->pnlOfregCourse = (gcnew System::Windows::Forms::Panel());
-			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->label5 = (gcnew System::Windows::Forms::Label());
 			this->savebt = (gcnew System::Windows::Forms::Button());
 			this->flowLayoutPanel2 = (gcnew System::Windows::Forms::FlowLayoutPanel());
+			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->reglb = (gcnew System::Windows::Forms::Label());
 			this->Header = (gcnew System::Windows::Forms::Panel());
 			this->pnlOfPanels = (gcnew System::Windows::Forms::Panel());
@@ -564,18 +564,6 @@ namespace UMS {
 			this->pnlOfregCourse->UseWaitCursor = true;
 			this->pnlOfregCourse->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &StudentPageForm::pnlOfregCourse_Paint);
 			// 
-			// button1
-			// 
-			this->button1->Dock = System::Windows::Forms::DockStyle::Top;
-			this->button1->Location = System::Drawing::Point(3, 3);
-			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(219, 30);
-			this->button1->TabIndex = 6;
-			this->button1->Text = L"button1";
-			this->button1->UseVisualStyleBackColor = true;
-			this->button1->UseWaitCursor = true;
-			this->button1->Click += gcnew System::EventHandler(this, &StudentPageForm::button1_Click_2);
-			// 
 			// label5
 			// 
 			this->label5->AutoSize = true;
@@ -606,6 +594,18 @@ namespace UMS {
 			this->flowLayoutPanel2->TabIndex = 2;
 			this->flowLayoutPanel2->UseWaitCursor = true;
 			// 
+			// button1
+			// 
+			this->button1->Dock = System::Windows::Forms::DockStyle::Top;
+			this->button1->Location = System::Drawing::Point(3, 3);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(219, 30);
+			this->button1->TabIndex = 6;
+			this->button1->Text = L"button1";
+			this->button1->UseVisualStyleBackColor = true;
+			this->button1->UseWaitCursor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &StudentPageForm::button1_Click_2);
+			// 
 			// reglb
 			// 
 			this->reglb->AutoSize = true;
@@ -631,11 +631,11 @@ namespace UMS {
 			// 
 			// pnlOfPanels
 			// 
+			this->pnlOfPanels->Controls->Add(this->pnlOfDetailsOfCourse);
+			this->pnlOfPanels->Controls->Add(this->pnlOfCoursesInProgress);
 			this->pnlOfPanels->Controls->Add(this->pnlOfregCourse);
 			this->pnlOfPanels->Controls->Add(this->pnlOfCourseGrades);
 			this->pnlOfPanels->Controls->Add(this->PnlOfFilter);
-			this->pnlOfPanels->Controls->Add(this->pnlOfDetailsOfCourse);
-			this->pnlOfPanels->Controls->Add(this->pnlOfCoursesInProgress);
 			this->pnlOfPanels->Location = System::Drawing::Point(-5, 73);
 			this->pnlOfPanels->Name = L"pnlOfPanels";
 			this->pnlOfPanels->Size = System::Drawing::Size(880, 448);
