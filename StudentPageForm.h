@@ -647,11 +647,11 @@ namespace UMS {
 			// 
 			// pnlOfPanels
 			// 
-			this->pnlOfPanels->Controls->Add(this->pnlOfCoursesInProgress);
 			this->pnlOfPanels->Controls->Add(this->pnlOfregCourse);
 			this->pnlOfPanels->Controls->Add(this->pnlOfCourseGrades);
 			this->pnlOfPanels->Controls->Add(this->PnlOfFilter);
 			this->pnlOfPanels->Controls->Add(this->pnlOfDetailsOfCourse);
+			this->pnlOfPanels->Controls->Add(this->pnlOfCoursesInProgress);
 			this->pnlOfPanels->Location = System::Drawing::Point(-4, 59);
 			this->pnlOfPanels->Margin = System::Windows::Forms::Padding(2);
 			this->pnlOfPanels->Name = L"pnlOfPanels";

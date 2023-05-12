@@ -158,10 +158,9 @@ namespace UMS {
 			// pictureBox1
 			// 
 			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
-			this->pictureBox1->Location = System::Drawing::Point(56, 23);
-			this->pictureBox1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->pictureBox1->Location = System::Drawing::Point(35, 12);
 			this->pictureBox1->Name = L"pictureBox1";
-			this->pictureBox1->Size = System::Drawing::Size(145, 162);
+			this->pictureBox1->Size = System::Drawing::Size(193, 200);
 			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->pictureBox1->TabIndex = 0;
 			this->pictureBox1->TabStop = false;
@@ -169,142 +168,91 @@ namespace UMS {
 			// coursenamelb
 			// 
 			this->coursenamelb->AutoSize = true;
-			this->coursenamelb->Font = (gcnew System::Drawing::Font(L"Segoe UI", 9, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)),
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->coursenamelb->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
-				static_cast<System::Int32>(static_cast<System::Byte>(31)));
-			this->coursenamelb->Location = System::Drawing::Point(13, 187);
-			this->coursenamelb->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->coursenamelb->Location = System::Drawing::Point(35, 230);
 			this->coursenamelb->Name = L"coursenamelb";
-			this->coursenamelb->Size = System::Drawing::Size(88, 15);
+			this->coursenamelb->Size = System::Drawing::Size(48, 16);
 			this->coursenamelb->TabIndex = 1;
-			this->coursenamelb->Text = L"Course Name :";
+			this->coursenamelb->Text = L"cname";
 			this->coursenamelb->Click += gcnew System::EventHandler(this, &courselistitem::coursenamelb_Click);
 			// 
 			// codelb
 			// 
 			this->codelb->AutoSize = true;
-			this->codelb->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->codelb->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
-				static_cast<System::Int32>(static_cast<System::Byte>(31)));
-			this->codelb->Location = System::Drawing::Point(140, 202);
-			this->codelb->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->codelb->Location = System::Drawing::Point(111, 230);
 			this->codelb->Name = L"codelb";
-			this->codelb->Size = System::Drawing::Size(32, 13);
+			this->codelb->Size = System::Drawing::Size(38, 16);
 			this->codelb->TabIndex = 2;
 			this->codelb->Text = L"code";
 			// 
 			// label3
 			// 
 			this->label3->AutoSize = true;
-			this->label3->Font = (gcnew System::Drawing::Font(L"Segoe UI", 9, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)),
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->label3->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
-				static_cast<System::Int32>(static_cast<System::Byte>(31)));
-			this->label3->Location = System::Drawing::Point(13, 213);
-			this->label3->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label3->Location = System::Drawing::Point(35, 262);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(69, 15);
+			this->label3->Size = System::Drawing::Size(63, 16);
 			this->label3->TabIndex = 3;
-			this->label3->Text = L"Instructor :";
+			this->label3->Text = L"instructor:";
 			// 
 			// instrData
 			// 
 			this->instrData->AutoSize = true;
-			this->instrData->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->instrData->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
-				static_cast<System::Int32>(static_cast<System::Byte>(31)));
-			this->instrData->Location = System::Drawing::Point(140, 228);
-			this->instrData->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->instrData->Location = System::Drawing::Point(114, 262);
 			this->instrData->Name = L"instrData";
-			this->instrData->Size = System::Drawing::Size(29, 13);
+			this->instrData->Size = System::Drawing::Size(31, 16);
 			this->instrData->TabIndex = 4;
 			this->instrData->Text = L"instr";
 			// 
 			// maxstdslb
 			// 
 			this->maxstdslb->AutoSize = true;
-			this->maxstdslb->Font = (gcnew System::Drawing::Font(L"Segoe UI", 9, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)),
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->maxstdslb->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
-				static_cast<System::Int32>(static_cast<System::Byte>(31)));
-			this->maxstdslb->Location = System::Drawing::Point(13, 238);
-			this->maxstdslb->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->maxstdslb->Location = System::Drawing::Point(35, 308);
 			this->maxstdslb->Name = L"maxstdslb";
-			this->maxstdslb->Size = System::Drawing::Size(88, 15);
+			this->maxstdslb->Size = System::Drawing::Size(60, 16);
 			this->maxstdslb->TabIndex = 5;
-			this->maxstdslb->Text = L"Max Students :";
-			this->maxstdslb->Click += gcnew System::EventHandler(this, &courselistitem::maxstdslb_Click);
+			this->maxstdslb->Text = L"maxstds:";
 			// 
 			// hourslb
 			// 
 			this->hourslb->AutoSize = true;
-			this->hourslb->Font = (gcnew System::Drawing::Font(L"Segoe UI", 9, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)),
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->hourslb->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
-				static_cast<System::Int32>(static_cast<System::Byte>(31)));
-			this->hourslb->Location = System::Drawing::Point(13, 264);
-			this->hourslb->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->hourslb->Location = System::Drawing::Point(35, 346);
 			this->hourslb->Name = L"hourslb";
-			this->hourslb->Size = System::Drawing::Size(46, 15);
+			this->hourslb->Size = System::Drawing::Size(40, 16);
 			this->hourslb->TabIndex = 6;
-			this->hourslb->Text = L"Hours :";
+			this->hourslb->Text = L"hours";
 			// 
 			// hoursdt
 			// 
 			this->hoursdt->AutoSize = true;
-			this->hoursdt->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->hoursdt->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
-				static_cast<System::Int32>(static_cast<System::Byte>(31)));
-			this->hoursdt->Location = System::Drawing::Point(140, 279);
-			this->hoursdt->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->hoursdt->Location = System::Drawing::Point(114, 346);
 			this->hoursdt->Name = L"hoursdt";
-			this->hoursdt->Size = System::Drawing::Size(24, 13);
+			this->hoursdt->Size = System::Drawing::Size(25, 16);
 			this->hoursdt->TabIndex = 8;
 			this->hoursdt->Text = L"hdt";
 			// 
 			// isreqlb
 			// 
 			this->isreqlb->AutoSize = true;
-			this->isreqlb->Font = (gcnew System::Drawing::Font(L"Segoe UI", 9, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)),
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->isreqlb->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
-				static_cast<System::Int32>(static_cast<System::Byte>(31)));
-			this->isreqlb->Location = System::Drawing::Point(13, 291);
-			this->isreqlb->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->isreqlb->Location = System::Drawing::Point(32, 380);
 			this->isreqlb->Name = L"isreqlb";
-			this->isreqlb->Size = System::Drawing::Size(63, 15);
+			this->isreqlb->Size = System::Drawing::Size(37, 16);
 			this->isreqlb->TabIndex = 9;
-			this->isreqlb->Text = L"Required :";
+			this->isreqlb->Text = L"isreq";
 			// 
 			// isreqdata
 			// 
 			this->isreqdata->AutoSize = true;
-			this->isreqdata->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->isreqdata->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
-				static_cast<System::Int32>(static_cast<System::Byte>(31)));
-			this->isreqdata->Location = System::Drawing::Point(140, 306);
-			this->isreqdata->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->isreqdata->Location = System::Drawing::Point(107, 380);
 			this->isreqdata->Name = L"isreqdata";
-			this->isreqdata->Size = System::Drawing::Size(43, 13);
+			this->isreqdata->Size = System::Drawing::Size(48, 16);
 			this->isreqdata->TabIndex = 10;
 			this->isreqdata->Text = L"isreqdt";
 			// 
 			// maxstdDt
 			// 
 			this->maxstdDt->AutoSize = true;
-			this->maxstdDt->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->maxstdDt->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
-				static_cast<System::Int32>(static_cast<System::Byte>(31)));
-			this->maxstdDt->Location = System::Drawing::Point(140, 253);
-			this->maxstdDt->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->maxstdDt->Location = System::Drawing::Point(114, 308);
 			this->maxstdDt->Name = L"maxstdDt";
-			this->maxstdDt->Size = System::Drawing::Size(56, 13);
+			this->maxstdDt->Size = System::Drawing::Size(61, 16);
 			this->maxstdDt->TabIndex = 11;
 			this->maxstdDt->Text = L"maxstddt";
 			// 
@@ -338,10 +286,9 @@ namespace UMS {
 			this->panel1->Controls->Add(this->codelb);
 			this->panel1->Controls->Add(this->coursenamelb);
 			this->panel1->Controls->Add(this->pictureBox1);
-			this->panel1->Location = System::Drawing::Point(30, 22);
-			this->panel1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->panel1->Location = System::Drawing::Point(40, 27);
 			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(196, 364);
+			this->panel1->Size = System::Drawing::Size(262, 448);
 			this->panel1->TabIndex = 12;
 			// 
 			// pictureBox2
@@ -516,12 +463,11 @@ namespace UMS {
 			// 
 			// courselistitem
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
+			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->Controls->Add(this->panel1);
-			this->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->Name = L"courselistitem";
-			this->Size = System::Drawing::Size(261, 414);
+			this->Size = System::Drawing::Size(348, 510);
 			this->Load += gcnew System::EventHandler(this, &courselistitem::courselistitem_Load);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			this->panel1->ResumeLayout(false);
