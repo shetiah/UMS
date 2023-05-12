@@ -110,7 +110,7 @@ namespace UMS {
 	private: System::Windows::Forms::Button^ savebt;
 
 	private: System::Windows::Forms::Button^ button1;
-	private: System::Windows::Forms::Label^ label4;
+
 
 
 
@@ -217,7 +217,6 @@ namespace UMS {
 			this->mstPanel = (gcnew System::Windows::Forms::Panel());
 			this->dropdowntimer = (gcnew System::Windows::Forms::Timer(this->components));
 			this->dropdowndet = (gcnew System::Windows::Forms::Timer(this->components));
-			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->sideBar->SuspendLayout();
 			this->pnlbuttons->SuspendLayout();
 			this->panel3->SuspendLayout();
@@ -226,9 +225,9 @@ namespace UMS {
 			this->pnlOfCourseGrades->SuspendLayout();
 			this->pnlOfDetailsOfCourse->SuspendLayout();
 			this->flowLayoutPanel3->SuspendLayout();
+			this->pnlOfCoursesInProgress->SuspendLayout();
 			this->pnlOfregCourse->SuspendLayout();
 			this->flowLayoutPanel2->SuspendLayout();
-			this->Header->SuspendLayout();
 			this->pnlOfPanels->SuspendLayout();
 			this->mstPanel->SuspendLayout();
 			this->SuspendLayout();
@@ -540,6 +539,7 @@ namespace UMS {
 			// 
 			// pnlOfCoursesInProgress
 			// 
+			this->pnlOfCoursesInProgress->Controls->Add(this->flowLayoutPanel1);
 			this->pnlOfCoursesInProgress->Dock = System::Windows::Forms::DockStyle::Right;
 			this->pnlOfCoursesInProgress->Location = System::Drawing::Point(171, 0);
 			this->pnlOfCoursesInProgress->Margin = System::Windows::Forms::Padding(2);
@@ -550,7 +550,7 @@ namespace UMS {
 			// flowLayoutPanel1
 			// 
 			this->flowLayoutPanel1->AutoScroll = true;
-			this->flowLayoutPanel1->Location = System::Drawing::Point(264, 58);
+			this->flowLayoutPanel1->Location = System::Drawing::Point(85, 0);
 			this->flowLayoutPanel1->Margin = System::Windows::Forms::Padding(2);
 			this->flowLayoutPanel1->Name = L"flowLayoutPanel1";
 			this->flowLayoutPanel1->Size = System::Drawing::Size(343, 363);
@@ -636,7 +636,6 @@ namespace UMS {
 			// 
 			this->Header->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(233)), static_cast<System::Int32>(static_cast<System::Byte>(234)),
 				static_cast<System::Int32>(static_cast<System::Byte>(238)));
-			this->Header->Controls->Add(this->label4);
 			this->Header->Dock = System::Windows::Forms::DockStyle::Top;
 			this->Header->Location = System::Drawing::Point(0, 0);
 			this->Header->Margin = System::Windows::Forms::Padding(2);
@@ -669,7 +668,6 @@ namespace UMS {
 			this->mstPanel->AutoSize = true;
 			this->mstPanel->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(233)), static_cast<System::Int32>(static_cast<System::Byte>(234)),
 				static_cast<System::Int32>(static_cast<System::Byte>(238)));
-			this->mstPanel->Controls->Add(this->flowLayoutPanel1);
 			this->mstPanel->Controls->Add(this->pnlOfPanels);
 			this->mstPanel->Controls->Add(this->Header);
 			this->mstPanel->Location = System::Drawing::Point(51, 0);
@@ -688,22 +686,6 @@ namespace UMS {
 			// dropdowndet
 			// 
 			this->dropdowndet->Tick += gcnew System::EventHandler(this, &StudentPageForm::dropdowndet_Tick);
-			// 
-			// label4
-			// 
-			this->label4->Anchor = System::Windows::Forms::AnchorStyles::None;
-			this->label4->AutoSize = true;
-			this->label4->Cursor = System::Windows::Forms::Cursors::Arrow;
-			this->label4->Font = (gcnew System::Drawing::Font(L"Segoe UI", 12, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)),
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->label4->ForeColor = System::Drawing::Color::DodgerBlue;
-			this->label4->Location = System::Drawing::Point(165, 9);
-			this->label4->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
-			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(152, 21);
-			this->label4->TabIndex = 1;
-			this->label4->Text = L"Courses In Progress";
-			this->label4->Click += gcnew System::EventHandler(this, &StudentPageForm::label4_Click);
 			// 
 			// StudentPageForm
 			// 
@@ -731,11 +713,10 @@ namespace UMS {
 			this->pnlOfDetailsOfCourse->ResumeLayout(false);
 			this->pnlOfDetailsOfCourse->PerformLayout();
 			this->flowLayoutPanel3->ResumeLayout(false);
+			this->pnlOfCoursesInProgress->ResumeLayout(false);
 			this->pnlOfregCourse->ResumeLayout(false);
 			this->pnlOfregCourse->PerformLayout();
 			this->flowLayoutPanel2->ResumeLayout(false);
-			this->Header->ResumeLayout(false);
-			this->Header->PerformLayout();
 			this->pnlOfPanels->ResumeLayout(false);
 			this->mstPanel->ResumeLayout(false);
 			this->ResumeLayout(false);
