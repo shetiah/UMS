@@ -173,7 +173,7 @@ namespace UMS {
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->coursenamelb->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
 				static_cast<System::Int32>(static_cast<System::Byte>(31)));
-			this->coursenamelb->Location = System::Drawing::Point(2, 202);
+			this->coursenamelb->Location = System::Drawing::Point(13, 187);
 			this->coursenamelb->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->coursenamelb->Name = L"coursenamelb";
 			this->coursenamelb->Size = System::Drawing::Size(88, 15);
@@ -202,7 +202,7 @@ namespace UMS {
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->label3->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
 				static_cast<System::Int32>(static_cast<System::Byte>(31)));
-			this->label3->Location = System::Drawing::Point(2, 228);
+			this->label3->Location = System::Drawing::Point(13, 213);
 			this->label3->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label3->Name = L"label3";
 			this->label3->Size = System::Drawing::Size(69, 15);
@@ -230,7 +230,7 @@ namespace UMS {
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->maxstdslb->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
 				static_cast<System::Int32>(static_cast<System::Byte>(31)));
-			this->maxstdslb->Location = System::Drawing::Point(2, 253);
+			this->maxstdslb->Location = System::Drawing::Point(13, 238);
 			this->maxstdslb->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->maxstdslb->Name = L"maxstdslb";
 			this->maxstdslb->Size = System::Drawing::Size(88, 15);
@@ -245,7 +245,7 @@ namespace UMS {
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->hourslb->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
 				static_cast<System::Int32>(static_cast<System::Byte>(31)));
-			this->hourslb->Location = System::Drawing::Point(2, 279);
+			this->hourslb->Location = System::Drawing::Point(13, 264);
 			this->hourslb->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->hourslb->Name = L"hourslb";
 			this->hourslb->Size = System::Drawing::Size(46, 15);
@@ -273,7 +273,7 @@ namespace UMS {
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->isreqlb->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
 				static_cast<System::Int32>(static_cast<System::Byte>(31)));
-			this->isreqlb->Location = System::Drawing::Point(2, 306);
+			this->isreqlb->Location = System::Drawing::Point(13, 291);
 			this->isreqlb->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->isreqlb->Name = L"isreqlb";
 			this->isreqlb->Size = System::Drawing::Size(63, 15);
@@ -338,11 +338,10 @@ namespace UMS {
 			this->panel1->Controls->Add(this->codelb);
 			this->panel1->Controls->Add(this->coursenamelb);
 			this->panel1->Controls->Add(this->pictureBox1);
-			this->panel1->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->panel1->Location = System::Drawing::Point(0, 0);
+			this->panel1->Location = System::Drawing::Point(30, 22);
 			this->panel1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(261, 414);
+			this->panel1->Size = System::Drawing::Size(196, 364);
 			this->panel1->TabIndex = 12;
 			// 
 			// pictureBox2
