@@ -73,11 +73,17 @@ namespace UMS {
 			// 
 			// courselab
 			// 
-			this->courselab->BackColor = System::Drawing::Color::DeepSkyBlue;
-			this->courselab->ForeColor = System::Drawing::Color::Black;
+			this->courselab->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
+				static_cast<System::Int32>(static_cast<System::Byte>(31)));
+			this->courselab->FlatAppearance->BorderSize = 0;
+			this->courselab->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->courselab->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->courselab->ForeColor = System::Drawing::Color::White;
 			this->courselab->Location = System::Drawing::Point(0, -1);
+			this->courselab->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->courselab->Name = L"courselab";
-			this->courselab->Size = System::Drawing::Size(219, 30);
+			this->courselab->Size = System::Drawing::Size(164, 24);
 			this->courselab->TabIndex = 0;
 			this->courselab->Text = L"coursename";
 			this->courselab->UseVisualStyleBackColor = false;
@@ -85,13 +91,14 @@ namespace UMS {
 			// 
 			// courseButton
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->Controls->Add(this->courselab);
+			this->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->Name = L"courseButton";
-			this->Size = System::Drawing::Size(219, 30);
+			this->Size = System::Drawing::Size(164, 24);
 			this->ResumeLayout(false);
-			cslbtemp = this->courselab;
 
 		}
 #pragma endregion
@@ -100,14 +107,15 @@ namespace UMS {
 		   bool clicked = false;
 	private: System::Void courselab_Click(System::Object^ sender, System::EventArgs^ e) {
 		if(!clicked){
-			courselab->BackColor= Color::Red;
+			courselab->BackColor= Color::Gray;
 			courselab->ForeColor = Color::White;
 			clicked = true;
 		}
 		else
 		{
-			courselab->BackColor = Color::DeepSkyBlue;
-			courselab->ForeColor = Color::Black;
+			//courselab->BackColor = Color::Black;
+			courselab->BackColor = ColorTranslator::FromHtml("#17171F");
+			courselab->ForeColor = Color::White;
 			clicked = false;
 		}
 	}
