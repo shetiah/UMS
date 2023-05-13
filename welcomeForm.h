@@ -1,4 +1,5 @@
 #pragma once
+#include"courseButton.h"
 namespace UMS {
 
 	using namespace System;
@@ -183,8 +184,12 @@ namespace UMS {
 		public:static bool gobacktoWelc = false;
 		public:static bool tostdHomeForm = false;
 		public:static bool toadminHome = false;
+
+	   
 	private: System::Void toadminbt_Click(System::Object^ sender, System::EventArgs^ e) {
+		
 		welcomeForm::gobacktoWelc = false;
+		
 		welcomeForm::toadmLogin = true;
 
 		this->Close();
@@ -194,7 +199,9 @@ namespace UMS {
 	
 	}
 	private: System::Void pictureBox1_Click(System::Object^ sender, System::EventArgs^ e) {
+		
 		this->Close();
+	
 	}
 private: System::Void pictureBox2_Click(System::Object^ sender, System::EventArgs^ e) {
 }

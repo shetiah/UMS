@@ -7,7 +7,7 @@
 7)3.9
 8)intro to cs,rgola,adab,trbya,mabad2First,eletadab
 9)3.7
-c)linear,Structured Programming,operation systems,muhtramelarub3,veryToxic
+c)linear,muhtramelarub3,veryToxic
 x
 1)Hassan Muhammad
 2)2023021@cis.com

@@ -1,5 +1,4 @@
 #pragma once
-
 using namespace System;
 using namespace System::ComponentModel;
 using namespace System::Collections;
@@ -7,6 +6,7 @@ using namespace System::Windows::Forms;
 using namespace System::Data;
 using namespace System::Drawing;
 
+using namespace System::Collections::Generic;
 
 namespace UMS {
 
@@ -24,6 +24,8 @@ namespace UMS {
 			//
 		}
 
+	public:static List<courseButton^>^ alldetailsbtns= gcnew List<courseButton^>();
+
 	protected:
 		/// <summary>
 		/// Clean up any resources being used.
@@ -38,9 +40,15 @@ namespace UMS {
 #pragma region MyRegion
 	private:String^ coursename;
 	private:Button^ bt= gcnew System::Windows::Forms::Button();
+	
 	public:void setCourseName(String^ cname);
 	public:String^ getCourseName();
 	public:Button^ getBt();
+	public:void setBtColor(Color color);
+	public:void setforecolor(Color color);
+	public:bool isselected = false;
+	public:static bool registerCourse = false;
+	public:static bool courseDetails = false;
 
 #pragma endregion
 
@@ -81,43 +89,64 @@ namespace UMS {
 				static_cast<System::Byte>(0)));
 			this->courselab->ForeColor = System::Drawing::Color::White;
 			this->courselab->Location = System::Drawing::Point(0, -1);
-			this->courselab->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->courselab->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->courselab->Name = L"courselab";
-			this->courselab->Size = System::Drawing::Size(164, 24);
+			this->courselab->Size = System::Drawing::Size(219, 30);
 			this->courselab->TabIndex = 0;
 			this->courselab->Text = L"coursename";
 			this->courselab->UseVisualStyleBackColor = false;
 			this->courselab->Click += gcnew System::EventHandler(this, &courseButton::courselab_Click);
+			this->courselab->MouseClick += gcnew System::Windows::Forms::MouseEventHandler(this, &courseButton::mourseclick);
 			// 
 			// courseButton
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
+			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->Controls->Add(this->courselab);
 			this->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->Name = L"courseButton";
-			this->Size = System::Drawing::Size(164, 24);
+			this->Size = System::Drawing::Size(219, 30);
 			this->ResumeLayout(false);
 
 		}
 #pragma endregion
+
+
 	private: System::Void selectlb_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
-		   bool clicked = false;
+		 
 	private: System::Void courselab_Click(System::Object^ sender, System::EventArgs^ e) {
-		if(!clicked){
-			courselab->BackColor= Color::Gray;
+		int c = 0;
+		if(courselab->BackColor == ColorTranslator::FromHtml("#17171F")){
+			courselab->BackColor= Color::Brown;
 			courselab->ForeColor = Color::White;
-			clicked = true;
+			isselected = true;
+			if (courseDetails)
+			{
+				for each (auto i in this->alldetailsbtns)
+				{
+					
+					if (i->courselab != this->courselab)
+					{
+						i->courselab->BackColor = ColorTranslator::FromHtml("#17171F");
+						i->courselab->ForeColor = Color::White;
+						i->isselected = false;
+					}
+					
+				}
+			}
+		
 		}
 		else
 		{
-			//courselab->BackColor = Color::Black;
 			courselab->BackColor = ColorTranslator::FromHtml("#17171F");
 			courselab->ForeColor = Color::White;
-			clicked = false;
+			isselected = false;
 		}
 	}
-	};
+	private: System::Void mourseclick(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e) {
+	
+	}
+};
 }

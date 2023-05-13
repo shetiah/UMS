@@ -15,4 +15,11 @@ Button^ UMS::courseButton::getBt()
 {
 	return this->bt;
 }
+void UMS::courseButton::setBtColor(Color color)
+{
+	this->courselab->BackColor = color;
+}void UMS::courseButton::setforecolor(Color color)
+{
+	this->courselab->ForeColor = color;
+}
 

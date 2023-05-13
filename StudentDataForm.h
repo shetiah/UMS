@@ -167,7 +167,7 @@ namespace UMS {
 			this->panel1->Controls->Add(this->pictureBox1);
 			this->panel1->Dock = System::Windows::Forms::DockStyle::Left;
 			this->panel1->Location = System::Drawing::Point(0, 0);
-			this->panel1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->panel1->Margin = System::Windows::Forms::Padding(4);
 			this->panel1->Name = L"panel1";
 			this->panel1->Size = System::Drawing::Size(624, 602);
 			this->panel1->TabIndex = 3;
@@ -233,7 +233,7 @@ namespace UMS {
 			this->pictureBox1->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
 			this->pictureBox1->Location = System::Drawing::Point(0, 0);
-			this->pictureBox1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->pictureBox1->Margin = System::Windows::Forms::Padding(4);
 			this->pictureBox1->Name = L"pictureBox1";
 			this->pictureBox1->Size = System::Drawing::Size(624, 602);
 			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -266,7 +266,7 @@ namespace UMS {
 			this->panel2->Controls->Add(this->panel3);
 			this->panel2->Dock = System::Windows::Forms::DockStyle::Right;
 			this->panel2->Location = System::Drawing::Point(621, 0);
-			this->panel2->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->panel2->Margin = System::Windows::Forms::Padding(4);
 			this->panel2->Name = L"panel2";
 			this->panel2->Size = System::Drawing::Size(671, 602);
 			this->panel2->TabIndex = 4;
@@ -274,7 +274,7 @@ namespace UMS {
 			// gradesTextBox
 			// 
 			this->gradesTextBox->Location = System::Drawing::Point(144, 363);
-			this->gradesTextBox->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->gradesTextBox->Margin = System::Windows::Forms::Padding(4);
 			this->gradesTextBox->Multiline = true;
 			this->gradesTextBox->Name = L"gradesTextBox";
 			this->gradesTextBox->Size = System::Drawing::Size(509, 24);
@@ -358,7 +358,7 @@ namespace UMS {
 			// CITextBox
 			// 
 			this->CITextBox->Location = System::Drawing::Point(144, 401);
-			this->CITextBox->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->CITextBox->Margin = System::Windows::Forms::Padding(4);
 			this->CITextBox->Multiline = true;
 			this->CITextBox->Name = L"CITextBox";
 			this->CITextBox->Size = System::Drawing::Size(509, 24);
@@ -367,7 +367,7 @@ namespace UMS {
 			// CTextBox
 			// 
 			this->CTextBox->Location = System::Drawing::Point(144, 321);
-			this->CTextBox->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->CTextBox->Margin = System::Windows::Forms::Padding(4);
 			this->CTextBox->Multiline = true;
 			this->CTextBox->Name = L"CTextBox";
 			this->CTextBox->Size = System::Drawing::Size(509, 24);
@@ -377,7 +377,7 @@ namespace UMS {
 			// gpaTextBox
 			// 
 			this->gpaTextBox->Location = System::Drawing::Point(144, 286);
-			this->gpaTextBox->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->gpaTextBox->Margin = System::Windows::Forms::Padding(4);
 			this->gpaTextBox->Multiline = true;
 			this->gpaTextBox->Name = L"gpaTextBox";
 			this->gpaTextBox->Size = System::Drawing::Size(509, 24);
@@ -386,7 +386,7 @@ namespace UMS {
 			// HTextBox
 			// 
 			this->HTextBox->Location = System::Drawing::Point(144, 246);
-			this->HTextBox->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->HTextBox->Margin = System::Windows::Forms::Padding(4);
 			this->HTextBox->Multiline = true;
 			this->HTextBox->Name = L"HTextBox";
 			this->HTextBox->Size = System::Drawing::Size(509, 24);
@@ -395,7 +395,7 @@ namespace UMS {
 			// AYTextBox
 			// 
 			this->AYTextBox->Location = System::Drawing::Point(144, 206);
-			this->AYTextBox->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->AYTextBox->Margin = System::Windows::Forms::Padding(4);
 			this->AYTextBox->Multiline = true;
 			this->AYTextBox->Name = L"AYTextBox";
 			this->AYTextBox->Size = System::Drawing::Size(509, 24);
@@ -404,7 +404,7 @@ namespace UMS {
 			// SPassTextBox
 			// 
 			this->SPassTextBox->Location = System::Drawing::Point(144, 158);
-			this->SPassTextBox->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->SPassTextBox->Margin = System::Windows::Forms::Padding(4);
 			this->SPassTextBox->Multiline = true;
 			this->SPassTextBox->Name = L"SPassTextBox";
 			this->SPassTextBox->PasswordChar = '*';
@@ -492,11 +492,12 @@ namespace UMS {
 			// SnameTextBox
 			// 
 			this->SnameTextBox->Location = System::Drawing::Point(144, 111);
-			this->SnameTextBox->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->SnameTextBox->Margin = System::Windows::Forms::Padding(4);
 			this->SnameTextBox->Multiline = true;
 			this->SnameTextBox->Name = L"SnameTextBox";
 			this->SnameTextBox->Size = System::Drawing::Size(509, 24);
 			this->SnameTextBox->TabIndex = 2;
+			this->SnameTextBox->TextChanged += gcnew System::EventHandler(this, &StudentDataForm::SnameTextBox_TextChanged);
 			// 
 			// label1
 			// 
@@ -516,7 +517,7 @@ namespace UMS {
 			this->panel3->Controls->Add(this->pictureBox2);
 			this->panel3->Dock = System::Windows::Forms::DockStyle::Top;
 			this->panel3->Location = System::Drawing::Point(0, 0);
-			this->panel3->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->panel3->Margin = System::Windows::Forms::Padding(4);
 			this->panel3->Name = L"panel3";
 			this->panel3->Size = System::Drawing::Size(671, 37);
 			this->panel3->TabIndex = 0;
@@ -527,7 +528,7 @@ namespace UMS {
 			this->pictureBox2->Dock = System::Windows::Forms::DockStyle::Right;
 			this->pictureBox2->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox2.Image")));
 			this->pictureBox2->Location = System::Drawing::Point(599, 0);
-			this->pictureBox2->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->pictureBox2->Margin = System::Windows::Forms::Padding(4);
 			this->pictureBox2->Name = L"pictureBox2";
 			this->pictureBox2->Size = System::Drawing::Size(72, 37);
 			this->pictureBox2->SizeMode = System::Windows::Forms::PictureBoxSizeMode::CenterImage;
@@ -664,6 +665,7 @@ private: System::Void button1_Click_1(System::Object^ sender, System::EventArgs^
 	}
 
 	String^ CoursesGrades = gradesTextBox->Text;
+
 	/*cli::array<String^>^ CoursesGradesArray = CoursesGrades->Split(',');
 	//convert the string data from the text box to be float 
 	cli::array<float>^ CoursesGradesFloatArray = gcnew cli::array<float>(CoursesGradesArray->Length);
@@ -722,6 +724,8 @@ private: System::Void button1_Click_1(System::Object^ sender, System::EventArgs^
 	
 }
 private: System::Void pictureBox1_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void SnameTextBox_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }
