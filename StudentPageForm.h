@@ -675,6 +675,7 @@ private: System::Windows::Forms::Button^ Exit;
 			this->flowLayoutPanel3->Name = L"flowLayoutPanel3";
 			this->flowLayoutPanel3->Size = System::Drawing::Size(269, 49);
 			this->flowLayoutPanel3->TabIndex = 3;
+			this->flowLayoutPanel3->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &StudentPageForm::flowLayoutPanel3_Paint);
 			// 
 			// button3
 			// 
@@ -1455,7 +1456,7 @@ private: System::Windows::Forms::Button^ Exit;
 					temp->setCode(course->getCode());
 					temp->setInstructor(course->getInstructor());
 					temp->setIsRequirement(course->getIsRequirement());
-					temp->setName(course->getName());
+					temp->setHours(course->getHours());
 					temp->setMaxNumberOfStudents(course->getMaxNumberOfStudents());
 					
 					flowLayoutPanel1->Controls->Add(temp);
@@ -1751,7 +1752,7 @@ private: System::Void viewbt_Click(System::Object^ sender, System::EventArgs^ e)
 					temp->setCode(course->getCode());
 					temp->setInstructor(course->getInstructor());
 					temp->setIsRequirement(course->getIsRequirement());
-					temp->setName(course->getName());
+					temp->setHours(course->getHours());
 					temp->setMaxNumberOfStudents(course->getMaxNumberOfStudents());
 				}
 			}	
@@ -1779,6 +1780,8 @@ private: System::Void button3_Click_1(System::Object^ sender, System::EventArgs^
 }
 private: System::Void Exit_Click(System::Object^ sender, System::EventArgs^ e) {
 	this->Close();
+}
+private: System::Void flowLayoutPanel3_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
 }
 };
 };
