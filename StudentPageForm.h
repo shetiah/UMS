@@ -176,6 +176,8 @@ private: System::Windows::Forms::Button^ button3;
 
 
 
+
+
 	private: System::ComponentModel::IContainer^ components;
 
 
@@ -270,18 +272,6 @@ private: System::Windows::Forms::Button^ button3;
 			this->pictureBox34 = (gcnew System::Windows::Forms::PictureBox());
 			this->pictureBox33 = (gcnew System::Windows::Forms::PictureBox());
 			this->pictureBox25 = (gcnew System::Windows::Forms::PictureBox());
-			this->coursesinprogHeaderpnl = (gcnew System::Windows::Forms::Panel());
-			this->pictureBox32 = (gcnew System::Windows::Forms::PictureBox());
-			this->pictureBox31 = (gcnew System::Windows::Forms::PictureBox());
-			this->pictureBox26 = (gcnew System::Windows::Forms::PictureBox());
-			this->pictureBox24 = (gcnew System::Windows::Forms::PictureBox());
-			this->pictureBox23 = (gcnew System::Windows::Forms::PictureBox());
-			this->pictureBox22 = (gcnew System::Windows::Forms::PictureBox());
-			this->pictureBox21 = (gcnew System::Windows::Forms::PictureBox());
-			this->pictureBox20 = (gcnew System::Windows::Forms::PictureBox());
-			this->pictureBox19 = (gcnew System::Windows::Forms::PictureBox());
-			this->pictureBox14 = (gcnew System::Windows::Forms::PictureBox());
-			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->pictureBox10 = (gcnew System::Windows::Forms::PictureBox());
 			this->pictureBox18 = (gcnew System::Windows::Forms::PictureBox());
 			this->pictureBox5 = (gcnew System::Windows::Forms::PictureBox());
@@ -298,6 +288,18 @@ private: System::Windows::Forms::Button^ button3;
 			this->pictureBox4 = (gcnew System::Windows::Forms::PictureBox());
 			this->pictureBox17 = (gcnew System::Windows::Forms::PictureBox());
 			this->flowLayoutPanel1 = (gcnew System::Windows::Forms::FlowLayoutPanel());
+			this->coursesinprogHeaderpnl = (gcnew System::Windows::Forms::Panel());
+			this->pictureBox32 = (gcnew System::Windows::Forms::PictureBox());
+			this->pictureBox31 = (gcnew System::Windows::Forms::PictureBox());
+			this->pictureBox26 = (gcnew System::Windows::Forms::PictureBox());
+			this->pictureBox24 = (gcnew System::Windows::Forms::PictureBox());
+			this->pictureBox23 = (gcnew System::Windows::Forms::PictureBox());
+			this->pictureBox22 = (gcnew System::Windows::Forms::PictureBox());
+			this->pictureBox21 = (gcnew System::Windows::Forms::PictureBox());
+			this->pictureBox20 = (gcnew System::Windows::Forms::PictureBox());
+			this->pictureBox19 = (gcnew System::Windows::Forms::PictureBox());
+			this->pictureBox14 = (gcnew System::Windows::Forms::PictureBox());
+			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->pnlOfregCourse = (gcnew System::Windows::Forms::Panel());
 			this->savebt = (gcnew System::Windows::Forms::Button());
 			this->flowLayoutPanel2 = (gcnew System::Windows::Forms::FlowLayoutPanel());
@@ -337,17 +339,6 @@ private: System::Windows::Forms::Button^ button3;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox34))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox33))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox25))->BeginInit();
-			this->coursesinprogHeaderpnl->SuspendLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox32))->BeginInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox31))->BeginInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox26))->BeginInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox24))->BeginInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox23))->BeginInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox22))->BeginInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox21))->BeginInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox20))->BeginInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox19))->BeginInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox14))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox10))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox18))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox5))->BeginInit();
@@ -363,6 +354,17 @@ private: System::Windows::Forms::Button^ button3;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox8))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox4))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox17))->BeginInit();
+			this->coursesinprogHeaderpnl->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox32))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox31))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox26))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox24))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox23))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox22))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox21))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox20))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox19))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox14))->BeginInit();
 			this->pnlOfregCourse->SuspendLayout();
 			this->flowLayoutPanel2->SuspendLayout();
 			this->pnlOfPanels->SuspendLayout();
@@ -592,41 +594,49 @@ private: System::Windows::Forms::Button^ button3;
 			// 
 			// pnlOfDetailsOfCourse
 			// 
+			this->pnlOfDetailsOfCourse->AutoScroll = true;
 			this->pnlOfDetailsOfCourse->Controls->Add(this->viewbt);
 			this->pnlOfDetailsOfCourse->Controls->Add(this->flwpnldetCourse);
 			this->pnlOfDetailsOfCourse->Controls->Add(this->flowLayoutPanel3);
-			this->pnlOfDetailsOfCourse->Location = System::Drawing::Point(228, 0);
+			this->pnlOfDetailsOfCourse->Location = System::Drawing::Point(227, 0);
 			this->pnlOfDetailsOfCourse->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->pnlOfDetailsOfCourse->Name = L"pnlOfDetailsOfCourse";
-			this->pnlOfDetailsOfCourse->Size = System::Drawing::Size(655, 517);
+			this->pnlOfDetailsOfCourse->Size = System::Drawing::Size(656, 517);
 			this->pnlOfDetailsOfCourse->TabIndex = 3;
 			this->pnlOfDetailsOfCourse->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &StudentPageForm::pnlOfDetailsOfCourse_Paint);
 			// 
 			// viewbt
 			// 
-			this->viewbt->Location = System::Drawing::Point(45, 448);
+			this->viewbt->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
+			this->viewbt->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
+				static_cast<System::Int32>(static_cast<System::Byte>(31)));
+			this->viewbt->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->viewbt->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 12, System::Drawing::FontStyle::Bold));
+			this->viewbt->ForeColor = System::Drawing::Color::White;
+			this->viewbt->Location = System::Drawing::Point(377, 46);
 			this->viewbt->Name = L"viewbt";
-			this->viewbt->Size = System::Drawing::Size(160, 66);
+			this->viewbt->Size = System::Drawing::Size(160, 45);
 			this->viewbt->TabIndex = 5;
-			this->viewbt->Text = L"VIEW";
-			this->viewbt->UseVisualStyleBackColor = true;
+			this->viewbt->Text = L"View";
+			this->viewbt->UseVisualStyleBackColor = false;
 			this->viewbt->Click += gcnew System::EventHandler(this, &StudentPageForm::viewbt_Click);
 			// 
 			// flwpnldetCourse
 			// 
-			this->flwpnldetCourse->Location = System::Drawing::Point(285, 6);
+			this->flwpnldetCourse->Location = System::Drawing::Point(276, 114);
 			this->flwpnldetCourse->Name = L"flwpnldetCourse";
-			this->flwpnldetCourse->Size = System::Drawing::Size(350, 515);
+			this->flwpnldetCourse->Size = System::Drawing::Size(350, 465);
 			this->flwpnldetCourse->TabIndex = 4;
 			this->flwpnldetCourse->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &StudentPageForm::flwpnldetCourse_Paint);
 			// 
 			// flowLayoutPanel3
 			// 
+			this->flowLayoutPanel3->AutoScroll = true;
 			this->flowLayoutPanel3->Controls->Add(this->button3);
 			this->flowLayoutPanel3->Location = System::Drawing::Point(9, 42);
 			this->flowLayoutPanel3->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->flowLayoutPanel3->Name = L"flowLayoutPanel3";
-			this->flowLayoutPanel3->Size = System::Drawing::Size(224, 49);
+			this->flowLayoutPanel3->Size = System::Drawing::Size(269, 49);
 			this->flowLayoutPanel3->TabIndex = 3;
 			// 
 			// pnlOfCoursesInProgress
@@ -847,147 +857,6 @@ private: System::Windows::Forms::Button^ button3;
 			this->pictureBox25->TabIndex = 46;
 			this->pictureBox25->TabStop = false;
 			// 
-			// coursesinprogHeaderpnl
-			// 
-			this->coursesinprogHeaderpnl->Controls->Add(this->pictureBox32);
-			this->coursesinprogHeaderpnl->Controls->Add(this->pictureBox31);
-			this->coursesinprogHeaderpnl->Controls->Add(this->pictureBox26);
-			this->coursesinprogHeaderpnl->Controls->Add(this->pictureBox24);
-			this->coursesinprogHeaderpnl->Controls->Add(this->pictureBox23);
-			this->coursesinprogHeaderpnl->Controls->Add(this->pictureBox22);
-			this->coursesinprogHeaderpnl->Controls->Add(this->pictureBox21);
-			this->coursesinprogHeaderpnl->Controls->Add(this->pictureBox20);
-			this->coursesinprogHeaderpnl->Controls->Add(this->pictureBox19);
-			this->coursesinprogHeaderpnl->Controls->Add(this->pictureBox14);
-			this->coursesinprogHeaderpnl->Controls->Add(this->label4);
-			this->coursesinprogHeaderpnl->Location = System::Drawing::Point(2, 2);
-			this->coursesinprogHeaderpnl->Name = L"coursesinprogHeaderpnl";
-			this->coursesinprogHeaderpnl->Size = System::Drawing::Size(649, 85);
-			this->coursesinprogHeaderpnl->TabIndex = 45;
-			// 
-			// pictureBox32
-			// 
-			this->pictureBox32->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox32.Image")));
-			this->pictureBox32->Location = System::Drawing::Point(237, 55);
-			this->pictureBox32->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
-			this->pictureBox32->Name = L"pictureBox32";
-			this->pictureBox32->Size = System::Drawing::Size(27, 20);
-			this->pictureBox32->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
-			this->pictureBox32->TabIndex = 50;
-			this->pictureBox32->TabStop = false;
-			// 
-			// pictureBox31
-			// 
-			this->pictureBox31->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox31.Image")));
-			this->pictureBox31->Location = System::Drawing::Point(240, 1);
-			this->pictureBox31->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
-			this->pictureBox31->Name = L"pictureBox31";
-			this->pictureBox31->Size = System::Drawing::Size(24, 32);
-			this->pictureBox31->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
-			this->pictureBox31->TabIndex = 47;
-			this->pictureBox31->TabStop = false;
-			// 
-			// pictureBox26
-			// 
-			this->pictureBox26->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox26.Image")));
-			this->pictureBox26->Location = System::Drawing::Point(336, 39);
-			this->pictureBox26->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
-			this->pictureBox26->Name = L"pictureBox26";
-			this->pictureBox26->Size = System::Drawing::Size(41, 34);
-			this->pictureBox26->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
-			this->pictureBox26->TabIndex = 47;
-			this->pictureBox26->TabStop = false;
-			// 
-			// pictureBox24
-			// 
-			this->pictureBox24->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox24.Image")));
-			this->pictureBox24->Location = System::Drawing::Point(523, 34);
-			this->pictureBox24->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
-			this->pictureBox24->Name = L"pictureBox24";
-			this->pictureBox24->Size = System::Drawing::Size(48, 43);
-			this->pictureBox24->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
-			this->pictureBox24->TabIndex = 46;
-			this->pictureBox24->TabStop = false;
-			// 
-			// pictureBox23
-			// 
-			this->pictureBox23->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox23.Image")));
-			this->pictureBox23->Location = System::Drawing::Point(460, 40);
-			this->pictureBox23->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
-			this->pictureBox23->Name = L"pictureBox23";
-			this->pictureBox23->Size = System::Drawing::Size(35, 33);
-			this->pictureBox23->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
-			this->pictureBox23->TabIndex = 46;
-			this->pictureBox23->TabStop = false;
-			// 
-			// pictureBox22
-			// 
-			this->pictureBox22->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox22.Image")));
-			this->pictureBox22->Location = System::Drawing::Point(460, 6);
-			this->pictureBox22->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
-			this->pictureBox22->Name = L"pictureBox22";
-			this->pictureBox22->Size = System::Drawing::Size(35, 30);
-			this->pictureBox22->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
-			this->pictureBox22->TabIndex = 46;
-			this->pictureBox22->TabStop = false;
-			// 
-			// pictureBox21
-			// 
-			this->pictureBox21->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox21.Image")));
-			this->pictureBox21->Location = System::Drawing::Point(383, 40);
-			this->pictureBox21->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
-			this->pictureBox21->Name = L"pictureBox21";
-			this->pictureBox21->Size = System::Drawing::Size(41, 41);
-			this->pictureBox21->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
-			this->pictureBox21->TabIndex = 46;
-			this->pictureBox21->TabStop = false;
-			// 
-			// pictureBox20
-			// 
-			this->pictureBox20->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox20.Image")));
-			this->pictureBox20->Location = System::Drawing::Point(577, 16);
-			this->pictureBox20->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
-			this->pictureBox20->Name = L"pictureBox20";
-			this->pictureBox20->Size = System::Drawing::Size(47, 34);
-			this->pictureBox20->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
-			this->pictureBox20->TabIndex = 46;
-			this->pictureBox20->TabStop = false;
-			// 
-			// pictureBox19
-			// 
-			this->pictureBox19->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox19.Image")));
-			this->pictureBox19->Location = System::Drawing::Point(353, 2);
-			this->pictureBox19->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
-			this->pictureBox19->Name = L"pictureBox19";
-			this->pictureBox19->Size = System::Drawing::Size(47, 34);
-			this->pictureBox19->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
-			this->pictureBox19->TabIndex = 46;
-			this->pictureBox19->TabStop = false;
-			// 
-			// pictureBox14
-			// 
-			this->pictureBox14->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox14.Image")));
-			this->pictureBox14->Location = System::Drawing::Point(270, 17);
-			this->pictureBox14->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
-			this->pictureBox14->Name = L"pictureBox14";
-			this->pictureBox14->Size = System::Drawing::Size(48, 43);
-			this->pictureBox14->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
-			this->pictureBox14->TabIndex = 46;
-			this->pictureBox14->TabStop = false;
-			// 
-			// label4
-			// 
-			this->label4->AutoSize = true;
-			this->label4->BackColor = System::Drawing::Color::Transparent;
-			this->label4->Font = (gcnew System::Drawing::Font(L"Showcard Gothic", 16.2F, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)),
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->label4->ForeColor = System::Drawing::Color::Tan;
-			this->label4->Location = System::Drawing::Point(1, 25);
-			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(242, 35);
-			this->label4->TabIndex = 0;
-			this->label4->Text = L"Your Courses:";
-			// 
 			// pictureBox10
 			// 
 			this->pictureBox10->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox10.Image")));
@@ -1162,6 +1031,147 @@ private: System::Windows::Forms::Button^ button3;
 			this->flowLayoutPanel1->Name = L"flowLayoutPanel1";
 			this->flowLayoutPanel1->Size = System::Drawing::Size(350, 515);
 			this->flowLayoutPanel1->TabIndex = 2;
+			// 
+			// coursesinprogHeaderpnl
+			// 
+			this->coursesinprogHeaderpnl->Controls->Add(this->pictureBox32);
+			this->coursesinprogHeaderpnl->Controls->Add(this->pictureBox31);
+			this->coursesinprogHeaderpnl->Controls->Add(this->pictureBox26);
+			this->coursesinprogHeaderpnl->Controls->Add(this->pictureBox24);
+			this->coursesinprogHeaderpnl->Controls->Add(this->pictureBox23);
+			this->coursesinprogHeaderpnl->Controls->Add(this->pictureBox22);
+			this->coursesinprogHeaderpnl->Controls->Add(this->pictureBox21);
+			this->coursesinprogHeaderpnl->Controls->Add(this->pictureBox20);
+			this->coursesinprogHeaderpnl->Controls->Add(this->pictureBox19);
+			this->coursesinprogHeaderpnl->Controls->Add(this->pictureBox14);
+			this->coursesinprogHeaderpnl->Controls->Add(this->label4);
+			this->coursesinprogHeaderpnl->Location = System::Drawing::Point(2, 2);
+			this->coursesinprogHeaderpnl->Name = L"coursesinprogHeaderpnl";
+			this->coursesinprogHeaderpnl->Size = System::Drawing::Size(649, 85);
+			this->coursesinprogHeaderpnl->TabIndex = 45;
+			// 
+			// pictureBox32
+			// 
+			this->pictureBox32->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox32.Image")));
+			this->pictureBox32->Location = System::Drawing::Point(237, 55);
+			this->pictureBox32->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->pictureBox32->Name = L"pictureBox32";
+			this->pictureBox32->Size = System::Drawing::Size(27, 20);
+			this->pictureBox32->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->pictureBox32->TabIndex = 50;
+			this->pictureBox32->TabStop = false;
+			// 
+			// pictureBox31
+			// 
+			this->pictureBox31->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox31.Image")));
+			this->pictureBox31->Location = System::Drawing::Point(240, 1);
+			this->pictureBox31->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->pictureBox31->Name = L"pictureBox31";
+			this->pictureBox31->Size = System::Drawing::Size(24, 32);
+			this->pictureBox31->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->pictureBox31->TabIndex = 47;
+			this->pictureBox31->TabStop = false;
+			// 
+			// pictureBox26
+			// 
+			this->pictureBox26->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox26.Image")));
+			this->pictureBox26->Location = System::Drawing::Point(336, 39);
+			this->pictureBox26->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->pictureBox26->Name = L"pictureBox26";
+			this->pictureBox26->Size = System::Drawing::Size(41, 34);
+			this->pictureBox26->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->pictureBox26->TabIndex = 47;
+			this->pictureBox26->TabStop = false;
+			// 
+			// pictureBox24
+			// 
+			this->pictureBox24->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox24.Image")));
+			this->pictureBox24->Location = System::Drawing::Point(523, 34);
+			this->pictureBox24->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->pictureBox24->Name = L"pictureBox24";
+			this->pictureBox24->Size = System::Drawing::Size(48, 43);
+			this->pictureBox24->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->pictureBox24->TabIndex = 46;
+			this->pictureBox24->TabStop = false;
+			// 
+			// pictureBox23
+			// 
+			this->pictureBox23->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox23.Image")));
+			this->pictureBox23->Location = System::Drawing::Point(460, 40);
+			this->pictureBox23->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->pictureBox23->Name = L"pictureBox23";
+			this->pictureBox23->Size = System::Drawing::Size(35, 33);
+			this->pictureBox23->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->pictureBox23->TabIndex = 46;
+			this->pictureBox23->TabStop = false;
+			// 
+			// pictureBox22
+			// 
+			this->pictureBox22->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox22.Image")));
+			this->pictureBox22->Location = System::Drawing::Point(460, 6);
+			this->pictureBox22->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->pictureBox22->Name = L"pictureBox22";
+			this->pictureBox22->Size = System::Drawing::Size(35, 30);
+			this->pictureBox22->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->pictureBox22->TabIndex = 46;
+			this->pictureBox22->TabStop = false;
+			// 
+			// pictureBox21
+			// 
+			this->pictureBox21->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox21.Image")));
+			this->pictureBox21->Location = System::Drawing::Point(383, 40);
+			this->pictureBox21->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->pictureBox21->Name = L"pictureBox21";
+			this->pictureBox21->Size = System::Drawing::Size(41, 41);
+			this->pictureBox21->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->pictureBox21->TabIndex = 46;
+			this->pictureBox21->TabStop = false;
+			// 
+			// pictureBox20
+			// 
+			this->pictureBox20->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox20.Image")));
+			this->pictureBox20->Location = System::Drawing::Point(577, 16);
+			this->pictureBox20->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->pictureBox20->Name = L"pictureBox20";
+			this->pictureBox20->Size = System::Drawing::Size(47, 34);
+			this->pictureBox20->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->pictureBox20->TabIndex = 46;
+			this->pictureBox20->TabStop = false;
+			// 
+			// pictureBox19
+			// 
+			this->pictureBox19->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox19.Image")));
+			this->pictureBox19->Location = System::Drawing::Point(353, 2);
+			this->pictureBox19->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->pictureBox19->Name = L"pictureBox19";
+			this->pictureBox19->Size = System::Drawing::Size(47, 34);
+			this->pictureBox19->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->pictureBox19->TabIndex = 46;
+			this->pictureBox19->TabStop = false;
+			// 
+			// pictureBox14
+			// 
+			this->pictureBox14->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox14.Image")));
+			this->pictureBox14->Location = System::Drawing::Point(270, 17);
+			this->pictureBox14->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->pictureBox14->Name = L"pictureBox14";
+			this->pictureBox14->Size = System::Drawing::Size(48, 43);
+			this->pictureBox14->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->pictureBox14->TabIndex = 46;
+			this->pictureBox14->TabStop = false;
+			// 
+			// label4
+			// 
+			this->label4->AutoSize = true;
+			this->label4->BackColor = System::Drawing::Color::Transparent;
+			this->label4->Font = (gcnew System::Drawing::Font(L"Showcard Gothic", 16.2F, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)),
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->label4->ForeColor = System::Drawing::Color::Tan;
+			this->label4->Location = System::Drawing::Point(1, 25);
+			this->label4->Name = L"label4";
+			this->label4->Size = System::Drawing::Size(242, 35);
+			this->label4->TabIndex = 0;
+			this->label4->Text = L"Your Courses:";
 			// 
 			// pnlOfregCourse
 			// 
@@ -1347,18 +1357,6 @@ private: System::Windows::Forms::Button^ button3;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox34))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox33))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox25))->EndInit();
-			this->coursesinprogHeaderpnl->ResumeLayout(false);
-			this->coursesinprogHeaderpnl->PerformLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox32))->EndInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox31))->EndInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox26))->EndInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox24))->EndInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox23))->EndInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox22))->EndInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox21))->EndInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox20))->EndInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox19))->EndInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox14))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox10))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox18))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox5))->EndInit();
@@ -1374,6 +1372,18 @@ private: System::Windows::Forms::Button^ button3;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox8))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox4))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox17))->EndInit();
+			this->coursesinprogHeaderpnl->ResumeLayout(false);
+			this->coursesinprogHeaderpnl->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox32))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox31))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox26))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox24))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox23))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox22))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox21))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox20))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox19))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox14))->EndInit();
 			this->pnlOfregCourse->ResumeLayout(false);
 			this->pnlOfregCourse->PerformLayout();
 			this->flowLayoutPanel2->ResumeLayout(false);
