@@ -160,6 +160,8 @@ private: System::Windows::Forms::PictureBox^ pictureBox33;
 private: System::Windows::Forms::FlowLayoutPanel^ flwpnldetCourse;
 private: System::Windows::Forms::Button^ viewbt;
 private: System::Windows::Forms::Button^ button3;
+private: System::Windows::Forms::Button^ logoutbt;
+private: System::Windows::Forms::Button^ Exit;
 
 
 
@@ -236,6 +238,8 @@ private: System::Windows::Forms::Button^ button3;
 			this->components = (gcnew System::ComponentModel::Container());
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(StudentPageForm::typeid));
 			this->sideBar = (gcnew System::Windows::Forms::Panel());
+			this->logoutbt = (gcnew System::Windows::Forms::Button());
+			this->Exit = (gcnew System::Windows::Forms::Button());
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
 			this->pictureBox13 = (gcnew System::Windows::Forms::PictureBox());
 			this->pictureBox16 = (gcnew System::Windows::Forms::PictureBox());
@@ -255,6 +259,7 @@ private: System::Windows::Forms::Button^ button3;
 			this->viewbt = (gcnew System::Windows::Forms::Button());
 			this->flwpnldetCourse = (gcnew System::Windows::Forms::FlowLayoutPanel());
 			this->flowLayoutPanel3 = (gcnew System::Windows::Forms::FlowLayoutPanel());
+			this->button3 = (gcnew System::Windows::Forms::Button());
 			this->pnlOfCoursesInProgress = (gcnew System::Windows::Forms::Panel());
 			this->pictureBox43 = (gcnew System::Windows::Forms::PictureBox());
 			this->pictureBox42 = (gcnew System::Windows::Forms::PictureBox());
@@ -310,7 +315,6 @@ private: System::Windows::Forms::Button^ button3;
 			this->mstPanel = (gcnew System::Windows::Forms::Panel());
 			this->dropdowntimer = (gcnew System::Windows::Forms::Timer(this->components));
 			this->dropdowndet = (gcnew System::Windows::Forms::Timer(this->components));
-			this->button3 = (gcnew System::Windows::Forms::Button());
 			this->sideBar->SuspendLayout();
 			this->panel1->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox13))->BeginInit();
@@ -376,6 +380,8 @@ private: System::Windows::Forms::Button^ button3;
 			this->sideBar->AllowDrop = true;
 			this->sideBar->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
 				static_cast<System::Int32>(static_cast<System::Byte>(31)));
+			this->sideBar->Controls->Add(this->logoutbt);
+			this->sideBar->Controls->Add(this->Exit);
 			this->sideBar->Controls->Add(this->panel1);
 			this->sideBar->Controls->Add(this->pnlbuttons);
 			this->sideBar->ForeColor = System::Drawing::SystemColors::ControlLightLight;
@@ -387,6 +393,37 @@ private: System::Windows::Forms::Button^ button3;
 			this->sideBar->Size = System::Drawing::Size(289, 521);
 			this->sideBar->TabIndex = 0;
 			this->sideBar->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &StudentPageForm::sideBar_Paint);
+			// 
+			// logoutbt
+			// 
+			this->logoutbt->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
+			this->logoutbt->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
+				static_cast<System::Int32>(static_cast<System::Byte>(31)));
+			this->logoutbt->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->logoutbt->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 12, System::Drawing::FontStyle::Bold));
+			this->logoutbt->ForeColor = System::Drawing::Color::Tan;
+			this->logoutbt->Location = System::Drawing::Point(13, 463);
+			this->logoutbt->Name = L"logoutbt";
+			this->logoutbt->Size = System::Drawing::Size(119, 45);
+			this->logoutbt->TabIndex = 7;
+			this->logoutbt->Text = L"Log out";
+			this->logoutbt->UseVisualStyleBackColor = false;
+			// 
+			// Exit
+			// 
+			this->Exit->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
+			this->Exit->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
+				static_cast<System::Int32>(static_cast<System::Byte>(31)));
+			this->Exit->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->Exit->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 12, System::Drawing::FontStyle::Bold));
+			this->Exit->ForeColor = System::Drawing::Color::Tan;
+			this->Exit->Location = System::Drawing::Point(196, 465);
+			this->Exit->Name = L"Exit";
+			this->Exit->Size = System::Drawing::Size(89, 45);
+			this->Exit->TabIndex = 6;
+			this->Exit->Text = L"Exit";
+			this->Exit->UseVisualStyleBackColor = false;
+			this->Exit->Click += gcnew System::EventHandler(this, &StudentPageForm::Exit_Click);
 			// 
 			// panel1
 			// 
@@ -612,7 +649,7 @@ private: System::Windows::Forms::Button^ button3;
 				static_cast<System::Int32>(static_cast<System::Byte>(31)));
 			this->viewbt->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->viewbt->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 12, System::Drawing::FontStyle::Bold));
-			this->viewbt->ForeColor = System::Drawing::Color::White;
+			this->viewbt->ForeColor = System::Drawing::Color::Tan;
 			this->viewbt->Location = System::Drawing::Point(377, 46);
 			this->viewbt->Name = L"viewbt";
 			this->viewbt->Size = System::Drawing::Size(160, 45);
@@ -638,6 +675,28 @@ private: System::Windows::Forms::Button^ button3;
 			this->flowLayoutPanel3->Name = L"flowLayoutPanel3";
 			this->flowLayoutPanel3->Size = System::Drawing::Size(269, 49);
 			this->flowLayoutPanel3->TabIndex = 3;
+			// 
+			// button3
+			// 
+			this->button3->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
+				static_cast<System::Int32>(static_cast<System::Byte>(31)));
+			this->button3->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->button3->FlatAppearance->BorderSize = 0;
+			this->button3->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button3->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button3->ForeColor = System::Drawing::Color::Tan;
+			this->button3->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button3.Image")));
+			this->button3->ImageAlign = System::Drawing::ContentAlignment::MiddleRight;
+			this->button3->Location = System::Drawing::Point(3, 2);
+			this->button3->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->button3->Name = L"button3";
+			this->button3->Size = System::Drawing::Size(219, 43);
+			this->button3->TabIndex = 7;
+			this->button3->Text = L"Select Course";
+			this->button3->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->button3->UseVisualStyleBackColor = false;
+			this->button3->Click += gcnew System::EventHandler(this, &StudentPageForm::button3_Click_1);
 			// 
 			// pnlOfCoursesInProgress
 			// 
@@ -1290,28 +1349,6 @@ private: System::Windows::Forms::Button^ button3;
 			// 
 			this->dropdowndet->Tick += gcnew System::EventHandler(this, &StudentPageForm::dropdowndet_Tick);
 			// 
-			// button3
-			// 
-			this->button3->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
-				static_cast<System::Int32>(static_cast<System::Byte>(31)));
-			this->button3->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->button3->FlatAppearance->BorderSize = 0;
-			this->button3->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button3->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->button3->ForeColor = System::Drawing::Color::White;
-			this->button3->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button3.Image")));
-			this->button3->ImageAlign = System::Drawing::ContentAlignment::MiddleRight;
-			this->button3->Location = System::Drawing::Point(3, 2);
-			this->button3->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
-			this->button3->Name = L"button3";
-			this->button3->Size = System::Drawing::Size(219, 43);
-			this->button3->TabIndex = 7;
-			this->button3->Text = L"Select Course";
-			this->button3->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->button3->UseVisualStyleBackColor = false;
-			this->button3->Click += gcnew System::EventHandler(this, &StudentPageForm::button3_Click_1);
-			// 
 			// StudentPageForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
@@ -1730,7 +1767,7 @@ private: System::Void viewbt_Click(System::Object^ sender, System::EventArgs^ e)
 		if (bt->getBt()->BackColor == Color::Brown)
 		{
 			bt->setBtColor(ColorTranslator::FromHtml("#17171F"));
-			bt->setforecolor(Color::White);
+			bt->setforecolor(Color::Tan);
 
 
 		}
@@ -1739,6 +1776,9 @@ private: System::Void viewbt_Click(System::Object^ sender, System::EventArgs^ e)
 private: System::Void button3_Click_1(System::Object^ sender, System::EventArgs^ e) {
 	dropdowndet->Start();
 
+}
+private: System::Void Exit_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->Close();
 }
 };
 };
