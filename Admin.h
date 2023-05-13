@@ -30,7 +30,7 @@ public:
 	//files
 	static void loadAdminDataFromFile();
 	static void saveAdminDataToFile();
-	
+	static float calc_CGPA(Student^ s);
 	//log in
 	//DONE === create student
 	//add course and enter course prerequisite
