@@ -1,5 +1,7 @@
 #pragma once
 #include "Admin.h"
+#include"Course.h"
+#include "Student.h"
 namespace UMS {
 
 	using namespace System;
@@ -107,6 +109,44 @@ namespace UMS {
 	private: System::Windows::Forms::Label^ hoursLabel;
 	private: System::Windows::Forms::Label^ gpaLabel;
 	private: System::Windows::Forms::Label^ GradesLabel;
+	private: System::Windows::Forms::Label^ lbl7;
+
+	private: System::Windows::Forms::Label^ lbl5;
+
+	private: System::Windows::Forms::Label^ lbl4;
+
+	private: System::Windows::Forms::Label^ lbl37;
+
+	private: System::Windows::Forms::Label^ lbl2;
+
+	private: System::Windows::Forms::Label^ lbl1;
+private: System::Windows::Forms::TextBox^ ctxt;
+
+
+private: System::Windows::Forms::TextBox^ ptxt;
+
+private: System::Windows::Forms::TextBox^ itxt;
+
+private: System::Windows::Forms::TextBox^ mtxt;
+
+private: System::Windows::Forms::TextBox^ htxt;
+
+private: System::Windows::Forms::TextBox^ nTxt;
+
+private: System::Windows::Forms::Label^ lblfgd;
+private: System::Windows::Forms::RadioButton^ Eradio;
+
+private: System::Windows::Forms::RadioButton^ Rradio;
+private: System::Windows::Forms::Label^ hlabel;
+private: System::Windows::Forms::Label^ mlabel;
+
+
+private: System::Windows::Forms::Button^ addCourseBtn;
+private: System::Windows::Forms::Label^ label11;
+private: System::Windows::Forms::Label^ slabel;
+
+
+
 
 
 
@@ -195,6 +235,27 @@ namespace UMS {
 			this->panel7 = (gcnew System::Windows::Forms::Panel());
 			this->slideBarTimer = (gcnew System::Windows::Forms::Timer(this->components));
 			this->pnlOfPanels = (gcnew System::Windows::Forms::Panel());
+			this->pnlOfAddCourse = (gcnew System::Windows::Forms::Panel());
+			this->slabel = (gcnew System::Windows::Forms::Label());
+			this->label11 = (gcnew System::Windows::Forms::Label());
+			this->addCourseBtn = (gcnew System::Windows::Forms::Button());
+			this->hlabel = (gcnew System::Windows::Forms::Label());
+			this->mlabel = (gcnew System::Windows::Forms::Label());
+			this->Eradio = (gcnew System::Windows::Forms::RadioButton());
+			this->Rradio = (gcnew System::Windows::Forms::RadioButton());
+			this->lblfgd = (gcnew System::Windows::Forms::Label());
+			this->ctxt = (gcnew System::Windows::Forms::TextBox());
+			this->ptxt = (gcnew System::Windows::Forms::TextBox());
+			this->itxt = (gcnew System::Windows::Forms::TextBox());
+			this->mtxt = (gcnew System::Windows::Forms::TextBox());
+			this->htxt = (gcnew System::Windows::Forms::TextBox());
+			this->nTxt = (gcnew System::Windows::Forms::TextBox());
+			this->lbl7 = (gcnew System::Windows::Forms::Label());
+			this->lbl5 = (gcnew System::Windows::Forms::Label());
+			this->lbl4 = (gcnew System::Windows::Forms::Label());
+			this->lbl37 = (gcnew System::Windows::Forms::Label());
+			this->lbl2 = (gcnew System::Windows::Forms::Label());
+			this->lbl1 = (gcnew System::Windows::Forms::Label());
 			this->pnlOfAddStudent = (gcnew System::Windows::Forms::Panel());
 			this->GradesLabel = (gcnew System::Windows::Forms::Label());
 			this->gpaLabel = (gcnew System::Windows::Forms::Label());
@@ -223,7 +284,6 @@ namespace UMS {
 			this->pnlOfStudentOfCourse = (gcnew System::Windows::Forms::Panel());
 			this->pnlEditStudent = (gcnew System::Windows::Forms::Panel());
 			this->pnlOfEditCourse = (gcnew System::Windows::Forms::Panel());
-			this->pnlOfAddCourse = (gcnew System::Windows::Forms::Panel());
 			this->sideBar->SuspendLayout();
 			this->pnlOfbtns->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox5))->BeginInit();
@@ -232,6 +292,7 @@ namespace UMS {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->pnlOfPanels->SuspendLayout();
+			this->pnlOfAddCourse->SuspendLayout();
 			this->pnlOfAddStudent->SuspendLayout();
 			this->pnlOfData->SuspendLayout();
 			this->SuspendLayout();
@@ -526,16 +587,273 @@ namespace UMS {
 			// 
 			// pnlOfPanels
 			// 
+			this->pnlOfPanels->Controls->Add(this->pnlOfAddCourse);
 			this->pnlOfPanels->Controls->Add(this->pnlOfAddStudent);
 			this->pnlOfPanels->Controls->Add(this->pnlOfStudentOfCourse);
 			this->pnlOfPanels->Controls->Add(this->pnlEditStudent);
 			this->pnlOfPanels->Controls->Add(this->pnlOfEditCourse);
-			this->pnlOfPanels->Controls->Add(this->pnlOfAddCourse);
 			this->pnlOfPanels->Location = System::Drawing::Point(46, 55);
 			this->pnlOfPanels->Margin = System::Windows::Forms::Padding(2);
 			this->pnlOfPanels->Name = L"pnlOfPanels";
 			this->pnlOfPanels->Size = System::Drawing::Size(650, 328);
 			this->pnlOfPanels->TabIndex = 1;
+			// 
+			// pnlOfAddCourse
+			// 
+			this->pnlOfAddCourse->BackColor = System::Drawing::Color::White;
+			this->pnlOfAddCourse->Controls->Add(this->slabel);
+			this->pnlOfAddCourse->Controls->Add(this->label11);
+			this->pnlOfAddCourse->Controls->Add(this->addCourseBtn);
+			this->pnlOfAddCourse->Controls->Add(this->hlabel);
+			this->pnlOfAddCourse->Controls->Add(this->mlabel);
+			this->pnlOfAddCourse->Controls->Add(this->Eradio);
+			this->pnlOfAddCourse->Controls->Add(this->Rradio);
+			this->pnlOfAddCourse->Controls->Add(this->lblfgd);
+			this->pnlOfAddCourse->Controls->Add(this->ctxt);
+			this->pnlOfAddCourse->Controls->Add(this->ptxt);
+			this->pnlOfAddCourse->Controls->Add(this->itxt);
+			this->pnlOfAddCourse->Controls->Add(this->mtxt);
+			this->pnlOfAddCourse->Controls->Add(this->htxt);
+			this->pnlOfAddCourse->Controls->Add(this->nTxt);
+			this->pnlOfAddCourse->Controls->Add(this->lbl7);
+			this->pnlOfAddCourse->Controls->Add(this->lbl5);
+			this->pnlOfAddCourse->Controls->Add(this->lbl4);
+			this->pnlOfAddCourse->Controls->Add(this->lbl37);
+			this->pnlOfAddCourse->Controls->Add(this->lbl2);
+			this->pnlOfAddCourse->Controls->Add(this->lbl1);
+			this->pnlOfAddCourse->Location = System::Drawing::Point(0, 0);
+			this->pnlOfAddCourse->Margin = System::Windows::Forms::Padding(2);
+			this->pnlOfAddCourse->Name = L"pnlOfAddCourse";
+			this->pnlOfAddCourse->Size = System::Drawing::Size(650, 328);
+			this->pnlOfAddCourse->TabIndex = 2;
+			this->pnlOfAddCourse->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &adminHome::pnlOfAddCourse_Paint);
+			// 
+			// slabel
+			// 
+			this->slabel->AutoSize = true;
+			this->slabel->BackColor = System::Drawing::Color::Transparent;
+			this->slabel->ForeColor = System::Drawing::Color::Blue;
+			this->slabel->Location = System::Drawing::Point(436, 259);
+			this->slabel->Name = L"slabel";
+			this->slabel->Size = System::Drawing::Size(139, 13);
+			this->slabel->TabIndex = 35;
+			this->slabel->Text = L"Course Added Successfully!";
+			this->slabel->Visible = false;
+			// 
+			// label11
+			// 
+			this->label11->AutoSize = true;
+			this->label11->BackColor = System::Drawing::Color::Transparent;
+			this->label11->ForeColor = System::Drawing::Color::Red;
+			this->label11->Location = System::Drawing::Point(411, 173);
+			this->label11->Name = L"label11";
+			this->label11->Size = System::Drawing::Size(173, 13);
+			this->label11->TabIndex = 34;
+			this->label11->Text = L"Sorry , you must fill all the textboxes";
+			this->label11->Visible = false;
+			// 
+			// addCourseBtn
+			// 
+			this->addCourseBtn->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
+				static_cast<System::Int32>(static_cast<System::Byte>(31)));
+			this->addCourseBtn->FlatAppearance->BorderSize = 0;
+			this->addCourseBtn->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->addCourseBtn->Font = (gcnew System::Drawing::Font(L"Segoe UI", 11.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->addCourseBtn->ForeColor = System::Drawing::Color::Tan;
+			this->addCourseBtn->Location = System::Drawing::Point(439, 201);
+			this->addCourseBtn->Margin = System::Windows::Forms::Padding(2);
+			this->addCourseBtn->Name = L"addCourseBtn";
+			this->addCourseBtn->Size = System::Drawing::Size(130, 45);
+			this->addCourseBtn->TabIndex = 33;
+			this->addCourseBtn->Text = L"ADD";
+			this->addCourseBtn->UseVisualStyleBackColor = false;
+			this->addCourseBtn->Click += gcnew System::EventHandler(this, &adminHome::addCourseBtn_Click);
+			// 
+			// hlabel
+			// 
+			this->hlabel->AutoSize = true;
+			this->hlabel->BackColor = System::Drawing::Color::Transparent;
+			this->hlabel->ForeColor = System::Drawing::Color::Red;
+			this->hlabel->Location = System::Drawing::Point(204, 89);
+			this->hlabel->Name = L"hlabel";
+			this->hlabel->Size = System::Drawing::Size(130, 13);
+			this->hlabel->TabIndex = 32;
+			this->hlabel->Text = L"please enter numbers only";
+			this->hlabel->Visible = false;
+			// 
+			// mlabel
+			// 
+			this->mlabel->AutoSize = true;
+			this->mlabel->BackColor = System::Drawing::Color::Transparent;
+			this->mlabel->ForeColor = System::Drawing::Color::Red;
+			this->mlabel->Location = System::Drawing::Point(204, 137);
+			this->mlabel->Name = L"mlabel";
+			this->mlabel->Size = System::Drawing::Size(130, 13);
+			this->mlabel->TabIndex = 31;
+			this->mlabel->Text = L"please enter numbers only";
+			this->mlabel->Visible = false;
+			// 
+			// Eradio
+			// 
+			this->Eradio->AutoSize = true;
+			this->Eradio->Font = (gcnew System::Drawing::Font(L"Segoe UI", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->Eradio->ForeColor = System::Drawing::Color::Gray;
+			this->Eradio->Location = System::Drawing::Point(414, 72);
+			this->Eradio->Name = L"Eradio";
+			this->Eradio->Size = System::Drawing::Size(63, 17);
+			this->Eradio->TabIndex = 30;
+			this->Eradio->Text = L"Elective";
+			this->Eradio->UseVisualStyleBackColor = true;
+			// 
+			// Rradio
+			// 
+			this->Rradio->AutoSize = true;
+			this->Rradio->Checked = true;
+			this->Rradio->Font = (gcnew System::Drawing::Font(L"Segoe UI", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->Rradio->ForeColor = System::Drawing::Color::Gray;
+			this->Rradio->Location = System::Drawing::Point(414, 49);
+			this->Rradio->Name = L"Rradio";
+			this->Rradio->Size = System::Drawing::Size(91, 17);
+			this->Rradio->TabIndex = 29;
+			this->Rradio->TabStop = true;
+			this->Rradio->Text = L"Requirement";
+			this->Rradio->UseVisualStyleBackColor = true;
+			// 
+			// lblfgd
+			// 
+			this->lblfgd->AutoSize = true;
+			this->lblfgd->Font = (gcnew System::Drawing::Font(L"Segoe UI", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->lblfgd->ForeColor = System::Drawing::Color::Gray;
+			this->lblfgd->Location = System::Drawing::Point(411, 28);
+			this->lblfgd->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->lblfgd->Name = L"lblfgd";
+			this->lblfgd->Size = System::Drawing::Size(208, 13);
+			this->lblfgd->TabIndex = 28;
+			this->lblfgd->Text = L"Is this course Requirement or Elective \?";
+			// 
+			// ctxt
+			// 
+			this->ctxt->Location = System::Drawing::Point(170, 232);
+			this->ctxt->Multiline = true;
+			this->ctxt->Name = L"ctxt";
+			this->ctxt->Size = System::Drawing::Size(200, 25);
+			this->ctxt->TabIndex = 27;
+			// 
+			// ptxt
+			// 
+			this->ptxt->Location = System::Drawing::Point(170, 192);
+			this->ptxt->Multiline = true;
+			this->ptxt->Name = L"ptxt";
+			this->ptxt->Size = System::Drawing::Size(200, 25);
+			this->ptxt->TabIndex = 26;
+			// 
+			// itxt
+			// 
+			this->itxt->Location = System::Drawing::Point(170, 158);
+			this->itxt->Multiline = true;
+			this->itxt->Name = L"itxt";
+			this->itxt->Size = System::Drawing::Size(200, 25);
+			this->itxt->TabIndex = 25;
+			// 
+			// mtxt
+			// 
+			this->mtxt->Location = System::Drawing::Point(170, 107);
+			this->mtxt->Multiline = true;
+			this->mtxt->Name = L"mtxt";
+			this->mtxt->Size = System::Drawing::Size(200, 25);
+			this->mtxt->TabIndex = 24;
+			// 
+			// htxt
+			// 
+			this->htxt->Location = System::Drawing::Point(170, 59);
+			this->htxt->Multiline = true;
+			this->htxt->Name = L"htxt";
+			this->htxt->Size = System::Drawing::Size(200, 25);
+			this->htxt->TabIndex = 23;
+			// 
+			// nTxt
+			// 
+			this->nTxt->Location = System::Drawing::Point(170, 16);
+			this->nTxt->Multiline = true;
+			this->nTxt->Name = L"nTxt";
+			this->nTxt->Size = System::Drawing::Size(200, 25);
+			this->nTxt->TabIndex = 22;
+			// 
+			// lbl7
+			// 
+			this->lbl7->AutoSize = true;
+			this->lbl7->Font = (gcnew System::Drawing::Font(L"Segoe UI", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->lbl7->ForeColor = System::Drawing::Color::Gray;
+			this->lbl7->Location = System::Drawing::Point(84, 238);
+			this->lbl7->Name = L"lbl7";
+			this->lbl7->Size = System::Drawing::Size(35, 13);
+			this->lbl7->TabIndex = 21;
+			this->lbl7->Text = L"code:";
+			// 
+			// lbl5
+			// 
+			this->lbl5->AutoSize = true;
+			this->lbl5->Font = (gcnew System::Drawing::Font(L"Segoe UI", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->lbl5->ForeColor = System::Drawing::Color::Gray;
+			this->lbl5->Location = System::Drawing::Point(84, 203);
+			this->lbl5->Name = L"lbl5";
+			this->lbl5->Size = System::Drawing::Size(77, 13);
+			this->lbl5->TabIndex = 20;
+			this->lbl5->Text = L"Prerequisites:";
+			// 
+			// lbl4
+			// 
+			this->lbl4->AutoSize = true;
+			this->lbl4->Font = (gcnew System::Drawing::Font(L"Segoe UI", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->lbl4->ForeColor = System::Drawing::Color::Gray;
+			this->lbl4->Location = System::Drawing::Point(84, 164);
+			this->lbl4->Name = L"lbl4";
+			this->lbl4->Size = System::Drawing::Size(60, 13);
+			this->lbl4->TabIndex = 19;
+			this->lbl4->Text = L"Instructor:";
+			// 
+			// lbl37
+			// 
+			this->lbl37->AutoSize = true;
+			this->lbl37->Font = (gcnew System::Drawing::Font(L"Segoe UI", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->lbl37->ForeColor = System::Drawing::Color::Gray;
+			this->lbl37->Location = System::Drawing::Point(82, 111);
+			this->lbl37->Name = L"lbl37";
+			this->lbl37->Size = System::Drawing::Size(82, 13);
+			this->lbl37->TabIndex = 18;
+			this->lbl37->Text = L"Max Students:";
+			// 
+			// lbl2
+			// 
+			this->lbl2->AutoSize = true;
+			this->lbl2->Font = (gcnew System::Drawing::Font(L"Segoe UI", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->lbl2->ForeColor = System::Drawing::Color::Gray;
+			this->lbl2->Location = System::Drawing::Point(84, 64);
+			this->lbl2->Name = L"lbl2";
+			this->lbl2->Size = System::Drawing::Size(41, 13);
+			this->lbl2->TabIndex = 17;
+			this->lbl2->Text = L"Hours:";
+			// 
+			// lbl1
+			// 
+			this->lbl1->AutoSize = true;
+			this->lbl1->Font = (gcnew System::Drawing::Font(L"Segoe UI", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->lbl1->ForeColor = System::Drawing::Color::Gray;
+			this->lbl1->Location = System::Drawing::Point(84, 20);
+			this->lbl1->Name = L"lbl1";
+			this->lbl1->Size = System::Drawing::Size(80, 13);
+			this->lbl1->TabIndex = 16;
+			this->lbl1->Text = L"Course Name:";
 			// 
 			// pnlOfAddStudent
 			// 
@@ -656,7 +974,6 @@ namespace UMS {
 			// 
 			// pnlOfData
 			// 
-			this->pnlOfData->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->pnlOfData->Controls->Add(this->gradesText);
 			this->pnlOfData->Controls->Add(this->inCoursesText);
 			this->pnlOfData->Controls->Add(this->FcoursesText);
@@ -877,6 +1194,7 @@ namespace UMS {
 			this->passText->Margin = System::Windows::Forms::Padding(2);
 			this->passText->Multiline = true;
 			this->passText->Name = L"passText";
+			this->passText->PasswordChar = '*';
 			this->passText->Size = System::Drawing::Size(250, 20);
 			this->passText->TabIndex = 1;
 			this->passText->TextChanged += gcnew System::EventHandler(this, &adminHome::txtStudentPassword_TextChanged);
@@ -923,15 +1241,6 @@ namespace UMS {
 			this->pnlOfEditCourse->Size = System::Drawing::Size(650, 328);
 			this->pnlOfEditCourse->TabIndex = 3;
 			// 
-			// pnlOfAddCourse
-			// 
-			this->pnlOfAddCourse->BackColor = System::Drawing::SystemColors::ActiveCaption;
-			this->pnlOfAddCourse->Location = System::Drawing::Point(0, 0);
-			this->pnlOfAddCourse->Margin = System::Windows::Forms::Padding(2);
-			this->pnlOfAddCourse->Name = L"pnlOfAddCourse";
-			this->pnlOfAddCourse->Size = System::Drawing::Size(650, 328);
-			this->pnlOfAddCourse->TabIndex = 2;
-			// 
 			// adminHome
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -953,6 +1262,8 @@ namespace UMS {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			this->pnlOfPanels->ResumeLayout(false);
+			this->pnlOfAddCourse->ResumeLayout(false);
+			this->pnlOfAddCourse->PerformLayout();
 			this->pnlOfAddStudent->ResumeLayout(false);
 			this->pnlOfAddStudent->PerformLayout();
 			this->pnlOfData->ResumeLayout(false);
@@ -963,8 +1274,7 @@ namespace UMS {
 #pragma endregion
 	private: System::Void adminHome_Load(System::Object^ sender, System::EventArgs^ e) {
 	}
-	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-	}
+
 		   bool slideBarExpand;
 private: System::Void slideBarTimer_Tick(System::Object^ sender, System::EventArgs^ e) {
 
@@ -1216,6 +1526,91 @@ private: System::Void btnSave_Click(System::Object^ sender, System::EventArgs^ e
 	
 }
 private: System::Void pnlOfAddStudent_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
+}
+private: System::Void pnlOfAddCourse_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
+}
+private: System::Void addCourseBtn_Click(System::Object^ sender, System::EventArgs^ e) {
+	// All textboxes are filled, don't show the label massege
+	if (nTxt->Text->Length > 0 &&
+		htxt->Text->Length > 0 &&
+		mtxt->Text->Length > 0 &&
+		itxt->Text->Length > 0 &&
+		ptxt->Text->Length > 0 &&
+		ctxt->Text->Length > 0)
+	{
+		label11->Visible = false;
+	}
+	// At least one textbox is empty, show error message
+	else
+	{
+
+		label11->Visible = true;
+		return;
+	}
+	int hours;
+	int maxStudents;
+
+	bool isHoursValid = int::TryParse(htxt->Text, hours);
+	bool isMaxStudentsValid = int::TryParse(mtxt->Text, maxStudents);
+	if (isHoursValid == false)
+	{
+		hlabel->Visible = true;
+		//label11->Visible = false;
+
+		return;
+	}
+	else
+	{
+		hlabel->Visible = false;
+
+	}
+	if (isMaxStudentsValid == false)
+	{
+		mlabel->Visible = true;
+		return;
+	}
+	else
+	{
+		mlabel->Visible = false;
+	}
+
+	// get the course information from the text boxes
+	String^ courseName = nTxt->Text;
+	String^ instructor = itxt->Text;
+	String^ code = ctxt->Text;
+	String^ prereqStr = ptxt->Text;
+	cli::array<String^>^ prerequisiteArray = prereqStr->Split(',');
+	List<String^>^ prerequisitesList = gcnew List<String^>();
+	for each (String ^ str in prerequisiteArray) {
+		prerequisitesList->Add(str);
+	}
+
+	// Create a new instance of the Course class
+	Course^ newCourse = gcnew Course();
+	// Set the properties using the setters
+	newCourse->setName(courseName);
+	newCourse->setHours(hours);
+	newCourse->setMaxNumberOfStudents(maxStudents);
+	newCourse->setInstructor(instructor);
+	Course::preRequires[courseName] = prerequisitesList;
+	newCourse->setCode(code);
+
+	if (Rradio->Checked == true)
+	{
+
+		newCourse->setIsRequirement(true);
+
+	}
+	else if (Eradio->Checked == true && Rradio->Checked == false)
+	{
+		newCourse->setIsRequirement(false);
+	}
+	Admin::addCourse(newCourse);
+	Course::allCourses->Add(newCourse);
+	Course::eachCourseHours->Add(courseName, hours);
+	slabel->Visible = true;
+
+
 }
 };
 }
