@@ -344,7 +344,7 @@ namespace UMS {
 			this->pictureBox15->Location = System::Drawing::Point(100, 474);
 			this->pictureBox15->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->pictureBox15->Name = L"pictureBox15";
-			this->pictureBox15->Size = System::Drawing::Size(35, 33);
+			this->pictureBox15->Size = System::Drawing::Size(52, 33);
 			this->pictureBox15->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->pictureBox15->TabIndex = 25;
 			this->pictureBox15->TabStop = false;

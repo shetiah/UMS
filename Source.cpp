@@ -44,9 +44,7 @@ int main()
 
 
 
-	/*Application::Run(gcnew UMS::AddCourseForm);
-
-*/
+	/*Application::Run(gcnew UMS::AddCourseForm);*/
 
 
 
@@ -55,50 +53,52 @@ int main()
 
 
 
-		while (true)
-		{
-			UMS::welcomeForm welcForm;
-			welcForm.ShowDialog();
-
-			if (welcForm.toadmLogin) {
-
-				UMS::AdminForm adminForm;
-				adminForm.ShowDialog();
-				if (welcForm.gobacktoWelc)
-					continue;
-				else if (welcForm.toadminHome)
-				{
-					UMS::adminHome adminpgForm(adminForm.admin);
-					adminpgForm.ShowDialog();
-					break;
-				}
-				else
-					break;
 
 
-			}
-			else if (welcForm.tostdLogin)
+	while (true)
+	{
+		UMS::welcomeForm welcForm;
+		welcForm.ShowDialog();
+
+		if (welcForm.toadmLogin) {
+
+			UMS::AdminForm adminForm;
+			adminForm.ShowDialog();
+			if (welcForm.gobacktoWelc)
+				continue;
+			else if (welcForm.toadminHome)
 			{
-				UMS::Login StudentLoginForm;
-				StudentLoginForm.ShowDialog();
-
-				if (welcForm.gobacktoWelc)
-					continue;
-				else if (welcForm.tostdHomeForm)
-				{
-					UMS::StudentPageForm studentPgForm(StudentLoginForm.student);
-					studentPgForm.ShowDialog();
-					break;
-				}
-				else 
-					break;
-				
+				UMS::adminHome adminpgForm(adminForm.admin);
+				adminpgForm.ShowDialog();
+				break;
 			}
 			else
 				break;
-			
 
-		}	
+
+		}
+		else if (welcForm.tostdLogin)
+		{
+			UMS::Login StudentLoginForm;
+			StudentLoginForm.ShowDialog();
+
+			if (welcForm.gobacktoWelc)
+				continue;
+			else if (welcForm.tostdHomeForm)
+			{
+				UMS::StudentPageForm studentPgForm(StudentLoginForm.student);
+				studentPgForm.ShowDialog();
+				break;
+			}
+			else
+				break;
+
+		}
+		else
+			break;
+
+
+	}
 
 
 

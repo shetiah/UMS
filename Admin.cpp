@@ -181,3 +181,58 @@ void Admin::saveAdminDataToFile()
 	}
 	file.close();
 }
+float Admin::calc_CGPA(Student^ s)
+{
+	float cgpa = 0, totalHours = 0;
+	for each (auto i in s->getEachCourseGrade())
+	{
+		int hours = i.Key->getHours();
+		totalHours += hours;
+
+		if (i.Value == "A+" || i.Value == "A") {
+			cgpa += 4.0 * hours;
+		}
+		else if (i.Value == "A-")
+		{
+			cgpa += 3.7 * hours;
+		}
+		else if (i.Value == "B+")
+		{
+			cgpa += 3.3 * hours;
+		}
+		else if (i.Value == "B")
+		{
+			cgpa += 3.0 * hours;
+		}
+		else if (i.Value == "B-")
+		{
+			cgpa += 2.7 * hours;
+		}
+		else if (i.Value == "C+")
+		{
+			cgpa += 2.3 * hours;
+		}
+		else if (i.Value == "C")
+		{
+			cgpa += 2.0 * hours;
+		}
+		else if (i.Value == "C-")
+		{
+			cgpa += 1.7 * hours;
+		}
+		else if (i.Value == "D+")
+		{
+			cgpa += 1.3 * hours;
+		}
+		else if (i.Value == "D")
+		{
+			cgpa += 1.0 * hours;
+		}
+		else if (i.Value == "F")
+		{
+			cgpa += 0;
+		}
+	}
+	cgpa /= totalHours;
+	return cgpa;
+}

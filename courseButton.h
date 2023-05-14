@@ -85,9 +85,8 @@ namespace UMS {
 				static_cast<System::Int32>(static_cast<System::Byte>(31)));
 			this->courselab->FlatAppearance->BorderSize = 0;
 			this->courselab->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->courselab->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->courselab->ForeColor = System::Drawing::Color::White;
+			this->courselab->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 8, System::Drawing::FontStyle::Bold));
+			this->courselab->ForeColor = System::Drawing::Color::Tan;
 			this->courselab->Location = System::Drawing::Point(0, -1);
 			this->courselab->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->courselab->Name = L"courselab";
@@ -130,7 +129,7 @@ namespace UMS {
 					if (i->courselab != this->courselab)
 					{
 						i->courselab->BackColor = ColorTranslator::FromHtml("#17171F");
-						i->courselab->ForeColor = Color::White;
+						i->courselab->ForeColor = Color::Tan;
 						i->isselected = false;
 					}
 					
