@@ -510,7 +510,6 @@ void Student::registerForCourse(Course^ course)
 		{
 			CoursesInProgress->Add(course->getName());
 			course->allStudentInProgress->Add(getID());
-		
 		}
 
 }
