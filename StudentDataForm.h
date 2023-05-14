@@ -270,6 +270,7 @@ namespace UMS {
 			this->panel2->Name = L"panel2";
 			this->panel2->Size = System::Drawing::Size(671, 602);
 			this->panel2->TabIndex = 4;
+			this->panel2->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &StudentDataForm::panel2_Paint);
 			// 
 			// gradesTextBox
 			// 
@@ -726,6 +727,8 @@ private: System::Void button1_Click_1(System::Object^ sender, System::EventArgs^
 private: System::Void pictureBox1_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void SnameTextBox_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void panel2_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
 }
 };
 }

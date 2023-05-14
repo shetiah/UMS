@@ -206,6 +206,7 @@ namespace UMS {
 			this->pnlOfPanels->SuspendLayout();
 			this->pnlOfAddStudent->SuspendLayout();
 			this->pnlOfData->SuspendLayout();
+			this->panel8->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// sideBar
@@ -513,10 +514,10 @@ namespace UMS {
 			// 
 			// btnSave
 			// 
-			this->btnSave->BackColor = System::Drawing::Color::SteelBlue;
+			this->btnSave->BackColor = System::Drawing::Color::DarkGray;
 			this->btnSave->FlatAppearance->BorderSize = 0;
 			this->btnSave->FlatAppearance->MouseDownBackColor = System::Drawing::Color::Gray;
-			this->btnSave->FlatAppearance->MouseOverBackColor = System::Drawing::Color::LightCoral;
+			this->btnSave->FlatAppearance->MouseOverBackColor = System::Drawing::Color::LightGreen;
 			this->btnSave->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->btnSave->Location = System::Drawing::Point(714, 335);
 			this->btnSave->Name = L"btnSave";
@@ -528,17 +529,14 @@ namespace UMS {
 			// 
 			// pnlOfData
 			// 
-			this->pnlOfData->Controls->Add(this->label8);
-			this->pnlOfData->Controls->Add(this->label7);
+			this->pnlOfData->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->pnlOfData->Controls->Add(this->label6);
 			this->pnlOfData->Controls->Add(this->label5);
 			this->pnlOfData->Controls->Add(this->label4);
 			this->pnlOfData->Controls->Add(this->label3);
 			this->pnlOfData->Controls->Add(this->label2);
 			this->pnlOfData->Controls->Add(this->label1);
-			this->pnlOfData->Controls->Add(this->clFinishedCourses);
 			this->pnlOfData->Controls->Add(this->clCoursesInProgress);
-			this->pnlOfData->Controls->Add(this->txtStudentGrades);
 			this->pnlOfData->Controls->Add(this->txtStudentGPA);
 			this->pnlOfData->Controls->Add(this->txtStudentMaxHours);
 			this->pnlOfData->Controls->Add(this->txtStudentAcademicYear);
@@ -553,11 +551,11 @@ namespace UMS {
 			// label8
 			// 
 			this->label8->AutoSize = true;
+			this->label8->BackColor = System::Drawing::Color::Transparent;
 			this->label8->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->label8->Font = (gcnew System::Drawing::Font(L"Segoe UI", 11, System::Drawing::FontStyle::Bold));
-			this->label8->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
-				static_cast<System::Int32>(static_cast<System::Byte>(31)));
-			this->label8->Location = System::Drawing::Point(26, 307);
+			this->label8->ForeColor = System::Drawing::Color::White;
+			this->label8->Location = System::Drawing::Point(11, 48);
 			this->label8->Name = L"label8";
 			this->label8->Size = System::Drawing::Size(79, 25);
 			this->label8->TabIndex = 19;
@@ -566,11 +564,11 @@ namespace UMS {
 			// label7
 			// 
 			this->label7->AutoSize = true;
+			this->label7->BackColor = System::Drawing::Color::Transparent;
 			this->label7->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->label7->Font = (gcnew System::Drawing::Font(L"Segoe UI", 11, System::Drawing::FontStyle::Bold));
-			this->label7->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
-				static_cast<System::Int32>(static_cast<System::Byte>(31)));
-			this->label7->Location = System::Drawing::Point(26, 267);
+			this->label7->ForeColor = System::Drawing::Color::White;
+			this->label7->Location = System::Drawing::Point(11, 11);
 			this->label7->Name = L"label7";
 			this->label7->Size = System::Drawing::Size(165, 25);
 			this->label7->TabIndex = 18;
@@ -664,7 +662,7 @@ namespace UMS {
 			// 
 			this->clFinishedCourses->FormattingEnabled = true;
 			this->clFinishedCourses->Items->AddRange(gcnew cli::array< System::Object^  >(4) { L"x", L"y", L"z", L"mmmmmm" });
-			this->clFinishedCourses->Location = System::Drawing::Point(230, 266);
+			this->clFinishedCourses->Location = System::Drawing::Point(221, 8);
 			this->clFinishedCourses->Name = L"clFinishedCourses";
 			this->clFinishedCourses->Size = System::Drawing::Size(212, 38);
 			this->clFinishedCourses->TabIndex = 7;
@@ -685,7 +683,7 @@ namespace UMS {
 			this->txtStudentGrades->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->txtStudentGrades->Font = (gcnew System::Drawing::Font(L"Segoe UI", 11, System::Drawing::FontStyle::Bold));
 			this->txtStudentGrades->ForeColor = System::Drawing::SystemColors::WindowText;
-			this->txtStudentGrades->Location = System::Drawing::Point(230, 308);
+			this->txtStudentGrades->Location = System::Drawing::Point(221, 52);
 			this->txtStudentGrades->Multiline = true;
 			this->txtStudentGrades->Name = L"txtStudentGrades";
 			this->txtStudentGrades->Size = System::Drawing::Size(212, 29);
@@ -754,7 +752,12 @@ namespace UMS {
 			// panel8
 			// 
 			this->panel8->BackColor = System::Drawing::Color::LightGray;
+			this->panel8->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"panel8.BackgroundImage")));
 			this->panel8->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel8->Controls->Add(this->label8);
+			this->panel8->Controls->Add(this->clFinishedCourses);
+			this->panel8->Controls->Add(this->label7);
+			this->panel8->Controls->Add(this->txtStudentGrades);
 			this->panel8->Location = System::Drawing::Point(0, 255);
 			this->panel8->Name = L"panel8";
 			this->panel8->Size = System::Drawing::Size(530, 93);
@@ -817,6 +820,8 @@ namespace UMS {
 			this->pnlOfAddStudent->ResumeLayout(false);
 			this->pnlOfData->ResumeLayout(false);
 			this->pnlOfData->PerformLayout();
+			this->panel8->ResumeLayout(false);
+			this->panel8->PerformLayout();
 			this->ResumeLayout(false);
 
 		}
@@ -958,67 +963,78 @@ private: System::Void txtStudentPassword_TextChanged(System::Object^ sender, Sys
 private: System::Void txtStudentName_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void btnSave_Click(System::Object^ sender, System::EventArgs^ e) {
-	String^ StudentName;
-	String^ StudentPassword;
-	String^ StudentMaxHours;
-	String^ StudentAcademicYear;
-	String^ StudentGPA;
 
-	StudentName = txtStudentName->Text;
-	StudentPassword = txtStudentPassword->Text;
-	StudentMaxHours = txtStudentMaxHours->Text;
-	StudentAcademicYear = txtStudentAcademicYear->Text;
-	StudentGPA = txtStudentGPA->Text;
 
-	List<String^>^ checkedFinishedCourses = gcnew List<String^>();
-	for each (String ^ S in clFinishedCourses->CheckedItems) {
-		checkedFinishedCourses->Add(S);
+	if (!(txtStudentName->Text->Length == 0 && txtStudentPassword->Text->Length == 0 && txtStudentMaxHours->Text->Length == 0
+		&& txtStudentAcademicYear->Text->Length == 0 && txtStudentGPA->Text->Length == 0) ){
 
-	}
-	List<String^>^ CheckedCoursesInProgress = gcnew List<String^>();
-	for each (String ^ S in clFinishedCourses->CheckedItems) {
-		CheckedCoursesInProgress->Add(S);
 
-	}
-	String^ CoursesGrades = txtStudentGrades->Text;
-	cli::array<String^>^ CoursesGradesArray = CoursesGrades->Split(',');
-	//convert the string data from the text box to be float 
-	cli::array<float>^ CoursesGradesFloatArray = gcnew cli::array<float>(CoursesGradesArray->Length);
-	List<float>^ CoursesGradesList = gcnew List<float>();
 
-	for (int i = 0; i < CoursesGradesArray->Length; i++)
-	{
-		float grade;
-		if (float::TryParse(CoursesGradesArray[i], grade))
-		{
-			CoursesGradesFloatArray[i] = grade;
-			CoursesGradesList->Add(grade);
+
+		String^ StudentName;
+		String^ StudentPassword;
+		String^ StudentMaxHours;
+		String^ StudentAcademicYear;
+		String^ StudentGPA;
+
+		StudentName = txtStudentName->Text;
+		StudentPassword = txtStudentPassword->Text;
+		StudentMaxHours = txtStudentMaxHours->Text;
+		StudentAcademicYear = txtStudentAcademicYear->Text;
+		StudentGPA = txtStudentGPA->Text;
+
+		List<String^>^ checkedFinishedCourses = gcnew List<String^>();
+		for each (String ^ S in clFinishedCourses->CheckedItems) {
+			checkedFinishedCourses->Add(S);
+
 		}
-		else
+		List<String^>^ CheckedCoursesInProgress = gcnew List<String^>();
+		for each (String ^ S in clCoursesInProgress->CheckedItems) {
+			CheckedCoursesInProgress->Add(S);
+
+		}
+		String^ CoursesGrades = txtStudentGrades->Text;
+		cli::array<String^>^ CoursesGradesArray = CoursesGrades->Split(',');
+		//convert the string data from the text box to be float 
+		cli::array<float>^ CoursesGradesFloatArray = gcnew cli::array<float>(CoursesGradesArray->Length);
+		List<float>^ CoursesGradesList = gcnew List<float>();
+
+		for (int i = 0; i < CoursesGradesArray->Length; i++)
 		{
-			if (txtStudentGrades->Text->Length == 0)
+			float grade;
+			if (float::TryParse(CoursesGradesArray[i], grade))
 			{
-				txtStudentGrades->Visible = false;
-
-
+				CoursesGradesFloatArray[i] = grade;
+				CoursesGradesList->Add(grade);
 			}
 			else
 			{
-				// handle the case where the input is not a valid float
-				txtStudentGrades->Visible = true;
-				return;
+				if (txtStudentGrades->Text->Length == 0)
+				{
+					txtStudentGrades->Visible = false;
+
+
+				}
+				else
+				{
+					// handle the case where the input is not a valid float
+					txtStudentGrades->Visible = true;
+					return;
+				}
 			}
 		}
+		int AcademicYearInt, MaxHoursInt;
+		float StudentGPAFloat;
+		bool x = int::TryParse(StudentAcademicYear, AcademicYearInt);
+		bool y = int::TryParse(StudentMaxHours, MaxHoursInt);
+		bool z = float::TryParse(StudentGPA, StudentGPAFloat);
+		Admin::createStudent(StudentName, StudentPassword, AcademicYearInt, MaxHoursInt, StudentGPAFloat, checkedFinishedCourses, CheckedCoursesInProgress, CoursesGradesList);
+		Student::saveStudentDataToFile();
+
 	}
-	int AcademicYearInt, MaxHoursInt;
-	float StudentGPAFloat;
-	bool x = int::TryParse(StudentAcademicYear, AcademicYearInt);
-	bool y = int::TryParse(StudentMaxHours, MaxHoursInt);
-	bool z = float::TryParse(StudentGPA, StudentGPAFloat);
-	Admin::createStudent(StudentName, StudentPassword, AcademicYearInt, MaxHoursInt, StudentGPAFloat, checkedFinishedCourses, CheckedCoursesInProgress, CoursesGradesList);
-	Student::saveStudentDataToFile();
+	else {
 
+	}
 }
-
 };
 }
