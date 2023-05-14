@@ -706,7 +706,6 @@ namespace UMS {
 			// panel8
 			// 
 			this->panel8->BackColor = System::Drawing::Color::LightGray;
-			this->panel8->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"panel8.BackgroundImage")));
 			this->panel8->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel8->Controls->Add(this->label8);
 			this->panel8->Controls->Add(this->clFinishedCourses);

@@ -24,6 +24,7 @@ namespace UMS {
 			//
 		}
 
+
 	public:static List<courseButton^>^ alldetailsbtns= gcnew List<courseButton^>();
 
 	protected:
@@ -49,6 +50,7 @@ namespace UMS {
 	public:bool isselected = false;
 	public:static bool registerCourse = false;
 	public:static bool courseDetails = false;
+	
 
 #pragma endregion
 
@@ -83,16 +85,21 @@ namespace UMS {
 			// 
 			this->courselab->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
 				static_cast<System::Int32>(static_cast<System::Byte>(31)));
-			this->courselab->FlatAppearance->BorderSize = 0;
+			this->courselab->FlatAppearance->BorderColor = System::Drawing::Color::Tan;
+			this->courselab->FlatAppearance->BorderSize = 3;
+			this->courselab->FlatAppearance->MouseDownBackColor = System::Drawing::Color::Brown;
+			this->courselab->FlatAppearance->MouseOverBackColor = System::Drawing::Color::Brown;
 			this->courselab->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->courselab->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 8, System::Drawing::FontStyle::Bold));
+			this->courselab->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
 			this->courselab->ForeColor = System::Drawing::Color::Tan;
 			this->courselab->Location = System::Drawing::Point(0, -1);
 			this->courselab->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->courselab->Name = L"courselab";
-			this->courselab->Size = System::Drawing::Size(219, 30);
+			this->courselab->Size = System::Drawing::Size(145, 45);
 			this->courselab->TabIndex = 0;
-			this->courselab->Text = L"coursename";
+			this->courselab->Text = L"structurred  programming";
+			this->courselab->UseCompatibleTextRendering = true;
 			this->courselab->UseVisualStyleBackColor = false;
 			this->courselab->Click += gcnew System::EventHandler(this, &courseButton::courselab_Click);
 			this->courselab->MouseClick += gcnew System::Windows::Forms::MouseEventHandler(this, &courseButton::mourseclick);
@@ -103,9 +110,11 @@ namespace UMS {
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->Controls->Add(this->courselab);
 			this->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
 			this->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->Name = L"courseButton";
-			this->Size = System::Drawing::Size(219, 30);
+			this->Size = System::Drawing::Size(145, 45);
 			this->ResumeLayout(false);
 
 		}
@@ -116,7 +125,7 @@ namespace UMS {
 	}
 		 
 	private: System::Void courselab_Click(System::Object^ sender, System::EventArgs^ e) {
-		int c = 0;
+	
 		if(courselab->BackColor == ColorTranslator::FromHtml("#17171F")){
 			courselab->BackColor= Color::Brown;
 			courselab->ForeColor = Color::White;
@@ -134,6 +143,7 @@ namespace UMS {
 					}
 					
 				}
+				
 			}
 		
 		}

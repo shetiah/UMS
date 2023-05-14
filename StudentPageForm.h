@@ -177,7 +177,7 @@ private: System::Windows::Forms::Timer^ filterTimer;
 private: System::Windows::Forms::FlowLayoutPanel^ coursesviewFilterCourses;
 private: System::Windows::Forms::FlowLayoutPanel^ flowLayoutPanel4;
 private: System::Windows::Forms::Button^ viewerbt;
-private: System::Windows::Forms::Button^ slctLB;
+
 private: System::Windows::Forms::Timer^ selectCoursetimer;
 
 
@@ -281,7 +281,6 @@ private: System::Windows::Forms::Timer^ selectCoursetimer;
 			this->PnlOfFilter = (gcnew System::Windows::Forms::Panel());
 			this->viewerbt = (gcnew System::Windows::Forms::Button());
 			this->flowLayoutPanel4 = (gcnew System::Windows::Forms::FlowLayoutPanel());
-			this->slctLB = (gcnew System::Windows::Forms::Button());
 			this->coursesviewFilterCourses = (gcnew System::Windows::Forms::FlowLayoutPanel());
 			this->filterflowlytpnl = (gcnew System::Windows::Forms::FlowLayoutPanel());
 			this->Selectbt = (gcnew System::Windows::Forms::Button());
@@ -363,7 +362,6 @@ private: System::Windows::Forms::Timer^ selectCoursetimer;
 			this->panel3->SuspendLayout();
 			this->panel2->SuspendLayout();
 			this->PnlOfFilter->SuspendLayout();
-			this->flowLayoutPanel4->SuspendLayout();
 			this->filterflowlytpnl->SuspendLayout();
 			this->pnlOfCourseGrades->SuspendLayout();
 			this->pnlOfDetailsOfCourse->SuspendLayout();
@@ -648,37 +646,34 @@ private: System::Windows::Forms::Timer^ selectCoursetimer;
 			// 
 			// viewerbt
 			// 
-			this->viewerbt->Location = System::Drawing::Point(414, 53);
+			this->viewerbt->BackColor = System::Drawing::Color::Tan;
+			this->viewerbt->FlatAppearance->BorderSize = 3;
+			this->viewerbt->FlatAppearance->MouseDownBackColor = System::Drawing::Color::Brown;
+			this->viewerbt->FlatAppearance->MouseOverBackColor = System::Drawing::Color::Brown;
+			this->viewerbt->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->viewerbt->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F));
+			this->viewerbt->Location = System::Drawing::Point(499, 39);
 			this->viewerbt->Name = L"viewerbt";
-			this->viewerbt->Size = System::Drawing::Size(169, 38);
+			this->viewerbt->Size = System::Drawing::Size(184, 61);
 			this->viewerbt->TabIndex = 10;
 			this->viewerbt->Text = L"view";
 			this->viewerbt->UseVisualStyleBackColor = true;
+			this->viewerbt->Click += gcnew System::EventHandler(this, &StudentPageForm::viewerbt_Click);
 			// 
 			// flowLayoutPanel4
 			// 
-			this->flowLayoutPanel4->Controls->Add(this->slctLB);
-			this->flowLayoutPanel4->Location = System::Drawing::Point(196, 50);
+			this->flowLayoutPanel4->FlowDirection = System::Windows::Forms::FlowDirection::TopDown;
+			this->flowLayoutPanel4->Location = System::Drawing::Point(201, 49);
 			this->flowLayoutPanel4->Name = L"flowLayoutPanel4";
-			this->flowLayoutPanel4->Size = System::Drawing::Size(174, 43);
+			this->flowLayoutPanel4->Size = System::Drawing::Size(201, 65);
 			this->flowLayoutPanel4->TabIndex = 11;
-			// 
-			// slctLB
-			// 
-			this->slctLB->Location = System::Drawing::Point(3, 3);
-			this->slctLB->Name = L"slctLB";
-			this->slctLB->Size = System::Drawing::Size(171, 36);
-			this->slctLB->TabIndex = 0;
-			this->slctLB->Text = L"select course";
-			this->slctLB->UseVisualStyleBackColor = true;
-			this->slctLB->Click += gcnew System::EventHandler(this, &StudentPageForm::slctLB_Click);
+			this->flowLayoutPanel4->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &StudentPageForm::flowLayoutPanel4_Paint);
 			// 
 			// coursesviewFilterCourses
 			// 
-			this->coursesviewFilterCourses->AutoScroll = true;
-			this->coursesviewFilterCourses->Location = System::Drawing::Point(373, 115);
+			this->coursesviewFilterCourses->Location = System::Drawing::Point(400, 110);
 			this->coursesviewFilterCourses->Name = L"coursesviewFilterCourses";
-			this->coursesviewFilterCourses->Size = System::Drawing::Size(252, 791);
+			this->coursesviewFilterCourses->Size = System::Drawing::Size(348, 510);
 			this->coursesviewFilterCourses->TabIndex = 8;
 			// 
 			// filterflowlytpnl
@@ -689,69 +684,131 @@ private: System::Windows::Forms::Timer^ selectCoursetimer;
 			this->filterflowlytpnl->Controls->Add(this->RequiredCoursesbt);
 			this->filterflowlytpnl->Controls->Add(this->ElectiveCoursesBt);
 			this->filterflowlytpnl->Controls->Add(this->CoursesInProgressbt);
+			this->filterflowlytpnl->FlowDirection = System::Windows::Forms::FlowDirection::TopDown;
 			this->filterflowlytpnl->Location = System::Drawing::Point(3, 49);
 			this->filterflowlytpnl->Name = L"filterflowlytpnl";
-			this->filterflowlytpnl->Size = System::Drawing::Size(180, 44);
+			this->filterflowlytpnl->Size = System::Drawing::Size(190, 67);
 			this->filterflowlytpnl->TabIndex = 7;
 			// 
 			// Selectbt
 			// 
+			this->Selectbt->BackColor = System::Drawing::Color::Tan;
+			this->Selectbt->FlatAppearance->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(23)),
+				static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(31)));
+			this->Selectbt->FlatAppearance->BorderSize = 3;
+			this->Selectbt->FlatAppearance->MouseDownBackColor = System::Drawing::Color::Brown;
+			this->Selectbt->FlatAppearance->MouseOverBackColor = System::Drawing::Color::Brown;
+			this->Selectbt->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->Selectbt->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F));
+			this->Selectbt->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
+				static_cast<System::Int32>(static_cast<System::Byte>(31)));
 			this->Selectbt->Location = System::Drawing::Point(3, 3);
 			this->Selectbt->Name = L"Selectbt";
-			this->Selectbt->Size = System::Drawing::Size(169, 38);
+			this->Selectbt->Size = System::Drawing::Size(184, 61);
 			this->Selectbt->TabIndex = 8;
-			this->Selectbt->Text = L"Select";
-			this->Selectbt->UseVisualStyleBackColor = true;
+			this->Selectbt->Text = L"Courses Type";
+			this->Selectbt->UseCompatibleTextRendering = true;
+			this->Selectbt->UseVisualStyleBackColor = false;
 			this->Selectbt->Click += gcnew System::EventHandler(this, &StudentPageForm::Selectbt_Click);
 			// 
 			// finishcsbt
 			// 
-			this->finishcsbt->Location = System::Drawing::Point(3, 47);
+			this->finishcsbt->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
+				static_cast<System::Int32>(static_cast<System::Byte>(31)));
+			this->finishcsbt->FlatAppearance->BorderColor = System::Drawing::Color::Tan;
+			this->finishcsbt->FlatAppearance->BorderSize = 3;
+			this->finishcsbt->FlatAppearance->MouseDownBackColor = System::Drawing::Color::Brown;
+			this->finishcsbt->FlatAppearance->MouseOverBackColor = System::Drawing::Color::Brown;
+			this->finishcsbt->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->finishcsbt->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F));
+			this->finishcsbt->ForeColor = System::Drawing::Color::Tan;
+			this->finishcsbt->Location = System::Drawing::Point(193, 3);
 			this->finishcsbt->Name = L"finishcsbt";
-			this->finishcsbt->Size = System::Drawing::Size(169, 38);
+			this->finishcsbt->Size = System::Drawing::Size(184, 61);
 			this->finishcsbt->TabIndex = 9;
 			this->finishcsbt->Text = L"Finished Courses";
-			this->finishcsbt->UseVisualStyleBackColor = true;
+			this->finishcsbt->UseCompatibleTextRendering = true;
+			this->finishcsbt->UseVisualStyleBackColor = false;
 			this->finishcsbt->Click += gcnew System::EventHandler(this, &StudentPageForm::finishcsbt_Click);
 			// 
 			// AvailableCoursesbt
 			// 
-			this->AvailableCoursesbt->Location = System::Drawing::Point(3, 91);
+			this->AvailableCoursesbt->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(23)),
+				static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(31)));
+			this->AvailableCoursesbt->FlatAppearance->BorderColor = System::Drawing::Color::Tan;
+			this->AvailableCoursesbt->FlatAppearance->BorderSize = 3;
+			this->AvailableCoursesbt->FlatAppearance->MouseDownBackColor = System::Drawing::Color::Brown;
+			this->AvailableCoursesbt->FlatAppearance->MouseOverBackColor = System::Drawing::Color::Brown;
+			this->AvailableCoursesbt->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->AvailableCoursesbt->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F));
+			this->AvailableCoursesbt->ForeColor = System::Drawing::Color::Tan;
+			this->AvailableCoursesbt->Location = System::Drawing::Point(383, 3);
 			this->AvailableCoursesbt->Name = L"AvailableCoursesbt";
-			this->AvailableCoursesbt->Size = System::Drawing::Size(169, 38);
+			this->AvailableCoursesbt->Size = System::Drawing::Size(184, 61);
 			this->AvailableCoursesbt->TabIndex = 10;
 			this->AvailableCoursesbt->Text = L"Available Courses";
-			this->AvailableCoursesbt->UseVisualStyleBackColor = true;
+			this->AvailableCoursesbt->UseCompatibleTextRendering = true;
+			this->AvailableCoursesbt->UseVisualStyleBackColor = false;
 			this->AvailableCoursesbt->Click += gcnew System::EventHandler(this, &StudentPageForm::AvailableCoursesbt_Click);
 			// 
 			// RequiredCoursesbt
 			// 
-			this->RequiredCoursesbt->Location = System::Drawing::Point(3, 135);
+			this->RequiredCoursesbt->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(23)),
+				static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(31)));
+			this->RequiredCoursesbt->FlatAppearance->BorderColor = System::Drawing::Color::Tan;
+			this->RequiredCoursesbt->FlatAppearance->BorderSize = 3;
+			this->RequiredCoursesbt->FlatAppearance->MouseDownBackColor = System::Drawing::Color::Brown;
+			this->RequiredCoursesbt->FlatAppearance->MouseOverBackColor = System::Drawing::Color::Brown;
+			this->RequiredCoursesbt->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->RequiredCoursesbt->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F));
+			this->RequiredCoursesbt->ForeColor = System::Drawing::Color::Tan;
+			this->RequiredCoursesbt->Location = System::Drawing::Point(573, 3);
 			this->RequiredCoursesbt->Name = L"RequiredCoursesbt";
-			this->RequiredCoursesbt->Size = System::Drawing::Size(169, 38);
+			this->RequiredCoursesbt->Size = System::Drawing::Size(184, 61);
 			this->RequiredCoursesbt->TabIndex = 11;
 			this->RequiredCoursesbt->Text = L"Required Courses";
-			this->RequiredCoursesbt->UseVisualStyleBackColor = true;
+			this->RequiredCoursesbt->UseCompatibleTextRendering = true;
+			this->RequiredCoursesbt->UseVisualStyleBackColor = false;
 			this->RequiredCoursesbt->Click += gcnew System::EventHandler(this, &StudentPageForm::RequiredCoursesbt_Click);
 			// 
 			// ElectiveCoursesBt
 			// 
-			this->ElectiveCoursesBt->Location = System::Drawing::Point(3, 179);
+			this->ElectiveCoursesBt->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(23)),
+				static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(31)));
+			this->ElectiveCoursesBt->FlatAppearance->BorderColor = System::Drawing::Color::Tan;
+			this->ElectiveCoursesBt->FlatAppearance->BorderSize = 3;
+			this->ElectiveCoursesBt->FlatAppearance->MouseDownBackColor = System::Drawing::Color::Brown;
+			this->ElectiveCoursesBt->FlatAppearance->MouseOverBackColor = System::Drawing::Color::Brown;
+			this->ElectiveCoursesBt->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->ElectiveCoursesBt->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F));
+			this->ElectiveCoursesBt->ForeColor = System::Drawing::Color::Tan;
+			this->ElectiveCoursesBt->Location = System::Drawing::Point(763, 3);
 			this->ElectiveCoursesBt->Name = L"ElectiveCoursesBt";
-			this->ElectiveCoursesBt->Size = System::Drawing::Size(169, 38);
+			this->ElectiveCoursesBt->Size = System::Drawing::Size(184, 61);
 			this->ElectiveCoursesBt->TabIndex = 12;
 			this->ElectiveCoursesBt->Text = L"Elective Courses";
-			this->ElectiveCoursesBt->UseVisualStyleBackColor = true;
+			this->ElectiveCoursesBt->UseCompatibleTextRendering = true;
+			this->ElectiveCoursesBt->UseVisualStyleBackColor = false;
 			this->ElectiveCoursesBt->Click += gcnew System::EventHandler(this, &StudentPageForm::ElectiveCoursesBt_Click);
 			// 
 			// CoursesInProgressbt
 			// 
-			this->CoursesInProgressbt->Location = System::Drawing::Point(3, 223);
+			this->CoursesInProgressbt->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(23)),
+				static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(31)));
+			this->CoursesInProgressbt->FlatAppearance->BorderColor = System::Drawing::Color::Tan;
+			this->CoursesInProgressbt->FlatAppearance->BorderSize = 3;
+			this->CoursesInProgressbt->FlatAppearance->MouseDownBackColor = System::Drawing::Color::Brown;
+			this->CoursesInProgressbt->FlatAppearance->MouseOverBackColor = System::Drawing::Color::Brown;
+			this->CoursesInProgressbt->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->CoursesInProgressbt->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F));
+			this->CoursesInProgressbt->ForeColor = System::Drawing::Color::Tan;
+			this->CoursesInProgressbt->Location = System::Drawing::Point(953, 3);
 			this->CoursesInProgressbt->Name = L"CoursesInProgressbt";
-			this->CoursesInProgressbt->Size = System::Drawing::Size(169, 38);
+			this->CoursesInProgressbt->Size = System::Drawing::Size(184, 61);
 			this->CoursesInProgressbt->TabIndex = 13;
-			this->CoursesInProgressbt->Text = L"CoursesInProgress";
-			this->CoursesInProgressbt->UseVisualStyleBackColor = true;
+			this->CoursesInProgressbt->Text = L"In Progress Courses";
+			this->CoursesInProgressbt->UseCompatibleTextRendering = true;
+			this->CoursesInProgressbt->UseVisualStyleBackColor = false;
 			this->CoursesInProgressbt->Click += gcnew System::EventHandler(this, &StudentPageForm::CoursesInProgressbt_Click);
 			// 
 			// label1
@@ -760,7 +817,7 @@ private: System::Windows::Forms::Timer^ selectCoursetimer;
 			this->label1->Cursor = System::Windows::Forms::Cursors::WaitCursor;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Palatino Linotype", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(39, 7);
+			this->label1->Location = System::Drawing::Point(17, 14);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(161, 31);
 			this->label1->TabIndex = 1;
@@ -810,7 +867,7 @@ private: System::Windows::Forms::Timer^ selectCoursetimer;
 			this->viewbt->ForeColor = System::Drawing::Color::Tan;
 			this->viewbt->Location = System::Drawing::Point(377, 46);
 			this->viewbt->Name = L"viewbt";
-			this->viewbt->Size = System::Drawing::Size(160, 45);
+			this->viewbt->Size = System::Drawing::Size(169, 60);
 			this->viewbt->TabIndex = 5;
 			this->viewbt->Text = L"View";
 			this->viewbt->UseVisualStyleBackColor = false;
@@ -828,10 +885,11 @@ private: System::Windows::Forms::Timer^ selectCoursetimer;
 			// 
 			this->flowLayoutPanel3->AutoScroll = true;
 			this->flowLayoutPanel3->Controls->Add(this->button3);
+			this->flowLayoutPanel3->FlowDirection = System::Windows::Forms::FlowDirection::TopDown;
 			this->flowLayoutPanel3->Location = System::Drawing::Point(9, 42);
 			this->flowLayoutPanel3->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->flowLayoutPanel3->Name = L"flowLayoutPanel3";
-			this->flowLayoutPanel3->Size = System::Drawing::Size(269, 49);
+			this->flowLayoutPanel3->Size = System::Drawing::Size(175, 65);
 			this->flowLayoutPanel3->TabIndex = 3;
 			this->flowLayoutPanel3->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &StudentPageForm::flowLayoutPanel3_Paint);
 			// 
@@ -850,7 +908,7 @@ private: System::Windows::Forms::Timer^ selectCoursetimer;
 			this->button3->Location = System::Drawing::Point(3, 2);
 			this->button3->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->button3->Name = L"button3";
-			this->button3->Size = System::Drawing::Size(219, 43);
+			this->button3->Size = System::Drawing::Size(169, 60);
 			this->button3->TabIndex = 7;
 			this->button3->Text = L"Select Course";
 			this->button3->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
@@ -1427,7 +1485,7 @@ private: System::Windows::Forms::Timer^ selectCoursetimer;
 			this->flowLayoutPanel2->Location = System::Drawing::Point(239, 98);
 			this->flowLayoutPanel2->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->flowLayoutPanel2->Name = L"flowLayoutPanel2";
-			this->flowLayoutPanel2->Size = System::Drawing::Size(224, 49);
+			this->flowLayoutPanel2->Size = System::Drawing::Size(169, 38);
 			this->flowLayoutPanel2->TabIndex = 2;
 			// 
 			// button1
@@ -1446,7 +1504,7 @@ private: System::Windows::Forms::Timer^ selectCoursetimer;
 			this->button1->Location = System::Drawing::Point(3, 2);
 			this->button1->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(219, 43);
+			this->button1->Size = System::Drawing::Size(169, 38);
 			this->button1->TabIndex = 6;
 			this->button1->Text = L"Select Course";
 			this->button1->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
@@ -1541,7 +1599,6 @@ private: System::Windows::Forms::Timer^ selectCoursetimer;
 			this->panel2->PerformLayout();
 			this->PnlOfFilter->ResumeLayout(false);
 			this->PnlOfFilter->PerformLayout();
-			this->flowLayoutPanel4->ResumeLayout(false);
 			this->filterflowlytpnl->ResumeLayout(false);
 			this->pnlOfCourseGrades->ResumeLayout(false);
 			this->pnlOfCourseGrades->PerformLayout();
@@ -1604,10 +1661,19 @@ private: System::Windows::Forms::Timer^ selectCoursetimer;
 
 	public: bool loggedOut = false;
     public:List<courseButton^>^ RegisterCourseList = gcnew List<courseButton^>();
+    public:List<courseButton^>^ viewcourses = gcnew List<courseButton^>();
 	public:String^ filterchoice="";
+
+	public:static List<Button^>^ allbtns = gcnew List<Button^>();
+		
 
 	private: System::Void StudentPageForm_Load(System::Object^ sender, System::EventArgs^ e) {
 		populateItems();
+		allbtns->Add(finishcsbt);
+		allbtns->Add(CoursesInProgressbt);
+		allbtns->Add(ElectiveCoursesBt);
+		allbtns->Add(RequiredCoursesbt);
+		allbtns->Add(AvailableCoursesbt);
 	}
 
 
@@ -1800,6 +1866,7 @@ private: System::Void dropdowntimer_Tick(System::Object^ sender, System::EventAr
 	}
 
 	else {
+
 		flowLayoutPanel2->Height -= 15;
 		if (flowLayoutPanel2->Height <= 40)
 		{
@@ -1870,8 +1937,11 @@ private: System::Void savebt_Click(System::Object^ sender, System::EventArgs^ e)
 	{
 		for each (auto course in Course::allCourses) {
 			if (course->getName() == i->getCourseName()) {
+				
 				flowLayoutPanel2->Controls->Clear();
+				
 				flowLayoutPanel2->Controls->Add(button1);
+
 				RegisterCourseList->Clear();
 
 				student->registerForCourse(course);
@@ -1957,111 +2027,320 @@ private: System::Void pnlOfCoursesInProgress_Paint(System::Object^ sender, Syste
 }
 private: System::Void PnlOfFilter_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
 }
+
 private: System::Void CoursesInProgressbt_Click(System::Object^ sender, System::EventArgs^ e) {
 	filterchoice = "CoursesInProgress";
 	coursesviewFilterCourses->Controls->Clear();
 
 	flowLayoutPanel4->Controls->Clear();
+	courseButton::alldetailsbtns->Clear();
 
-	for each (auto course in student->FilterCourses(filterchoice))
-	{
-		courseButton^ temp = gcnew courseButton;
 
-		temp->setCourseName(course->getName());
-		flowLayoutPanel4->Controls->Add(temp);
+	if (CoursesInProgressbt->BackColor == ColorTranslator::FromHtml("#17171F")) {
+		CoursesInProgressbt->BackColor = Color::Brown;
+		CoursesInProgressbt->ForeColor = Color::Tan;
+
+
+		for each (auto course in student->FilterCourses(filterchoice))
+		{
+			courseButton^ temp = gcnew courseButton;
+
+			temp->setCourseName(course->getName());
+			courseButton::alldetailsbtns->Add(temp);
+			flowLayoutPanel4->Controls->Add(temp);
+		}
+		selectCoursebool = false;
+		selectCoursetimer->Start();
+			for each (auto i in this->allbtns)
+			{
+
+				if (i != CoursesInProgressbt)
+				{
+					i->BackColor = ColorTranslator::FromHtml("#17171F");
+					i->ForeColor = Color::Tan;
+			
+				}
+
+			}
+
+		
 	}
-	for each (auto course in student->FilterCourses(filterchoice))
+	else
 	{
-		courselistitem^ temp = gcnew courselistitem;
 
-		temp->setName(course->getName());
-		temp->setCode(course->getCode());
-		temp->setInstructor(course->getInstructor());
-		temp->setIsRequirement(course->getIsRequirement());
-		temp->setHours(course->getHours());
-		temp->setMaxNumberOfStudents(course->getMaxNumberOfStudents());
-
-		coursesviewFilterCourses->Controls->Add(temp);
+		selectCoursebool = true;
+		selectCoursetimer->Start();
+		CoursesInProgressbt->BackColor = ColorTranslator::FromHtml("#17171F");
+		CoursesInProgressbt->ForeColor = Color::Tan;
+		
 	}
-	
+	bool temp = false;
+	for each (auto i in this->allbtns)
+	{
+
+		if (i->BackColor == Color::Brown) {
+			temp = true;
+		}
+
+	}
+	if (!temp)
+	{
+		flowLayoutPanel4->Height = 0;
+	}
 }
 private: System::Void ElectiveCoursesBt_Click(System::Object^ sender, System::EventArgs^ e) {
 	filterchoice = "Elective Courses";
 
 	coursesviewFilterCourses->Controls->Clear();
-	for each (auto course in student->FilterCourses(filterchoice))
+	flowLayoutPanel4->Controls->Clear();
+	courseButton::alldetailsbtns->Clear();
+	
+	if (ElectiveCoursesBt->BackColor == ColorTranslator::FromHtml("#17171F")) {
+		ElectiveCoursesBt->BackColor = Color::Brown;
+		ElectiveCoursesBt->ForeColor = Color::Tan;
+
+		for each (auto course in student->FilterCourses(filterchoice))
+		{
+			courseButton^ temp = gcnew courseButton;
+			temp->setCourseName(course->getName());
+			viewcourses->Add(temp);
+			flowLayoutPanel4->Controls->Add(temp);
+
+			courseButton::alldetailsbtns->Add(temp);
+		}
+
+		selectCoursebool = false;
+		selectCoursetimer->Start();
+		for each (auto i in this->allbtns)
+		{
+
+			if (i != ElectiveCoursesBt)
+			{
+				i->BackColor = ColorTranslator::FromHtml("#17171F");
+				i->ForeColor = Color::Tan;
+
+			}
+
+		}
+	}
+	else
 	{
-		courselistitem^ temp = gcnew courselistitem;
 
-		temp->setName(course->getName());
-		temp->setCode(course->getCode());
-		temp->setInstructor(course->getInstructor());
-		temp->setIsRequirement(course->getIsRequirement());
-		temp->setHours(course->getHours());
-		temp->setMaxNumberOfStudents(course->getMaxNumberOfStudents());
+		selectCoursebool = true;
+		selectCoursetimer->Start();
+		ElectiveCoursesBt->BackColor = ColorTranslator::FromHtml("#17171F");
+		ElectiveCoursesBt->ForeColor = Color::Tan;
 
-		coursesviewFilterCourses->Controls->Add(temp);
+	}
+	bool temp = false;
+	for each (auto i in this->allbtns)
+	{
+
+		if (i->BackColor == Color::Brown) {
+			temp = true;
+		}
+
+	}
+	if (!temp)
+	{
+		flowLayoutPanel4->Height = 0;
 	}
 }
 private: System::Void RequiredCoursesbt_Click(System::Object^ sender, System::EventArgs^ e) {
 	filterchoice = "Required Courses";
 
 	coursesviewFilterCourses->Controls->Clear();
-	for each (auto course in student->FilterCourses(filterchoice))
+	flowLayoutPanel4->Controls->Clear();
+	courseButton::alldetailsbtns->Clear();
+	
+	if (RequiredCoursesbt->BackColor == ColorTranslator::FromHtml("#17171F")) {
+		RequiredCoursesbt->BackColor = Color::Brown;
+		RequiredCoursesbt->ForeColor = Color::Tan;
+
+
+		for each (auto course in student->FilterCourses(filterchoice))
+		{
+			courseButton^ temp = gcnew courseButton;
+			temp->setCourseName(course->getName());
+			viewcourses->Add(temp);
+			flowLayoutPanel4->Controls->Add(temp);
+
+			courseButton::alldetailsbtns->Add(temp);
+		}
+
+		selectCoursebool = false;
+		selectCoursetimer->Start();
+		for each (auto i in this->allbtns)
+		{
+
+			if (i != RequiredCoursesbt)
+			{
+				i->BackColor = ColorTranslator::FromHtml("#17171F");
+				i->ForeColor = Color::Tan;
+
+			}
+
+		}
+	}
+	else
 	{
-		courselistitem^ temp = gcnew courselistitem;
 
-		temp->setName(course->getName());
-		temp->setCode(course->getCode());
-		temp->setInstructor(course->getInstructor());
-		temp->setIsRequirement(course->getIsRequirement());
-		temp->setHours(course->getHours());
-		temp->setMaxNumberOfStudents(course->getMaxNumberOfStudents());
 
-		coursesviewFilterCourses->Controls->Add(temp);
+		selectCoursebool = true;
+		selectCoursetimer->Start();
+		RequiredCoursesbt->BackColor = ColorTranslator::FromHtml("#17171F");
+		RequiredCoursesbt->ForeColor = Color::Tan;
+
+	}
+	bool temp = false;
+	for each (auto i in this->allbtns)
+	{
+
+		if (i->BackColor == Color::Brown) {
+			temp = true;
+		}
+
+	}
+	if (!temp)
+	{
+		flowLayoutPanel4->Height = 0;
 	}
 }
 private: System::Void AvailableCoursesbt_Click(System::Object^ sender, System::EventArgs^ e) {
 	filterchoice = "Available Courses";
-
+	
 	coursesviewFilterCourses->Controls->Clear();
-	for each (auto course in student->FilterCourses(filterchoice))
+	flowLayoutPanel4->Controls->Clear();
+	courseButton::alldetailsbtns->Clear();
+	
+	if (AvailableCoursesbt->BackColor == ColorTranslator::FromHtml("#17171F")) {
+		AvailableCoursesbt->BackColor = Color::Brown;
+		AvailableCoursesbt->ForeColor = Color::Tan;
+
+		for each (auto course in student->FilterCourses(filterchoice))
+		{
+			courseButton^ temp = gcnew courseButton;
+			viewcourses->Add(temp);
+			temp->setCourseName(course->getName());
+
+			courseButton::alldetailsbtns->Add(temp);
+			flowLayoutPanel4->Controls->Add(temp);
+		}
+
+		selectCoursebool = false;
+		selectCoursetimer->Start();
+
+
+		for each (auto i in this->allbtns)
+		{
+
+			if (i != AvailableCoursesbt)
+			{
+				i->BackColor = ColorTranslator::FromHtml("#17171F");
+				i->ForeColor = Color::Tan;
+
+			}
+
+		}
+
+		
+	}
+	else
 	{
-		courselistitem^ temp = gcnew courselistitem;
 
-		temp->setName(course->getName());
-		temp->setCode(course->getCode());
-		temp->setInstructor(course->getInstructor());
-		temp->setIsRequirement(course->getIsRequirement());
-		temp->setHours(course->getHours());
-		temp->setMaxNumberOfStudents(course->getMaxNumberOfStudents());
+		selectCoursebool = true;
+		selectCoursetimer->Start();
+		AvailableCoursesbt->BackColor = ColorTranslator::FromHtml("#17171F");
+		AvailableCoursesbt->ForeColor = Color::Tan;
 
-		coursesviewFilterCourses->Controls->Add(temp);
+	}
+	bool temp = false;
+	for each (auto i in this->allbtns)
+	{
+
+		if (i->BackColor == Color::Brown) {
+			temp = true;
+		}
+
+	}
+	if (!temp)
+	{
+		flowLayoutPanel4->Height = 0;
 	}
 }
 private: System::Void finishcsbt_Click(System::Object^ sender, System::EventArgs^ e) {
 	filterchoice = "Finished Courses";
 
+
 	coursesviewFilterCourses->Controls->Clear();
-	for each (auto course in student->FilterCourses(filterchoice))
+	flowLayoutPanel4->Controls->Clear();
+	courseButton::alldetailsbtns->Clear();
+
+	
+	if (finishcsbt->BackColor == ColorTranslator::FromHtml("#17171F")) {
+		
+		finishcsbt->BackColor = Color::Brown;
+		finishcsbt->ForeColor = Color::Tan;
+		for each (auto course in student->FilterCourses(filterchoice))
+		{
+			courseButton^ temp = gcnew courseButton;
+
+			temp->setCourseName(course->getName());
+
+			flowLayoutPanel4->Controls->Add(temp);
+
+			courseButton::alldetailsbtns->Add(temp);
+		}
+
+		selectCoursebool = false;
+		selectCoursetimer->Start();
+		for each (auto i in this->allbtns)
+		{
+
+			if (i != finishcsbt)
+			{
+				i->BackColor = ColorTranslator::FromHtml("#17171F");
+				i->ForeColor = Color::Tan;
+
+			}
+
+		}
+	
+	}
+	else
 	{
-		courselistitem^ temp = gcnew courselistitem;
 
-		temp->setName(course->getName());
-		temp->setCode(course->getCode());
-		temp->setInstructor(course->getInstructor());
-		temp->setIsRequirement(course->getIsRequirement());
-		temp->setHours(course->getHours());
-		temp->setMaxNumberOfStudents(course->getMaxNumberOfStudents());
+		selectCoursebool = true;
 
-		coursesviewFilterCourses->Controls->Add(temp);
+		selectCoursetimer->Start();
+		finishcsbt->BackColor = ColorTranslator::FromHtml("#17171F");
+		finishcsbt->ForeColor = Color::Tan;
+
+	}
+	bool temp = false;
+	for each (auto i in this->allbtns)
+	{
+
+		if (i->BackColor == Color::Brown) {
+			temp = true;
+		}
+
+	}
+	if (!temp)
+	{
+		flowLayoutPanel4->Height = 0;
 	}
 }
+
+
+
 private: System::Void Selectbt_Click(System::Object^ sender, System::EventArgs^ e) {
 
+	courseButton::courseDetails = true;
 	coursesviewFilterCourses->Controls->Clear();
 	filterTimer->Start();
-
+	
+	
 }
 
 public :bool exapndfilter = false;
@@ -2070,43 +2349,92 @@ private: System::Void filterTimer_Tick(System::Object^ sender, System::EventArgs
 
 	if (!exapndfilter)
 	{
-		filterflowlytpnl->Height += 15;
-		if ((filterflowlytpnl->Height >=6*40)) {
+		filterflowlytpnl->Height += 30;
+		if ((filterflowlytpnl->Height >=6*65)) {
 			filterTimer->Stop();
 			exapndfilter = true;
 		}
 	}
 
 	else {
-
-		filterflowlytpnl->Height -= 15;
-		if (filterflowlytpnl->Height <= 40)
+		filterflowlytpnl->Height -= 30;
+	
+		if (filterflowlytpnl->Height <= 65)
 		{
 			filterTimer->Stop();
 			exapndfilter = false;
+			flowLayoutPanel4->Height = 0;
+			if (flowLayoutPanel4->Height == 0)
+			{
+				for each (auto i in this->allbtns)
+				{
+					i->BackColor = ColorTranslator::FromHtml("#17171F");
+					i->ForeColor = Color::Tan;
+				}
+			}
+		
 		}
 	}
+	
 }
-private: System::Void slctLB_Click(System::Object^ sender, System::EventArgs^ e) {
-	selectCoursetimer->Start();
-}
+
 public: bool selectCoursebool=false;
 private: System::Void selectCoursetimer_Tick(System::Object^ sender, System::EventArgs^ e) {
-	if (!selectCoursetimer)
+	if (!selectCoursebool)
 	{
-		flowLayoutPanel4->Height += 15;
-		if ((flowLayoutPanel4->Height >= 6 * 40)) {
-			filterTimer->Stop();
+		flowLayoutPanel4->Height += 25;
+		if ((flowLayoutPanel4->Height >= 6 * 65)) {
+			selectCoursetimer->Stop();
 			selectCoursebool = true;
 		}
 	}
 
 	else {
-		flowLayoutPanel4->Height -= 15;
-		if (flowLayoutPanel4->Height <= 40)
+		selectCoursetimer->Stop();
+		selectCoursebool = false;
+
+	}
+}
+private: System::Void flowLayoutPanel4_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
+}
+private: System::Void slctLB_Click(System::Object^ sender, System::EventArgs^ e) {
+	selectCoursetimer->Start();
+}
+private: System::Void viewerbt_Click(System::Object^ sender, System::EventArgs^ e) {
+
+	coursesviewFilterCourses->Controls->Clear();
+	for each (auto bt in courseButton::alldetailsbtns)
+	{
+
+		courselistitem^ temp = gcnew courselistitem;
+		if (bt->getBt()->BackColor == Color::Brown)
 		{
-			filterTimer->Stop();
-			selectCoursebool = false;
+
+			for each (auto course in Course::allCourses)
+			{
+				if (bt->getCourseName() == course->getName())
+				{
+					temp->setName(course->getName());
+					temp->setCode(course->getCode());
+					temp->setInstructor(course->getInstructor());
+					temp->setIsRequirement(course->getIsRequirement());
+					temp->setHours(course->getHours());
+					temp->setMaxNumberOfStudents(course->getMaxNumberOfStudents());
+				}
+			}
+
+			coursesviewFilterCourses->Controls->Add(temp);
+		
+		}
+
+	}
+	for each (auto bt in courseButton::alldetailsbtns)
+	{
+		if (bt->getBt()->BackColor == Color::Brown)
+		{
+			bt->setBtColor(ColorTranslator::FromHtml("#17171F"));
+			bt->setforecolor(Color::Tan);
+
 		}
 	}
 }
