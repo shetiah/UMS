@@ -76,11 +76,13 @@ void Admin::addCourse(Course^ newCourse)
 	Course::allCourses->Add(newCourse);
 
 }
+
 void Admin::addCourseGrade(Course^ course, String^ grade,Student^ student) {
 Dictionary< Course^, String^ > ^temp= student->getEachCourseGrade();
 temp->Add(course, grade);
 student->setEachCourseGrade(temp);
 }
+
 void Admin::addCoursePreReq(Course^ course, List<String^>^ preList) {
 	Course::preRequires->Add(course->getName(), preList);
 }

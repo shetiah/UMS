@@ -157,14 +157,6 @@ List<String^>^ Student::CoursesAV()
 
 	List<String^>^ AvCourses = gcnew List<String^>();
 	
-	//return an empty list if no finished courses
-	//if(FinishedCourses==nullptr)
-	//	return nullptr;
-	//	
-
-	////return an empty list if no finished courses
-	//if (FinishedCourses->Count == 0);
-	//  return nullptr;
 
 	for each (auto line in Course::preRequires)
 	{
@@ -186,6 +178,9 @@ List<String^>^ Student::CoursesAV()
 		{
 			AvCourses->Add(courseToAdd);
 		}
+		//checking if course has no preRequisites
+		if (preReqs[0] == "0")
+			AvCourses->Add(courseToAdd);
 	}
 
 	return AvCourses;
