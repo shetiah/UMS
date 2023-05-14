@@ -65,6 +65,30 @@ namespace UMS {
 	private: System::Windows::Forms::Panel^ pnlOfStudentOfCourse;
 	private: System::Windows::Forms::Panel^ pnlEditStudent;
 	private: System::Windows::Forms::Panel^ pnlOfEditCourse;
+	private: System::Windows::Forms::Panel^ pnlOfData;
+
+	private: System::Windows::Forms::TextBox^ txtStudentName;
+	private: System::Windows::Forms::TextBox^ txtStudentAcademicYear;
+
+
+	private: System::Windows::Forms::TextBox^ txtStudentPassword;
+	private: System::Windows::Forms::TextBox^ txtStudentMaxHours;
+	private: System::Windows::Forms::TextBox^ txtStudentGPA;
+
+	private: System::Windows::Forms::CheckedListBox^ clFinishedCourses;
+	private: System::Windows::Forms::CheckedListBox^ clCoursesInProgress;
+	private: System::Windows::Forms::TextBox^ txtStudentGrades;
+	private: System::Windows::Forms::Label^ label8;
+	private: System::Windows::Forms::Label^ label7;
+	private: System::Windows::Forms::Label^ label6;
+	private: System::Windows::Forms::Label^ label5;
+	private: System::Windows::Forms::Label^ label4;
+	private: System::Windows::Forms::Label^ label3;
+	private: System::Windows::Forms::Label^ label2;
+	private: System::Windows::Forms::Label^ label1;
+	private: System::Windows::Forms::Button^ btnSave;
+	private: System::Windows::Forms::Panel^ panel8;
+
 
 
 
@@ -148,11 +172,30 @@ namespace UMS {
 			this->panel7 = (gcnew System::Windows::Forms::Panel());
 			this->slideBarTimer = (gcnew System::Windows::Forms::Timer(this->components));
 			this->pnlOfPanels = (gcnew System::Windows::Forms::Panel());
+			this->pnlOfAddStudent = (gcnew System::Windows::Forms::Panel());
+			this->btnSave = (gcnew System::Windows::Forms::Button());
+			this->pnlOfData = (gcnew System::Windows::Forms::Panel());
+			this->label8 = (gcnew System::Windows::Forms::Label());
+			this->label7 = (gcnew System::Windows::Forms::Label());
+			this->label6 = (gcnew System::Windows::Forms::Label());
+			this->label5 = (gcnew System::Windows::Forms::Label());
+			this->label4 = (gcnew System::Windows::Forms::Label());
+			this->label3 = (gcnew System::Windows::Forms::Label());
+			this->label2 = (gcnew System::Windows::Forms::Label());
+			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->clFinishedCourses = (gcnew System::Windows::Forms::CheckedListBox());
+			this->clCoursesInProgress = (gcnew System::Windows::Forms::CheckedListBox());
+			this->txtStudentGrades = (gcnew System::Windows::Forms::TextBox());
+			this->txtStudentGPA = (gcnew System::Windows::Forms::TextBox());
+			this->txtStudentMaxHours = (gcnew System::Windows::Forms::TextBox());
+			this->txtStudentAcademicYear = (gcnew System::Windows::Forms::TextBox());
+			this->txtStudentPassword = (gcnew System::Windows::Forms::TextBox());
+			this->txtStudentName = (gcnew System::Windows::Forms::TextBox());
+			this->panel8 = (gcnew System::Windows::Forms::Panel());
 			this->pnlOfStudentOfCourse = (gcnew System::Windows::Forms::Panel());
 			this->pnlEditStudent = (gcnew System::Windows::Forms::Panel());
 			this->pnlOfEditCourse = (gcnew System::Windows::Forms::Panel());
 			this->pnlOfAddCourse = (gcnew System::Windows::Forms::Panel());
-			this->pnlOfAddStudent = (gcnew System::Windows::Forms::Panel());
 			this->sideBar->SuspendLayout();
 			this->pnlOfbtns->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox5))->BeginInit();
@@ -161,6 +204,8 @@ namespace UMS {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->pnlOfPanels->SuspendLayout();
+			this->pnlOfAddStudent->SuspendLayout();
+			this->pnlOfData->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// sideBar
@@ -172,7 +217,7 @@ namespace UMS {
 			this->sideBar->MaximumSize = System::Drawing::Size(287, 472);
 			this->sideBar->MinimumSize = System::Drawing::Size(60, 472);
 			this->sideBar->Name = L"sideBar";
-			this->sideBar->Size = System::Drawing::Size(287, 472);
+			this->sideBar->Size = System::Drawing::Size(60, 472);
 			this->sideBar->TabIndex = 0;
 			// 
 			// pnlOfbtns
@@ -446,15 +491,274 @@ namespace UMS {
 			// 
 			// pnlOfPanels
 			// 
+			this->pnlOfPanels->Controls->Add(this->pnlOfAddStudent);
 			this->pnlOfPanels->Controls->Add(this->pnlOfStudentOfCourse);
 			this->pnlOfPanels->Controls->Add(this->pnlEditStudent);
 			this->pnlOfPanels->Controls->Add(this->pnlOfEditCourse);
 			this->pnlOfPanels->Controls->Add(this->pnlOfAddCourse);
-			this->pnlOfPanels->Controls->Add(this->pnlOfAddStudent);
 			this->pnlOfPanels->Location = System::Drawing::Point(61, 68);
 			this->pnlOfPanels->Name = L"pnlOfPanels";
 			this->pnlOfPanels->Size = System::Drawing::Size(866, 404);
 			this->pnlOfPanels->TabIndex = 1;
+			// 
+			// pnlOfAddStudent
+			// 
+			this->pnlOfAddStudent->BackColor = System::Drawing::Color::Gainsboro;
+			this->pnlOfAddStudent->Controls->Add(this->btnSave);
+			this->pnlOfAddStudent->Controls->Add(this->pnlOfData);
+			this->pnlOfAddStudent->Location = System::Drawing::Point(0, 0);
+			this->pnlOfAddStudent->Name = L"pnlOfAddStudent";
+			this->pnlOfAddStudent->Size = System::Drawing::Size(866, 404);
+			this->pnlOfAddStudent->TabIndex = 2;
+			// 
+			// btnSave
+			// 
+			this->btnSave->BackColor = System::Drawing::Color::SteelBlue;
+			this->btnSave->FlatAppearance->BorderSize = 0;
+			this->btnSave->FlatAppearance->MouseDownBackColor = System::Drawing::Color::Gray;
+			this->btnSave->FlatAppearance->MouseOverBackColor = System::Drawing::Color::LightCoral;
+			this->btnSave->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->btnSave->Location = System::Drawing::Point(714, 335);
+			this->btnSave->Name = L"btnSave";
+			this->btnSave->Size = System::Drawing::Size(139, 40);
+			this->btnSave->TabIndex = 1;
+			this->btnSave->Text = L"Save";
+			this->btnSave->UseVisualStyleBackColor = false;
+			this->btnSave->Click += gcnew System::EventHandler(this, &adminHome::btnSave_Click);
+			// 
+			// pnlOfData
+			// 
+			this->pnlOfData->Controls->Add(this->label8);
+			this->pnlOfData->Controls->Add(this->label7);
+			this->pnlOfData->Controls->Add(this->label6);
+			this->pnlOfData->Controls->Add(this->label5);
+			this->pnlOfData->Controls->Add(this->label4);
+			this->pnlOfData->Controls->Add(this->label3);
+			this->pnlOfData->Controls->Add(this->label2);
+			this->pnlOfData->Controls->Add(this->label1);
+			this->pnlOfData->Controls->Add(this->clFinishedCourses);
+			this->pnlOfData->Controls->Add(this->clCoursesInProgress);
+			this->pnlOfData->Controls->Add(this->txtStudentGrades);
+			this->pnlOfData->Controls->Add(this->txtStudentGPA);
+			this->pnlOfData->Controls->Add(this->txtStudentMaxHours);
+			this->pnlOfData->Controls->Add(this->txtStudentAcademicYear);
+			this->pnlOfData->Controls->Add(this->txtStudentPassword);
+			this->pnlOfData->Controls->Add(this->txtStudentName);
+			this->pnlOfData->Controls->Add(this->panel8);
+			this->pnlOfData->Location = System::Drawing::Point(164, 27);
+			this->pnlOfData->Name = L"pnlOfData";
+			this->pnlOfData->Size = System::Drawing::Size(530, 348);
+			this->pnlOfData->TabIndex = 0;
+			// 
+			// label8
+			// 
+			this->label8->AutoSize = true;
+			this->label8->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->label8->Font = (gcnew System::Drawing::Font(L"Segoe UI", 11, System::Drawing::FontStyle::Bold));
+			this->label8->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
+				static_cast<System::Int32>(static_cast<System::Byte>(31)));
+			this->label8->Location = System::Drawing::Point(26, 307);
+			this->label8->Name = L"label8";
+			this->label8->Size = System::Drawing::Size(79, 25);
+			this->label8->TabIndex = 19;
+			this->label8->Text = L"Grades:";
+			// 
+			// label7
+			// 
+			this->label7->AutoSize = true;
+			this->label7->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->label7->Font = (gcnew System::Drawing::Font(L"Segoe UI", 11, System::Drawing::FontStyle::Bold));
+			this->label7->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
+				static_cast<System::Int32>(static_cast<System::Byte>(31)));
+			this->label7->Location = System::Drawing::Point(26, 267);
+			this->label7->Name = L"label7";
+			this->label7->Size = System::Drawing::Size(165, 25);
+			this->label7->TabIndex = 18;
+			this->label7->Text = L"Finished Courses:";
+			// 
+			// label6
+			// 
+			this->label6->AutoSize = true;
+			this->label6->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->label6->Font = (gcnew System::Drawing::Font(L"Segoe UI", 11, System::Drawing::FontStyle::Bold));
+			this->label6->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
+				static_cast<System::Int32>(static_cast<System::Byte>(31)));
+			this->label6->Location = System::Drawing::Point(12, 175);
+			this->label6->Name = L"label6";
+			this->label6->Size = System::Drawing::Size(188, 25);
+			this->label6->TabIndex = 17;
+			this->label6->Text = L"Courses In Progress";
+			this->label6->Click += gcnew System::EventHandler(this, &adminHome::label6_Click);
+			// 
+			// label5
+			// 
+			this->label5->AutoSize = true;
+			this->label5->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->label5->Font = (gcnew System::Drawing::Font(L"Segoe UI", 11, System::Drawing::FontStyle::Bold));
+			this->label5->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
+				static_cast<System::Int32>(static_cast<System::Byte>(31)));
+			this->label5->Location = System::Drawing::Point(12, 140);
+			this->label5->Name = L"label5";
+			this->label5->Size = System::Drawing::Size(55, 25);
+			this->label5->TabIndex = 16;
+			this->label5->Text = L"GPA:";
+			this->label5->Click += gcnew System::EventHandler(this, &adminHome::label5_Click);
+			// 
+			// label4
+			// 
+			this->label4->AutoSize = true;
+			this->label4->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->label4->Font = (gcnew System::Drawing::Font(L"Segoe UI", 11, System::Drawing::FontStyle::Bold));
+			this->label4->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
+				static_cast<System::Int32>(static_cast<System::Byte>(31)));
+			this->label4->Location = System::Drawing::Point(12, 105);
+			this->label4->Name = L"label4";
+			this->label4->Size = System::Drawing::Size(116, 25);
+			this->label4->TabIndex = 15;
+			this->label4->Text = L"Max Hours:";
+			this->label4->Click += gcnew System::EventHandler(this, &adminHome::label4_Click);
+			// 
+			// label3
+			// 
+			this->label3->AutoSize = true;
+			this->label3->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->label3->Font = (gcnew System::Drawing::Font(L"Segoe UI", 11, System::Drawing::FontStyle::Bold));
+			this->label3->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
+				static_cast<System::Int32>(static_cast<System::Byte>(31)));
+			this->label3->Location = System::Drawing::Point(12, 70);
+			this->label3->Name = L"label3";
+			this->label3->Size = System::Drawing::Size(146, 25);
+			this->label3->TabIndex = 14;
+			this->label3->Text = L"Academic Year:";
+			this->label3->Click += gcnew System::EventHandler(this, &adminHome::label3_Click);
+			// 
+			// label2
+			// 
+			this->label2->AutoSize = true;
+			this->label2->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->label2->Font = (gcnew System::Drawing::Font(L"Segoe UI", 11, System::Drawing::FontStyle::Bold));
+			this->label2->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
+				static_cast<System::Int32>(static_cast<System::Byte>(31)));
+			this->label2->Location = System::Drawing::Point(12, 39);
+			this->label2->Name = L"label2";
+			this->label2->Size = System::Drawing::Size(102, 25);
+			this->label2->TabIndex = 13;
+			this->label2->Text = L"Password:";
+			this->label2->Click += gcnew System::EventHandler(this, &adminHome::label2_Click);
+			// 
+			// label1
+			// 
+			this->label1->AutoSize = true;
+			this->label1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->label1->Font = (gcnew System::Drawing::Font(L"Segoe UI", 11, System::Drawing::FontStyle::Bold));
+			this->label1->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
+				static_cast<System::Int32>(static_cast<System::Byte>(31)));
+			this->label1->Location = System::Drawing::Point(12, 5);
+			this->label1->Name = L"label1";
+			this->label1->Size = System::Drawing::Size(69, 25);
+			this->label1->TabIndex = 12;
+			this->label1->Text = L"Name:";
+			this->label1->Click += gcnew System::EventHandler(this, &adminHome::label1_Click);
+			// 
+			// clFinishedCourses
+			// 
+			this->clFinishedCourses->FormattingEnabled = true;
+			this->clFinishedCourses->Items->AddRange(gcnew cli::array< System::Object^  >(4) { L"x", L"y", L"z", L"mmmmmm" });
+			this->clFinishedCourses->Location = System::Drawing::Point(230, 266);
+			this->clFinishedCourses->Name = L"clFinishedCourses";
+			this->clFinishedCourses->Size = System::Drawing::Size(212, 38);
+			this->clFinishedCourses->TabIndex = 7;
+			this->clFinishedCourses->SelectedIndexChanged += gcnew System::EventHandler(this, &adminHome::clFinishedCourses_SelectedIndexChanged);
+			// 
+			// clCoursesInProgress
+			// 
+			this->clCoursesInProgress->FormattingEnabled = true;
+			this->clCoursesInProgress->Items->AddRange(gcnew cli::array< System::Object^  >(4) { L"a", L"b", L"c", L"d" });
+			this->clCoursesInProgress->Location = System::Drawing::Point(222, 174);
+			this->clCoursesInProgress->Name = L"clCoursesInProgress";
+			this->clCoursesInProgress->Size = System::Drawing::Size(212, 38);
+			this->clCoursesInProgress->TabIndex = 6;
+			this->clCoursesInProgress->SelectedIndexChanged += gcnew System::EventHandler(this, &adminHome::clCoursesInProgress_SelectedIndexChanged);
+			// 
+			// txtStudentGrades
+			// 
+			this->txtStudentGrades->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			this->txtStudentGrades->Font = (gcnew System::Drawing::Font(L"Segoe UI", 11, System::Drawing::FontStyle::Bold));
+			this->txtStudentGrades->ForeColor = System::Drawing::SystemColors::WindowText;
+			this->txtStudentGrades->Location = System::Drawing::Point(230, 308);
+			this->txtStudentGrades->Multiline = true;
+			this->txtStudentGrades->Name = L"txtStudentGrades";
+			this->txtStudentGrades->Size = System::Drawing::Size(212, 29);
+			this->txtStudentGrades->TabIndex = 5;
+			// 
+			// txtStudentGPA
+			// 
+			this->txtStudentGPA->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			this->txtStudentGPA->Font = (gcnew System::Drawing::Font(L"Segoe UI", 11, System::Drawing::FontStyle::Bold));
+			this->txtStudentGPA->ForeColor = System::Drawing::SystemColors::WindowText;
+			this->txtStudentGPA->Location = System::Drawing::Point(222, 139);
+			this->txtStudentGPA->Multiline = true;
+			this->txtStudentGPA->Name = L"txtStudentGPA";
+			this->txtStudentGPA->Size = System::Drawing::Size(212, 29);
+			this->txtStudentGPA->TabIndex = 4;
+			this->txtStudentGPA->TextChanged += gcnew System::EventHandler(this, &adminHome::txtStudentGPA_TextChanged);
+			// 
+			// txtStudentMaxHours
+			// 
+			this->txtStudentMaxHours->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			this->txtStudentMaxHours->Font = (gcnew System::Drawing::Font(L"Segoe UI", 11, System::Drawing::FontStyle::Bold));
+			this->txtStudentMaxHours->ForeColor = System::Drawing::SystemColors::WindowText;
+			this->txtStudentMaxHours->Location = System::Drawing::Point(222, 104);
+			this->txtStudentMaxHours->Multiline = true;
+			this->txtStudentMaxHours->Name = L"txtStudentMaxHours";
+			this->txtStudentMaxHours->Size = System::Drawing::Size(212, 29);
+			this->txtStudentMaxHours->TabIndex = 3;
+			this->txtStudentMaxHours->TextChanged += gcnew System::EventHandler(this, &adminHome::txtStudentMaxHours_TextChanged);
+			// 
+			// txtStudentAcademicYear
+			// 
+			this->txtStudentAcademicYear->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			this->txtStudentAcademicYear->Font = (gcnew System::Drawing::Font(L"Segoe UI", 11, System::Drawing::FontStyle::Bold));
+			this->txtStudentAcademicYear->ForeColor = System::Drawing::SystemColors::WindowText;
+			this->txtStudentAcademicYear->Location = System::Drawing::Point(222, 69);
+			this->txtStudentAcademicYear->Multiline = true;
+			this->txtStudentAcademicYear->Name = L"txtStudentAcademicYear";
+			this->txtStudentAcademicYear->Size = System::Drawing::Size(212, 29);
+			this->txtStudentAcademicYear->TabIndex = 2;
+			this->txtStudentAcademicYear->TextChanged += gcnew System::EventHandler(this, &adminHome::txtStudentAcademicYEar_TextChanged);
+			// 
+			// txtStudentPassword
+			// 
+			this->txtStudentPassword->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			this->txtStudentPassword->Font = (gcnew System::Drawing::Font(L"Segoe UI", 11, System::Drawing::FontStyle::Bold));
+			this->txtStudentPassword->ForeColor = System::Drawing::SystemColors::WindowText;
+			this->txtStudentPassword->Location = System::Drawing::Point(222, 34);
+			this->txtStudentPassword->Multiline = true;
+			this->txtStudentPassword->Name = L"txtStudentPassword";
+			this->txtStudentPassword->Size = System::Drawing::Size(212, 29);
+			this->txtStudentPassword->TabIndex = 1;
+			this->txtStudentPassword->TextChanged += gcnew System::EventHandler(this, &adminHome::txtStudentPassword_TextChanged);
+			// 
+			// txtStudentName
+			// 
+			this->txtStudentName->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			this->txtStudentName->Font = (gcnew System::Drawing::Font(L"Segoe UI", 11, System::Drawing::FontStyle::Bold));
+			this->txtStudentName->ForeColor = System::Drawing::SystemColors::WindowText;
+			this->txtStudentName->Location = System::Drawing::Point(222, 0);
+			this->txtStudentName->Multiline = true;
+			this->txtStudentName->Name = L"txtStudentName";
+			this->txtStudentName->Size = System::Drawing::Size(212, 29);
+			this->txtStudentName->TabIndex = 0;
+			this->txtStudentName->TextChanged += gcnew System::EventHandler(this, &adminHome::txtStudentName_TextChanged);
+			// 
+			// panel8
+			// 
+			this->panel8->BackColor = System::Drawing::Color::LightGray;
+			this->panel8->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel8->Location = System::Drawing::Point(0, 255);
+			this->panel8->Name = L"panel8";
+			this->panel8->Size = System::Drawing::Size(530, 93);
+			this->panel8->TabIndex = 20;
 			// 
 			// pnlOfStudentOfCourse
 			// 
@@ -490,14 +794,6 @@ namespace UMS {
 			this->pnlOfAddCourse->Size = System::Drawing::Size(866, 404);
 			this->pnlOfAddCourse->TabIndex = 2;
 			// 
-			// pnlOfAddStudent
-			// 
-			this->pnlOfAddStudent->BackColor = System::Drawing::Color::IndianRed;
-			this->pnlOfAddStudent->Location = System::Drawing::Point(8, 8);
-			this->pnlOfAddStudent->Name = L"pnlOfAddStudent";
-			this->pnlOfAddStudent->Size = System::Drawing::Size(866, 404);
-			this->pnlOfAddStudent->TabIndex = 2;
-			// 
 			// adminHome
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
@@ -518,6 +814,9 @@ namespace UMS {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			this->pnlOfPanels->ResumeLayout(false);
+			this->pnlOfAddStudent->ResumeLayout(false);
+			this->pnlOfData->ResumeLayout(false);
+			this->pnlOfData->PerformLayout();
 			this->ResumeLayout(false);
 
 		}
@@ -632,5 +931,94 @@ private: System::Void pictureBox3_Click(System::Object^ sender, System::EventArg
 }
 private: System::Void pnlOfStudentOfCourse_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
 }
+private: System::Void clFinishedCourses_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void label2_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void label3_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void label4_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void label5_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void label6_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void clCoursesInProgress_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void txtStudentGPA_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void txtStudentMaxHours_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void txtStudentAcademicYEar_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void txtStudentPassword_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void txtStudentName_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void btnSave_Click(System::Object^ sender, System::EventArgs^ e) {
+	String^ StudentName;
+	String^ StudentPassword;
+	String^ StudentMaxHours;
+	String^ StudentAcademicYear;
+	String^ StudentGPA;
+
+	StudentName = txtStudentName->Text;
+	StudentPassword = txtStudentPassword->Text;
+	StudentMaxHours = txtStudentMaxHours->Text;
+	StudentAcademicYear = txtStudentAcademicYear->Text;
+	StudentGPA = txtStudentGPA->Text;
+
+	List<String^>^ checkedFinishedCourses = gcnew List<String^>();
+	for each (String ^ S in clFinishedCourses->CheckedItems) {
+		checkedFinishedCourses->Add(S);
+
+	}
+	List<String^>^ CheckedCoursesInProgress = gcnew List<String^>();
+	for each (String ^ S in clFinishedCourses->CheckedItems) {
+		CheckedCoursesInProgress->Add(S);
+
+	}
+	String^ CoursesGrades = txtStudentGrades->Text;
+	cli::array<String^>^ CoursesGradesArray = CoursesGrades->Split(',');
+	//convert the string data from the text box to be float 
+	cli::array<float>^ CoursesGradesFloatArray = gcnew cli::array<float>(CoursesGradesArray->Length);
+	List<float>^ CoursesGradesList = gcnew List<float>();
+
+	for (int i = 0; i < CoursesGradesArray->Length; i++)
+	{
+		float grade;
+		if (float::TryParse(CoursesGradesArray[i], grade))
+		{
+			CoursesGradesFloatArray[i] = grade;
+			CoursesGradesList->Add(grade);
+		}
+		else
+		{
+			if (txtStudentGrades->Text->Length == 0)
+			{
+				txtStudentGrades->Visible = false;
+
+
+			}
+			else
+			{
+				// handle the case where the input is not a valid float
+				txtStudentGrades->Visible = true;
+				return;
+			}
+		}
+	}
+	int AcademicYearInt, MaxHoursInt;
+	float StudentGPAFloat;
+	bool x = int::TryParse(StudentAcademicYear, AcademicYearInt);
+	bool y = int::TryParse(StudentMaxHours, MaxHoursInt);
+	bool z = float::TryParse(StudentGPA, StudentGPAFloat);
+	Admin::createStudent(StudentName, StudentPassword, AcademicYearInt, MaxHoursInt, StudentGPAFloat, checkedFinishedCourses, CheckedCoursesInProgress, CoursesGradesList);
+	Student::saveStudentDataToFile();
+
+}
+
 };
 }
