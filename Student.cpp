@@ -172,7 +172,7 @@ List<String^>^ Student::CoursesAV()
 			AvCourses->Add(courseToAdd);
 		}
 		//checking if course has no preRequisites
-		if (preReqs[0] == "0")
+		if (preReqs[0] == "0" && !CoursesInProgress->Contains(courseToAdd) && !FinishedCourses->Contains(courseToAdd))
 			AvCourses->Add(courseToAdd);
 	}
 
