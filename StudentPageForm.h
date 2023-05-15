@@ -2525,13 +2525,13 @@ private: System::Void viewgradesBt_Click(System::Object^ sender, System::EventAr
 bool viewgradesTimerbool = false;
 private: System::Void viewGradesTiner_Tick(System::Object^ sender, System::EventArgs^ e) {
 
-	if (!viewgradesTimerbool&&selected)
+	if (!viewgradesTimerbool)
 	{
 		flowLayoutPanel5->Height += 40;
 		if (flowLayoutPanel5->Height >=(student->getFinishedCourses()->Count) * 60) {
 			viewGradesTiner->Stop();
 			viewgradesTimerbool = true;
-			selected = false;
+			selected = true;
 		}
 	}
 
@@ -2541,7 +2541,7 @@ private: System::Void viewGradesTiner_Tick(System::Object^ sender, System::Event
 		{
 			viewGradesTiner->Stop();
 			viewgradesTimerbool = false;
-			selected = true;
+			selected = false;
 			flowLayoutPanel5->Controls->Clear();
 		}
 		
