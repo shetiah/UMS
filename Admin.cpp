@@ -209,8 +209,8 @@ Dictionary<Course^, float>^ Admin::conversionFinishedCourseGpa(List<float>^ fini
 float Admin::calc_CGPA(Student^ s)
 {
 	float cgpa = 0, totalHours = 0;	
-	Dictionary<Course^, float>^ temp = gcnew Dictionary<Course^, float>;/*
-		temp=Admin::conversionFinishedCourseGpa(s->getEachFinishedCourseGPA(), s);*/
+	Dictionary<Course^, float>^ temp = gcnew Dictionary<Course^, float>;
+		temp=Admin::conversionFinishedCourseGpa(s->getCoursesGPA(), s);
 
 	for each (auto i in temp)
 	{

@@ -18,16 +18,16 @@ String^ UMS::CoursegGradeItem::getCode()
 void UMS::CoursegGradeItem::setName(String^ Name)
 {
 	this->courseName = Name;
-	courseNameLb->Text = Name;
+	csnamelabel->Text = Name;
 }void UMS::CoursegGradeItem::setGrade(float Grade)
 {
 	this->courseGrade = Grade;
-	courseGradeLabel->Text = Convert::ToString(Grade);
+	csgradelabel->Text = Convert::ToString(Grade);
 }
 
 
 void UMS::CoursegGradeItem::setCode(String^ code)
 {
 	this->courseCode = code;
-	Codelb->Text = Name;
+	cscodelabel->Text = code;
 }

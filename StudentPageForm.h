@@ -188,6 +188,8 @@ private: System::Windows::Forms::Button^ viewbttt;
 
 private: System::Windows::Forms::Label^ label2;
 private: System::Windows::Forms::Timer^ viewGradesTiner;
+private: System::Windows::Forms::Label^ CGPALabel;
+private: System::Windows::Forms::Label^ label3;
 
 
 
@@ -369,6 +371,8 @@ private: System::Windows::Forms::Timer^ viewGradesTiner;
 			this->filterTimer = (gcnew System::Windows::Forms::Timer(this->components));
 			this->selectCoursetimer = (gcnew System::Windows::Forms::Timer(this->components));
 			this->viewGradesTiner = (gcnew System::Windows::Forms::Timer(this->components));
+			this->label3 = (gcnew System::Windows::Forms::Label());
+			this->CGPALabel = (gcnew System::Windows::Forms::Label());
 			this->sideBar->SuspendLayout();
 			this->panel1->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox13))->BeginInit();
@@ -825,6 +829,8 @@ private: System::Windows::Forms::Timer^ viewGradesTiner;
 			// 
 			// pnlOfCourseGrades
 			// 
+			this->pnlOfCourseGrades->Controls->Add(this->CGPALabel);
+			this->pnlOfCourseGrades->Controls->Add(this->label3);
 			this->pnlOfCourseGrades->Controls->Add(this->viewgradesBt);
 			this->pnlOfCourseGrades->Controls->Add(this->label2);
 			this->pnlOfCourseGrades->Controls->Add(this->viewbttt);
@@ -1638,6 +1644,35 @@ private: System::Windows::Forms::Timer^ viewGradesTiner;
 			// 
 			this->viewGradesTiner->Tick += gcnew System::EventHandler(this, &StudentPageForm::viewGradesTiner_Tick);
 			// 
+			// label3
+			// 
+			this->label3->AutoSize = true;
+			this->label3->BackColor = System::Drawing::Color::Transparent;
+			this->label3->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->label3->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->label3->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F));
+			this->label3->Location = System::Drawing::Point(65, 340);
+			this->label3->Name = L"label3";
+			this->label3->Size = System::Drawing::Size(146, 28);
+			this->label3->TabIndex = 14;
+			this->label3->Text = L"your CGPA is:->";
+			this->label3->UseCompatibleTextRendering = true;
+			// 
+			// CGPALabel
+			// 
+			this->CGPALabel->AutoSize = true;
+			this->CGPALabel->BackColor = System::Drawing::Color::Transparent;
+			this->CGPALabel->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->CGPALabel->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->CGPALabel->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F));
+			this->CGPALabel->Location = System::Drawing::Point(215, 340);
+			this->CGPALabel->Name = L"CGPALabel";
+			this->CGPALabel->Size = System::Drawing::Size(61, 28);
+			this->CGPALabel->TabIndex = 15;
+			this->CGPALabel->Text = L"CGPA";
+			this->CGPALabel->UseCompatibleTextRendering = true;
+			this->CGPALabel->Click += gcnew System::EventHandler(this, &StudentPageForm::CGPALabel_Click);
+			// 
 			// StudentPageForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
@@ -1720,7 +1755,7 @@ private: System::Windows::Forms::Timer^ viewGradesTiner;
 
 	public: bool loggedOut = false;
     public:List<courseButton^>^ RegisterCourseList = gcnew List<courseButton^>();
-    public:List<courseButton^>^ viewcourses = gcnew List<courseButton^>();
+    public:List<courseButton^>^ allgradesbtns = gcnew List<courseButton^>();
 	public:String^ filterchoice="";
 
 	public:static List<Button^>^ allbtns = gcnew List<Button^>();
@@ -1757,7 +1792,7 @@ private: System::Windows::Forms::Timer^ viewGradesTiner;
 
 		}
 		
-
+		CGPALabel->Text = Convert::ToString(Admin::calc_CGPA(student));
 
 			
 
@@ -1839,6 +1874,8 @@ private: System::Windows::Forms::Timer^ viewGradesTiner;
 		pnlOfCoursesInProgress->Visible = false;
 		pnlOfCourseGrades->Visible = true;
 		pnlOfregCourse->Visible = false;
+	
+		courseButton::alldetailsbtns->Clear();
 	}
 	private: System::Void btnDetailsOfCourse_Click(System::Object^ sender, System::EventArgs^ e) {
 		sideBarTimer->Start();
@@ -2162,7 +2199,6 @@ private: System::Void ElectiveCoursesBt_Click(System::Object^ sender, System::Ev
 		{
 			courseButton^ temp = gcnew courseButton;
 			temp->setCourseName(course->getName());
-			viewcourses->Add(temp);
 			flowLayoutPanel4->Controls->Add(temp);
 
 			courseButton::alldetailsbtns->Add(temp);
@@ -2221,7 +2257,6 @@ private: System::Void RequiredCoursesbt_Click(System::Object^ sender, System::Ev
 		{
 			courseButton^ temp = gcnew courseButton;
 			temp->setCourseName(course->getName());
-			viewcourses->Add(temp);
 			flowLayoutPanel4->Controls->Add(temp);
 
 			courseButton::alldetailsbtns->Add(temp);
@@ -2279,7 +2314,6 @@ private: System::Void AvailableCoursesbt_Click(System::Object^ sender, System::E
 		for each (auto course in student->FilterCourses(filterchoice))
 		{
 			courseButton^ temp = gcnew courseButton;
-			viewcourses->Add(temp);
 			temp->setCourseName(course->getName());
 
 			courseButton::alldetailsbtns->Add(temp);
@@ -2500,12 +2534,32 @@ private: System::Void viewerbt_Click(System::Object^ sender, System::EventArgs^ 
 private: System::Void panel3_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
 }
 private: System::Void button2_Click_2(System::Object^ sender, System::EventArgs^ e) {
+	flowLayoutPanel6->Controls->Clear();
+	for each (auto i in courseButton::alldetailsbtns)
+	{
+		if (i->getBt()->BackColor ==Color::Brown)
+		{
+			CoursegGradeItem ^temp = gcnew CoursegGradeItem;
+			for each (auto j in Admin::conversionFinishedCourseGpa(student->getCoursesGPA(), student))
+			{
+				if (i->getCourseName() == j.Key->getName())
+				{
+					temp->setName(j.Key->getName());
+					temp->setCode(j.Key->getCode());
+					temp->setGrade(j.Value);
+					flowLayoutPanel6->Controls->Add(temp);
+				}
+			}
+		}
+	}
 }
 
 private: System::Void pnlOfCourseGrades_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
 }
 	   bool selected = false;
 private: System::Void viewgradesBt_Click(System::Object^ sender, System::EventArgs^ e) {
+	flowLayoutPanel6->Controls->Clear();
+	courseButton::courseDetails = true;
 	if (!selected)
 	{
 		for each (auto i in Admin::conversionFinishedCourseGpa(student->getCoursesGPA(), student)) {
@@ -2514,7 +2568,7 @@ private: System::Void viewgradesBt_Click(System::Object^ sender, System::EventAr
 			Course^ course = i.Key;
 			float gpaCourse = i.Value;
 			temp->setCourseName(course->getName());
-
+			courseButton::alldetailsbtns->Add(temp);
 			flowLayoutPanel5->Controls->Add(temp);
 		}
 	selected = true;
@@ -2543,12 +2597,15 @@ private: System::Void viewGradesTiner_Tick(System::Object^ sender, System::Event
 			viewgradesTimerbool = false;
 			selected = false;
 			flowLayoutPanel5->Controls->Clear();
+			courseButton::alldetailsbtns->Clear();
 		}
 		
 
 	}
 }
 private: System::Void flowLayoutPanel5_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
+}
+private: System::Void CGPALabel_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 };
