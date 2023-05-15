@@ -362,9 +362,9 @@ private: System::Windows::Forms::Label^ label3;
 			this->pictureBox14 = (gcnew System::Windows::Forms::PictureBox());
 			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->pnlOfregCourse = (gcnew System::Windows::Forms::Panel());
+			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->savebt = (gcnew System::Windows::Forms::Button());
 			this->flowLayoutPanel2 = (gcnew System::Windows::Forms::FlowLayoutPanel());
-			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->reglb = (gcnew System::Windows::Forms::Label());
 			this->pnlOfPanels = (gcnew System::Windows::Forms::Panel());
 			this->sideBarTimer = (gcnew System::Windows::Forms::Timer(this->components));
@@ -1559,6 +1559,27 @@ private: System::Windows::Forms::Label^ label3;
 			this->pnlOfregCourse->TabIndex = 5;
 			this->pnlOfregCourse->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &StudentPageForm::pnlOfregCourse_Paint);
 			// 
+			// button1
+			// 
+			this->button1->BackColor = System::Drawing::Color::Tan;
+			this->button1->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->button1->FlatAppearance->BorderSize = 3;
+			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button1->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F));
+			this->button1->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
+				static_cast<System::Int32>(static_cast<System::Byte>(31)));
+			this->button1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button1.Image")));
+			this->button1->ImageAlign = System::Drawing::ContentAlignment::MiddleRight;
+			this->button1->Location = System::Drawing::Point(242, 79);
+			this->button1->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(207, 51);
+			this->button1->TabIndex = 6;
+			this->button1->Text = L"Select Course";
+			this->button1->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->button1->UseVisualStyleBackColor = false;
+			this->button1->Click += gcnew System::EventHandler(this, &StudentPageForm::button1_Click_2);
+			// 
 			// savebt
 			// 
 			this->savebt->BackColor = System::Drawing::Color::Tan;
@@ -1588,27 +1609,6 @@ private: System::Windows::Forms::Label^ label3;
 			this->flowLayoutPanel2->TabIndex = 2;
 			this->flowLayoutPanel2->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &StudentPageForm::flowLayoutPanel2_Paint);
 			// 
-			// button1
-			// 
-			this->button1->BackColor = System::Drawing::Color::Tan;
-			this->button1->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->button1->FlatAppearance->BorderSize = 3;
-			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button1->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F));
-			this->button1->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
-				static_cast<System::Int32>(static_cast<System::Byte>(31)));
-			this->button1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button1.Image")));
-			this->button1->ImageAlign = System::Drawing::ContentAlignment::MiddleRight;
-			this->button1->Location = System::Drawing::Point(242, 79);
-			this->button1->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
-			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(207, 51);
-			this->button1->TabIndex = 6;
-			this->button1->Text = L"Select Course";
-			this->button1->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->button1->UseVisualStyleBackColor = false;
-			this->button1->Click += gcnew System::EventHandler(this, &StudentPageForm::button1_Click_2);
-			// 
 			// reglb
 			// 
 			this->reglb->AutoSize = true;
@@ -1625,11 +1625,11 @@ private: System::Windows::Forms::Label^ label3;
 			// 
 			// pnlOfPanels
 			// 
+			this->pnlOfPanels->Controls->Add(this->pnlOfCourseGrades);
+			this->pnlOfPanels->Controls->Add(this->PnlOfFilter);
 			this->pnlOfPanels->Controls->Add(this->pnlOfregCourse);
 			this->pnlOfPanels->Controls->Add(this->pnlOfDetailsOfCourse);
 			this->pnlOfPanels->Controls->Add(this->pnlOfCoursesInProgress);
-			this->pnlOfPanels->Controls->Add(this->pnlOfCourseGrades);
-			this->pnlOfPanels->Controls->Add(this->PnlOfFilter);
 			this->pnlOfPanels->Location = System::Drawing::Point(-13, 0);
 			this->pnlOfPanels->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->pnlOfPanels->Name = L"pnlOfPanels";
@@ -1966,8 +1966,8 @@ private: System::Void dropdowntimer_Tick(System::Object^ sender, System::EventAr
 	
 	if (!expandd)
 	{
-		flowLayoutPanel2->Height += 15;
-		if (flowLayoutPanel2->Height >= student.get * 35) {
+		flowLayoutPanel2->Height += 30;
+		if (flowLayoutPanel2->Height >= student->CoursesAV()->Count * 60) {
 			dropdowntimer->Stop();
 			expandd = true;
 		}
@@ -1975,7 +1975,7 @@ private: System::Void dropdowntimer_Tick(System::Object^ sender, System::EventAr
 
 	else {
 
-		flowLayoutPanel2->Height -= 15;
+		flowLayoutPanel2->Height -= 30;
 		if (flowLayoutPanel2->Height <= 0)
 		{
 			dropdowntimer->Stop();
