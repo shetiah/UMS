@@ -1625,11 +1625,11 @@ private: System::Windows::Forms::Label^ label3;
 			// 
 			// pnlOfPanels
 			// 
-			this->pnlOfPanels->Controls->Add(this->pnlOfCourseGrades);
-			this->pnlOfPanels->Controls->Add(this->PnlOfFilter);
 			this->pnlOfPanels->Controls->Add(this->pnlOfregCourse);
 			this->pnlOfPanels->Controls->Add(this->pnlOfDetailsOfCourse);
 			this->pnlOfPanels->Controls->Add(this->pnlOfCoursesInProgress);
+			this->pnlOfPanels->Controls->Add(this->pnlOfCourseGrades);
+			this->pnlOfPanels->Controls->Add(this->PnlOfFilter);
 			this->pnlOfPanels->Location = System::Drawing::Point(-13, 0);
 			this->pnlOfPanels->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->pnlOfPanels->Name = L"pnlOfPanels";
@@ -1799,27 +1799,6 @@ private: System::Windows::Forms::Label^ label3;
 
 			
 
-			for each (auto course in Course::allCourses)
-			{
-
-				courseButton^ temp = gcnew courseButton;
-
-				List<String^>^ tempe = gcnew List<String^>();
-				tempe = student->CoursesAV();
-			    
-				if (tempe->Contains(course->getName()))
-				{
-				
-					courseButton^ temp = gcnew courseButton;
-
-					temp->setCourseName(course->getName());
-
-					RegisterCourseList->Add(temp);
-					flowLayoutPanel2->Controls->Add(temp);
-					
-				}
-
-			}
 
 
 		
@@ -2072,9 +2051,31 @@ private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e
 
 
 private: System::Void button1_Click_2(System::Object^ sender, System::EventArgs^ e) {
-	dropdowntimer->Start();
 
-	flwpnldetCourse->Controls->Clear();
+	flowLayoutPanel2->Controls->Clear();
+
+	for each (auto course in Course::allCourses)
+	{
+
+		courseButton^ temp = gcnew courseButton;
+
+		List<String^>^ tempe = gcnew List<String^>();
+		tempe = student->CoursesAV();
+
+		if (tempe->Contains(course->getName()))
+		{
+
+			courseButton^ temp = gcnew courseButton;
+
+			temp->setCourseName(course->getName());
+
+			RegisterCourseList->Add(temp);
+			flowLayoutPanel2->Controls->Add(temp);
+
+		}
+
+	}
+	dropdowntimer->Start();
 
 }
 

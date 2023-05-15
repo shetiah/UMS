@@ -172,6 +172,7 @@ List<String^>^ Student::CoursesAV()
 				canBeAdded = false;
 				break;
 			}
+		
 		}
 		//checking if the course can be added and not already in progress and not finished
 		if (canBeAdded && !CoursesInProgress->Contains(courseToAdd) && !FinishedCourses->Contains(courseToAdd))
