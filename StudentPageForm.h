@@ -221,6 +221,7 @@ private: System::Windows::Forms::Label^ label3;
 
 
 
+
 	private: System::ComponentModel::IContainer^ components;
 
 
@@ -850,7 +851,7 @@ private: System::Windows::Forms::Label^ label3;
 			this->CGPALabel->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->CGPALabel->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->CGPALabel->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F));
-			this->CGPALabel->Location = System::Drawing::Point(227, 340);
+			this->CGPALabel->Location = System::Drawing::Point(455, 199);
 			this->CGPALabel->Name = L"CGPALabel";
 			this->CGPALabel->Size = System::Drawing::Size(61, 28);
 			this->CGPALabel->TabIndex = 15;
@@ -865,12 +866,13 @@ private: System::Windows::Forms::Label^ label3;
 			this->label3->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->label3->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->label3->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F));
-			this->label3->Location = System::Drawing::Point(65, 340);
+			this->label3->Location = System::Drawing::Point(303, 199);
 			this->label3->Name = L"label3";
 			this->label3->Size = System::Drawing::Size(146, 28);
 			this->label3->TabIndex = 14;
 			this->label3->Text = L"your CGPA is:->";
 			this->label3->UseCompatibleTextRendering = true;
+			this->label3->Click += gcnew System::EventHandler(this, &StudentPageForm::label3_Click);
 			// 
 			// viewgradesBt
 			// 
@@ -915,7 +917,7 @@ private: System::Windows::Forms::Label^ label3;
 			this->viewbttt->FlatAppearance->MouseOverBackColor = System::Drawing::Color::Brown;
 			this->viewbttt->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->viewbttt->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F));
-			this->viewbttt->Location = System::Drawing::Point(338, 188);
+			this->viewbttt->Location = System::Drawing::Point(322, 352);
 			this->viewbttt->Name = L"viewbttt";
 			this->viewbttt->Size = System::Drawing::Size(184, 61);
 			this->viewbttt->TabIndex = 12;
@@ -1579,26 +1581,25 @@ private: System::Windows::Forms::Label^ label3;
 			this->flowLayoutPanel2->Location = System::Drawing::Point(239, 98);
 			this->flowLayoutPanel2->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->flowLayoutPanel2->Name = L"flowLayoutPanel2";
-			this->flowLayoutPanel2->Size = System::Drawing::Size(169, 38);
+			this->flowLayoutPanel2->Size = System::Drawing::Size(220, 60);
 			this->flowLayoutPanel2->TabIndex = 2;
 			// 
 			// button1
 			// 
-			this->button1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
-				static_cast<System::Int32>(static_cast<System::Byte>(31)));
+			this->button1->BackColor = System::Drawing::Color::Tan;
 			this->button1->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->button1->Dock = System::Windows::Forms::DockStyle::Top;
-			this->button1->FlatAppearance->BorderSize = 0;
+			this->button1->FlatAppearance->BorderSize = 3;
 			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button1->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->button1->ForeColor = System::Drawing::Color::White;
+			this->button1->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F));
+			this->button1->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
+				static_cast<System::Int32>(static_cast<System::Byte>(31)));
 			this->button1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button1.Image")));
 			this->button1->ImageAlign = System::Drawing::ContentAlignment::MiddleRight;
 			this->button1->Location = System::Drawing::Point(3, 2);
 			this->button1->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(169, 38);
+			this->button1->Size = System::Drawing::Size(207, 51);
 			this->button1->TabIndex = 6;
 			this->button1->Text = L"Select Course";
 			this->button1->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
@@ -2606,6 +2607,8 @@ private: System::Void viewGradesTiner_Tick(System::Object^ sender, System::Event
 private: System::Void flowLayoutPanel5_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
 }
 private: System::Void CGPALabel_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void label3_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 };
