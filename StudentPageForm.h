@@ -428,7 +428,6 @@ private: System::Windows::Forms::Label^ label3;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox19))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox14))->BeginInit();
 			this->pnlOfregCourse->SuspendLayout();
-			this->flowLayoutPanel2->SuspendLayout();
 			this->pnlOfPanels->SuspendLayout();
 			this->mstPanel->SuspendLayout();
 			this->SuspendLayout();
@@ -1548,6 +1547,7 @@ private: System::Windows::Forms::Label^ label3;
 			// 
 			// pnlOfregCourse
 			// 
+			this->pnlOfregCourse->Controls->Add(this->button1);
 			this->pnlOfregCourse->Controls->Add(this->savebt);
 			this->pnlOfregCourse->Controls->Add(this->flowLayoutPanel2);
 			this->pnlOfregCourse->Controls->Add(this->reglb);
@@ -1561,9 +1561,13 @@ private: System::Windows::Forms::Label^ label3;
 			// 
 			// savebt
 			// 
+			this->savebt->BackColor = System::Drawing::Color::Tan;
 			this->savebt->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->savebt->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 11.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
+			this->savebt->FlatAppearance->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(23)),
+				static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(31)));
+			this->savebt->FlatAppearance->BorderSize = 3;
+			this->savebt->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->savebt->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F));
 			this->savebt->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
 				static_cast<System::Int32>(static_cast<System::Byte>(31)));
 			this->savebt->Location = System::Drawing::Point(92, 340);
@@ -1572,23 +1576,22 @@ private: System::Windows::Forms::Label^ label3;
 			this->savebt->Size = System::Drawing::Size(117, 38);
 			this->savebt->TabIndex = 3;
 			this->savebt->Text = L"save";
-			this->savebt->UseVisualStyleBackColor = true;
+			this->savebt->UseVisualStyleBackColor = false;
 			this->savebt->Click += gcnew System::EventHandler(this, &StudentPageForm::savebt_Click);
 			// 
 			// flowLayoutPanel2
 			// 
-			this->flowLayoutPanel2->Controls->Add(this->button1);
-			this->flowLayoutPanel2->Location = System::Drawing::Point(239, 98);
+			this->flowLayoutPanel2->Location = System::Drawing::Point(242, 130);
 			this->flowLayoutPanel2->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->flowLayoutPanel2->Name = L"flowLayoutPanel2";
 			this->flowLayoutPanel2->Size = System::Drawing::Size(220, 60);
 			this->flowLayoutPanel2->TabIndex = 2;
+			this->flowLayoutPanel2->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &StudentPageForm::flowLayoutPanel2_Paint);
 			// 
 			// button1
 			// 
 			this->button1->BackColor = System::Drawing::Color::Tan;
 			this->button1->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->button1->Dock = System::Windows::Forms::DockStyle::Top;
 			this->button1->FlatAppearance->BorderSize = 3;
 			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button1->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F));
@@ -1596,7 +1599,7 @@ private: System::Windows::Forms::Label^ label3;
 				static_cast<System::Int32>(static_cast<System::Byte>(31)));
 			this->button1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button1.Image")));
 			this->button1->ImageAlign = System::Drawing::ContentAlignment::MiddleRight;
-			this->button1->Location = System::Drawing::Point(3, 2);
+			this->button1->Location = System::Drawing::Point(242, 79);
 			this->button1->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(207, 51);
@@ -1622,11 +1625,11 @@ private: System::Windows::Forms::Label^ label3;
 			// 
 			// pnlOfPanels
 			// 
-			this->pnlOfPanels->Controls->Add(this->pnlOfCourseGrades);
-			this->pnlOfPanels->Controls->Add(this->PnlOfFilter);
 			this->pnlOfPanels->Controls->Add(this->pnlOfregCourse);
 			this->pnlOfPanels->Controls->Add(this->pnlOfDetailsOfCourse);
 			this->pnlOfPanels->Controls->Add(this->pnlOfCoursesInProgress);
+			this->pnlOfPanels->Controls->Add(this->pnlOfCourseGrades);
+			this->pnlOfPanels->Controls->Add(this->PnlOfFilter);
 			this->pnlOfPanels->Location = System::Drawing::Point(-13, 0);
 			this->pnlOfPanels->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->pnlOfPanels->Name = L"pnlOfPanels";
@@ -1745,7 +1748,6 @@ private: System::Windows::Forms::Label^ label3;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox14))->EndInit();
 			this->pnlOfregCourse->ResumeLayout(false);
 			this->pnlOfregCourse->PerformLayout();
-			this->flowLayoutPanel2->ResumeLayout(false);
 			this->pnlOfPanels->ResumeLayout(false);
 			this->mstPanel->ResumeLayout(false);
 			this->ResumeLayout(false);
@@ -1858,6 +1860,8 @@ private: System::Windows::Forms::Label^ label3;
 		pnlOfCourseGrades->Visible = false;
 		pnlOfregCourse->Visible = false;
 
+		courseButton::alldetailsbtns->Clear();
+
 	}
 
 	private: System::Void btnCourseInProgress_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -1867,6 +1871,8 @@ private: System::Windows::Forms::Label^ label3;
 		pnlOfCoursesInProgress->Visible = true;
 		pnlOfCourseGrades->Visible = false;
 		pnlOfregCourse->Visible = false;
+
+		courseButton::alldetailsbtns->Clear();
 	}
 	private: System::Void btnCourseGrade_Click(System::Object^ sender, System::EventArgs^ e) {
 		sideBarTimer->Start();
@@ -1885,6 +1891,8 @@ private: System::Windows::Forms::Label^ label3;
 		pnlOfCoursesInProgress->Visible = false;
 		pnlOfCourseGrades->Visible = false;
 		pnlOfregCourse->Visible = false;
+
+		courseButton::alldetailsbtns->Clear();
 	}
 	private: System::Void btnGPA_Click(System::Object^ sender, System::EventArgs^ e) {
 		sideBarTimer->Start();
@@ -1894,6 +1902,9 @@ private: System::Windows::Forms::Label^ label3;
 		pnlOfCoursesInProgress->Visible = false;
 		pnlOfCourseGrades->Visible = false;
 		pnlOfregCourse->Visible = true;
+
+		flowLayoutPanel2->Controls->Clear();
+		courseButton::alldetailsbtns->Clear();
 	}
 
 
@@ -1965,7 +1976,7 @@ private: System::Void dropdowntimer_Tick(System::Object^ sender, System::EventAr
 	else {
 
 		flowLayoutPanel2->Height -= 15;
-		if (flowLayoutPanel2->Height <= 40)
+		if (flowLayoutPanel2->Height <= 0)
 		{
 			dropdowntimer->Stop();
 			expandd = false;
@@ -2609,6 +2620,8 @@ private: System::Void flowLayoutPanel5_Paint(System::Object^ sender, System::Win
 private: System::Void CGPALabel_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void label3_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void flowLayoutPanel2_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
 }
 };
 };
