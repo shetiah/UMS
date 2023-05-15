@@ -30,7 +30,9 @@ public ref class Student
 	List<String^>^ FinishedCourses;
 	List<float>^ coursesGPA;
 	List<String^>^ CoursesInProgress;
-	Dictionary<Course^, String^>^ eachCourseGrade;
+
+
+
 	Dictionary<String^, float>^ eachFinishedCourseGPA;
 public :
 
@@ -53,7 +55,6 @@ public :
 	void setMaxHoursAllowed(int MaxHoursAllowed);
 	void setGPA(float GPA);
 	void setCoursesGPA(List<float>^ coursesGPA);
-	void setEachCourseGrade(Dictionary<Course^, String^>^ eachCourseGrade);
 	void setEachFinishedCourseGPA(List<String^>^ FinishedCourses, List<float>^ coursesGPA);
 
 
@@ -70,7 +71,8 @@ public :
 	List<String^>^ getFinishedCourses();
 	List<float>^ getCoursesGPA();
 	float getGPA();
-	Dictionary<Course^, String^>^ getEachCourseGrade();
+
+
 	Dictionary<String^, float>^ getEachFinishedCourseGPA();
 
 

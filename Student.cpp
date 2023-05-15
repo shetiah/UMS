@@ -70,10 +70,6 @@ void Student::setCoursesGPA(List<float>^ coursesGPA)
 	this->coursesGPA = coursesGPA;
 }
 
-void Student::setEachCourseGrade(Dictionary<Course^, String^>^ eachCourseGrade)
-{
-	this->eachCourseGrade = eachCourseGrade;
-}
 
 void Student::setMaxHoursAllowed(int MaxHoursAllowed)
 {
@@ -147,10 +143,6 @@ float Student::getGPA()
 	return GPA;
 }
 
-Dictionary<Course^, String^>^ Student::getEachCourseGrade()
-{
-	return eachCourseGrade;
-}
 
 List<String^>^ Student::CoursesAV()
 {

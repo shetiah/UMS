@@ -23,14 +23,15 @@ public:
 	
 	void editCourseData(Course^ c, String^ name, String^ code, String^ instructor, int maxNumberOfStudents, int hours);
 	static void createStudent(String^ name, String^ password, int academicYear, int maxHoursAllowed, float GPA, List<String^>^ finishedCourses, List<String^>^ coursesInProgress, List<float>^ coursesGPA);
-	static void addCourse(Course^ course);
-	static void addCourseGrade(Course^ course, String^ grade,Student^ student);
+	static void addCourse(Course^ course);/*
+	static void addCourseGrade(Course^ course, String^ grade,Student^ student);*/
 	static void addCoursePreReq(Course^ course, List<String^>^ preList);
 	static bool changeCourseStatus(int studentID, String^ courseName, float GPA);
 	//files
 	static void loadAdminDataFromFile();
 	static void saveAdminDataToFile();
 	static float calc_CGPA(Student^ s);
+	static Dictionary<Course^, float>^ conversionFinishedCourseGpa(List<float>^,Student ^ s) ;
 	//log in
 	//DONE === create student
 	//add course and enter course prerequisite
