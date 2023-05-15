@@ -303,6 +303,8 @@ private: System::Windows::Forms::Label^ label3;
 			this->CoursesInProgressbt = (gcnew System::Windows::Forms::Button());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->pnlOfCourseGrades = (gcnew System::Windows::Forms::Panel());
+			this->CGPALabel = (gcnew System::Windows::Forms::Label());
+			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->viewgradesBt = (gcnew System::Windows::Forms::Button());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->viewbttt = (gcnew System::Windows::Forms::Button());
@@ -371,8 +373,6 @@ private: System::Windows::Forms::Label^ label3;
 			this->filterTimer = (gcnew System::Windows::Forms::Timer(this->components));
 			this->selectCoursetimer = (gcnew System::Windows::Forms::Timer(this->components));
 			this->viewGradesTiner = (gcnew System::Windows::Forms::Timer(this->components));
-			this->label3 = (gcnew System::Windows::Forms::Label());
-			this->CGPALabel = (gcnew System::Windows::Forms::Label());
 			this->sideBar->SuspendLayout();
 			this->panel1->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox13))->BeginInit();
@@ -842,6 +842,35 @@ private: System::Windows::Forms::Label^ label3;
 			this->pnlOfCourseGrades->Size = System::Drawing::Size(887, 519);
 			this->pnlOfCourseGrades->TabIndex = 2;
 			this->pnlOfCourseGrades->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &StudentPageForm::pnlOfCourseGrades_Paint);
+			// 
+			// CGPALabel
+			// 
+			this->CGPALabel->AutoSize = true;
+			this->CGPALabel->BackColor = System::Drawing::Color::Transparent;
+			this->CGPALabel->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->CGPALabel->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->CGPALabel->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F));
+			this->CGPALabel->Location = System::Drawing::Point(227, 340);
+			this->CGPALabel->Name = L"CGPALabel";
+			this->CGPALabel->Size = System::Drawing::Size(61, 28);
+			this->CGPALabel->TabIndex = 15;
+			this->CGPALabel->Text = L"CGPA";
+			this->CGPALabel->UseCompatibleTextRendering = true;
+			this->CGPALabel->Click += gcnew System::EventHandler(this, &StudentPageForm::CGPALabel_Click);
+			// 
+			// label3
+			// 
+			this->label3->AutoSize = true;
+			this->label3->BackColor = System::Drawing::Color::Transparent;
+			this->label3->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->label3->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->label3->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F));
+			this->label3->Location = System::Drawing::Point(65, 340);
+			this->label3->Name = L"label3";
+			this->label3->Size = System::Drawing::Size(146, 28);
+			this->label3->TabIndex = 14;
+			this->label3->Text = L"your CGPA is:->";
+			this->label3->UseCompatibleTextRendering = true;
 			// 
 			// viewgradesBt
 			// 
@@ -1643,35 +1672,6 @@ private: System::Windows::Forms::Label^ label3;
 			// viewGradesTiner
 			// 
 			this->viewGradesTiner->Tick += gcnew System::EventHandler(this, &StudentPageForm::viewGradesTiner_Tick);
-			// 
-			// label3
-			// 
-			this->label3->AutoSize = true;
-			this->label3->BackColor = System::Drawing::Color::Transparent;
-			this->label3->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->label3->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->label3->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F));
-			this->label3->Location = System::Drawing::Point(65, 340);
-			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(146, 28);
-			this->label3->TabIndex = 14;
-			this->label3->Text = L"your CGPA is:->";
-			this->label3->UseCompatibleTextRendering = true;
-			// 
-			// CGPALabel
-			// 
-			this->CGPALabel->AutoSize = true;
-			this->CGPALabel->BackColor = System::Drawing::Color::Transparent;
-			this->CGPALabel->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->CGPALabel->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->CGPALabel->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F));
-			this->CGPALabel->Location = System::Drawing::Point(215, 340);
-			this->CGPALabel->Name = L"CGPALabel";
-			this->CGPALabel->Size = System::Drawing::Size(61, 28);
-			this->CGPALabel->TabIndex = 15;
-			this->CGPALabel->Text = L"CGPA";
-			this->CGPALabel->UseCompatibleTextRendering = true;
-			this->CGPALabel->Click += gcnew System::EventHandler(this, &StudentPageForm::CGPALabel_Click);
 			// 
 			// StudentPageForm
 			// 
