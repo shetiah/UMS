@@ -211,7 +211,7 @@ namespace UMS {
 			// nameTextBox
 			// 
 			this->nameTextBox->Location = System::Drawing::Point(113, 27);
-			this->nameTextBox->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->nameTextBox->Margin = System::Windows::Forms::Padding(4);
 			this->nameTextBox->Name = L"nameTextBox";
 			this->nameTextBox->Size = System::Drawing::Size(132, 22);
 			this->nameTextBox->TabIndex = 3;
@@ -230,7 +230,7 @@ namespace UMS {
 			// hoursTextBox
 			// 
 			this->hoursTextBox->Location = System::Drawing::Point(113, 68);
-			this->hoursTextBox->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->hoursTextBox->Margin = System::Windows::Forms::Padding(4);
 			this->hoursTextBox->Name = L"hoursTextBox";
 			this->hoursTextBox->Size = System::Drawing::Size(132, 22);
 			this->hoursTextBox->TabIndex = 5;
@@ -268,7 +268,7 @@ namespace UMS {
 			// maxStudentsTextBox
 			// 
 			this->maxStudentsTextBox->Location = System::Drawing::Point(113, 114);
-			this->maxStudentsTextBox->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->maxStudentsTextBox->Margin = System::Windows::Forms::Padding(4);
 			this->maxStudentsTextBox->Name = L"maxStudentsTextBox";
 			this->maxStudentsTextBox->Size = System::Drawing::Size(132, 22);
 			this->maxStudentsTextBox->TabIndex = 9;
@@ -276,7 +276,7 @@ namespace UMS {
 			// instructorTextBox
 			// 
 			this->instructorTextBox->Location = System::Drawing::Point(113, 153);
-			this->instructorTextBox->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->instructorTextBox->Margin = System::Windows::Forms::Padding(4);
 			this->instructorTextBox->Name = L"instructorTextBox";
 			this->instructorTextBox->Size = System::Drawing::Size(132, 22);
 			this->instructorTextBox->TabIndex = 10;
@@ -284,7 +284,7 @@ namespace UMS {
 			// prereqTextBox
 			// 
 			this->prereqTextBox->Location = System::Drawing::Point(113, 196);
-			this->prereqTextBox->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->prereqTextBox->Margin = System::Windows::Forms::Padding(4);
 			this->prereqTextBox->Name = L"prereqTextBox";
 			this->prereqTextBox->Size = System::Drawing::Size(132, 22);
 			this->prereqTextBox->TabIndex = 11;
@@ -294,7 +294,7 @@ namespace UMS {
 			this->radioButton1->AutoSize = true;
 			this->radioButton1->Checked = true;
 			this->radioButton1->Location = System::Drawing::Point(19, 59);
-			this->radioButton1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->radioButton1->Margin = System::Windows::Forms::Padding(4);
 			this->radioButton1->Name = L"radioButton1";
 			this->radioButton1->Size = System::Drawing::Size(105, 20);
 			this->radioButton1->TabIndex = 12;
@@ -306,7 +306,7 @@ namespace UMS {
 			// 
 			this->radioButton2->AutoSize = true;
 			this->radioButton2->Location = System::Drawing::Point(19, 87);
-			this->radioButton2->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->radioButton2->Margin = System::Windows::Forms::Padding(4);
 			this->radioButton2->Name = L"radioButton2";
 			this->radioButton2->Size = System::Drawing::Size(76, 20);
 			this->radioButton2->TabIndex = 13;
@@ -336,7 +336,7 @@ namespace UMS {
 			// codeTextBox
 			// 
 			this->codeTextBox->Location = System::Drawing::Point(113, 242);
-			this->codeTextBox->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->codeTextBox->Margin = System::Windows::Forms::Padding(4);
 			this->codeTextBox->Name = L"codeTextBox";
 			this->codeTextBox->Size = System::Drawing::Size(132, 22);
 			this->codeTextBox->TabIndex = 16;

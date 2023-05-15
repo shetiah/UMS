@@ -214,12 +214,11 @@ float Admin::calc_CGPA(Student^ s)
 
 	for each (auto i in temp)
 	{
-	int hours = i.Key->getHours();
-	totalHours += hours;
+		int hours = i.Key->getHours();
+		totalHours += hours;
 	
-	cgpa += i.Value * hours;
-	
-}
+		cgpa += i.Value * hours;
+	}
 	cgpa /= totalHours;
 	return cgpa;
 }
