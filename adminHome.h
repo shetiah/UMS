@@ -1608,6 +1608,9 @@ private: System::Void addCourseBtn_Click(System::Object^ sender, System::EventAr
 	Admin::addCourse(newCourse);
 	Course::allCourses->Add(newCourse);
 	Course::eachCourseHours->Add(courseName, hours);
+	Course::saveCourseDataToFile();
+	Course::saveCourseContentToFile();
+	Course::saveCourseHoursToFile();
 	slabel->Visible = true;
 
 

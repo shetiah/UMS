@@ -216,50 +216,9 @@ float Admin::calc_CGPA(Student^ s)
 	{
 	int hours = i.Key->getHours();
 	totalHours += hours;
-
-	if (i.Value == 4.0) {
-		cgpa += 4.0 * hours;
-	}
-	else if (i.Value == 3.7)
-	{
-		cgpa += 3.7 * hours;
-	}
-	else if (i.Value == 3.3)
-	{
-		cgpa += 3.3 * hours;
-	}
-	else if (i.Value == 3.0)
-	{
-		cgpa += 3.0 * hours;
-	}
-	else if (i.Value == 2.7)
-	{
-		cgpa += 2.7 * hours;
-	}
-	else if (i.Value == 2.3)
-	{
-		cgpa += 2.3 * hours;
-	}
-	else if (i.Value == 2.0)
-	{
-		cgpa += 2.0 * hours;
-	}
-	else if (i.Value == 1.7)
-	{
-		cgpa += 1.7 * hours;
-	}
-	else if (i.Value == 1.3)
-	{
-		cgpa += 1.3 * hours;
-	}
-	else if (i.Value == 1.0)
-	{
-		cgpa += 1.0 * hours;
-	}
-	else if (i.Value == 0)
-	{
-		cgpa += 0;
-	}
+	
+	cgpa += i.Value * hours;
+	
 }
 	cgpa /= totalHours;
 	return cgpa;
