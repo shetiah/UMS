@@ -76,13 +76,11 @@ void Admin::addCourse(Course^ newCourse)
 	Course::allCourses->Add(newCourse);
 
 }
-
-void Admin::addCourseGrade(Course^ course, String^ grade,Student^ student) {
-Dictionary< Course^, String^ > ^temp= student->getEachCourseGrade();
-temp->Add(course, grade);
-student->setEachCourseGrade(temp);
-}
-
+//void Admin::addCourseGrade(Course^ course, String^ grade,Student^ student) {
+//Dictionary< Course^, String^ > ^temp= student->getEachCourseGrade();
+//temp->Add(course, grade);
+//student->setEachCourseGrade(temp);
+//}
 void Admin::addCoursePreReq(Course^ course, List<String^>^ preList) {
 	Course::preRequires->Add(course->getName(), preList);
 }
@@ -181,58 +179,90 @@ void Admin::saveAdminDataToFile()
 	}
 	file.close();
 }
+Dictionary<Course^, float>^ Admin::conversionFinishedCourseGpa(List<float>^ finishedcoursesGPAs,Student^ s)
+{
+	List<String^>^ Names=gcnew List<String^>;
+	List<float>^ GPAs = gcnew List<float>;
+	List<Course^>^ Courses=gcnew List<Course^>;
+
+	Dictionary<Course^, float>^ temp= gcnew Dictionary<Course^ ,float>;
+	
+	for each (auto course in Course::allCourses)
+	{
+
+		for each (auto coursename in s->getFinishedCourses())
+		{
+			if (course->getName() == coursename)
+			{
+				Courses->Add(course);
+			}
+		}
+
+	}
+	for (int i =0;i<Courses->Count;i++)
+	{
+			temp->Add(Courses[i], finishedcoursesGPAs[i]);
+
+	}
+	return temp;
+}
 float Admin::calc_CGPA(Student^ s)
 {
-	float cgpa = 0, totalHours = 0;
-	for each (auto i in s->getEachCourseGrade())
-	{
-		int hours = i.Key->getHours();
-		totalHours += hours;
+	float cgpa = 0, totalHours = 0;	
+	Dictionary<Course^, float>^ temp = gcnew Dictionary<Course^, float>;
+		temp=Admin::conversionFinishedCourseGpa(s->getCoursesGPA(), s);
 
-		if (i.Value == "A+" || i.Value == "A") {
-			cgpa += 4.0 * hours;
-		}
-		else if (i.Value == "A-")
-		{
-			cgpa += 3.7 * hours;
-		}
-		else if (i.Value == "B+")
-		{
-			cgpa += 3.3 * hours;
-		}
-		else if (i.Value == "B")
-		{
-			cgpa += 3.0 * hours;
-		}
-		else if (i.Value == "B-")
-		{
-			cgpa += 2.7 * hours;
-		}
-		else if (i.Value == "C+")
-		{
-			cgpa += 2.3 * hours;
-		}
-		else if (i.Value == "C")
-		{
-			cgpa += 2.0 * hours;
-		}
-		else if (i.Value == "C-")
-		{
-			cgpa += 1.7 * hours;
-		}
-		else if (i.Value == "D+")
-		{
-			cgpa += 1.3 * hours;
-		}
-		else if (i.Value == "D")
-		{
-			cgpa += 1.0 * hours;
-		}
-		else if (i.Value == "F")
-		{
-			cgpa += 0;
-		}
+	for each (auto i in temp)
+	{
+	int hours = i.Key->getHours();
+	totalHours += hours;
+
+	if (i.Value == 4.0) {
+		cgpa += 4.0 * hours;
 	}
+	else if (i.Value == 3.7)
+	{
+		cgpa += 3.7 * hours;
+	}
+	else if (i.Value == 3.3)
+	{
+		cgpa += 3.3 * hours;
+	}
+	else if (i.Value == 3.0)
+	{
+		cgpa += 3.0 * hours;
+	}
+	else if (i.Value == 2.7)
+	{
+		cgpa += 2.7 * hours;
+	}
+	else if (i.Value == 2.3)
+	{
+		cgpa += 2.3 * hours;
+	}
+	else if (i.Value == 2.0)
+	{
+		cgpa += 2.0 * hours;
+	}
+	else if (i.Value == 1.7)
+	{
+		cgpa += 1.7 * hours;
+	}
+	else if (i.Value == 1.3)
+	{
+		cgpa += 1.3 * hours;
+	}
+	else if (i.Value == 1.0)
+	{
+		cgpa += 1.0 * hours;
+	}
+	else if (i.Value == 0)
+	{
+		cgpa += 0;
+	}
+}
 	cgpa /= totalHours;
 	return cgpa;
 }
+
+

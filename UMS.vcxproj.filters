@@ -63,6 +63,9 @@
     <ClCompile Include="courseButton.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="CoursegGradeItem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Course.h">
@@ -108,6 +111,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="courseButton.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CoursegGradeItem.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

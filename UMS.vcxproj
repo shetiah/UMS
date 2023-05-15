@@ -127,6 +127,7 @@
     <ClCompile Include="adminHome.cpp" />
     <ClCompile Include="Course.cpp" />
     <ClCompile Include="courseButton.cpp" />
+    <ClCompile Include="CoursegGradeItem.cpp" />
     <ClCompile Include="courselistitem.cpp" />
     <ClCompile Include="Login.cpp" />
     <ClCompile Include="messagebox.cpp" />
@@ -151,6 +152,9 @@
     </ClInclude>
     <ClInclude Include="Course.h" />
     <ClInclude Include="courseButton.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
+    <ClInclude Include="CoursegGradeItem.h">
       <FileType>CppControl</FileType>
     </ClInclude>
     <ClInclude Include="courselistitem.h">
@@ -191,6 +195,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="courseButton.resx">
       <DependentUpon>courseButton.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CoursegGradeItem.resx">
+      <DependentUpon>CoursegGradeItem.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="courselistitem.resx">
       <DependentUpon>courselistitem.h</DependentUpon>

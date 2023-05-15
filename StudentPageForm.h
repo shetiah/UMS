@@ -7,6 +7,7 @@
 #include<iostream>
 #include "courselistitem.h"
 #include "courseButton.h"
+#include "CoursegGradeItem.h"
 //
 //inline void viewAvCourses(Student^ stud);
 
@@ -70,7 +71,7 @@ namespace UMS {
 
 	private: System::Windows::Forms::Label^ label1;
 	private: System::Windows::Forms::Panel^ pnlOfCourseGrades;
-	private: System::Windows::Forms::Label^ label2;
+
 	private: System::Windows::Forms::Panel^ pnlOfDetailsOfCourse;
 
 	private: System::Windows::Forms::Panel^ pnlOfCoursesInProgress;
@@ -180,6 +181,18 @@ private: System::Windows::Forms::Button^ viewerbt;
 
 private: System::Windows::Forms::Timer^ selectCoursetimer;
 private: System::Windows::Forms::Button^ btnFilter;
+private: System::Windows::Forms::Button^ viewgradesBt;
+private: System::Windows::Forms::FlowLayoutPanel^ flowLayoutPanel6;
+private: System::Windows::Forms::FlowLayoutPanel^ flowLayoutPanel5;
+private: System::Windows::Forms::Button^ viewbttt;
+
+private: System::Windows::Forms::Label^ label2;
+private: System::Windows::Forms::Timer^ viewGradesTiner;
+private: System::Windows::Forms::Label^ CGPALabel;
+private: System::Windows::Forms::Label^ label3;
+
+
+
 
 
 
@@ -272,6 +285,7 @@ private: System::Windows::Forms::Button^ btnFilter;
 			this->pictureBox13 = (gcnew System::Windows::Forms::PictureBox());
 			this->pictureBox16 = (gcnew System::Windows::Forms::PictureBox());
 			this->pnlbuttons = (gcnew System::Windows::Forms::Panel());
+			this->btnFilter = (gcnew System::Windows::Forms::Button());
 			this->btnregister = (gcnew System::Windows::Forms::Button());
 			this->btnCourseGrade = (gcnew System::Windows::Forms::Button());
 			this->btnDetailsOfCourse = (gcnew System::Windows::Forms::Button());
@@ -289,7 +303,13 @@ private: System::Windows::Forms::Button^ btnFilter;
 			this->CoursesInProgressbt = (gcnew System::Windows::Forms::Button());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->pnlOfCourseGrades = (gcnew System::Windows::Forms::Panel());
+			this->CGPALabel = (gcnew System::Windows::Forms::Label());
+			this->label3 = (gcnew System::Windows::Forms::Label());
+			this->viewgradesBt = (gcnew System::Windows::Forms::Button());
 			this->label2 = (gcnew System::Windows::Forms::Label());
+			this->viewbttt = (gcnew System::Windows::Forms::Button());
+			this->flowLayoutPanel6 = (gcnew System::Windows::Forms::FlowLayoutPanel());
+			this->flowLayoutPanel5 = (gcnew System::Windows::Forms::FlowLayoutPanel());
 			this->pnlOfDetailsOfCourse = (gcnew System::Windows::Forms::Panel());
 			this->viewbt = (gcnew System::Windows::Forms::Button());
 			this->flwpnldetCourse = (gcnew System::Windows::Forms::FlowLayoutPanel());
@@ -352,7 +372,7 @@ private: System::Windows::Forms::Button^ btnFilter;
 			this->dropdowndet = (gcnew System::Windows::Forms::Timer(this->components));
 			this->filterTimer = (gcnew System::Windows::Forms::Timer(this->components));
 			this->selectCoursetimer = (gcnew System::Windows::Forms::Timer(this->components));
-			this->btnFilter = (gcnew System::Windows::Forms::Button());
+			this->viewGradesTiner = (gcnew System::Windows::Forms::Timer(this->components));
 			this->sideBar->SuspendLayout();
 			this->panel1->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox13))->BeginInit();
@@ -507,6 +527,28 @@ private: System::Windows::Forms::Button^ btnFilter;
 			this->pnlbuttons->Size = System::Drawing::Size(289, 277);
 			this->pnlbuttons->TabIndex = 0;
 			// 
+			// btnFilter
+			// 
+			this->btnFilter->AutoSize = true;
+			this->btnFilter->FlatAppearance->BorderColor = System::Drawing::Color::Tan;
+			this->btnFilter->FlatAppearance->BorderSize = 2;
+			this->btnFilter->FlatAppearance->MouseDownBackColor = System::Drawing::Color::Brown;
+			this->btnFilter->FlatAppearance->MouseOverBackColor = System::Drawing::Color::LightSlateGray;
+			this->btnFilter->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->btnFilter->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F));
+			this->btnFilter->ForeColor = System::Drawing::Color::Tan;
+			this->btnFilter->Location = System::Drawing::Point(18, 30);
+			this->btnFilter->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->btnFilter->Name = L"btnFilter";
+			this->btnFilter->Size = System::Drawing::Size(264, 43);
+			this->btnFilter->TabIndex = 0;
+			this->btnFilter->Text = L"Filter Courses";
+			this->btnFilter->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->btnFilter->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageBeforeText;
+			this->btnFilter->UseCompatibleTextRendering = true;
+			this->btnFilter->UseVisualStyleBackColor = true;
+			this->btnFilter->Click += gcnew System::EventHandler(this, &StudentPageForm::btnFilter_Click);
+			// 
 			// btnregister
 			// 
 			this->btnregister->AutoSize = true;
@@ -597,10 +639,10 @@ private: System::Windows::Forms::Button^ btnFilter;
 			this->PnlOfFilter->Controls->Add(this->coursesviewFilterCourses);
 			this->PnlOfFilter->Controls->Add(this->filterflowlytpnl);
 			this->PnlOfFilter->Controls->Add(this->label1);
-			this->PnlOfFilter->Location = System::Drawing::Point(228, 2);
+			this->PnlOfFilter->Location = System::Drawing::Point(44, 2);
 			this->PnlOfFilter->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->PnlOfFilter->Name = L"PnlOfFilter";
-			this->PnlOfFilter->Size = System::Drawing::Size(655, 515);
+			this->PnlOfFilter->Size = System::Drawing::Size(954, 515);
 			this->PnlOfFilter->TabIndex = 1;
 			this->PnlOfFilter->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &StudentPageForm::PnlOfFilter_Paint);
 			// 
@@ -612,7 +654,7 @@ private: System::Windows::Forms::Button^ btnFilter;
 			this->viewerbt->FlatAppearance->MouseOverBackColor = System::Drawing::Color::Brown;
 			this->viewerbt->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->viewerbt->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F));
-			this->viewerbt->Location = System::Drawing::Point(499, 39);
+			this->viewerbt->Location = System::Drawing::Point(500, 55);
 			this->viewerbt->Name = L"viewerbt";
 			this->viewerbt->Size = System::Drawing::Size(184, 61);
 			this->viewerbt->TabIndex = 10;
@@ -631,9 +673,9 @@ private: System::Windows::Forms::Button^ btnFilter;
 			// 
 			// coursesviewFilterCourses
 			// 
-			this->coursesviewFilterCourses->Location = System::Drawing::Point(400, 110);
+			this->coursesviewFilterCourses->Location = System::Drawing::Point(433, 119);
 			this->coursesviewFilterCourses->Name = L"coursesviewFilterCourses";
-			this->coursesviewFilterCourses->Size = System::Drawing::Size(348, 510);
+			this->coursesviewFilterCourses->Size = System::Drawing::Size(327, 510);
 			this->coursesviewFilterCourses->TabIndex = 8;
 			// 
 			// filterflowlytpnl
@@ -787,22 +829,114 @@ private: System::Windows::Forms::Button^ btnFilter;
 			// 
 			// pnlOfCourseGrades
 			// 
+			this->pnlOfCourseGrades->Controls->Add(this->CGPALabel);
+			this->pnlOfCourseGrades->Controls->Add(this->label3);
+			this->pnlOfCourseGrades->Controls->Add(this->viewgradesBt);
 			this->pnlOfCourseGrades->Controls->Add(this->label2);
-			this->pnlOfCourseGrades->Location = System::Drawing::Point(231, 0);
+			this->pnlOfCourseGrades->Controls->Add(this->viewbttt);
+			this->pnlOfCourseGrades->Controls->Add(this->flowLayoutPanel6);
+			this->pnlOfCourseGrades->Controls->Add(this->flowLayoutPanel5);
+			this->pnlOfCourseGrades->Location = System::Drawing::Point(41, 0);
 			this->pnlOfCourseGrades->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->pnlOfCourseGrades->Name = L"pnlOfCourseGrades";
-			this->pnlOfCourseGrades->Size = System::Drawing::Size(649, 519);
+			this->pnlOfCourseGrades->Size = System::Drawing::Size(887, 519);
 			this->pnlOfCourseGrades->TabIndex = 2;
+			this->pnlOfCourseGrades->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &StudentPageForm::pnlOfCourseGrades_Paint);
+			// 
+			// CGPALabel
+			// 
+			this->CGPALabel->AutoSize = true;
+			this->CGPALabel->BackColor = System::Drawing::Color::Transparent;
+			this->CGPALabel->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->CGPALabel->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->CGPALabel->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F));
+			this->CGPALabel->Location = System::Drawing::Point(227, 340);
+			this->CGPALabel->Name = L"CGPALabel";
+			this->CGPALabel->Size = System::Drawing::Size(61, 28);
+			this->CGPALabel->TabIndex = 15;
+			this->CGPALabel->Text = L"CGPA";
+			this->CGPALabel->UseCompatibleTextRendering = true;
+			this->CGPALabel->Click += gcnew System::EventHandler(this, &StudentPageForm::CGPALabel_Click);
+			// 
+			// label3
+			// 
+			this->label3->AutoSize = true;
+			this->label3->BackColor = System::Drawing::Color::Transparent;
+			this->label3->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->label3->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->label3->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F));
+			this->label3->Location = System::Drawing::Point(65, 340);
+			this->label3->Name = L"label3";
+			this->label3->Size = System::Drawing::Size(146, 28);
+			this->label3->TabIndex = 14;
+			this->label3->Text = L"your CGPA is:->";
+			this->label3->UseCompatibleTextRendering = true;
+			// 
+			// viewgradesBt
+			// 
+			this->viewgradesBt->BackColor = System::Drawing::Color::Tan;
+			this->viewgradesBt->FlatAppearance->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(23)),
+				static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(31)));
+			this->viewgradesBt->FlatAppearance->BorderSize = 3;
+			this->viewgradesBt->FlatAppearance->MouseDownBackColor = System::Drawing::Color::Brown;
+			this->viewgradesBt->FlatAppearance->MouseOverBackColor = System::Drawing::Color::Brown;
+			this->viewgradesBt->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->viewgradesBt->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F));
+			this->viewgradesBt->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
+				static_cast<System::Int32>(static_cast<System::Byte>(31)));
+			this->viewgradesBt->Location = System::Drawing::Point(54, 47);
+			this->viewgradesBt->Name = L"viewgradesBt";
+			this->viewgradesBt->Size = System::Drawing::Size(207, 51);
+			this->viewgradesBt->TabIndex = 9;
+			this->viewgradesBt->Text = L"View Grades";
+			this->viewgradesBt->UseCompatibleTextRendering = true;
+			this->viewgradesBt->UseVisualStyleBackColor = false;
+			this->viewgradesBt->Click += gcnew System::EventHandler(this, &StudentPageForm::viewgradesBt_Click);
 			// 
 			// label2
 			// 
 			this->label2->AutoSize = true;
-			this->label2->Cursor = System::Windows::Forms::Cursors::WaitCursor;
-			this->label2->Location = System::Drawing::Point(-3, 0);
+			this->label2->BackColor = System::Drawing::Color::Transparent;
+			this->label2->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->label2->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->label2->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F));
+			this->label2->Location = System::Drawing::Point(3, 12);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(95, 16);
-			this->label2->TabIndex = 1;
-			this->label2->Text = L"CourseGrades";
+			this->label2->Size = System::Drawing::Size(588, 28);
+			this->label2->TabIndex = 13;
+			this->label2->Text = L"after selecting the course please click view to view your course:->";
+			this->label2->UseCompatibleTextRendering = true;
+			// 
+			// viewbttt
+			// 
+			this->viewbttt->BackColor = System::Drawing::Color::Tan;
+			this->viewbttt->FlatAppearance->BorderSize = 3;
+			this->viewbttt->FlatAppearance->MouseDownBackColor = System::Drawing::Color::Brown;
+			this->viewbttt->FlatAppearance->MouseOverBackColor = System::Drawing::Color::Brown;
+			this->viewbttt->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->viewbttt->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F));
+			this->viewbttt->Location = System::Drawing::Point(338, 188);
+			this->viewbttt->Name = L"viewbttt";
+			this->viewbttt->Size = System::Drawing::Size(184, 61);
+			this->viewbttt->TabIndex = 12;
+			this->viewbttt->Text = L"view";
+			this->viewbttt->UseVisualStyleBackColor = true;
+			this->viewbttt->Click += gcnew System::EventHandler(this, &StudentPageForm::button2_Click_2);
+			// 
+			// flowLayoutPanel6
+			// 
+			this->flowLayoutPanel6->Location = System::Drawing::Point(566, 54);
+			this->flowLayoutPanel6->Name = L"flowLayoutPanel6";
+			this->flowLayoutPanel6->Size = System::Drawing::Size(281, 412);
+			this->flowLayoutPanel6->TabIndex = 11;
+			// 
+			// flowLayoutPanel5
+			// 
+			this->flowLayoutPanel5->Location = System::Drawing::Point(54, 100);
+			this->flowLayoutPanel5->Name = L"flowLayoutPanel5";
+			this->flowLayoutPanel5->Size = System::Drawing::Size(207, 59);
+			this->flowLayoutPanel5->TabIndex = 10;
+			this->flowLayoutPanel5->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &StudentPageForm::flowLayoutPanel5_Paint);
 			// 
 			// pnlOfDetailsOfCourse
 			// 
@@ -810,10 +944,10 @@ private: System::Windows::Forms::Button^ btnFilter;
 			this->pnlOfDetailsOfCourse->Controls->Add(this->viewbt);
 			this->pnlOfDetailsOfCourse->Controls->Add(this->flwpnldetCourse);
 			this->pnlOfDetailsOfCourse->Controls->Add(this->flowLayoutPanel3);
-			this->pnlOfDetailsOfCourse->Location = System::Drawing::Point(227, 0);
+			this->pnlOfDetailsOfCourse->Location = System::Drawing::Point(44, 0);
 			this->pnlOfDetailsOfCourse->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->pnlOfDetailsOfCourse->Name = L"pnlOfDetailsOfCourse";
-			this->pnlOfDetailsOfCourse->Size = System::Drawing::Size(656, 517);
+			this->pnlOfDetailsOfCourse->Size = System::Drawing::Size(869, 517);
 			this->pnlOfDetailsOfCourse->TabIndex = 3;
 			this->pnlOfDetailsOfCourse->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &StudentPageForm::pnlOfDetailsOfCourse_Paint);
 			// 
@@ -825,7 +959,7 @@ private: System::Windows::Forms::Button^ btnFilter;
 			this->viewbt->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->viewbt->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 12, System::Drawing::FontStyle::Bold));
 			this->viewbt->ForeColor = System::Drawing::Color::Tan;
-			this->viewbt->Location = System::Drawing::Point(377, 46);
+			this->viewbt->Location = System::Drawing::Point(590, 46);
 			this->viewbt->Name = L"viewbt";
 			this->viewbt->Size = System::Drawing::Size(169, 60);
 			this->viewbt->TabIndex = 5;
@@ -911,10 +1045,10 @@ private: System::Windows::Forms::Button^ btnFilter;
 			this->pnlOfCoursesInProgress->Controls->Add(this->flowLayoutPanel1);
 			this->pnlOfCoursesInProgress->Controls->Add(this->coursesinprogHeaderpnl);
 			this->pnlOfCoursesInProgress->Dock = System::Windows::Forms::DockStyle::Right;
-			this->pnlOfCoursesInProgress->Location = System::Drawing::Point(228, 0);
+			this->pnlOfCoursesInProgress->Location = System::Drawing::Point(41, 0);
 			this->pnlOfCoursesInProgress->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->pnlOfCoursesInProgress->Name = L"pnlOfCoursesInProgress";
-			this->pnlOfCoursesInProgress->Size = System::Drawing::Size(652, 521);
+			this->pnlOfCoursesInProgress->Size = System::Drawing::Size(960, 521);
 			this->pnlOfCoursesInProgress->TabIndex = 4;
 			this->pnlOfCoursesInProgress->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &StudentPageForm::pnlOfCoursesInProgress_Paint);
 			// 
@@ -1416,10 +1550,10 @@ private: System::Windows::Forms::Button^ btnFilter;
 			this->pnlOfregCourse->Controls->Add(this->flowLayoutPanel2);
 			this->pnlOfregCourse->Controls->Add(this->reglb);
 			this->pnlOfregCourse->Cursor = System::Windows::Forms::Cursors::Arrow;
-			this->pnlOfregCourse->Location = System::Drawing::Point(228, 0);
+			this->pnlOfregCourse->Location = System::Drawing::Point(41, 0);
 			this->pnlOfregCourse->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->pnlOfregCourse->Name = L"pnlOfregCourse";
-			this->pnlOfregCourse->Size = System::Drawing::Size(655, 517);
+			this->pnlOfregCourse->Size = System::Drawing::Size(880, 517);
 			this->pnlOfregCourse->TabIndex = 5;
 			this->pnlOfregCourse->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &StudentPageForm::pnlOfregCourse_Paint);
 			// 
@@ -1487,15 +1621,15 @@ private: System::Windows::Forms::Button^ btnFilter;
 			// 
 			// pnlOfPanels
 			// 
+			this->pnlOfPanels->Controls->Add(this->pnlOfCourseGrades);
 			this->pnlOfPanels->Controls->Add(this->PnlOfFilter);
 			this->pnlOfPanels->Controls->Add(this->pnlOfregCourse);
 			this->pnlOfPanels->Controls->Add(this->pnlOfDetailsOfCourse);
 			this->pnlOfPanels->Controls->Add(this->pnlOfCoursesInProgress);
-			this->pnlOfPanels->Controls->Add(this->pnlOfCourseGrades);
-			this->pnlOfPanels->Location = System::Drawing::Point(-5, 0);
+			this->pnlOfPanels->Location = System::Drawing::Point(-13, 0);
 			this->pnlOfPanels->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->pnlOfPanels->Name = L"pnlOfPanels";
-			this->pnlOfPanels->Size = System::Drawing::Size(880, 521);
+			this->pnlOfPanels->Size = System::Drawing::Size(1001, 521);
 			this->pnlOfPanels->TabIndex = 2;
 			// 
 			// sideBarTimer
@@ -1510,12 +1644,12 @@ private: System::Windows::Forms::Button^ btnFilter;
 			this->mstPanel->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(233)), static_cast<System::Int32>(static_cast<System::Byte>(234)),
 				static_cast<System::Int32>(static_cast<System::Byte>(238)));
 			this->mstPanel->Controls->Add(this->pnlOfPanels);
-			this->mstPanel->Location = System::Drawing::Point(68, 0);
+			this->mstPanel->Location = System::Drawing::Point(259, 0);
 			this->mstPanel->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->mstPanel->MaximumSize = System::Drawing::Size(900, 519);
 			this->mstPanel->MinimumSize = System::Drawing::Size(653, 519);
 			this->mstPanel->Name = L"mstPanel";
-			this->mstPanel->Size = System::Drawing::Size(878, 519);
+			this->mstPanel->Size = System::Drawing::Size(900, 519);
 			this->mstPanel->TabIndex = 2;
 			this->mstPanel->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &StudentPageForm::mstPanel_Paint);
 			// 
@@ -1535,33 +1669,15 @@ private: System::Windows::Forms::Button^ btnFilter;
 			// 
 			this->selectCoursetimer->Tick += gcnew System::EventHandler(this, &StudentPageForm::selectCoursetimer_Tick);
 			// 
-			// btnFilter
+			// viewGradesTiner
 			// 
-			this->btnFilter->AutoSize = true;
-			this->btnFilter->FlatAppearance->BorderColor = System::Drawing::Color::Tan;
-			this->btnFilter->FlatAppearance->BorderSize = 2;
-			this->btnFilter->FlatAppearance->MouseDownBackColor = System::Drawing::Color::Brown;
-			this->btnFilter->FlatAppearance->MouseOverBackColor = System::Drawing::Color::LightSlateGray;
-			this->btnFilter->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->btnFilter->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F));
-			this->btnFilter->ForeColor = System::Drawing::Color::Tan;
-			this->btnFilter->Location = System::Drawing::Point(18, 30);
-			this->btnFilter->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
-			this->btnFilter->Name = L"btnFilter";
-			this->btnFilter->Size = System::Drawing::Size(264, 43);
-			this->btnFilter->TabIndex = 0;
-			this->btnFilter->Text = L"Filter Courses";
-			this->btnFilter->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->btnFilter->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageBeforeText;
-			this->btnFilter->UseCompatibleTextRendering = true;
-			this->btnFilter->UseVisualStyleBackColor = true;
-			this->btnFilter->Click += gcnew System::EventHandler(this, &StudentPageForm::btnFilter_Click);
+			this->viewGradesTiner->Tick += gcnew System::EventHandler(this, &StudentPageForm::viewGradesTiner_Tick);
 			// 
 			// StudentPageForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(944, 519);
+			this->ClientSize = System::Drawing::Size(1159, 519);
 			this->Controls->Add(this->sideBar);
 			this->Controls->Add(this->mstPanel);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
@@ -1639,7 +1755,7 @@ private: System::Windows::Forms::Button^ btnFilter;
 
 	public: bool loggedOut = false;
     public:List<courseButton^>^ RegisterCourseList = gcnew List<courseButton^>();
-    public:List<courseButton^>^ viewcourses = gcnew List<courseButton^>();
+    public:List<courseButton^>^ allgradesbtns = gcnew List<courseButton^>();
 	public:String^ filterchoice="";
 
 	public:static List<Button^>^ allbtns = gcnew List<Button^>();
@@ -1652,6 +1768,7 @@ private: System::Windows::Forms::Button^ btnFilter;
 		allbtns->Add(ElectiveCoursesBt);
 		allbtns->Add(RequiredCoursesbt);
 		allbtns->Add(AvailableCoursesbt);
+		flowLayoutPanel5->Height = 0;
 	}
 
 
@@ -1659,24 +1776,23 @@ private: System::Windows::Forms::Button^ btnFilter;
     private:void populateItems()
 	{
 
+		for each (auto course in Course::allCourses)
+		{
 
-			for each (auto course in Course::allCourses)
-			{
-				    
-					courselistitem^ temp = gcnew courselistitem;
+			courselistitem^ temp = gcnew courselistitem;
 
-					temp->setName(course->getName());
-					temp->setCode(course->getCode());
-					temp->setInstructor(course->getInstructor());
-					temp->setIsRequirement(course->getIsRequirement());
-					temp->setHours(course->getHours());
-					temp->setMaxNumberOfStudents(course->getMaxNumberOfStudents());
-					
-					flowLayoutPanel1->Controls->Add(temp);
-				
-			}
+			temp->setName(course->getName());
+			temp->setCode(course->getCode());
+			temp->setInstructor(course->getInstructor());
+			temp->setIsRequirement(course->getIsRequirement());
+			temp->setHours(course->getHours());
+			temp->setMaxNumberOfStudents(course->getMaxNumberOfStudents());
+
+			flowLayoutPanel1->Controls->Add(temp);
+
+		}
 		
-
+		CGPALabel->Text = Convert::ToString(Admin::calc_CGPA(student));
 
 			
 
@@ -1758,6 +1874,8 @@ private: System::Windows::Forms::Button^ btnFilter;
 		pnlOfCoursesInProgress->Visible = false;
 		pnlOfCourseGrades->Visible = true;
 		pnlOfregCourse->Visible = false;
+	
+		courseButton::alldetailsbtns->Clear();
 	}
 	private: System::Void btnDetailsOfCourse_Click(System::Object^ sender, System::EventArgs^ e) {
 		sideBarTimer->Start();
@@ -2081,7 +2199,6 @@ private: System::Void ElectiveCoursesBt_Click(System::Object^ sender, System::Ev
 		{
 			courseButton^ temp = gcnew courseButton;
 			temp->setCourseName(course->getName());
-			viewcourses->Add(temp);
 			flowLayoutPanel4->Controls->Add(temp);
 
 			courseButton::alldetailsbtns->Add(temp);
@@ -2140,7 +2257,6 @@ private: System::Void RequiredCoursesbt_Click(System::Object^ sender, System::Ev
 		{
 			courseButton^ temp = gcnew courseButton;
 			temp->setCourseName(course->getName());
-			viewcourses->Add(temp);
 			flowLayoutPanel4->Controls->Add(temp);
 
 			courseButton::alldetailsbtns->Add(temp);
@@ -2198,7 +2314,6 @@ private: System::Void AvailableCoursesbt_Click(System::Object^ sender, System::E
 		for each (auto course in student->FilterCourses(filterchoice))
 		{
 			courseButton^ temp = gcnew courseButton;
-			viewcourses->Add(temp);
 			temp->setCourseName(course->getName());
 
 			courseButton::alldetailsbtns->Add(temp);
@@ -2417,6 +2532,80 @@ private: System::Void viewerbt_Click(System::Object^ sender, System::EventArgs^ 
 	}
 }
 private: System::Void panel3_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
+}
+private: System::Void button2_Click_2(System::Object^ sender, System::EventArgs^ e) {
+	flowLayoutPanel6->Controls->Clear();
+	for each (auto i in courseButton::alldetailsbtns)
+	{
+		if (i->getBt()->BackColor ==Color::Brown)
+		{
+			CoursegGradeItem ^temp = gcnew CoursegGradeItem;
+			for each (auto j in Admin::conversionFinishedCourseGpa(student->getCoursesGPA(), student))
+			{
+				if (i->getCourseName() == j.Key->getName())
+				{
+					temp->setName(j.Key->getName());
+					temp->setCode(j.Key->getCode());
+					temp->setGrade(j.Value);
+					flowLayoutPanel6->Controls->Add(temp);
+				}
+			}
+		}
+	}
+}
+
+private: System::Void pnlOfCourseGrades_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
+}
+	   bool selected = false;
+private: System::Void viewgradesBt_Click(System::Object^ sender, System::EventArgs^ e) {
+	flowLayoutPanel6->Controls->Clear();
+	courseButton::courseDetails = true;
+	if (!selected)
+	{
+		for each (auto i in Admin::conversionFinishedCourseGpa(student->getCoursesGPA(), student)) {
+
+			courseButton^ temp = gcnew courseButton();
+			Course^ course = i.Key;
+			float gpaCourse = i.Value;
+			temp->setCourseName(course->getName());
+			courseButton::alldetailsbtns->Add(temp);
+			flowLayoutPanel5->Controls->Add(temp);
+		}
+	selected = true;
+	}
+	viewGradesTiner->Start();
+}
+	   
+bool viewgradesTimerbool = false;
+private: System::Void viewGradesTiner_Tick(System::Object^ sender, System::EventArgs^ e) {
+
+	if (!viewgradesTimerbool)
+	{
+		flowLayoutPanel5->Height += 40;
+		if (flowLayoutPanel5->Height >=(student->getFinishedCourses()->Count) * 60) {
+			viewGradesTiner->Stop();
+			viewgradesTimerbool = true;
+			selected = true;
+		}
+	}
+
+	else {
+		flowLayoutPanel5->Height -= 40;
+		if (flowLayoutPanel5->Height <= 0)
+		{
+			viewGradesTiner->Stop();
+			viewgradesTimerbool = false;
+			selected = false;
+			flowLayoutPanel5->Controls->Clear();
+			courseButton::alldetailsbtns->Clear();
+		}
+		
+
+	}
+}
+private: System::Void flowLayoutPanel5_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
+}
+private: System::Void CGPALabel_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 };
