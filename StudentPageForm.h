@@ -1967,7 +1967,7 @@ private: System::Void dropdowntimer_Tick(System::Object^ sender, System::EventAr
 	if (!expandd)
 	{
 		flowLayoutPanel2->Height += 15;
-		if (flowLayoutPanel2->Height >= Course::allCourses->Count * 35) {
+		if (flowLayoutPanel2->Height >= student.get * 35) {
 			dropdowntimer->Stop();
 			expandd = true;
 		}
