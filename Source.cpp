@@ -28,7 +28,6 @@ int main()
 	Student^ stud = nullptr;
 	Student::allStudents = gcnew List<Student^>();
 	Admin::allAdmins = gcnew List<Admin^>();
-	Course::allStudentInProgress = gcnew List<int>();
 	//fncs
 	Course::loadCourseDataFromFile();
 	Course::loadCourseContentFromFile();

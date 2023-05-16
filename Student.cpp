@@ -164,6 +164,7 @@ List<String^>^ Student::CoursesAV()
 				canBeAdded = false;
 				break;
 			}
+		
 		}
 		//checking if the course can be added and not already in progress and not finished
 		if (canBeAdded && !CoursesInProgress->Contains(courseToAdd) && !FinishedCourses->Contains(courseToAdd))
@@ -171,7 +172,7 @@ List<String^>^ Student::CoursesAV()
 			AvCourses->Add(courseToAdd);
 		}
 		//checking if course has no preRequisites
-		if (preReqs[0] == "0")
+		if (preReqs[0] == "0" && !CoursesInProgress->Contains(courseToAdd) && !FinishedCourses->Contains(courseToAdd))
 			AvCourses->Add(courseToAdd);
 	}
 
@@ -501,7 +502,7 @@ void Student::registerForCourse(Course^ course)
 		if (CoursesAV()->Contains(course->getName()))
 		{
 			CoursesInProgress->Add(course->getName());
-			course->allStudentInProgress->Add(getID());
+			//course->allStudentInProgress->Add(getID());
 		}
 
 }

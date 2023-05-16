@@ -199,11 +199,12 @@ namespace UMS {
 			List<Student^>^ S;/*
 			this->studentList->DataSource = course->allStudentInProgress;*/
 			int studentCount=0;
+			List<int>^ studentsInCourse = course->getAllStudentsInCourse();
 			for (int i = 0; i < Student::allStudents->Count; i++)
 			{
-				for (int j = 0; j < course->allStudentInProgress->Count; j++)
+				for (int j = 0; j < studentsInCourse->Count; j++)
 				{
-					if (Student::allStudents[i]->getID() == course->allStudentInProgress[j])
+					if (Student::allStudents[i]->getID() == studentsInCourse[j])
 					{
 						S[studentCount] = Student::allStudents[i];
 						studentCount++;
