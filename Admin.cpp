@@ -119,7 +119,7 @@ bool Admin::changeCourseStatus(int studentID, String^ courseName, float GPA)
 			List<String^>^ tempFinishedCourses = s->getFinishedCourses();
 			List<float>^ tempCoursesGPA = s->getCoursesGPA();
 			List<String^>^ tempCoursesInProgress = gcnew List<String^>();
-
+			bool courseFound = false;
 				for each (auto course in coursesInProgress)//looping in the courses in progress list
 				{
 					if (course == courseName) // got a match of course name in the list
@@ -127,11 +127,15 @@ bool Admin::changeCourseStatus(int studentID, String^ courseName, float GPA)
 						// add the course to our finished courses and coursesGPA
 						tempFinishedCourses->Add(course);
 						tempCoursesGPA->Add(GPA);
+						courseFound = true;
 					}
 					else
 						tempCoursesInProgress->Add(course);//updating the courses in progress with the new list
 
 				}
+				// return false if course not found in finished courses
+				if (!courseFound)
+					return false;
 				//updating the student with the new lists
 				s->setCoursesGPA(tempCoursesGPA);
 				s->setCoursesINProgress(tempCoursesInProgress);
