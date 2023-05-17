@@ -171,6 +171,7 @@ private: System::Windows::Forms::Button^ viewbt;
 
 
 
+
 	private: System::ComponentModel::IContainer^ components;
 
 
@@ -663,12 +664,12 @@ private: System::Windows::Forms::Button^ viewbt;
 			// studentnamepanel
 			// 
 			this->studentnamepanel->AutoScroll = true;
-			this->studentnamepanel->FlowDirection = System::Windows::Forms::FlowDirection::TopDown;
+			this->studentnamepanel->BackColor = System::Drawing::Color::Tan;
 			this->studentnamepanel->Location = System::Drawing::Point(275, 208);
 			this->studentnamepanel->Name = L"studentnamepanel";
-			this->studentnamepanel->Size = System::Drawing::Size(232, 290);
-			this->studentnamepanel->TabIndex = 14;
-			this->studentnamepanel->Visible = false;
+			this->studentnamepanel->Size = System::Drawing::Size(232, 277);
+			this->studentnamepanel->TabIndex = 4;
+			this->studentnamepanel->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &adminHome::studentnamepanel_Paint);
 			// 
 			// label14
 			// 
@@ -683,6 +684,7 @@ private: System::Windows::Forms::Button^ viewbt;
 			this->label14->TabIndex = 13;
 			this->label14->Text = L"not found:-> please enter another course name";
 			this->label14->Visible = false;
+			this->label14->Click += gcnew System::EventHandler(this, &adminHome::label14_Click);
 			// 
 			// panel6
 			// 
@@ -721,6 +723,7 @@ private: System::Windows::Forms::Button^ viewbt;
 			this->label13->Size = System::Drawing::Size(30, 20);
 			this->label13->TabIndex = 11;
 			this->label13->Text = L"no";
+			this->label13->Click += gcnew System::EventHandler(this, &adminHome::label13_Click);
 			// 
 			// label9
 			// 
@@ -1800,7 +1803,7 @@ private: System::Void panel8_Paint(System::Object^ sender, System::Windows::Form
 private: System::Void viewbt_Click(System::Object^ sender, System::EventArgs^ e) {
 	getstudentinAcourse(textBox1->Text);
 }
-	   public:List<studentname^>^ temps = gcnew List<studentname^>;
+public:List<studentname^>^ temps = gcnew List<studentname^>;
 public: Course^ searchforCourse(String^ courseName)
 {
 	for each (auto i in Course::allCourses)
@@ -1812,7 +1815,7 @@ public: Course^ searchforCourse(String^ courseName)
 }
 public: void getstudentinAcourse(String^ courseName)
 {
-	studentname^ temp = gcnew studentname;
+	
 	bool found = false;
 
 	Course^ searchedcourse = gcnew Course;
@@ -1820,6 +1823,11 @@ public: void getstudentinAcourse(String^ courseName)
 	if (searchedcourse == nullptr)
 	{
 		label14->Visible = true;
+		label9->Visible = false;
+		label13->Visible = false;
+		label12->Visible = false;
+		panel6->Visible = false;
+
 		studentnamepanel->Controls->Clear();
 		studentnamepanel->Visible = false;
 		temps->Clear();
@@ -1828,24 +1836,37 @@ public: void getstudentinAcourse(String^ courseName)
 	else {
 		label14->Visible = false;
 		searchedcourse->setAllStudentsInCourse();
+		studentnamepanel->Controls->Clear();
+		temps->Clear();
 		for each (auto i in  searchedcourse->getAllStudentsInCourse())
 		{
 			for each (auto student in Student::allStudents)
 			{
+				studentname^ temp = gcnew studentname;
 				if (student->getID() == i) {
 					found = true;
 					temp->setStudentname(student->getName());
-					temps->Add(temp);
 					studentnamepanel->Controls->Add(temp);
+					temps->Add(temp);
+					
+					
 				}
+				
 			}
+			
 		}
+		
 		if (found)
 		{
 			label13->Text = Convert::ToString(temps->Count);
 			panel6->Visible = true;
+			
 			studentnamepanel->Visible = true;
-			studentnamepanel->Height = 60 * studentnamepanel->Controls->Count;
+			label9->Visible = true;
+			label13->Visible = true;
+			label12->Visible = true;
+			
+			studentnamepanel->Height = 60 * temps->Count;
 		}
 		else
 		{
@@ -1854,6 +1875,12 @@ public: void getstudentinAcourse(String^ courseName)
 		}
 	}
 
+}
+private: System::Void label13_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void label14_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void studentnamepanel_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
 }
 };
 }

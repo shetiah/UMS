@@ -1410,6 +1410,7 @@ private: System::Windows::Forms::Label^ avcoursecount;
 			this->flowLayoutPanel1->Name = L"flowLayoutPanel1";
 			this->flowLayoutPanel1->Size = System::Drawing::Size(350, 515);
 			this->flowLayoutPanel1->TabIndex = 2;
+			this->flowLayoutPanel1->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &StudentPageForm::flowLayoutPanel1_Paint);
 			// 
 			// coursesinprogHeaderpnl
 			// 
@@ -1428,6 +1429,7 @@ private: System::Windows::Forms::Label^ avcoursecount;
 			this->coursesinprogHeaderpnl->Name = L"coursesinprogHeaderpnl";
 			this->coursesinprogHeaderpnl->Size = System::Drawing::Size(649, 85);
 			this->coursesinprogHeaderpnl->TabIndex = 45;
+			this->coursesinprogHeaderpnl->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &StudentPageForm::coursesinprogHeaderpnl_Paint);
 			// 
 			// pictureBox32
 			// 
@@ -1669,11 +1671,11 @@ private: System::Windows::Forms::Label^ avcoursecount;
 			// 
 			// pnlOfPanels
 			// 
-			this->pnlOfPanels->Controls->Add(this->pnlOfregCourse);
-			this->pnlOfPanels->Controls->Add(this->pnlOfDetailsOfCourse);
 			this->pnlOfPanels->Controls->Add(this->pnlOfCoursesInProgress);
 			this->pnlOfPanels->Controls->Add(this->pnlOfCourseGrades);
 			this->pnlOfPanels->Controls->Add(this->PnlOfFilter);
+			this->pnlOfPanels->Controls->Add(this->pnlOfregCourse);
+			this->pnlOfPanels->Controls->Add(this->pnlOfDetailsOfCourse);
 			this->pnlOfPanels->Location = System::Drawing::Point(-13, 0);
 			this->pnlOfPanels->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->pnlOfPanels->Name = L"pnlOfPanels";
@@ -2653,6 +2655,10 @@ private: System::Void CGPALabel_Click(System::Object^ sender, System::EventArgs^
 private: System::Void label3_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void flowLayoutPanel2_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
+}
+private: System::Void flowLayoutPanel1_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
+}
+private: System::Void coursesinprogHeaderpnl_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
 }
 };
 };
