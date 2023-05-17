@@ -135,6 +135,7 @@
     <ClCompile Include="Source.cpp" />
     <ClCompile Include="Student.cpp" />
     <ClCompile Include="StudentDataForm.cpp" />
+    <ClCompile Include="studentname.cpp" />
     <ClCompile Include="StudentPageForm.cpp" />
     <ClCompile Include="testtest.cpp" />
     <ClCompile Include="welcomeForm.cpp" />
@@ -169,9 +170,11 @@
     <ClInclude Include="SignUp.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="Student.h" />
     <ClInclude Include="StudentDataForm.h">
       <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="studentname.h">
+      <FileType>CppControl</FileType>
     </ClInclude>
     <ClInclude Include="StudentPageForm.h">
       <FileType>CppForm</FileType>
@@ -222,6 +225,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="StudentDataForm.resx">
       <DependentUpon>StudentDataForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="studentname.resx">
+      <DependentUpon>studentname.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StudentPageForm.resx">
       <DependentUpon>StudentPageForm.h</DependentUpon>
