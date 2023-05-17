@@ -1,5 +1,6 @@
 //#include "pch.h"
 #include "Course.h"
+#include "Student.h"
 #include <fstream>
 #include <string>
 Course::Course()
@@ -41,6 +42,25 @@ void Course::setHours(int hours) {
 	this->hours = hours;
 }
 
+void Course::setAllStudentsInCourse()
+{
+	List<int>^ temp = gcnew List<int>();
+	//looping on all students
+	for each (auto std in Student::allStudents)
+	{
+		//getting courses in progress for each student
+		List<String^>^ c = std->getCoursesINProgress();
+		//checking if our course is in the student's coursesInProgress
+		if (c->Contains(this->name))
+		{
+			//adding their id in temp list
+			temp->Add(std->getID());
+		}
+	}
+	//setting out attr. value
+	allStudentsInCourse = temp;
+}
+
 String^ Course::getName() {
 	return name;
 }
@@ -59,6 +79,10 @@ int Course::getMaxNumberOfStudents() {
 }
 int Course::getHours() {
 	return hours;
+}
+
+List<int>^ Course::getAllStudentsInCourse(){
+	return allStudentsInCourse;
 }
 
 

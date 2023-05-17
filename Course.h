@@ -19,6 +19,7 @@ private:
 	int maxNumberOfStudents;
     int hours;
 	
+	List<int>^ allStudentsInCourse;
 
 public:
 	
@@ -28,7 +29,6 @@ public:
 	static Dictionary<String^, int>^ eachCourseHours;
 
 	static List<Course^>^ allCourses;
-	static List<int>^ allStudentInProgress;
 	//constructor
 	Course();
 	Course(String^ name, String^ code, String^ instructor, bool isRequirement, int maxNumberOfStudents, int hours);
@@ -41,13 +41,17 @@ public:
 	void setIsRequirement(bool isRequirement);
 	void setMaxNumberOfStudents(int maxNumberOfStudents);
 	void setHours(int hours);
-
+	void setAllStudentsInCourse();
+	
+	
 	String^ getName();
 	String^ getCode();
 	String^ getInstructor();
 	bool getIsRequirement();
 	int getMaxNumberOfStudents();
 	int getHours();
+	List<int>^ getAllStudentsInCourse();
+
 
 	static void loadCourseDataFromFile();
 	static void saveCourseDataToFile();

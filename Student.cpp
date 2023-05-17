@@ -502,7 +502,7 @@ void Student::registerForCourse(Course^ course)
 		if (CoursesAV()->Contains(course->getName()))
 		{
 			CoursesInProgress->Add(course->getName());
-			course->allStudentInProgress->Add(getID());
+			//course->allStudentInProgress->Add(getID());
 		}
 
 }
