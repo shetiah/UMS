@@ -1619,6 +1619,7 @@ private: System::Windows::Forms::Label^ avcoursecount;
 			// button1
 			// 
 			this->button1->BackColor = System::Drawing::Color::Tan;
+			this->button1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
 			this->button1->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->button1->FlatAppearance->BorderSize = 3;
 			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
