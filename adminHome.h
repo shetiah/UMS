@@ -664,7 +664,7 @@ private: System::Windows::Forms::Button^ viewbt;
 			// studentnamepanel
 			// 
 			this->studentnamepanel->AutoScroll = true;
-			this->studentnamepanel->BackColor = System::Drawing::Color::Tan;
+			this->studentnamepanel->BackColor = System::Drawing::Color::Transparent;
 			this->studentnamepanel->Location = System::Drawing::Point(275, 208);
 			this->studentnamepanel->Name = L"studentnamepanel";
 			this->studentnamepanel->Size = System::Drawing::Size(232, 277);
