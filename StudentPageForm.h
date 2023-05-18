@@ -479,6 +479,7 @@ private: System::Windows::Forms::Label^ avcoursecount;
 			this->Exit->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->Exit->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
 				static_cast<System::Int32>(static_cast<System::Byte>(31)));
+			this->Exit->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->Exit->FlatAppearance->BorderSize = 3;
 			this->Exit->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->Exit->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F));

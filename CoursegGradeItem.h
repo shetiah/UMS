@@ -87,10 +87,10 @@ namespace UMS {
 			// pictureBox1
 			// 
 			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
-			this->pictureBox1->Location = System::Drawing::Point(82, 27);
+			this->pictureBox1->Location = System::Drawing::Point(27, 20);
 			this->pictureBox1->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->pictureBox1->Name = L"pictureBox1";
-			this->pictureBox1->Size = System::Drawing::Size(231, 169);
+			this->pictureBox1->Size = System::Drawing::Size(226, 162);
 			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->pictureBox1->TabIndex = 1;
 			this->pictureBox1->TabStop = false;
@@ -100,11 +100,11 @@ namespace UMS {
 			this->courseNameLb->AutoSize = true;
 			this->courseNameLb->Font = (gcnew System::Drawing::Font(L"Cooper Black", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->courseNameLb->Location = System::Drawing::Point(3, 229);
+			this->courseNameLb->Location = System::Drawing::Point(13, 217);
 			this->courseNameLb->Name = L"courseNameLb";
-			this->courseNameLb->Size = System::Drawing::Size(144, 23);
+			this->courseNameLb->Size = System::Drawing::Size(147, 23);
 			this->courseNameLb->TabIndex = 2;
-			this->courseNameLb->Text = L"course name:";
+			this->courseNameLb->Text = L"Course name:";
 			this->courseNameLb->Click += gcnew System::EventHandler(this, &CoursegGradeItem::courseNameLb_Click);
 			// 
 			// courseGradeLabel
@@ -112,7 +112,7 @@ namespace UMS {
 			this->courseGradeLabel->AutoSize = true;
 			this->courseGradeLabel->Font = (gcnew System::Drawing::Font(L"Cooper Black", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->courseGradeLabel->Location = System::Drawing::Point(3, 261);
+			this->courseGradeLabel->Location = System::Drawing::Point(13, 310);
 			this->courseGradeLabel->Name = L"courseGradeLabel";
 			this->courseGradeLabel->Size = System::Drawing::Size(78, 23);
 			this->courseGradeLabel->TabIndex = 3;
@@ -123,7 +123,7 @@ namespace UMS {
 			this->csnamelabel->AutoSize = true;
 			this->csnamelabel->Font = (gcnew System::Drawing::Font(L"Cooper Black", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->csnamelabel->Location = System::Drawing::Point(187, 235);
+			this->csnamelabel->Location = System::Drawing::Point(166, 223);
 			this->csnamelabel->Name = L"csnamelabel";
 			this->csnamelabel->Size = System::Drawing::Size(53, 17);
 			this->csnamelabel->TabIndex = 4;
@@ -134,18 +134,19 @@ namespace UMS {
 			this->Codelb->AutoSize = true;
 			this->Codelb->Font = (gcnew System::Drawing::Font(L"Cooper Black", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->Codelb->Location = System::Drawing::Point(3, 298);
+			this->Codelb->Location = System::Drawing::Point(13, 266);
 			this->Codelb->Name = L"Codelb";
 			this->Codelb->Size = System::Drawing::Size(66, 23);
 			this->Codelb->TabIndex = 5;
 			this->Codelb->Text = L"Code:";
+			this->Codelb->Click += gcnew System::EventHandler(this, &CoursegGradeItem::Codelb_Click);
 			// 
 			// csgradelabel
 			// 
 			this->csgradelabel->AutoSize = true;
 			this->csgradelabel->Font = (gcnew System::Drawing::Font(L"Cooper Black", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->csgradelabel->Location = System::Drawing::Point(187, 268);
+			this->csgradelabel->Location = System::Drawing::Point(166, 314);
 			this->csgradelabel->Name = L"csgradelabel";
 			this->csgradelabel->Size = System::Drawing::Size(53, 17);
 			this->csgradelabel->TabIndex = 6;
@@ -156,7 +157,7 @@ namespace UMS {
 			this->cscodelabel->AutoSize = true;
 			this->cscodelabel->Font = (gcnew System::Drawing::Font(L"Cooper Black", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->cscodelabel->Location = System::Drawing::Point(187, 298);
+			this->cscodelabel->Location = System::Drawing::Point(166, 270);
 			this->cscodelabel->Name = L"cscodelabel";
 			this->cscodelabel->Size = System::Drawing::Size(53, 17);
 			this->cscodelabel->TabIndex = 7;
@@ -186,5 +187,7 @@ namespace UMS {
 	}
 	private: System::Void CoursegGradeItem_Load(System::Object^ sender, System::EventArgs^ e) {
 	}
+private: System::Void Codelb_Click(System::Object^ sender, System::EventArgs^ e) {
+}
 };
 }
