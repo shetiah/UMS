@@ -305,6 +305,12 @@ void Student::saveStudentDataToFile() {
 		List<String^>^ coursesInProgress = i->getCoursesINProgress();
 		List<float>^   coursesGPA = i->getCoursesGPA();
 
+		if ( finishedCourses->Contains("0") && finishedCourses->Count>1)
+		{
+			finishedCourses->RemoveAt(0);
+			coursesGPA->RemoveAt(0);
+		}
+		
 		//convert from system::string to std::string
 		string name;
 		for each (wchar_t c in sysName)
