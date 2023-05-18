@@ -239,12 +239,13 @@ namespace UMS {
 			// 
 			// LOGINbt
 			// 
-			this->LOGINbt->BackColor = System::Drawing::Color::SteelBlue;
+			this->LOGINbt->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(26)), static_cast<System::Int32>(static_cast<System::Byte>(11)),
+				static_cast<System::Int32>(static_cast<System::Byte>(69)));
 			this->LOGINbt->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->LOGINbt->FlatAppearance->BorderSize = 0;
 			this->LOGINbt->FlatAppearance->MouseOverBackColor = System::Drawing::Color::Navy;
 			resources->ApplyResources(this->LOGINbt, L"LOGINbt");
-			this->LOGINbt->ForeColor = System::Drawing::Color::AliceBlue;
+			this->LOGINbt->ForeColor = System::Drawing::SystemColors::ControlLight;
 			this->LOGINbt->Name = L"LOGINbt";
 			this->LOGINbt->UseVisualStyleBackColor = false;
 			this->LOGINbt->Click += gcnew System::EventHandler(this, &Login::LOGINbt_Click_1);
@@ -253,14 +254,16 @@ namespace UMS {
 			// 
 			resources->ApplyResources(this->label3, L"label3");
 			this->label3->BackColor = System::Drawing::Color::Transparent;
-			this->label3->ForeColor = System::Drawing::Color::SteelBlue;
+			this->label3->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(26)), static_cast<System::Int32>(static_cast<System::Byte>(11)),
+				static_cast<System::Int32>(static_cast<System::Byte>(69)));
 			this->label3->Name = L"label3";
 			// 
 			// lbemail
 			// 
 			this->lbemail->Cursor = System::Windows::Forms::Cursors::Default;
 			resources->ApplyResources(this->lbemail, L"lbemail");
-			this->lbemail->ForeColor = System::Drawing::Color::SteelBlue;
+			this->lbemail->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(26)), static_cast<System::Int32>(static_cast<System::Byte>(11)),
+				static_cast<System::Int32>(static_cast<System::Byte>(69)));
 			this->lbemail->Name = L"lbemail";
 			// 
 			// tbemail
@@ -286,7 +289,8 @@ namespace UMS {
 			// 
 			this->label1->Cursor = System::Windows::Forms::Cursors::Default;
 			resources->ApplyResources(this->label1, L"label1");
-			this->label1->ForeColor = System::Drawing::Color::SteelBlue;
+			this->label1->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(26)), static_cast<System::Int32>(static_cast<System::Byte>(11)),
+				static_cast<System::Int32>(static_cast<System::Byte>(69)));
 			this->label1->Name = L"label1";
 			// 
 			// pictureBox2

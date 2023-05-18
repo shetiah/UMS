@@ -156,6 +156,9 @@ private: System::Windows::Forms::Label^ label12;
 private: System::Windows::Forms::Label^ label13;
 private: System::Windows::Forms::Label^ label9;
 private: System::Windows::Forms::Button^ viewbt;
+private: System::Windows::Forms::Label^ label15;
+private: System::Windows::Forms::Label^ label17;
+private: System::Windows::Forms::Label^ label16;
 
 
 
@@ -309,6 +312,9 @@ private: System::Windows::Forms::Button^ viewbt;
 			this->passText = (gcnew System::Windows::Forms::TextBox());
 			this->nameText = (gcnew System::Windows::Forms::TextBox());
 			this->pnlOfEditCourse = (gcnew System::Windows::Forms::Panel());
+			this->label15 = (gcnew System::Windows::Forms::Label());
+			this->label16 = (gcnew System::Windows::Forms::Label());
+			this->label17 = (gcnew System::Windows::Forms::Label());
 			this->sideBar->SuspendLayout();
 			this->pnlOfbtns->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox5))->BeginInit();
@@ -614,11 +620,11 @@ private: System::Windows::Forms::Button^ viewbt;
 			// 
 			// pnlOfPanels
 			// 
-			this->pnlOfPanels->Controls->Add(this->pnlOfStudentOfCourse);
-			this->pnlOfPanels->Controls->Add(this->pnlEditStudent);
 			this->pnlOfPanels->Controls->Add(this->pnlOfAddCourse);
 			this->pnlOfPanels->Controls->Add(this->pnlOfAddStudent);
 			this->pnlOfPanels->Controls->Add(this->pnlOfEditCourse);
+			this->pnlOfPanels->Controls->Add(this->pnlOfStudentOfCourse);
+			this->pnlOfPanels->Controls->Add(this->pnlEditStudent);
 			this->pnlOfPanels->Location = System::Drawing::Point(61, 0);
 			this->pnlOfPanels->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->pnlOfPanels->Name = L"pnlOfPanels";
@@ -652,7 +658,7 @@ private: System::Windows::Forms::Button^ viewbt;
 			this->viewbt->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F));
 			this->viewbt->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
 				static_cast<System::Int32>(static_cast<System::Byte>(31)));
-			this->viewbt->Location = System::Drawing::Point(658, 162);
+			this->viewbt->Location = System::Drawing::Point(688, 98);
 			this->viewbt->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->viewbt->Name = L"viewbt";
 			this->viewbt->Size = System::Drawing::Size(117, 38);
@@ -774,6 +780,7 @@ private: System::Windows::Forms::Button^ viewbt;
 			// pnlOfAddCourse
 			// 
 			this->pnlOfAddCourse->BackColor = System::Drawing::Color::White;
+			this->pnlOfAddCourse->Controls->Add(this->label15);
 			this->pnlOfAddCourse->Controls->Add(this->slabel);
 			this->pnlOfAddCourse->Controls->Add(this->label11);
 			this->pnlOfAddCourse->Controls->Add(this->addCourseBtn);
@@ -807,7 +814,7 @@ private: System::Windows::Forms::Button^ viewbt;
 			this->slabel->AutoSize = true;
 			this->slabel->BackColor = System::Drawing::Color::Transparent;
 			this->slabel->ForeColor = System::Drawing::Color::Blue;
-			this->slabel->Location = System::Drawing::Point(581, 319);
+			this->slabel->Location = System::Drawing::Point(630, 444);
 			this->slabel->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->slabel->Name = L"slabel";
 			this->slabel->Size = System::Drawing::Size(175, 16);
@@ -820,7 +827,7 @@ private: System::Windows::Forms::Button^ viewbt;
 			this->label11->AutoSize = true;
 			this->label11->BackColor = System::Drawing::Color::Transparent;
 			this->label11->ForeColor = System::Drawing::Color::Red;
-			this->label11->Location = System::Drawing::Point(548, 213);
+			this->label11->Location = System::Drawing::Point(614, 354);
 			this->label11->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label11->Name = L"label11";
 			this->label11->Size = System::Drawing::Size(214, 16);
@@ -832,12 +839,13 @@ private: System::Windows::Forms::Button^ viewbt;
 			// 
 			this->addCourseBtn->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
 				static_cast<System::Int32>(static_cast<System::Byte>(31)));
+			this->addCourseBtn->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->addCourseBtn->FlatAppearance->BorderSize = 0;
 			this->addCourseBtn->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->addCourseBtn->Font = (gcnew System::Drawing::Font(L"Segoe UI", 11.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->addCourseBtn->ForeColor = System::Drawing::Color::Tan;
-			this->addCourseBtn->Location = System::Drawing::Point(585, 247);
+			this->addCourseBtn->Location = System::Drawing::Point(632, 377);
 			this->addCourseBtn->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->addCourseBtn->Name = L"addCourseBtn";
 			this->addCourseBtn->Size = System::Drawing::Size(173, 55);
@@ -851,7 +859,7 @@ private: System::Windows::Forms::Button^ viewbt;
 			this->hlabel->AutoSize = true;
 			this->hlabel->BackColor = System::Drawing::Color::Transparent;
 			this->hlabel->ForeColor = System::Drawing::Color::Red;
-			this->hlabel->Location = System::Drawing::Point(272, 110);
+			this->hlabel->Location = System::Drawing::Point(514, 158);
 			this->hlabel->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->hlabel->Name = L"hlabel";
 			this->hlabel->Size = System::Drawing::Size(165, 16);
@@ -864,7 +872,7 @@ private: System::Windows::Forms::Button^ viewbt;
 			this->mlabel->AutoSize = true;
 			this->mlabel->BackColor = System::Drawing::Color::Transparent;
 			this->mlabel->ForeColor = System::Drawing::Color::Red;
-			this->mlabel->Location = System::Drawing::Point(272, 169);
+			this->mlabel->Location = System::Drawing::Point(514, 200);
 			this->mlabel->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->mlabel->Name = L"mlabel";
 			this->mlabel->Size = System::Drawing::Size(165, 16);
@@ -875,13 +883,14 @@ private: System::Windows::Forms::Button^ viewbt;
 			// Eradio
 			// 
 			this->Eradio->AutoSize = true;
-			this->Eradio->Font = (gcnew System::Drawing::Font(L"Segoe UI", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->Eradio->Font = (gcnew System::Drawing::Font(L"Cooper Black", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->Eradio->ForeColor = System::Drawing::Color::Gray;
-			this->Eradio->Location = System::Drawing::Point(552, 89);
+			this->Eradio->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(26)), static_cast<System::Int32>(static_cast<System::Byte>(11)),
+				static_cast<System::Int32>(static_cast<System::Byte>(69)));
+			this->Eradio->Location = System::Drawing::Point(404, 425);
 			this->Eradio->Margin = System::Windows::Forms::Padding(4);
 			this->Eradio->Name = L"Eradio";
-			this->Eradio->Size = System::Drawing::Size(75, 23);
+			this->Eradio->Size = System::Drawing::Size(84, 19);
 			this->Eradio->TabIndex = 30;
 			this->Eradio->Text = L"Elective";
 			this->Eradio->UseVisualStyleBackColor = true;
@@ -890,13 +899,14 @@ private: System::Windows::Forms::Button^ viewbt;
 			// 
 			this->Rradio->AutoSize = true;
 			this->Rradio->Checked = true;
-			this->Rradio->Font = (gcnew System::Drawing::Font(L"Segoe UI", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->Rradio->Font = (gcnew System::Drawing::Font(L"Cooper Black", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->Rradio->ForeColor = System::Drawing::Color::Gray;
-			this->Rradio->Location = System::Drawing::Point(552, 60);
+			this->Rradio->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(26)), static_cast<System::Int32>(static_cast<System::Byte>(11)),
+				static_cast<System::Int32>(static_cast<System::Byte>(69)));
+			this->Rradio->Location = System::Drawing::Point(404, 398);
 			this->Rradio->Margin = System::Windows::Forms::Padding(4);
 			this->Rradio->Name = L"Rradio";
-			this->Rradio->Size = System::Drawing::Size(108, 23);
+			this->Rradio->Size = System::Drawing::Size(117, 19);
 			this->Rradio->TabIndex = 29;
 			this->Rradio->TabStop = true;
 			this->Rradio->Text = L"Requirement";
@@ -905,18 +915,18 @@ private: System::Windows::Forms::Button^ viewbt;
 			// lblfgd
 			// 
 			this->lblfgd->AutoSize = true;
-			this->lblfgd->Font = (gcnew System::Drawing::Font(L"Segoe UI", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->lblfgd->ForeColor = System::Drawing::Color::Gray;
-			this->lblfgd->Location = System::Drawing::Point(548, 34);
+			this->lblfgd->Font = (gcnew System::Drawing::Font(L"Cooper Black", 9));
+			this->lblfgd->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(26)), static_cast<System::Int32>(static_cast<System::Byte>(11)),
+				static_cast<System::Int32>(static_cast<System::Byte>(69)));
+			this->lblfgd->Location = System::Drawing::Point(75, 399);
 			this->lblfgd->Name = L"lblfgd";
-			this->lblfgd->Size = System::Drawing::Size(268, 19);
+			this->lblfgd->Size = System::Drawing::Size(308, 17);
 			this->lblfgd->TabIndex = 28;
 			this->lblfgd->Text = L"Is this course Requirement or Elective \?";
 			// 
 			// ctxt
 			// 
-			this->ctxt->Location = System::Drawing::Point(227, 286);
+			this->ctxt->Location = System::Drawing::Point(227, 340);
 			this->ctxt->Margin = System::Windows::Forms::Padding(4);
 			this->ctxt->Multiline = true;
 			this->ctxt->Name = L"ctxt";
@@ -925,7 +935,7 @@ private: System::Windows::Forms::Button^ viewbt;
 			// 
 			// ptxt
 			// 
-			this->ptxt->Location = System::Drawing::Point(227, 236);
+			this->ptxt->Location = System::Drawing::Point(227, 295);
 			this->ptxt->Margin = System::Windows::Forms::Padding(4);
 			this->ptxt->Multiline = true;
 			this->ptxt->Name = L"ptxt";
@@ -934,7 +944,7 @@ private: System::Windows::Forms::Button^ viewbt;
 			// 
 			// itxt
 			// 
-			this->itxt->Location = System::Drawing::Point(227, 194);
+			this->itxt->Location = System::Drawing::Point(227, 243);
 			this->itxt->Margin = System::Windows::Forms::Padding(4);
 			this->itxt->Multiline = true;
 			this->itxt->Name = L"itxt";
@@ -943,7 +953,7 @@ private: System::Windows::Forms::Button^ viewbt;
 			// 
 			// mtxt
 			// 
-			this->mtxt->Location = System::Drawing::Point(227, 132);
+			this->mtxt->Location = System::Drawing::Point(227, 194);
 			this->mtxt->Margin = System::Windows::Forms::Padding(4);
 			this->mtxt->Multiline = true;
 			this->mtxt->Name = L"mtxt";
@@ -952,7 +962,7 @@ private: System::Windows::Forms::Button^ viewbt;
 			// 
 			// htxt
 			// 
-			this->htxt->Location = System::Drawing::Point(227, 73);
+			this->htxt->Location = System::Drawing::Point(227, 151);
 			this->htxt->Margin = System::Windows::Forms::Padding(4);
 			this->htxt->Multiline = true;
 			this->htxt->Name = L"htxt";
@@ -961,7 +971,7 @@ private: System::Windows::Forms::Button^ viewbt;
 			// 
 			// nTxt
 			// 
-			this->nTxt->Location = System::Drawing::Point(227, 20);
+			this->nTxt->Location = System::Drawing::Point(227, 104);
 			this->nTxt->Margin = System::Windows::Forms::Padding(4);
 			this->nTxt->Multiline = true;
 			this->nTxt->Name = L"nTxt";
@@ -971,84 +981,89 @@ private: System::Windows::Forms::Button^ viewbt;
 			// lbl7
 			// 
 			this->lbl7->AutoSize = true;
-			this->lbl7->Font = (gcnew System::Drawing::Font(L"Segoe UI", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->lbl7->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->lbl7->ForeColor = System::Drawing::Color::Gray;
-			this->lbl7->Location = System::Drawing::Point(112, 293);
+			this->lbl7->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(26)), static_cast<System::Int32>(static_cast<System::Byte>(11)),
+				static_cast<System::Int32>(static_cast<System::Byte>(69)));
+			this->lbl7->Location = System::Drawing::Point(77, 347);
 			this->lbl7->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lbl7->Name = L"lbl7";
-			this->lbl7->Size = System::Drawing::Size(46, 19);
+			this->lbl7->Size = System::Drawing::Size(53, 20);
 			this->lbl7->TabIndex = 21;
 			this->lbl7->Text = L"code:";
+			this->lbl7->Click += gcnew System::EventHandler(this, &adminHome::lbl7_Click);
 			// 
 			// lbl5
 			// 
 			this->lbl5->AutoSize = true;
-			this->lbl5->Font = (gcnew System::Drawing::Font(L"Segoe UI", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->lbl5->ForeColor = System::Drawing::Color::Gray;
-			this->lbl5->Location = System::Drawing::Point(112, 250);
+			this->lbl5->Font = (gcnew System::Drawing::Font(L"Cooper Black", 9));
+			this->lbl5->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(26)), static_cast<System::Int32>(static_cast<System::Byte>(11)),
+				static_cast<System::Int32>(static_cast<System::Byte>(69)));
+			this->lbl5->Location = System::Drawing::Point(78, 302);
 			this->lbl5->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lbl5->Name = L"lbl5";
-			this->lbl5->Size = System::Drawing::Size(100, 19);
+			this->lbl5->Size = System::Drawing::Size(114, 17);
 			this->lbl5->TabIndex = 20;
 			this->lbl5->Text = L"Prerequisites:";
 			// 
 			// lbl4
 			// 
 			this->lbl4->AutoSize = true;
-			this->lbl4->Font = (gcnew System::Drawing::Font(L"Segoe UI", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->lbl4->ForeColor = System::Drawing::Color::Gray;
-			this->lbl4->Location = System::Drawing::Point(112, 202);
+			this->lbl4->Font = (gcnew System::Drawing::Font(L"Cooper Black", 9));
+			this->lbl4->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(26)), static_cast<System::Int32>(static_cast<System::Byte>(11)),
+				static_cast<System::Int32>(static_cast<System::Byte>(69)));
+			this->lbl4->Location = System::Drawing::Point(78, 251);
 			this->lbl4->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lbl4->Name = L"lbl4";
-			this->lbl4->Size = System::Drawing::Size(78, 19);
+			this->lbl4->Size = System::Drawing::Size(93, 17);
 			this->lbl4->TabIndex = 19;
 			this->lbl4->Text = L"Instructor:";
 			// 
 			// lbl37
 			// 
 			this->lbl37->AutoSize = true;
-			this->lbl37->Font = (gcnew System::Drawing::Font(L"Segoe UI", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->lbl37->ForeColor = System::Drawing::Color::Gray;
-			this->lbl37->Location = System::Drawing::Point(109, 137);
+			this->lbl37->Font = (gcnew System::Drawing::Font(L"Cooper Black", 9));
+			this->lbl37->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(26)), static_cast<System::Int32>(static_cast<System::Byte>(11)),
+				static_cast<System::Int32>(static_cast<System::Byte>(69)));
+			this->lbl37->Location = System::Drawing::Point(75, 204);
 			this->lbl37->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lbl37->Name = L"lbl37";
-			this->lbl37->Size = System::Drawing::Size(103, 19);
+			this->lbl37->Size = System::Drawing::Size(117, 17);
 			this->lbl37->TabIndex = 18;
 			this->lbl37->Text = L"Max Students:";
 			// 
 			// lbl2
 			// 
 			this->lbl2->AutoSize = true;
-			this->lbl2->Font = (gcnew System::Drawing::Font(L"Segoe UI", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->lbl2->ForeColor = System::Drawing::Color::Gray;
-			this->lbl2->Location = System::Drawing::Point(112, 79);
+			this->lbl2->Font = (gcnew System::Drawing::Font(L"Cooper Black", 9));
+			this->lbl2->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(26)), static_cast<System::Int32>(static_cast<System::Byte>(11)),
+				static_cast<System::Int32>(static_cast<System::Byte>(69)));
+			this->lbl2->Location = System::Drawing::Point(78, 153);
 			this->lbl2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lbl2->Name = L"lbl2";
-			this->lbl2->Size = System::Drawing::Size(53, 19);
+			this->lbl2->Size = System::Drawing::Size(59, 17);
 			this->lbl2->TabIndex = 17;
 			this->lbl2->Text = L"Hours:";
 			// 
 			// lbl1
 			// 
 			this->lbl1->AutoSize = true;
-			this->lbl1->Font = (gcnew System::Drawing::Font(L"Segoe UI", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->lbl1->Font = (gcnew System::Drawing::Font(L"Cooper Black", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->lbl1->ForeColor = System::Drawing::Color::Gray;
-			this->lbl1->Location = System::Drawing::Point(112, 25);
+			this->lbl1->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(26)), static_cast<System::Int32>(static_cast<System::Byte>(11)),
+				static_cast<System::Int32>(static_cast<System::Byte>(69)));
+			this->lbl1->Location = System::Drawing::Point(79, 110);
 			this->lbl1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lbl1->Name = L"lbl1";
-			this->lbl1->Size = System::Drawing::Size(103, 19);
+			this->lbl1->Size = System::Drawing::Size(113, 17);
 			this->lbl1->TabIndex = 16;
 			this->lbl1->Text = L"Course Name:";
 			// 
 			// pnlOfAddStudent
 			// 
 			this->pnlOfAddStudent->BackColor = System::Drawing::Color::White;
+			this->pnlOfAddStudent->Controls->Add(this->label17);
+			this->pnlOfAddStudent->Controls->Add(this->label16);
 			this->pnlOfAddStudent->Controls->Add(this->GradesLabel);
 			this->pnlOfAddStudent->Controls->Add(this->gpaLabel);
 			this->pnlOfAddStudent->Controls->Add(this->hoursLabel);
@@ -1070,7 +1085,7 @@ private: System::Windows::Forms::Button^ viewbt;
 			this->GradesLabel->Font = (gcnew System::Drawing::Font(L"Segoe UI", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->GradesLabel->ForeColor = System::Drawing::Color::Red;
-			this->GradesLabel->Location = System::Drawing::Point(654, 372);
+			this->GradesLabel->Location = System::Drawing::Point(644, 376);
 			this->GradesLabel->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->GradesLabel->Name = L"GradesLabel";
 			this->GradesLabel->Size = System::Drawing::Size(151, 19);
@@ -1084,7 +1099,7 @@ private: System::Windows::Forms::Button^ viewbt;
 			this->gpaLabel->Font = (gcnew System::Drawing::Font(L"Segoe UI", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->gpaLabel->ForeColor = System::Drawing::Color::Red;
-			this->gpaLabel->Location = System::Drawing::Point(654, 280);
+			this->gpaLabel->Location = System::Drawing::Point(644, 299);
 			this->gpaLabel->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->gpaLabel->Name = L"gpaLabel";
 			this->gpaLabel->Size = System::Drawing::Size(151, 19);
@@ -1098,7 +1113,7 @@ private: System::Windows::Forms::Button^ viewbt;
 			this->hoursLabel->Font = (gcnew System::Drawing::Font(L"Segoe UI", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->hoursLabel->ForeColor = System::Drawing::Color::Red;
-			this->hoursLabel->Location = System::Drawing::Point(654, 240);
+			this->hoursLabel->Location = System::Drawing::Point(644, 252);
 			this->hoursLabel->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->hoursLabel->Name = L"hoursLabel";
 			this->hoursLabel->Size = System::Drawing::Size(151, 19);
@@ -1112,7 +1127,7 @@ private: System::Windows::Forms::Button^ viewbt;
 			this->yearLabel->Font = (gcnew System::Drawing::Font(L"Segoe UI", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->yearLabel->ForeColor = System::Drawing::Color::Red;
-			this->yearLabel->Location = System::Drawing::Point(654, 201);
+			this->yearLabel->Location = System::Drawing::Point(644, 212);
 			this->yearLabel->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->yearLabel->Name = L"yearLabel";
 			this->yearLabel->Size = System::Drawing::Size(151, 19);
@@ -1127,7 +1142,7 @@ private: System::Windows::Forms::Button^ viewbt;
 			this->sucssLabel->Font = (gcnew System::Drawing::Font(L"Segoe UI", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->sucssLabel->ForeColor = System::Drawing::Color::MediumBlue;
-			this->sucssLabel->Location = System::Drawing::Point(295, 482);
+			this->sucssLabel->Location = System::Drawing::Point(654, 508);
 			this->sucssLabel->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->sucssLabel->Name = L"sucssLabel";
 			this->sucssLabel->Size = System::Drawing::Size(197, 20);
@@ -1141,7 +1156,7 @@ private: System::Windows::Forms::Button^ viewbt;
 			this->allTxtLabel->Font = (gcnew System::Drawing::Font(L"Segoe UI", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->allTxtLabel->ForeColor = System::Drawing::Color::Red;
-			this->allTxtLabel->Location = System::Drawing::Point(70, 482);
+			this->allTxtLabel->Location = System::Drawing::Point(654, 445);
 			this->allTxtLabel->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->allTxtLabel->Name = L"allTxtLabel";
 			this->allTxtLabel->Size = System::Drawing::Size(185, 20);
@@ -1151,16 +1166,18 @@ private: System::Windows::Forms::Button^ viewbt;
 			// 
 			// btnSave
 			// 
-			this->btnSave->BackColor = System::Drawing::Color::DodgerBlue;
+			this->btnSave->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(26)), static_cast<System::Int32>(static_cast<System::Byte>(11)),
+				static_cast<System::Int32>(static_cast<System::Byte>(69)));
 			this->btnSave->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btnSave->FlatAppearance->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)),
+				static_cast<System::Int32>(static_cast<System::Byte>(224)), static_cast<System::Int32>(static_cast<System::Byte>(192)));
 			this->btnSave->FlatAppearance->BorderSize = 0;
-			this->btnSave->FlatAppearance->MouseDownBackColor = System::Drawing::Color::Gray;
-			this->btnSave->FlatAppearance->MouseOverBackColor = System::Drawing::Color::LightGreen;
+			this->btnSave->FlatAppearance->MouseDownBackColor = System::Drawing::Color::Brown;
+			this->btnSave->FlatAppearance->MouseOverBackColor = System::Drawing::Color::Brown;
 			this->btnSave->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->btnSave->Font = (gcnew System::Drawing::Font(L"Segoe UI", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->btnSave->ForeColor = System::Drawing::Color::White;
-			this->btnSave->Location = System::Drawing::Point(685, 473);
+			this->btnSave->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F));
+			this->btnSave->ForeColor = System::Drawing::Color::Tan;
+			this->btnSave->Location = System::Drawing::Point(676, 467);
 			this->btnSave->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->btnSave->Name = L"btnSave";
 			this->btnSave->Size = System::Drawing::Size(139, 39);
@@ -1187,7 +1204,7 @@ private: System::Windows::Forms::Button^ viewbt;
 			this->pnlOfData->Controls->Add(this->yearText);
 			this->pnlOfData->Controls->Add(this->passText);
 			this->pnlOfData->Controls->Add(this->nameText);
-			this->pnlOfData->Location = System::Drawing::Point(109, 98);
+			this->pnlOfData->Location = System::Drawing::Point(106, 121);
 			this->pnlOfData->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->pnlOfData->Name = L"pnlOfData";
 			this->pnlOfData->Size = System::Drawing::Size(531, 368);
@@ -1197,7 +1214,7 @@ private: System::Windows::Forms::Button^ viewbt;
 			// 
 			this->gradesText->Font = (gcnew System::Drawing::Font(L"Segoe UI", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->gradesText->Location = System::Drawing::Point(175, 274);
+			this->gradesText->Location = System::Drawing::Point(187, 250);
 			this->gradesText->Margin = System::Windows::Forms::Padding(4);
 			this->gradesText->Multiline = true;
 			this->gradesText->Name = L"gradesText";
@@ -1209,7 +1226,7 @@ private: System::Windows::Forms::Button^ viewbt;
 			// 
 			this->inCoursesText->Font = (gcnew System::Drawing::Font(L"Segoe UI", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->inCoursesText->Location = System::Drawing::Point(175, 319);
+			this->inCoursesText->Location = System::Drawing::Point(187, 292);
 			this->inCoursesText->Margin = System::Windows::Forms::Padding(4);
 			this->inCoursesText->Multiline = true;
 			this->inCoursesText->Name = L"inCoursesText";
@@ -1220,7 +1237,7 @@ private: System::Windows::Forms::Button^ viewbt;
 			// 
 			this->FcoursesText->Font = (gcnew System::Drawing::Font(L"Segoe UI", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->FcoursesText->Location = System::Drawing::Point(175, 229);
+			this->FcoursesText->Location = System::Drawing::Point(187, 207);
 			this->FcoursesText->Margin = System::Windows::Forms::Padding(4);
 			this->FcoursesText->Multiline = true;
 			this->FcoursesText->Name = L"FcoursesText";
@@ -1232,12 +1249,12 @@ private: System::Windows::Forms::Button^ viewbt;
 			// 
 			this->label8->AutoSize = true;
 			this->label8->BackColor = System::Drawing::Color::Transparent;
-			this->label8->Font = (gcnew System::Drawing::Font(L"Segoe UI", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->label8->ForeColor = System::Drawing::Color::Gray;
-			this->label8->Location = System::Drawing::Point(9, 274);
+			this->label8->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F));
+			this->label8->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(26)), static_cast<System::Int32>(static_cast<System::Byte>(11)),
+				static_cast<System::Int32>(static_cast<System::Byte>(69)));
+			this->label8->Location = System::Drawing::Point(17, 252);
 			this->label8->Name = L"label8";
-			this->label8->Size = System::Drawing::Size(60, 19);
+			this->label8->Size = System::Drawing::Size(75, 20);
 			this->label8->TabIndex = 19;
 			this->label8->Text = L"Grades:";
 			// 
@@ -1245,12 +1262,12 @@ private: System::Windows::Forms::Button^ viewbt;
 			// 
 			this->label6->AutoSize = true;
 			this->label6->BackColor = System::Drawing::Color::Transparent;
-			this->label6->Font = (gcnew System::Drawing::Font(L"Segoe UI", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->label6->ForeColor = System::Drawing::Color::Gray;
-			this->label6->Location = System::Drawing::Point(9, 322);
+			this->label6->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F));
+			this->label6->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(26)), static_cast<System::Int32>(static_cast<System::Byte>(11)),
+				static_cast<System::Int32>(static_cast<System::Byte>(69)));
+			this->label6->Location = System::Drawing::Point(3, 291);
 			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(148, 19);
+			this->label6->Size = System::Drawing::Size(187, 20);
 			this->label6->TabIndex = 17;
 			this->label6->Text = L"Courses In Progress :";
 			this->label6->Click += gcnew System::EventHandler(this, &adminHome::label6_Click);
@@ -1259,12 +1276,12 @@ private: System::Windows::Forms::Button^ viewbt;
 			// 
 			this->label5->AutoSize = true;
 			this->label5->BackColor = System::Drawing::Color::Transparent;
-			this->label5->Font = (gcnew System::Drawing::Font(L"Segoe UI", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->label5->ForeColor = System::Drawing::Color::Gray;
-			this->label5->Location = System::Drawing::Point(15, 187);
+			this->label5->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F));
+			this->label5->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(26)), static_cast<System::Int32>(static_cast<System::Byte>(11)),
+				static_cast<System::Int32>(static_cast<System::Byte>(69)));
+			this->label5->Location = System::Drawing::Point(17, 177);
 			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(41, 19);
+			this->label5->Size = System::Drawing::Size(54, 20);
 			this->label5->TabIndex = 16;
 			this->label5->Text = L"GPA:";
 			this->label5->Click += gcnew System::EventHandler(this, &adminHome::label5_Click);
@@ -1273,12 +1290,12 @@ private: System::Windows::Forms::Button^ viewbt;
 			// 
 			this->label7->AutoSize = true;
 			this->label7->BackColor = System::Drawing::Color::Transparent;
-			this->label7->Font = (gcnew System::Drawing::Font(L"Segoe UI", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->label7->ForeColor = System::Drawing::Color::Gray;
-			this->label7->Location = System::Drawing::Point(9, 229);
+			this->label7->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F));
+			this->label7->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(26)), static_cast<System::Int32>(static_cast<System::Byte>(11)),
+				static_cast<System::Int32>(static_cast<System::Byte>(69)));
+			this->label7->Location = System::Drawing::Point(8, 211);
 			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(123, 19);
+			this->label7->Size = System::Drawing::Size(160, 20);
 			this->label7->TabIndex = 18;
 			this->label7->Text = L"Finished Courses:";
 			// 
@@ -1286,12 +1303,12 @@ private: System::Windows::Forms::Button^ viewbt;
 			// 
 			this->label4->AutoSize = true;
 			this->label4->BackColor = System::Drawing::Color::Transparent;
-			this->label4->Font = (gcnew System::Drawing::Font(L"Segoe UI", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->label4->ForeColor = System::Drawing::Color::Gray;
-			this->label4->Location = System::Drawing::Point(15, 139);
+			this->label4->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F));
+			this->label4->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(26)), static_cast<System::Int32>(static_cast<System::Byte>(11)),
+				static_cast<System::Int32>(static_cast<System::Byte>(69)));
+			this->label4->Location = System::Drawing::Point(17, 130);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(86, 19);
+			this->label4->Size = System::Drawing::Size(106, 20);
 			this->label4->TabIndex = 15;
 			this->label4->Text = L"Max Hours:";
 			this->label4->Click += gcnew System::EventHandler(this, &adminHome::label4_Click);
@@ -1300,12 +1317,12 @@ private: System::Windows::Forms::Button^ viewbt;
 			// 
 			this->label3->AutoSize = true;
 			this->label3->BackColor = System::Drawing::Color::Transparent;
-			this->label3->Font = (gcnew System::Drawing::Font(L"Segoe UI", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->label3->ForeColor = System::Drawing::Color::Gray;
-			this->label3->Location = System::Drawing::Point(9, 103);
+			this->label3->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F));
+			this->label3->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(26)), static_cast<System::Int32>(static_cast<System::Byte>(11)),
+				static_cast<System::Int32>(static_cast<System::Byte>(69)));
+			this->label3->Location = System::Drawing::Point(15, 92);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(114, 19);
+			this->label3->Size = System::Drawing::Size(143, 20);
 			this->label3->TabIndex = 14;
 			this->label3->Text = L"Academic Year:";
 			this->label3->Click += gcnew System::EventHandler(this, &adminHome::label3_Click);
@@ -1314,12 +1331,12 @@ private: System::Windows::Forms::Button^ viewbt;
 			// 
 			this->label2->AutoSize = true;
 			this->label2->BackColor = System::Drawing::Color::Transparent;
-			this->label2->Font = (gcnew System::Drawing::Font(L"Segoe UI", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->label2->ForeColor = System::Drawing::Color::Gray;
-			this->label2->Location = System::Drawing::Point(15, 57);
+			this->label2->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F));
+			this->label2->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(26)), static_cast<System::Int32>(static_cast<System::Byte>(11)),
+				static_cast<System::Int32>(static_cast<System::Byte>(69)));
+			this->label2->Location = System::Drawing::Point(14, 53);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(77, 19);
+			this->label2->Size = System::Drawing::Size(99, 20);
 			this->label2->TabIndex = 13;
 			this->label2->Text = L"Password:";
 			this->label2->Click += gcnew System::EventHandler(this, &adminHome::label2_Click);
@@ -1328,12 +1345,13 @@ private: System::Windows::Forms::Button^ viewbt;
 			// 
 			this->label1->AutoSize = true;
 			this->label1->BackColor = System::Drawing::Color::Transparent;
-			this->label1->Font = (gcnew System::Drawing::Font(L"Segoe UI", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->label1->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label1->ForeColor = System::Drawing::Color::Gray;
-			this->label1->Location = System::Drawing::Point(16, 14);
+			this->label1->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(26)), static_cast<System::Int32>(static_cast<System::Byte>(11)),
+				static_cast<System::Int32>(static_cast<System::Byte>(69)));
+			this->label1->Location = System::Drawing::Point(15, 20);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(53, 19);
+			this->label1->Size = System::Drawing::Size(63, 20);
 			this->label1->TabIndex = 12;
 			this->label1->Text = L"Name:";
 			this->label1->Click += gcnew System::EventHandler(this, &adminHome::label1_Click);
@@ -1343,7 +1361,7 @@ private: System::Windows::Forms::Button^ viewbt;
 			this->gpaText->Font = (gcnew System::Drawing::Font(L"Segoe UI", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->gpaText->ForeColor = System::Drawing::SystemColors::WindowText;
-			this->gpaText->Location = System::Drawing::Point(175, 179);
+			this->gpaText->Location = System::Drawing::Point(187, 173);
 			this->gpaText->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->gpaText->Multiline = true;
 			this->gpaText->Name = L"gpaText";
@@ -1356,7 +1374,7 @@ private: System::Windows::Forms::Button^ viewbt;
 			this->HoursText->Font = (gcnew System::Drawing::Font(L"Segoe UI", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->HoursText->ForeColor = System::Drawing::SystemColors::WindowText;
-			this->HoursText->Location = System::Drawing::Point(175, 139);
+			this->HoursText->Location = System::Drawing::Point(187, 130);
 			this->HoursText->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->HoursText->Multiline = true;
 			this->HoursText->Name = L"HoursText";
@@ -1369,7 +1387,7 @@ private: System::Windows::Forms::Button^ viewbt;
 			this->yearText->Font = (gcnew System::Drawing::Font(L"Segoe UI", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->yearText->ForeColor = System::Drawing::SystemColors::WindowText;
-			this->yearText->Location = System::Drawing::Point(175, 96);
+			this->yearText->Location = System::Drawing::Point(187, 88);
 			this->yearText->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->yearText->Multiline = true;
 			this->yearText->Name = L"yearText";
@@ -1382,7 +1400,7 @@ private: System::Windows::Forms::Button^ viewbt;
 			this->passText->Font = (gcnew System::Drawing::Font(L"Segoe UI", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->passText->ForeColor = System::Drawing::SystemColors::WindowText;
-			this->passText->Location = System::Drawing::Point(175, 52);
+			this->passText->Location = System::Drawing::Point(187, 51);
 			this->passText->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->passText->Multiline = true;
 			this->passText->Name = L"passText";
@@ -1396,7 +1414,7 @@ private: System::Windows::Forms::Button^ viewbt;
 			this->nameText->Font = (gcnew System::Drawing::Font(L"Segoe UI", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->nameText->ForeColor = System::Drawing::SystemColors::WindowText;
-			this->nameText->Location = System::Drawing::Point(175, 9);
+			this->nameText->Location = System::Drawing::Point(187, 16);
 			this->nameText->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->nameText->Multiline = true;
 			this->nameText->Name = L"nameText";
@@ -1413,6 +1431,38 @@ private: System::Windows::Forms::Button^ viewbt;
 			this->pnlOfEditCourse->Name = L"pnlOfEditCourse";
 			this->pnlOfEditCourse->Size = System::Drawing::Size(867, 535);
 			this->pnlOfEditCourse->TabIndex = 3;
+			// 
+			// label15
+			// 
+			this->label15->AutoSize = true;
+			this->label15->Font = (gcnew System::Drawing::Font(L"Cooper Black", 22.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label15->ForeColor = System::Drawing::Color::Tan;
+			this->label15->Location = System::Drawing::Point(9, 13);
+			this->label15->Name = L"label15";
+			this->label15->Size = System::Drawing::Size(241, 42);
+			this->label15->TabIndex = 36;
+			this->label15->Text = L"Add course:";
+			// 
+			// label16
+			// 
+			this->label16->AutoSize = true;
+			this->label16->Location = System::Drawing::Point(49, 92);
+			this->label16->Name = L"label16";
+			this->label16->Size = System::Drawing::Size(0, 16);
+			this->label16->TabIndex = 24;
+			// 
+			// label17
+			// 
+			this->label17->AutoSize = true;
+			this->label17->Font = (gcnew System::Drawing::Font(L"Cooper Black", 22.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label17->ForeColor = System::Drawing::Color::Tan;
+			this->label17->Location = System::Drawing::Point(13, 71);
+			this->label17->Name = L"label17";
+			this->label17->Size = System::Drawing::Size(269, 42);
+			this->label17->TabIndex = 25;
+			this->label17->Text = L"Add Student:";
 			// 
 			// adminHome
 			// 
@@ -1881,6 +1931,8 @@ private: System::Void label13_Click(System::Object^ sender, System::EventArgs^ e
 private: System::Void label14_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void studentnamepanel_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
+}
+private: System::Void lbl7_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }
