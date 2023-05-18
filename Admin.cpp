@@ -109,11 +109,11 @@ String^ Admin::getPasswordAdmin() {
 }
 
 //returns true if course status is changed, otherwise false
-bool Admin::changeCourseStatus(int studentID, String^ courseName, float GPA)
+bool Admin::changeCourseStatus(String^ studentname, String^ courseName, float GPA)
 {
 	for each (auto s in Student::allStudents)
 	{
-		if (s->getID() == studentID)//got a match of the student in our students list
+		if (s->getName() == studentname)//got a match of the student in our students list
 		{
 			List<String^>^ coursesInProgress = s->getCoursesINProgress();
 			List<String^>^ tempFinishedCourses = s->getFinishedCourses();

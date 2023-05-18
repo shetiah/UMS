@@ -18,7 +18,7 @@ x
 7)3.6
 8)0
 9)0
-c)halland,teuty
+c)halland,teuty,operation systems
 x
 1)maya mohamed
 2)2023025@cis.com

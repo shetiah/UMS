@@ -26,7 +26,7 @@ public:
 	static void addCourse(Course^ course);
 	//static void addCourseGrade(Course^ course, String^ grade,Student^ student);
 	static void addCoursePreReq(Course^ course, List<String^>^ preList);
-	static bool changeCourseStatus(int studentID, String^ courseName, float GPA);
+	static bool changeCourseStatus(String^ name, String^ courseName, float GPA);
 	static float calc_CGPA(Student^ s);
 	static Dictionary<Course^, float>^ conversionFinishedCourseGpa(List<float>^,Student ^ s) ;
 	

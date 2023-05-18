@@ -8,6 +8,8 @@ using namespace System::Data;
 using namespace System::Drawing;
 
 
+using namespace System::Collections::Generic;
+
 namespace UMS {
 
 	/// <summary>
@@ -47,9 +49,14 @@ namespace UMS {
 		System::ComponentModel::Container ^components;
 
 #pragma region MyRegion
-	private :String^ studentName;
-	public :String^ getStudentname();
-	public	 :void setStudentname(String^ student);
+	private:String^ studentName;
+	public:String^ getStudentname();
+	public:void setStudentname(String^ student);
+	public:Button^ bt = gcnew Button;
+	public:Button^ getBt();
+	public:void setBtColor(Color color);
+	public:void setforecolor(Color color);
+	public:static List<studentname^>^ allbtns = gcnew List<studentname^>;
 #pragma endregion
 
 #pragma region Windows Form Designer generated code
@@ -97,6 +104,27 @@ namespace UMS {
 		}
 #pragma endregion
 	private: System::Void studentnamebt_Click(System::Object^ sender, System::EventArgs^ e) {
+		if (studentnamebt->BackColor == ColorTranslator::FromHtml("#17171F")) {
+			studentnamebt->BackColor = Color::Brown;
+			studentnamebt->ForeColor = Color::White;
+			
+			for each (auto i in this->allbtns)
+			{
+
+				if (i->studentnamebt != this->studentnamebt)
+				{
+					i->studentnamebt->BackColor = ColorTranslator::FromHtml("#17171F");
+					i->studentnamebt->ForeColor = Color::Tan;
+				}
+
+			}
+		}
+		else
+		{
+			studentnamebt->BackColor = ColorTranslator::FromHtml("#17171F");
+			studentnamebt->ForeColor = Color::White;
+		
+		}
 	}
 	};
 }
