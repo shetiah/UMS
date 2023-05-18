@@ -279,6 +279,7 @@ private: System::Windows::Forms::Label^ label26;
 			this->pnlOfPanels = (gcnew System::Windows::Forms::Panel());
 			this->pnlOfEditCourse = (gcnew System::Windows::Forms::Panel());
 			this->button3 = (gcnew System::Windows::Forms::Button());
+			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
 			this->choosestdbt = (gcnew System::Windows::Forms::Button());
 			this->stdpanel = (gcnew System::Windows::Forms::FlowLayoutPanel());
