@@ -172,8 +172,8 @@ private: System::Windows::Forms::Label^ label22;
 private: System::Windows::Forms::Label^ label21;
 private: System::Windows::Forms::Label^ label20;
 private: System::Windows::Forms::TextBox^ textBox2;
-private: System::Windows::Forms::PictureBox^ pictureBox6;
-private: System::Windows::Forms::Button^ button2;
+private: System::Windows::Forms::PictureBox^ pictureBox6;/*
+private: System::Windows::Forms::Button^ button2;*/
 
 private: System::Windows::Forms::Button^ button3;
 private: System::Windows::Forms::TextBox^ textBox3;
@@ -376,7 +376,7 @@ private: System::Windows::Forms::Label^ label26;
 			// 
 			this->sideBar->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
 				static_cast<System::Int32>(static_cast<System::Byte>(31)));
-			this->sideBar->Controls->Add(this->button2);
+			/*this->sideBar->Controls->Add(this->button2);*/
 			this->sideBar->Controls->Add(this->pictureBox6);
 			this->sideBar->Controls->Add(this->pnlOfbtns);
 			this->sideBar->Location = System::Drawing::Point(0, 0);
