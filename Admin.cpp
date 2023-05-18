@@ -140,6 +140,7 @@ bool Admin::changeCourseStatus(String^ studentname, String^ courseName, float GP
 				s->setCoursesGPA(tempCoursesGPA);
 				s->setCoursesINProgress(tempCoursesInProgress);
 				s->setFinishedCourses(tempFinishedCourses);
+				Student::saveStudentDataToFile();
 				return true;
 		}
 	}
