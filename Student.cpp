@@ -81,11 +81,11 @@ void Student::setGPA(float GPA)
 	this->GPA = GPA;
 }
 
-void Student::setEachFinishedCourseGPA(List<String^>^ FinishedCourses, List<float>^ coursesGPA)
+void Student::setEachFinishedCourseGPA()
 {
 	for (int i = 0; i < coursesGPA->Count; i++)
 	{
-		eachFinishedCourseGPA->Add(FinishedCourses[i], coursesGPA[i]);
+		eachFinishedCourseGPA->Add(this->FinishedCourses[i], coursesGPA[i]);
 	}
 }
 

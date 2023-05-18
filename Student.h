@@ -55,7 +55,7 @@ public :
 	void setMaxHoursAllowed(int MaxHoursAllowed);
 	void setGPA(float GPA);
 	void setCoursesGPA(List<float>^ coursesGPA);
-	void setEachFinishedCourseGPA(List<String^>^ FinishedCourses, List<float>^ coursesGPA);
+	void setEachFinishedCourseGPA();
 
 
 
