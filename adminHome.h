@@ -199,6 +199,7 @@ private: System::Windows::Forms::TextBox^ textBox6;
 private: System::Windows::Forms::Panel^ panel11;
 private: System::Windows::Forms::Button^ StudentData;
 private: System::Windows::Forms::PictureBox^ pictureBox8;
+private: System::Windows::Forms::Panel^ panel5;
 
 
 
@@ -392,6 +393,7 @@ private: System::Windows::Forms::PictureBox^ pictureBox8;
 			this->label9 = (gcnew System::Windows::Forms::Label());
 			this->label10 = (gcnew System::Windows::Forms::Label());
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
+			this->panel5 = (gcnew System::Windows::Forms::Panel());
 			this->sideBar->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox6))->BeginInit();
 			this->pnlOfbtns->SuspendLayout();
@@ -452,6 +454,7 @@ private: System::Windows::Forms::PictureBox^ pictureBox8;
 			// 
 			// pnlOfbtns
 			// 
+			this->pnlOfbtns->Controls->Add(this->panel5);
 			this->pnlOfbtns->Controls->Add(this->pictureBox8);
 			this->pnlOfbtns->Controls->Add(this->panel4);
 			this->pnlOfbtns->Controls->Add(this->panel3);
@@ -754,7 +757,7 @@ private: System::Windows::Forms::PictureBox^ pictureBox8;
 			this->pnlEditStudent->Location = System::Drawing::Point(0, -68);
 			this->pnlEditStudent->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->pnlEditStudent->Name = L"pnlEditStudent";
-			this->pnlEditStudent->Size = System::Drawing::Size(985, 541);
+			this->pnlEditStudent->Size = System::Drawing::Size(909, 541);
 			this->pnlEditStudent->TabIndex = 4;
 			this->pnlEditStudent->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &adminHome::pnlEditStudent_Paint);
 			// 
@@ -765,7 +768,7 @@ private: System::Windows::Forms::PictureBox^ pictureBox8;
 			this->panel11->Controls->Add(this->pictureBox7);
 			this->panel11->Controls->Add(this->label27);
 			this->panel11->Controls->Add(this->pictureBox44);
-			this->panel11->Location = System::Drawing::Point(11, 73);
+			this->panel11->Location = System::Drawing::Point(9, 81);
 			this->panel11->Name = L"panel11";
 			this->panel11->Size = System::Drawing::Size(853, 436);
 			this->panel11->TabIndex = 9;
@@ -2062,6 +2065,15 @@ private: System::Windows::Forms::PictureBox^ pictureBox8;
 			this->textBox1->Size = System::Drawing::Size(587, 27);
 			this->textBox1->TabIndex = 0;
 			this->textBox1->TextChanged += gcnew System::EventHandler(this, &adminHome::textBox1_TextChanged);
+			// 
+			// panel5
+			// 
+			this->panel5->BackColor = System::Drawing::Color::Tan;
+			this->panel5->Location = System::Drawing::Point(0, 219);
+			this->panel5->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->panel5->Name = L"panel5";
+			this->panel5->Size = System::Drawing::Size(7, 46);
+			this->panel5->TabIndex = 9;
 			// 
 			// adminHome
 			// 

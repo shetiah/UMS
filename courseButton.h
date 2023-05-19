@@ -150,7 +150,7 @@ namespace UMS {
 		else
 		{
 			courselab->BackColor = ColorTranslator::FromHtml("#17171F");
-			courselab->ForeColor = Color::White;
+			courselab->ForeColor = Color::Tan;
 			isselected = false;
 		}
 	}

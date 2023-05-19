@@ -105,7 +105,8 @@ namespace UMS {
 
 	private: System::Windows::Forms::Timer^ dropdowntimer;
 
-	private: System::Windows::Forms::FlowLayoutPanel^ flowLayoutPanel3;
+
+
 
 	private: System::Windows::Forms::Timer^ dropdowndet;
 	private: System::Windows::Forms::Button^ savebt;
@@ -160,7 +161,7 @@ private: System::Windows::Forms::PictureBox^ pictureBox34;
 private: System::Windows::Forms::PictureBox^ pictureBox33;
 private: System::Windows::Forms::FlowLayoutPanel^ flwpnldetCourse;
 private: System::Windows::Forms::Button^ viewbt;
-private: System::Windows::Forms::Button^ button3;
+
 private: System::Windows::Forms::Button^ logoutbt;
 private: System::Windows::Forms::Button^ Exit;
 private: System::Windows::Forms::FlowLayoutPanel^ filterflowlytpnl;
@@ -226,6 +227,11 @@ private: System::Windows::Forms::Label^ label17;
 private: System::Windows::Forms::Label^ label18;
 private: System::Windows::Forms::PictureBox^ pictureBox50;
 private: System::Windows::Forms::PictureBox^ pictureBox49;
+private: System::Windows::Forms::Button^ slctcourseCDetailsbt;
+
+private: System::Windows::Forms::FlowLayoutPanel^ flowLayoutPanel3;
+
+
 
 
 
@@ -363,10 +369,10 @@ private: System::Windows::Forms::PictureBox^ pictureBox49;
 			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->pnlOfDetailsOfCourse = (gcnew System::Windows::Forms::Panel());
+			this->flowLayoutPanel3 = (gcnew System::Windows::Forms::FlowLayoutPanel());
+			this->slctcourseCDetailsbt = (gcnew System::Windows::Forms::Button());
 			this->viewbt = (gcnew System::Windows::Forms::Button());
 			this->flwpnldetCourse = (gcnew System::Windows::Forms::FlowLayoutPanel());
-			this->flowLayoutPanel3 = (gcnew System::Windows::Forms::FlowLayoutPanel());
-			this->button3 = (gcnew System::Windows::Forms::Button());
 			this->pnlOfCoursesInProgress = (gcnew System::Windows::Forms::Panel());
 			this->pictureBox43 = (gcnew System::Windows::Forms::PictureBox());
 			this->pictureBox42 = (gcnew System::Windows::Forms::PictureBox());
@@ -457,7 +463,6 @@ private: System::Windows::Forms::PictureBox^ pictureBox49;
 			this->pnlOfCourseGrades->SuspendLayout();
 			this->editpanel->SuspendLayout();
 			this->pnlOfDetailsOfCourse->SuspendLayout();
-			this->flowLayoutPanel3->SuspendLayout();
 			this->pnlOfCoursesInProgress->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox43))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox42))->BeginInit();
@@ -1238,15 +1243,47 @@ private: System::Windows::Forms::PictureBox^ pictureBox49;
 			// pnlOfDetailsOfCourse
 			// 
 			this->pnlOfDetailsOfCourse->AutoScroll = true;
+			this->pnlOfDetailsOfCourse->Controls->Add(this->flowLayoutPanel3);
+			this->pnlOfDetailsOfCourse->Controls->Add(this->slctcourseCDetailsbt);
 			this->pnlOfDetailsOfCourse->Controls->Add(this->viewbt);
 			this->pnlOfDetailsOfCourse->Controls->Add(this->flwpnldetCourse);
-			this->pnlOfDetailsOfCourse->Controls->Add(this->flowLayoutPanel3);
 			this->pnlOfDetailsOfCourse->Location = System::Drawing::Point(44, 0);
 			this->pnlOfDetailsOfCourse->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->pnlOfDetailsOfCourse->Name = L"pnlOfDetailsOfCourse";
 			this->pnlOfDetailsOfCourse->Size = System::Drawing::Size(869, 517);
 			this->pnlOfDetailsOfCourse->TabIndex = 3;
 			this->pnlOfDetailsOfCourse->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &StudentPageForm::pnlOfDetailsOfCourse_Paint);
+			// 
+			// flowLayoutPanel3
+			// 
+			this->flowLayoutPanel3->AutoScroll = true;
+			this->flowLayoutPanel3->AutoScrollMargin = System::Drawing::Size(10, 0);
+			this->flowLayoutPanel3->Location = System::Drawing::Point(13, 118);
+			this->flowLayoutPanel3->Name = L"flowLayoutPanel3";
+			this->flowLayoutPanel3->Size = System::Drawing::Size(207, 59);
+			this->flowLayoutPanel3->TabIndex = 11;
+			// 
+			// slctcourseCDetailsbt
+			// 
+			this->slctcourseCDetailsbt->BackColor = System::Drawing::Color::Tan;
+			this->slctcourseCDetailsbt->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
+			this->slctcourseCDetailsbt->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->slctcourseCDetailsbt->FlatAppearance->BorderSize = 3;
+			this->slctcourseCDetailsbt->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->slctcourseCDetailsbt->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F));
+			this->slctcourseCDetailsbt->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(23)),
+				static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(31)));
+			this->slctcourseCDetailsbt->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"slctcourseCDetailsbt.Image")));
+			this->slctcourseCDetailsbt->ImageAlign = System::Drawing::ContentAlignment::MiddleRight;
+			this->slctcourseCDetailsbt->Location = System::Drawing::Point(16, 62);
+			this->slctcourseCDetailsbt->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->slctcourseCDetailsbt->Name = L"slctcourseCDetailsbt";
+			this->slctcourseCDetailsbt->Size = System::Drawing::Size(207, 51);
+			this->slctcourseCDetailsbt->TabIndex = 7;
+			this->slctcourseCDetailsbt->Text = L"Select Course";
+			this->slctcourseCDetailsbt->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->slctcourseCDetailsbt->UseVisualStyleBackColor = false;
+			this->slctcourseCDetailsbt->Click += gcnew System::EventHandler(this, &StudentPageForm::slctcourseCDetailsbt_Click);
 			// 
 			// viewbt
 			// 
@@ -1256,7 +1293,7 @@ private: System::Windows::Forms::PictureBox^ pictureBox49;
 			this->viewbt->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->viewbt->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 12, System::Drawing::FontStyle::Bold));
 			this->viewbt->ForeColor = System::Drawing::Color::Tan;
-			this->viewbt->Location = System::Drawing::Point(590, 46);
+			this->viewbt->Location = System::Drawing::Point(606, 33);
 			this->viewbt->Name = L"viewbt";
 			this->viewbt->Size = System::Drawing::Size(169, 60);
 			this->viewbt->TabIndex = 5;
@@ -1268,43 +1305,9 @@ private: System::Windows::Forms::PictureBox^ pictureBox49;
 			// 
 			this->flwpnldetCourse->Location = System::Drawing::Point(276, 114);
 			this->flwpnldetCourse->Name = L"flwpnldetCourse";
-			this->flwpnldetCourse->Size = System::Drawing::Size(350, 465);
+			this->flwpnldetCourse->Size = System::Drawing::Size(350, 408);
 			this->flwpnldetCourse->TabIndex = 4;
 			this->flwpnldetCourse->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &StudentPageForm::flwpnldetCourse_Paint);
-			// 
-			// flowLayoutPanel3
-			// 
-			this->flowLayoutPanel3->AutoScroll = true;
-			this->flowLayoutPanel3->Controls->Add(this->button3);
-			this->flowLayoutPanel3->FlowDirection = System::Windows::Forms::FlowDirection::TopDown;
-			this->flowLayoutPanel3->Location = System::Drawing::Point(9, 42);
-			this->flowLayoutPanel3->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
-			this->flowLayoutPanel3->Name = L"flowLayoutPanel3";
-			this->flowLayoutPanel3->Size = System::Drawing::Size(175, 65);
-			this->flowLayoutPanel3->TabIndex = 3;
-			this->flowLayoutPanel3->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &StudentPageForm::flowLayoutPanel3_Paint);
-			// 
-			// button3
-			// 
-			this->button3->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
-				static_cast<System::Int32>(static_cast<System::Byte>(31)));
-			this->button3->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->button3->FlatAppearance->BorderSize = 0;
-			this->button3->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button3->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->button3->ForeColor = System::Drawing::Color::Tan;
-			this->button3->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button3.Image")));
-			this->button3->ImageAlign = System::Drawing::ContentAlignment::MiddleRight;
-			this->button3->Location = System::Drawing::Point(3, 2);
-			this->button3->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
-			this->button3->Name = L"button3";
-			this->button3->Size = System::Drawing::Size(165, 61);
-			this->button3->TabIndex = 7;
-			this->button3->Text = L"Select Course";
-			this->button3->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->button3->UseVisualStyleBackColor = false;
-			this->button3->Click += gcnew System::EventHandler(this, &StudentPageForm::button3_Click_1);
 			// 
 			// pnlOfCoursesInProgress
 			// 
@@ -1958,13 +1961,13 @@ private: System::Windows::Forms::PictureBox^ pictureBox49;
 			// 
 			// pnlOfPanels
 			// 
+			this->pnlOfPanels->Controls->Add(this->pnlOfDetailsOfCourse);
+			this->pnlOfPanels->Controls->Add(this->pnlOfCoursesInProgress);
 			this->pnlOfPanels->Controls->Add(this->homepanel);
 			this->pnlOfPanels->Controls->Add(this->editpanel);
 			this->pnlOfPanels->Controls->Add(this->pnlOfCourseGrades);
 			this->pnlOfPanels->Controls->Add(this->PnlOfFilter);
 			this->pnlOfPanels->Controls->Add(this->pnlOfregCourse);
-			this->pnlOfPanels->Controls->Add(this->pnlOfDetailsOfCourse);
-			this->pnlOfPanels->Controls->Add(this->pnlOfCoursesInProgress);
 			this->pnlOfPanels->Location = System::Drawing::Point(-13, 0);
 			this->pnlOfPanels->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->pnlOfPanels->Name = L"pnlOfPanels";
@@ -2291,7 +2294,6 @@ private: System::Windows::Forms::PictureBox^ pictureBox49;
 			this->editpanel->ResumeLayout(false);
 			this->editpanel->PerformLayout();
 			this->pnlOfDetailsOfCourse->ResumeLayout(false);
-			this->flowLayoutPanel3->ResumeLayout(false);
 			this->pnlOfCoursesInProgress->ResumeLayout(false);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox43))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox42))->EndInit();
@@ -2382,7 +2384,7 @@ private: System::Windows::Forms::PictureBox^ pictureBox49;
 
     private:void populateItems()
 	{
-
+		flowLayoutPanel3->Height = 0;
 		for each (auto course in Course::allCourses)
 		{
 
@@ -2449,7 +2451,7 @@ private: System::Windows::Forms::PictureBox^ pictureBox49;
 	}
 
 	private: System::Void btnCourseInProgress_Click(System::Object^ sender, System::EventArgs^ e) {
-		
+		courseButton::courseDetails = true;
 		PnlOfFilter->Visible = false;
 		pnlOfDetailsOfCourse->Visible = false;
 		pnlOfCoursesInProgress->Visible = true;
@@ -2460,7 +2462,7 @@ private: System::Windows::Forms::PictureBox^ pictureBox49;
 		courseButton::alldetailsbtns->Clear();
 	}
 	private: System::Void btnCourseGrade_Click(System::Object^ sender, System::EventArgs^ e) {
-		
+		courseButton::courseDetails = true;
 		PnlOfFilter->Visible = false;
 		pnlOfDetailsOfCourse->Visible = false;
 		pnlOfCoursesInProgress->Visible = false;
@@ -2471,7 +2473,7 @@ private: System::Windows::Forms::PictureBox^ pictureBox49;
 		courseButton::alldetailsbtns->Clear();
 	}
 	private: System::Void btnDetailsOfCourse_Click(System::Object^ sender, System::EventArgs^ e) {
-		
+		courseButton::courseDetails = true;
 		PnlOfFilter->Visible = false;
 		pnlOfDetailsOfCourse->Visible = true;
 		pnlOfCoursesInProgress->Visible = false;
@@ -2483,7 +2485,7 @@ private: System::Windows::Forms::PictureBox^ pictureBox49;
 	}
 	private: System::Void btnGPA_Click(System::Object^ sender, System::EventArgs^ e) {
 		sideBarTimer->Start();
-
+	
 		PnlOfFilter->Visible = false;
 		pnlOfDetailsOfCourse->Visible = false;
 		pnlOfCoursesInProgress->Visible = false;
@@ -2502,14 +2504,15 @@ private: System::Windows::Forms::PictureBox^ pictureBox49;
 	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
 	private: System::Void btnDetailsOfCourse_Click_1(System::Object^ sender, System::EventArgs^ e) {
-		
-		PnlOfFilter->Visible = false;
+		courseButton::courseDetails = true;
+PnlOfFilter->Visible = false;
 		pnlOfDetailsOfCourse->Visible = true;
 		pnlOfCoursesInProgress->Visible = false;
 		pnlOfCourseGrades->Visible = false;
 		pnlOfregCourse->Visible = false;
 		editpanel->Visible = false;
 		homepanel->Visible = false;
+		flowLayoutPanel3->Height = 0;
 	}
 		   bool sideBarExpand;
 	private: System::Void sideBarTimer_Tick(System::Object^ sender, System::EventArgs^ e)
@@ -2594,23 +2597,25 @@ private: System::Void dropdowndet_Tick(System::Object^ sender, System::EventArgs
 
 	if (!expand3)
 	{
-		flowLayoutPanel3->Height += 15;
-		if (flowLayoutPanel3->Height >= Course::allCourses->Count * 35) {
+		flowLayoutPanel3->Height += 40;
+		if (flowLayoutPanel3->Height >= Course::allCourses->Count * 60) {
 			dropdowndet->Stop();
 			expand3 = true;
 		}
 	}
 
 	else {
-		if (flowLayoutPanel3->Height <= 40)
+		if (flowLayoutPanel3->Height <= 0)
 		{
+			flwpnldetCourse->Controls->Clear();
+
 			dropdowndet->Stop();
 			expand3 = false;
 		}
 		else
 		{
 
-			flowLayoutPanel3->Height -= 15;
+			flowLayoutPanel3->Height -= 60;
 		}
 
 	}
@@ -2680,43 +2685,47 @@ private: System::Void flwpnldetCourse_Paint(System::Object^ sender, System::Wind
 }
 private: System::Void viewbt_Click(System::Object^ sender, System::EventArgs^ e) {
 
-	flwpnldetCourse->Controls->Clear();
-	for each (auto bt in courseButton::alldetailsbtns)
-	{
+	//flwpnldetCourse->Controls->Clear();
+	//for each (auto bt in courseButton::alldetailsbtns)
+	//{
 
-		courselistitem^ temp = gcnew courselistitem;
-		if (bt->getBt()->BackColor == Color::Brown)
-		{
+	//	courselistitem^ temp = gcnew courselistitem;
+	//	if (bt->getBt()->BackColor == Color::Brown)
+	//	{
 
-			for each (auto course in Course::allCourses)
-			{
-				if (bt->getCourseName() == course->getName())
-				{
-					temp->setName(course->getName());
-					temp->setCode(course->getCode());
-					temp->setInstructor(course->getInstructor());
-					temp->setIsRequirement(course->getIsRequirement());
-					temp->setHours(course->getHours());
-					temp->setMaxNumberOfStudents(course->getMaxNumberOfStudents());
-				}
-			}	
+	//		for each (auto course in Course::allCourses)
+	//		{
+	//			if (bt->getCourseName() == course->getName())
+	//			{
+	//				temp->setName(course->getName());
+	//				temp->setCode(course->getCode());
+	//				temp->setInstructor(course->getInstructor());
+	//				temp->setIsRequirement(course->getIsRequirement());
+	//				temp->setHours(course->getHours());
+	//				temp->setMaxNumberOfStudents(course->getMaxNumberOfStudents());
+	//			}
+	//		}	
 
-			flwpnldetCourse->Controls->Add(temp);
-			flowLayoutPanel3->Height = 40;
-			expand3 = false;
-		}
+	//		flwpnldetCourse->Controls->Add(temp);
+	//		flowLayoutPanel3->Height = 40;
+	//		expand3 = false;
+	//	}
 
-	}
-	for each (auto bt in courseButton::alldetailsbtns)
-	{
-		if (bt->getBt()->BackColor == Color::Brown)
-		{
-			bt->setBtColor(ColorTranslator::FromHtml("#17171F"));
-			bt->setforecolor(Color::Tan);
+	//}
+	//for each (auto bt in courseButton::alldetailsbtns)
+	//{
+	//	if (bt->getBt()->BackColor == Color::Brown)
+	//	{
+	//		bt->setBtColor(ColorTranslator::FromHtml("#17171F"));
+	//		bt->setforecolor(Color::Tan);
 
 
-		}
-	}
+	//	}
+	//}
+
+
+
+	viewdetailsofaCourse(flwpnldetCourse, coursedetailsbtns);
 }
 private: System::Void button3_Click_1(System::Object^ sender, System::EventArgs^ e) {
 	dropdowndet->Start();
@@ -3344,6 +3353,92 @@ private: System::Void pnlbuttons_Paint(System::Object^ sender, System::Windows::
 }
 private: System::Void panel3_Paint_1(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
 }
+private: System::Void slctcourseCDetailsbt_Click(System::Object^ sender, System::EventArgs^ e) {
+	coursedetailsbtns = convertfromcoursestocoursebt(Course::allCourses);
+	putCoursesbtnsInPanel(coursedetailsbtns, flowLayoutPanel3);
+	dropdowndet->Start();
+	courseButton::alldetailsbtns = coursedetailsbtns;
+}
+
+	   List<courseButton^>^ convertfromcoursestocoursebt(List<Course^>^ courses) {
+		   List< courseButton^>^ temp = gcnew List<courseButton^>;
+		   for each (auto course in courses)
+		   {
+			   courseButton^ tempp = gcnew courseButton;
+			   tempp->setCourseName(course->getName());
+			   temp->Add(tempp);
+
+		   }
+		   return temp;
+	   }
+	   void putCoursesbtnsInPanel(List<courseButton^>^ temp, FlowLayoutPanel^ fp)
+	   {
+		   fp->Controls->Clear();
+		   for each (auto var in temp)
+		   {
+			   fp->Controls->Add(var);
+		   }
+	   }
+	   void viewdetailsofaCourse(FlowLayoutPanel^ flp, List<courseButton^>^ courses)
+	   {
+		   flp->Controls->Clear();
+		   flp->Controls->Add(getselectedcourseCard(courses));
+	   }
+
+	   courselistitem^ getselectedcourseCard( List<courseButton^>^ courses)
+	   {
+		   Course^ selcCourse = gcnew Course;
+		   selcCourse = findcourse(courses);
+		   for each (auto course in courses)
+		   {
+			   if (course->getBt()->BackColor == Color::Brown)
+			   {
+				   courselistitem^ cs = gcnew courselistitem;
+				   cs->setName(selcCourse->getName());
+				   cs->setCode(selcCourse->getCode());
+				   cs->setInstructor(selcCourse->getInstructor());
+				   cs->setIsRequirement(selcCourse->getIsRequirement());
+				   cs->setHours(selcCourse->getHours());
+				   cs->setMaxNumberOfStudents(selcCourse->getMaxNumberOfStudents());
+				   return cs;
+			   }
+		   }
+	   }
+	   Course^ findcourse(List<courseButton^>^ courses)
+	   {
+		   for each (auto course in courses)
+		   {
+			   if (course->getBt()->BackColor == Color::Brown)
+			   {
+				   for each (auto var in Course::allCourses)
+				   {
+					   if (course->getCourseName() == var->getName())
+						   return var;
+				   }
+			   }
+		   }
+		   return nullptr;
+	   }
+	
+	   List<courselistitem^>^ convertfromcoursestocourselistitem(List<Course^>^ courses) {
+		   List< courselistitem^>^ temp = gcnew List<courselistitem^>;
+		   for each (auto course in courses)
+		   {
+			   for each (auto var in temp)
+			   {
+			   var->setName(course->getName());
+			   var->setCode(course->getCode());
+			   var->setInstructor(course->getInstructor());
+			   var->setIsRequirement(course->getIsRequirement());
+			   var->setHours(course->getHours());
+			   var->setMaxNumberOfStudents(course->getMaxNumberOfStudents());
+			
+			   }
+			  
+		   }
+		   return temp;
+	   }
+	   List<courseButton^>^ coursedetailsbtns = gcnew List<courseButton^>;
 };
 };
 
