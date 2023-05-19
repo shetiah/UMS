@@ -1034,6 +1034,7 @@ private: System::Windows::Forms::Label^ label26;
 			this->yearText->ForeColor = System::Drawing::SystemColors::WindowText;
 			this->yearText->Location = System::Drawing::Point(187, 88);
 			this->yearText->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->yearText->MaxLength = 4;
 			this->yearText->Multiline = true;
 			this->yearText->Name = L"yearText";
 			this->yearText->Size = System::Drawing::Size(332, 24);
@@ -1047,6 +1048,7 @@ private: System::Windows::Forms::Label^ label26;
 			this->passText->ForeColor = System::Drawing::SystemColors::WindowText;
 			this->passText->Location = System::Drawing::Point(187, 51);
 			this->passText->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->passText->MaxLength = 20;
 			this->passText->Multiline = true;
 			this->passText->Name = L"passText";
 			this->passText->PasswordChar = '*';
@@ -1061,6 +1063,7 @@ private: System::Windows::Forms::Label^ label26;
 			this->nameText->ForeColor = System::Drawing::SystemColors::WindowText;
 			this->nameText->Location = System::Drawing::Point(187, 16);
 			this->nameText->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->nameText->MaxLength = 30;
 			this->nameText->Multiline = true;
 			this->nameText->Name = L"nameText";
 			this->nameText->Size = System::Drawing::Size(332, 24);
@@ -1977,7 +1980,7 @@ private: System::Void btnSave_Click(System::Object^ sender, System::EventArgs^ e
 	bool isHoursNum = int::TryParse(HoursText->Text, Hours);
 	bool isAcademicYearNum = int::TryParse(yearText->Text, AcademicYearInt);
 
-	if (isHoursNum == false || Hours>4 || Hours<0)
+	if (isHoursNum == false || Hours>20|| Hours<0)
 	{
 		hoursLabel->Visible = true;
 		return;
