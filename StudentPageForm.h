@@ -616,9 +616,9 @@ private: System::Windows::Forms::PictureBox^ pictureBox49;
 			// pictureBox13
 			// 
 			this->pictureBox13->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox13.Image")));
-			this->pictureBox13->Location = System::Drawing::Point(0, 60);
+			this->pictureBox13->Location = System::Drawing::Point(0, 72);
 			this->pictureBox13->Name = L"pictureBox13";
-			this->pictureBox13->Size = System::Drawing::Size(48, 55);
+			this->pictureBox13->Size = System::Drawing::Size(55, 63);
 			this->pictureBox13->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->pictureBox13->TabIndex = 4;
 			this->pictureBox13->TabStop = false;
@@ -627,9 +627,9 @@ private: System::Windows::Forms::PictureBox^ pictureBox49;
 			// pictureBox16
 			// 
 			this->pictureBox16->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox16.Image")));
-			this->pictureBox16->Location = System::Drawing::Point(3, -4);
+			this->pictureBox16->Location = System::Drawing::Point(3, 10);
 			this->pictureBox16->Name = L"pictureBox16";
-			this->pictureBox16->Size = System::Drawing::Size(39, 75);
+			this->pictureBox16->Size = System::Drawing::Size(40, 63);
 			this->pictureBox16->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->pictureBox16->TabIndex = 6;
 			this->pictureBox16->TabStop = false;
@@ -1958,13 +1958,13 @@ private: System::Windows::Forms::PictureBox^ pictureBox49;
 			// 
 			// pnlOfPanels
 			// 
-			this->pnlOfPanels->Controls->Add(this->pnlOfDetailsOfCourse);
-			this->pnlOfPanels->Controls->Add(this->pnlOfCoursesInProgress);
 			this->pnlOfPanels->Controls->Add(this->homepanel);
 			this->pnlOfPanels->Controls->Add(this->editpanel);
 			this->pnlOfPanels->Controls->Add(this->pnlOfCourseGrades);
 			this->pnlOfPanels->Controls->Add(this->PnlOfFilter);
 			this->pnlOfPanels->Controls->Add(this->pnlOfregCourse);
+			this->pnlOfPanels->Controls->Add(this->pnlOfDetailsOfCourse);
+			this->pnlOfPanels->Controls->Add(this->pnlOfCoursesInProgress);
 			this->pnlOfPanels->Location = System::Drawing::Point(-13, 0);
 			this->pnlOfPanels->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->pnlOfPanels->Name = L"pnlOfPanels";
@@ -2189,6 +2189,7 @@ private: System::Windows::Forms::PictureBox^ pictureBox49;
 			this->panel3->Name = L"panel3";
 			this->panel3->Size = System::Drawing::Size(424, 56);
 			this->panel3->TabIndex = 2;
+			this->panel3->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &StudentPageForm::panel3_Paint_1);
 			// 
 			// label7
 			// 
@@ -3340,6 +3341,8 @@ private: System::Void pictureBox16_Click(System::Object^ sender, System::EventAr
 	sideBarTimer->Start();
 }
 private: System::Void pnlbuttons_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
+}
+private: System::Void panel3_Paint_1(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
 }
 };
 };
