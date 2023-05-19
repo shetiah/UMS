@@ -80,13 +80,13 @@ public :
 	void registerForCourse(Course^ course);
 	List<Course^>^ FilterCourses(String^ filterOption);
 
+	int calculatecourseshours();
 
 
 
 	//files
 	static void loadStudentDataFromFile();
 	static void saveStudentDataToFile();
-
    /*
 1- Log in.
 

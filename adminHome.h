@@ -738,11 +738,11 @@ private: System::Windows::Forms::Panel^ panel5;
 			// 
 			// pnlOfPanels
 			// 
+			this->pnlOfPanels->Controls->Add(this->pnlOfStudentOfCourse);
 			this->pnlOfPanels->Controls->Add(this->pnlEditStudent);
 			this->pnlOfPanels->Controls->Add(this->pnlOfAddCourse);
 			this->pnlOfPanels->Controls->Add(this->pnlOfAddStudent);
 			this->pnlOfPanels->Controls->Add(this->pnlOfEditCourse);
-			this->pnlOfPanels->Controls->Add(this->pnlOfStudentOfCourse);
 			this->pnlOfPanels->Location = System::Drawing::Point(61, 0);
 			this->pnlOfPanels->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->pnlOfPanels->Name = L"pnlOfPanels";

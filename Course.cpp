@@ -343,5 +343,18 @@ void Course::saveCourseContentToFile() {
 	// Close the output file
 	outFile.close();
 }
+int Course::calcnumofstdinCourse()
+{
+	if (getAllStudentsInCourse() != nullptr)
+		return getAllStudentsInCourse()->Count;
+	else
+		return 0;
+}
+bool Course::ifcourseisfilled()
+{
+	if (calcnumofstdinCourse() == maxNumberOfStudents)
+		return true;
+	return false;
+}
 
 

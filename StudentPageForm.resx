@@ -5764,6 +5764,14 @@
         u3b9D536rBL7TvQnAAAAAElFTkSuQmCC
 </value>
   </data>
+  <data name="label25.Text" xml:space="preserve">
+    <value>click Select course to view a list for your available courses 
+after clicking on the desired course 
+click select to select the course and view 
+the course's hours and it's maximum students allowed 
+click save to register for the selected course if wanted
+</value>
+  </data>
   <data name="button1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABQAAAAVCAYAAABG1c6oAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL

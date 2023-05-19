@@ -51,8 +51,8 @@ public:
 	int getMaxNumberOfStudents();
 	int getHours();
 	List<int>^ getAllStudentsInCourse();
-
-
+	bool ifcourseisfilled();
+	int calcnumofstdinCourse();
 	static void loadCourseDataFromFile();
 	static void saveCourseDataToFile();
 	static void loadCourseHoursFromFile();
