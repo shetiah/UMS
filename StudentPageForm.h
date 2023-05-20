@@ -253,6 +253,8 @@ private: System::Windows::Forms::Label^ label19;
 private: System::Windows::Forms::Label^ currstds;
 private: System::Windows::Forms::Label^ label22;
 private: System::Windows::Forms::Label^ savedcourse;
+private: System::Windows::Forms::Label^ hoursrem;
+private: System::Windows::Forms::Label^ label26;
 
 
 
@@ -449,6 +451,8 @@ private: System::Windows::Forms::Label^ savedcourse;
 			this->label25 = (gcnew System::Windows::Forms::Label());
 			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->panel6 = (gcnew System::Windows::Forms::Panel());
+			this->hoursrem = (gcnew System::Windows::Forms::Label());
+			this->label26 = (gcnew System::Windows::Forms::Label());
 			this->avcoursecount = (gcnew System::Windows::Forms::Label());
 			this->myhours = (gcnew System::Windows::Forms::Label());
 			this->label5 = (gcnew System::Windows::Forms::Label());
@@ -1984,14 +1988,42 @@ private: System::Windows::Forms::Label^ savedcourse;
 			// panel6
 			// 
 			this->panel6->BackColor = System::Drawing::Color::Tan;
+			this->panel6->Controls->Add(this->hoursrem);
+			this->panel6->Controls->Add(this->label26);
 			this->panel6->Controls->Add(this->avcoursecount);
 			this->panel6->Controls->Add(this->myhours);
 			this->panel6->Controls->Add(this->label5);
 			this->panel6->Controls->Add(this->label21);
 			this->panel6->Location = System::Drawing::Point(488, 177);
 			this->panel6->Name = L"panel6";
-			this->panel6->Size = System::Drawing::Size(381, 79);
+			this->panel6->Size = System::Drawing::Size(381, 92);
 			this->panel6->TabIndex = 21;
+			// 
+			// hoursrem
+			// 
+			this->hoursrem->AutoSize = true;
+			this->hoursrem->BackColor = System::Drawing::Color::Tan;
+			this->hoursrem->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F));
+			this->hoursrem->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(26)), static_cast<System::Int32>(static_cast<System::Byte>(11)),
+				static_cast<System::Int32>(static_cast<System::Byte>(69)));
+			this->hoursrem->Location = System::Drawing::Point(196, 68);
+			this->hoursrem->Name = L"hoursrem";
+			this->hoursrem->Size = System::Drawing::Size(44, 20);
+			this->hoursrem->TabIndex = 28;
+			this->hoursrem->Text = L"null";
+			// 
+			// label26
+			// 
+			this->label26->AutoSize = true;
+			this->label26->BackColor = System::Drawing::Color::Tan;
+			this->label26->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F));
+			this->label26->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(26)), static_cast<System::Int32>(static_cast<System::Byte>(11)),
+				static_cast<System::Int32>(static_cast<System::Byte>(69)));
+			this->label26->Location = System::Drawing::Point(20, 64);
+			this->label26->Name = L"label26";
+			this->label26->Size = System::Drawing::Size(141, 20);
+			this->label26->TabIndex = 27;
+			this->label26->Text = L"hours remainig";
 			// 
 			// avcoursecount
 			// 
@@ -2056,9 +2088,9 @@ private: System::Windows::Forms::Label^ savedcourse;
 			this->panel7->Controls->Add(this->label24);
 			this->panel7->Controls->Add(this->label23);
 			this->panel7->Controls->Add(this->label20);
-			this->panel7->Location = System::Drawing::Point(488, 256);
+			this->panel7->Location = System::Drawing::Point(469, 265);
 			this->panel7->Name = L"panel7";
-			this->panel7->Size = System::Drawing::Size(381, 251);
+			this->panel7->Size = System::Drawing::Size(400, 251);
 			this->panel7->TabIndex = 23;
 			this->panel7->Visible = false;
 			// 
@@ -2111,7 +2143,7 @@ private: System::Windows::Forms::Label^ savedcourse;
 			this->cshours->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F));
 			this->cshours->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(26)), static_cast<System::Int32>(static_cast<System::Byte>(11)),
 				static_cast<System::Int32>(static_cast<System::Byte>(69)));
-			this->cshours->Location = System::Drawing::Point(205, 130);
+			this->cshours->Location = System::Drawing::Point(152, 152);
 			this->cshours->Name = L"cshours";
 			this->cshours->Size = System::Drawing::Size(44, 20);
 			this->cshours->TabIndex = 17;
@@ -2139,7 +2171,7 @@ private: System::Windows::Forms::Label^ savedcourse;
 			this->label24->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F));
 			this->label24->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(26)), static_cast<System::Int32>(static_cast<System::Byte>(11)),
 				static_cast<System::Int32>(static_cast<System::Byte>(69)));
-			this->label24->Location = System::Drawing::Point(70, 130);
+			this->label24->Location = System::Drawing::Point(9, 152);
 			this->label24->Name = L"label24";
 			this->label24->Size = System::Drawing::Size(129, 20);
 			this->label24->TabIndex = 19;
@@ -2182,6 +2214,7 @@ private: System::Windows::Forms::Label^ savedcourse;
 			this->panel2->Name = L"panel2";
 			this->panel2->Size = System::Drawing::Size(880, 52);
 			this->panel2->TabIndex = 8;
+			this->panel2->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &StudentPageForm::panel2_Paint);
 			// 
 			// reglb
 			// 
@@ -2669,6 +2702,7 @@ private: System::Windows::Forms::Label^ savedcourse;
 	private: System::Void StudentPageForm_Load(System::Object^ sender, System::EventArgs^ e) {
 		populateItems();
 
+		hoursrem->Text = Convert::ToString(student->getMaxHoursAllowed() - (student->calculatecourseshours() + selectedcourse->getHours()));
 		myhours->Text = Convert::ToString(student->calculatecourseshours());
 		allbtns->Add(finishcsbt);
 		allbtns->Add(CoursesInProgressbt);
@@ -2798,6 +2832,8 @@ private: System::Windows::Forms::Label^ savedcourse;
 		else {
 			currstds->Text = "0";
 		}
+
+		hoursrem->Text = Convert::ToString(student->getMaxHoursAllowed() - (student->calculatecourseshours() + selectedcourse->getHours()));
 		myhours->Text = Convert::ToString(student->calculatecourseshours());
 		savedcourse->Visible = false;
 		panel7->Visible = false;
@@ -2985,6 +3021,7 @@ private: System::Void savebt_Click(System::Object^ sender, System::EventArgs^ e)
 		student->registerForCourse(selectedcourse);
 		avcoursecount->Text = Convert::ToString(student->CoursesAV()->Count);
 		myhours->Text = Convert::ToString(student->calculatecourseshours());
+		hoursrem->Text = Convert::ToString(student->getMaxHoursAllowed() - (student->calculatecourseshours() + selectedcourse->getHours()));
 		expand3 = true;
 		dropdowntimer->Start();
 		Student::saveStudentDataToFile();
@@ -3785,6 +3822,8 @@ private: System::Void button2_Click_3(System::Object^ sender, System::EventArgs^
 		savebt->Visible = false;
 		label19->Visible = true;
 	}
+}
+private: System::Void panel2_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
 }
 };
 };
