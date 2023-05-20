@@ -2951,7 +2951,7 @@ private: System::Void savebt_Click(System::Object^ sender, System::EventArgs^ e)
 		label20->Visible = true;
 		savebt->Visible = false;
 	}
-	else if ((student->calculatecourseshours() + selectedcourse->getHours()) < student->getMaxHoursAllowed())
+	else if ((student->calculatecourseshours() + selectedcourse->getHours()) > student->getMaxHoursAllowed())
 	{
 
 		label28->Visible = true;
@@ -3754,7 +3754,7 @@ private: System::Void button2_Click_3(System::Object^ sender, System::EventArgs^
 		cshours->Text = Convert::ToString(selectedcourse->getMaxNumberOfStudents());
 		currstds->Visible = true;
 			currstds->Text = Convert::ToString(selectedcourse->calcnumofstdinCourse());
-	
+		
 	}
 	else {
 		savebt->Visible = false;
