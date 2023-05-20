@@ -255,6 +255,9 @@ private: System::Windows::Forms::Label^ label22;
 private: System::Windows::Forms::Label^ savedcourse;
 private: System::Windows::Forms::Label^ hoursrem;
 private: System::Windows::Forms::Label^ label26;
+private: System::Windows::Forms::Label^ label27;
+private: System::Windows::Forms::Label^ label29;
+private: System::Windows::Forms::Label^ label30;
 
 
 
@@ -497,6 +500,9 @@ private: System::Windows::Forms::Label^ label26;
 			this->filterTimer = (gcnew System::Windows::Forms::Timer(this->components));
 			this->selectCoursetimer = (gcnew System::Windows::Forms::Timer(this->components));
 			this->viewGradesTiner = (gcnew System::Windows::Forms::Timer(this->components));
+			this->label27 = (gcnew System::Windows::Forms::Label());
+			this->label29 = (gcnew System::Windows::Forms::Label());
+			this->label30 = (gcnew System::Windows::Forms::Label());
 			this->sideBar->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox46))->BeginInit();
 			this->panel1->SuspendLayout();
@@ -1162,7 +1168,7 @@ private: System::Windows::Forms::Label^ label26;
 			// 
 			this->textBox3->BackColor = System::Drawing::Color::SeaShell;
 			this->textBox3->ForeColor = System::Drawing::Color::Gray;
-			this->textBox3->Location = System::Drawing::Point(139, 241);
+			this->textBox3->Location = System::Drawing::Point(142, 241);
 			this->textBox3->Name = L"textBox3";
 			this->textBox3->Size = System::Drawing::Size(289, 22);
 			this->textBox3->TabIndex = 9;
@@ -1174,7 +1180,7 @@ private: System::Windows::Forms::Label^ label26;
 			// 
 			this->label13->AutoSize = true;
 			this->label13->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F));
-			this->label13->Location = System::Drawing::Point(131, 207);
+			this->label13->Location = System::Drawing::Point(138, 214);
 			this->label13->Name = L"label13";
 			this->label13->Size = System::Drawing::Size(291, 20);
 			this->label13->TabIndex = 8;
@@ -1247,7 +1253,7 @@ private: System::Windows::Forms::Label^ label26;
 			// 
 			this->label9->AutoSize = true;
 			this->label9->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F));
-			this->label9->Location = System::Drawing::Point(135, 284);
+			this->label9->Location = System::Drawing::Point(138, 289);
 			this->label9->Name = L"label9";
 			this->label9->Size = System::Drawing::Size(238, 20);
 			this->label9->TabIndex = 3;
@@ -1258,7 +1264,7 @@ private: System::Windows::Forms::Label^ label26;
 			// 
 			this->label8->AutoSize = true;
 			this->label8->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F));
-			this->label8->Location = System::Drawing::Point(138, 126);
+			this->label8->Location = System::Drawing::Point(138, 134);
 			this->label8->Name = L"label8";
 			this->label8->Size = System::Drawing::Size(269, 20);
 			this->label8->TabIndex = 2;
@@ -1268,9 +1274,9 @@ private: System::Windows::Forms::Label^ label26;
 			// 
 			this->textBox2->BackColor = System::Drawing::Color::SeaShell;
 			this->textBox2->ForeColor = System::Drawing::Color::Gray;
-			this->textBox2->Location = System::Drawing::Point(142, 324);
+			this->textBox2->Location = System::Drawing::Point(142, 318);
 			this->textBox2->Name = L"textBox2";
-			this->textBox2->Size = System::Drawing::Size(280, 22);
+			this->textBox2->Size = System::Drawing::Size(289, 22);
 			this->textBox2->TabIndex = 1;
 			this->textBox2->Text = L"Enter new password";
 			this->textBox2->Enter += gcnew System::EventHandler(this, &StudentPageForm::new_enter);
@@ -1393,8 +1399,8 @@ private: System::Windows::Forms::Label^ label26;
 			this->pnlOfCoursesInProgress->Controls->Add(this->pictureBox8);
 			this->pnlOfCoursesInProgress->Controls->Add(this->pictureBox4);
 			this->pnlOfCoursesInProgress->Controls->Add(this->pictureBox17);
-			this->pnlOfCoursesInProgress->Controls->Add(this->flowLayoutPanel1);
 			this->pnlOfCoursesInProgress->Controls->Add(this->coursesinprogHeaderpnl);
+			this->pnlOfCoursesInProgress->Controls->Add(this->flowLayoutPanel1);
 			this->pnlOfCoursesInProgress->Dock = System::Windows::Forms::DockStyle::Right;
 			this->pnlOfCoursesInProgress->Location = System::Drawing::Point(41, 0);
 			this->pnlOfCoursesInProgress->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
@@ -2006,7 +2012,7 @@ private: System::Windows::Forms::Label^ label26;
 			this->hoursrem->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F));
 			this->hoursrem->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(26)), static_cast<System::Int32>(static_cast<System::Byte>(11)),
 				static_cast<System::Int32>(static_cast<System::Byte>(69)));
-			this->hoursrem->Location = System::Drawing::Point(196, 68);
+			this->hoursrem->Location = System::Drawing::Point(192, 66);
 			this->hoursrem->Name = L"hoursrem";
 			this->hoursrem->Size = System::Drawing::Size(44, 20);
 			this->hoursrem->TabIndex = 28;
@@ -2045,7 +2051,7 @@ private: System::Windows::Forms::Label^ label26;
 			this->myhours->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F));
 			this->myhours->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(26)), static_cast<System::Int32>(static_cast<System::Byte>(11)),
 				static_cast<System::Int32>(static_cast<System::Byte>(69)));
-			this->myhours->Location = System::Drawing::Point(192, 40);
+			this->myhours->Location = System::Drawing::Point(192, 37);
 			this->myhours->Name = L"myhours";
 			this->myhours->Size = System::Drawing::Size(44, 20);
 			this->myhours->TabIndex = 21;
@@ -2115,7 +2121,7 @@ private: System::Windows::Forms::Label^ label26;
 			this->label22->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F));
 			this->label22->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(26)), static_cast<System::Int32>(static_cast<System::Byte>(11)),
 				static_cast<System::Int32>(static_cast<System::Byte>(69)));
-			this->label22->Location = System::Drawing::Point(30, 33);
+			this->label22->Location = System::Drawing::Point(7, 35);
 			this->label22->Name = L"label22";
 			this->label22->Size = System::Drawing::Size(169, 40);
 			this->label22->TabIndex = 23;
@@ -2284,13 +2290,13 @@ private: System::Windows::Forms::Label^ label26;
 			// 
 			// pnlOfPanels
 			// 
-			this->pnlOfPanels->Controls->Add(this->pnlOfregCourse);
 			this->pnlOfPanels->Controls->Add(this->pnlOfDetailsOfCourse);
 			this->pnlOfPanels->Controls->Add(this->pnlOfCoursesInProgress);
 			this->pnlOfPanels->Controls->Add(this->homepanel);
 			this->pnlOfPanels->Controls->Add(this->editpanel);
 			this->pnlOfPanels->Controls->Add(this->pnlOfCourseGrades);
 			this->pnlOfPanels->Controls->Add(this->PnlOfFilter);
+			this->pnlOfPanels->Controls->Add(this->pnlOfregCourse);
 			this->pnlOfPanels->Location = System::Drawing::Point(-13, 0);
 			this->pnlOfPanels->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->pnlOfPanels->Name = L"pnlOfPanels";
@@ -2336,8 +2342,11 @@ private: System::Windows::Forms::Label^ label26;
 			// 
 			// panel4
 			// 
+			this->panel4->Controls->Add(this->label27);
 			this->panel4->Controls->Add(this->label17);
+			this->panel4->Controls->Add(this->label29);
 			this->panel4->Controls->Add(this->label18);
+			this->panel4->Controls->Add(this->label30);
 			this->panel4->Controls->Add(this->label16);
 			this->panel4->Controls->Add(this->pictureBox48);
 			this->panel4->Controls->Add(this->pictureBox47);
@@ -2586,6 +2595,48 @@ private: System::Windows::Forms::Label^ label26;
 			// viewGradesTiner
 			// 
 			this->viewGradesTiner->Tick += gcnew System::EventHandler(this, &StudentPageForm::viewGradesTiner_Tick);
+			// 
+			// label27
+			// 
+			this->label27->AutoSize = true;
+			this->label27->BackColor = System::Drawing::Color::Transparent;
+			this->label27->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label27->ForeColor = System::Drawing::Color::Brown;
+			this->label27->Location = System::Drawing::Point(59, 149);
+			this->label27->Name = L"label27";
+			this->label27->Size = System::Drawing::Size(46, 25);
+			this->label27->TabIndex = 9;
+			this->label27->Text = L"Join";
+			this->label27->UseCompatibleTextRendering = true;
+			// 
+			// label29
+			// 
+			this->label29->AutoSize = true;
+			this->label29->BackColor = System::Drawing::Color::Transparent;
+			this->label29->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label29->ForeColor = System::Drawing::Color::Brown;
+			this->label29->Location = System::Drawing::Point(54, 80);
+			this->label29->Name = L"label29";
+			this->label29->Size = System::Drawing::Size(46, 25);
+			this->label29->TabIndex = 10;
+			this->label29->Text = L"Stay";
+			this->label29->UseCompatibleTextRendering = true;
+			// 
+			// label30
+			// 
+			this->label30->AutoSize = true;
+			this->label30->BackColor = System::Drawing::Color::Transparent;
+			this->label30->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label30->ForeColor = System::Drawing::Color::Brown;
+			this->label30->Location = System::Drawing::Point(54, 15);
+			this->label30->Name = L"label30";
+			this->label30->Size = System::Drawing::Size(83, 25);
+			this->label30->TabIndex = 8;
+			this->label30->Text = L"Simplify";
+			this->label30->UseCompatibleTextRendering = true;
 			// 
 			// StudentPageForm
 			// 

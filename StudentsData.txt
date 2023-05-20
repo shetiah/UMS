@@ -108,3 +108,14 @@ x
 9)3.2
 c)ab
 x
+1)finalTest
+2)2023043@cis.com
+3)12
+4)2023043
+5)3
+6)18
+7)3.2
+8)intro to cs,operation systems,Structured Programming
+9)3.2,3.5,2.9
+c)eletadab
+x

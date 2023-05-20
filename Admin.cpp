@@ -191,8 +191,18 @@ Dictionary<Course^, float>^ Admin::conversionFinishedCourseGpa(List<float>^ fini
 	List<Course^>^ Courses=gcnew List<Course^>;
 
 	Dictionary<Course^, float>^ temp= gcnew Dictionary<Course^ ,float>;
-	
-	for each (auto course in Course::allCourses)
+	for each (auto c in s->getFinishedCourses())
+	{
+		for each (auto course in Course::allCourses)
+		{
+			if (c == course->getName())
+			{
+				Courses->Add(course);
+				break;
+			}
+		}
+	}
+	/*for each (auto course in Course::allCourses)
 	{
 
 		for each (auto coursename in s->getFinishedCourses())
@@ -203,7 +213,7 @@ Dictionary<Course^, float>^ Admin::conversionFinishedCourseGpa(List<float>^ fini
 			}
 		}
 
-	}
+	}*/
 	for (int i =0;i<Courses->Count;i++)
 	{
 			temp->Add(Courses[i], finishedcoursesGPAs[i]);
