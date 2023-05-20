@@ -2683,8 +2683,9 @@ private: System::Windows::Forms::Label^ savedcourse;
 
     private:void populateItems()
 	{
-		currstds->Text = Convert::ToString(student->calculatecourseshours());
 		flowLayoutPanel3->Height = 0;
+
+		currstds->Text = Convert::ToString(selectedcourse->getAllStudentsInCourse()->Count);
 		for each (auto course in Course::allCourses)
 		{
 
@@ -2785,7 +2786,7 @@ private: System::Windows::Forms::Label^ savedcourse;
 	}
 	private: System::Void btnGPA_Click(System::Object^ sender, System::EventArgs^ e) {
 		sideBarTimer->Start();
-
+		currstds->Text = Convert::ToString(selectedcourse->getAllStudentsInCourse()->Count);
 		myhours->Text = Convert::ToString(student->calculatecourseshours());
 		savedcourse->Visible = false;
 		panel7->Visible = false;
@@ -2963,6 +2964,8 @@ private: System::Void savebt_Click(System::Object^ sender, System::EventArgs^ e)
 	}
 	else {
 		savedcourse->Visible = true;
+
+		currstds->Text = Convert::ToString(selectedcourse->getAllStudentsInCourse()->Count);
 		student->registerForCourse(selectedcourse);
 		avcoursecount->Text = Convert::ToString(student->CoursesAV()->Count);
 		myhours->Text = Convert::ToString(student->calculatecourseshours());
