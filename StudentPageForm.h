@@ -2951,7 +2951,7 @@ private: System::Void savebt_Click(System::Object^ sender, System::EventArgs^ e)
 		label20->Visible = true;
 		savebt->Visible = false;
 	}
-	else if ((student->calculatecourseshours() + selectedcourse->getHours()) < student->getMaxHoursAllowed())
+	else if ((student->calculatecourseshours() + selectedcourse->getHours()) > student->getMaxHoursAllowed())
 	{
 
 		label28->Visible = true;
@@ -2966,6 +2966,9 @@ private: System::Void savebt_Click(System::Object^ sender, System::EventArgs^ e)
 		expand3 = true;
 		dropdowntimer->Start();
 	}
+
+
+	Student::saveStudentDataToFile();
 }
 private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
 
@@ -3721,19 +3724,19 @@ private: System::Void slctcourseCDetailsbt_Click(System::Object^ sender, System:
 	   List<courseButton^>^ coursedetailsbtns = gcnew List<courseButton^>;
 	   List<courseButton^>^ courseregisterbtns = gcnew List<courseButton^>;
 	   List<Course^>^ getavCourses()
-	 {
-		 List<Course^>^ temp = gcnew List<Course^>;
-		 for each (auto course in Course::allCourses)
-		 {
-			 if (student->CoursesAV()->Contains(course->getName()))
-			 {
-				 temp->Add(course);
+	   {
+		   List<Course^>^ temp = gcnew List<Course^>;
+		   for each (auto course in Course::allCourses)
+		   {
+			   if (student->CoursesAV()->Contains(course->getName()))
+			   {
+				   temp->Add(course);
 
-			 }
+			   }
 
-		 }
-		 return temp;
-	 }
+		   }
+		   return temp;
+	   }
 	   Course^ selectedcourse = gcnew Course;
 private: System::Void label19_Click(System::Object^ sender, System::EventArgs^ e) {
 }

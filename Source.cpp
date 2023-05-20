@@ -111,6 +111,7 @@ int main()
 
 
 
+	Student::saveStudentDataToFile();
 
 	return 0;
 }
