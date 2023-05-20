@@ -82,6 +82,7 @@ int Course::getHours() {
 }
 
 List<int>^ Course::getAllStudentsInCourse(){
+	setAllStudentsInCourse();
 	return allStudentsInCourse;
 }
 
