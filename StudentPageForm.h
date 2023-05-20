@@ -2965,10 +2965,10 @@ private: System::Void savebt_Click(System::Object^ sender, System::EventArgs^ e)
 		myhours->Text = Convert::ToString(student->calculatecourseshours());
 		expand3 = true;
 		dropdowntimer->Start();
+		Student::saveStudentDataToFile();
 	}
 
 
-	Student::saveStudentDataToFile();
 }
 private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
 
@@ -3754,7 +3754,7 @@ private: System::Void button2_Click_3(System::Object^ sender, System::EventArgs^
 		courseMaxstds->Visible = true;
 		courseMaxstds->Text = Convert::ToString(selectedcourse->getMaxNumberOfStudents());
 		cshours->Visible = true;
-		cshours->Text = Convert::ToString(selectedcourse->getMaxNumberOfStudents());
+		cshours->Text = Convert::ToString(selectedcourse->getHours());
 		currstds->Visible = true;
 			currstds->Text = Convert::ToString(selectedcourse->calcnumofstdinCourse());
 	
