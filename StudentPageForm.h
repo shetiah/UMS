@@ -2948,12 +2948,15 @@ private: System::Void savebt_Click(System::Object^ sender, System::EventArgs^ e)
 	panel7->Visible = false;
 	if (selectedcourse->ifcourseisfilled())
 	{
+
+		panel7->Visible = true;
 		label20->Visible = true;
 		savebt->Visible = false;
 	}
 	else if ((student->calculatecourseshours() + selectedcourse->getHours()) > student->getMaxHoursAllowed())
 	{
 
+		panel7->Visible = true;
 		label28->Visible = true;
 
 		savebt->Visible = false;
