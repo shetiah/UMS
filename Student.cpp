@@ -517,7 +517,7 @@ int Student::calculatecourseshours()
 	int count = 0;
 	for each (auto var in Course::allCourses)
 	{
-		if (FinishedCourses->Contains(var->getName()))
+		if (CoursesInProgress->Contains(var->getName()))
 		{
 			count+=var->getHours();
 		}
