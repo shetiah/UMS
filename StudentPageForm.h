@@ -2702,7 +2702,7 @@ private: System::Windows::Forms::Label^ label26;
 	private: System::Void StudentPageForm_Load(System::Object^ sender, System::EventArgs^ e) {
 		populateItems();
 
-		hoursrem->Text = Convert::ToString(student->getMaxHoursAllowed() - (student->calculatecourseshours() + selectedcourse->getHours()));
+		hoursrem->Text = Convert::ToString(student->getMaxHoursAllowed() - student->calculatecourseshours());
 		myhours->Text = Convert::ToString(student->calculatecourseshours());
 		allbtns->Add(finishcsbt);
 		allbtns->Add(CoursesInProgressbt);
@@ -2833,7 +2833,7 @@ private: System::Windows::Forms::Label^ label26;
 			currstds->Text = "0";
 		}
 
-		hoursrem->Text = Convert::ToString(student->getMaxHoursAllowed() - (student->calculatecourseshours() + selectedcourse->getHours()));
+		hoursrem->Text = Convert::ToString(student->getMaxHoursAllowed() - student->calculatecourseshours());
 		myhours->Text = Convert::ToString(student->calculatecourseshours());
 		savedcourse->Visible = false;
 		panel7->Visible = false;
@@ -3021,7 +3021,7 @@ private: System::Void savebt_Click(System::Object^ sender, System::EventArgs^ e)
 		student->registerForCourse(selectedcourse);
 		avcoursecount->Text = Convert::ToString(student->CoursesAV()->Count);
 		myhours->Text = Convert::ToString(student->calculatecourseshours());
-		hoursrem->Text = Convert::ToString(student->getMaxHoursAllowed() - (student->calculatecourseshours() + selectedcourse->getHours()));
+		hoursrem->Text = Convert::ToString(student->getMaxHoursAllowed() - student->calculatecourseshours() );
 		expand3 = true;
 		dropdowntimer->Start();
 		Student::saveStudentDataToFile();
@@ -3815,7 +3815,7 @@ private: System::Void button2_Click_3(System::Object^ sender, System::EventArgs^
 		cshours->Visible = true;
 		cshours->Text = Convert::ToString(selectedcourse->getHours());
 		currstds->Visible = true;
-			currstds->Text = Convert::ToString(selectedcourse->calcnumofstdinCourse());
+		currstds->Text = Convert::ToString(selectedcourse->calcnumofstdinCourse());
 		
 	}
 	else {
