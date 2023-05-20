@@ -158,7 +158,7 @@ namespace UMS {
 			// pictureBox1
 			// 
 			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
-			this->pictureBox1->Location = System::Drawing::Point(57, 33);
+			this->pictureBox1->Location = System::Drawing::Point(27, 29);
 			this->pictureBox1->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->pictureBox1->Name = L"pictureBox1";
 			this->pictureBox1->Size = System::Drawing::Size(193, 180);
@@ -181,7 +181,7 @@ namespace UMS {
 			// codelb
 			// 
 			this->codelb->AutoSize = true;
-			this->codelb->Location = System::Drawing::Point(159, 230);
+			this->codelb->Location = System::Drawing::Point(121, 230);
 			this->codelb->Name = L"codelb";
 			this->codelb->Size = System::Drawing::Size(38, 16);
 			this->codelb->TabIndex = 2;
@@ -201,7 +201,7 @@ namespace UMS {
 			// instrData
 			// 
 			this->instrData->AutoSize = true;
-			this->instrData->Location = System::Drawing::Point(159, 262);
+			this->instrData->Location = System::Drawing::Point(121, 262);
 			this->instrData->Name = L"instrData";
 			this->instrData->Size = System::Drawing::Size(31, 16);
 			this->instrData->TabIndex = 4;
@@ -232,7 +232,7 @@ namespace UMS {
 			// hoursdt
 			// 
 			this->hoursdt->AutoSize = true;
-			this->hoursdt->Location = System::Drawing::Point(159, 334);
+			this->hoursdt->Location = System::Drawing::Point(121, 334);
 			this->hoursdt->Name = L"hoursdt";
 			this->hoursdt->Size = System::Drawing::Size(25, 16);
 			this->hoursdt->TabIndex = 8;
@@ -252,7 +252,7 @@ namespace UMS {
 			// isreqdata
 			// 
 			this->isreqdata->AutoSize = true;
-			this->isreqdata->Location = System::Drawing::Point(159, 367);
+			this->isreqdata->Location = System::Drawing::Point(121, 367);
 			this->isreqdata->Name = L"isreqdata";
 			this->isreqdata->Size = System::Drawing::Size(48, 16);
 			this->isreqdata->TabIndex = 10;
@@ -261,7 +261,7 @@ namespace UMS {
 			// maxstdDt
 			// 
 			this->maxstdDt->AutoSize = true;
-			this->maxstdDt->Location = System::Drawing::Point(159, 297);
+			this->maxstdDt->Location = System::Drawing::Point(121, 297);
 			this->maxstdDt->Name = L"maxstdDt";
 			this->maxstdDt->Size = System::Drawing::Size(61, 16);
 			this->maxstdDt->TabIndex = 11;
@@ -301,7 +301,7 @@ namespace UMS {
 			this->panel1->Location = System::Drawing::Point(0, 0);
 			this->panel1->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(348, 510);
+			this->panel1->Size = System::Drawing::Size(258, 398);
 			this->panel1->TabIndex = 12;
 			// 
 			// pictureBox18
@@ -319,7 +319,7 @@ namespace UMS {
 			// pictureBox17
 			// 
 			this->pictureBox17->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox17.Image")));
-			this->pictureBox17->Location = System::Drawing::Point(243, 198);
+			this->pictureBox17->Location = System::Drawing::Point(226, 167);
 			this->pictureBox17->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->pictureBox17->Name = L"pictureBox17";
 			this->pictureBox17->Size = System::Drawing::Size(35, 30);
@@ -385,7 +385,7 @@ namespace UMS {
 			// pictureBox11
 			// 
 			this->pictureBox11->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox11.Image")));
-			this->pictureBox11->Location = System::Drawing::Point(3, 62);
+			this->pictureBox11->Location = System::Drawing::Point(0, 2);
 			this->pictureBox11->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->pictureBox11->Name = L"pictureBox11";
 			this->pictureBox11->Size = System::Drawing::Size(47, 30);
@@ -429,7 +429,7 @@ namespace UMS {
 			// pictureBox7
 			// 
 			this->pictureBox7->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox7.Image")));
-			this->pictureBox7->Location = System::Drawing::Point(11, 132);
+			this->pictureBox7->Location = System::Drawing::Point(226, 237);
 			this->pictureBox7->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->pictureBox7->Name = L"pictureBox7";
 			this->pictureBox7->Size = System::Drawing::Size(41, 41);
@@ -451,7 +451,7 @@ namespace UMS {
 			// pictureBox5
 			// 
 			this->pictureBox5->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox5.Image")));
-			this->pictureBox5->Location = System::Drawing::Point(46, 14);
+			this->pictureBox5->Location = System::Drawing::Point(221, 0);
 			this->pictureBox5->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->pictureBox5->Name = L"pictureBox5";
 			this->pictureBox5->Size = System::Drawing::Size(37, 43);
@@ -499,7 +499,7 @@ namespace UMS {
 			this->Controls->Add(this->panel1);
 			this->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->Name = L"courselistitem";
-			this->Size = System::Drawing::Size(348, 510);
+			this->Size = System::Drawing::Size(258, 398);
 			this->Load += gcnew System::EventHandler(this, &courselistitem::courselistitem_Load);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			this->panel1->ResumeLayout(false);
