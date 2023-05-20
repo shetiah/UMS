@@ -20,3 +20,4 @@ eshta2tlkkkteeer-0
 yarab-a,b,c
 x-a
 xx-a
+ttt-0

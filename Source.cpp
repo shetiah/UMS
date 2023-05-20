@@ -99,7 +99,10 @@ int main()
 
 	}
 
-
+	Course::saveCourseContentToFile();
+	Course::saveCourseDataToFile();
+	Course::saveCourseHoursToFile();
+	Student::saveStudentDataToFile();
 
 
 

@@ -3757,7 +3757,7 @@ private: System::Void button2_Click_3(System::Object^ sender, System::EventArgs^
 		cshours->Text = Convert::ToString(selectedcourse->getHours());
 		currstds->Visible = true;
 			currstds->Text = Convert::ToString(selectedcourse->calcnumofstdinCourse());
-	
+		
 	}
 	else {
 		savebt->Visible = false;
