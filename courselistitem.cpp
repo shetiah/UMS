@@ -1,7 +1,8 @@
 #include "courselistitem.h"
 void UMS::courselistitem::setName(String^ name) {
 	this->name = name;
-	coursenamelb->Text = name;
+	coursenamelb->Text = name;/*
+	coursenamelb->Width = (panel2->Width / 2) - (coursenamelb->Width / 2);*/
 }
 void UMS::courselistitem::setCode(String^ code) {
 	this->Code = code;

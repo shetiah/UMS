@@ -212,6 +212,32 @@ private: System::Windows::Forms::Label^ label39;
 private: System::Windows::Forms::TextBox^ textBox7;
 private: System::Windows::Forms::Button^ button4;
 private: System::Windows::Forms::PictureBox^ pictureBox9;
+private: System::Windows::Forms::Panel^ panel12;
+private: System::Windows::Forms::Label^ label40;
+private: System::Windows::Forms::Label^ label37;
+private: System::Windows::Forms::FlowLayoutPanel^ flowLayoutPanel2;
+private: System::Windows::Forms::Button^ instbt;
+private: System::Windows::Forms::Button^ reqbt;
+private: System::Windows::Forms::Button^ maxstd;
+
+
+private: System::Windows::Forms::TextBox^ textBox8;
+private: System::Windows::Forms::Button^ button5;
+private: System::Windows::Forms::Label^ label38;
+private: System::Windows::Forms::Label^ label41;
+private: System::Windows::Forms::Label^ label42;
+private: System::Windows::Forms::Panel^ panel13;
+private: System::Windows::Forms::Button^ button6;
+private: System::Windows::Forms::Label^ label43;
+private: System::Windows::Forms::Label^ label44;
+
+
+
+
+
+
+
+
 
 
 
@@ -314,6 +340,53 @@ private: System::Windows::Forms::PictureBox^ pictureBox9;
 			this->StudentData = (gcnew System::Windows::Forms::Button());
 			this->slideBarTimer = (gcnew System::Windows::Forms::Timer(this->components));
 			this->pnlOfPanels = (gcnew System::Windows::Forms::Panel());
+			this->pnlCoursedataedit = (gcnew System::Windows::Forms::Panel());
+			this->panel12 = (gcnew System::Windows::Forms::Panel());
+			this->label44 = (gcnew System::Windows::Forms::Label());
+			this->panel13 = (gcnew System::Windows::Forms::Panel());
+			this->textBox8 = (gcnew System::Windows::Forms::TextBox());
+			this->button6 = (gcnew System::Windows::Forms::Button());
+			this->label43 = (gcnew System::Windows::Forms::Label());
+			this->label38 = (gcnew System::Windows::Forms::Label());
+			this->label41 = (gcnew System::Windows::Forms::Label());
+			this->label40 = (gcnew System::Windows::Forms::Label());
+			this->button5 = (gcnew System::Windows::Forms::Button());
+			this->label37 = (gcnew System::Windows::Forms::Label());
+			this->label42 = (gcnew System::Windows::Forms::Label());
+			this->flowLayoutPanel2 = (gcnew System::Windows::Forms::FlowLayoutPanel());
+			this->instbt = (gcnew System::Windows::Forms::Button());
+			this->reqbt = (gcnew System::Windows::Forms::Button());
+			this->maxstd = (gcnew System::Windows::Forms::Button());
+			this->label34 = (gcnew System::Windows::Forms::Label());
+			this->label35 = (gcnew System::Windows::Forms::Label());
+			this->button2 = (gcnew System::Windows::Forms::Button());
+			this->flowLayoutPanel1 = (gcnew System::Windows::Forms::FlowLayoutPanel());
+			this->label36 = (gcnew System::Windows::Forms::Label());
+			this->label39 = (gcnew System::Windows::Forms::Label());
+			this->textBox7 = (gcnew System::Windows::Forms::TextBox());
+			this->pnlOfAddCourse = (gcnew System::Windows::Forms::Panel());
+			this->label33 = (gcnew System::Windows::Forms::Label());
+			this->label15 = (gcnew System::Windows::Forms::Label());
+			this->slabel = (gcnew System::Windows::Forms::Label());
+			this->label11 = (gcnew System::Windows::Forms::Label());
+			this->addCourseBtn = (gcnew System::Windows::Forms::Button());
+			this->hlabel = (gcnew System::Windows::Forms::Label());
+			this->mlabel = (gcnew System::Windows::Forms::Label());
+			this->Eradio = (gcnew System::Windows::Forms::RadioButton());
+			this->Rradio = (gcnew System::Windows::Forms::RadioButton());
+			this->lblfgd = (gcnew System::Windows::Forms::Label());
+			this->ctxt = (gcnew System::Windows::Forms::TextBox());
+			this->ptxt = (gcnew System::Windows::Forms::TextBox());
+			this->itxt = (gcnew System::Windows::Forms::TextBox());
+			this->mtxt = (gcnew System::Windows::Forms::TextBox());
+			this->htxt = (gcnew System::Windows::Forms::TextBox());
+			this->nTxt = (gcnew System::Windows::Forms::TextBox());
+			this->lbl7 = (gcnew System::Windows::Forms::Label());
+			this->lbl5 = (gcnew System::Windows::Forms::Label());
+			this->lbl4 = (gcnew System::Windows::Forms::Label());
+			this->lbl37 = (gcnew System::Windows::Forms::Label());
+			this->lbl2 = (gcnew System::Windows::Forms::Label());
+			this->lbl1 = (gcnew System::Windows::Forms::Label());
 			this->pnlOfAddStudent = (gcnew System::Windows::Forms::Panel());
 			this->label17 = (gcnew System::Windows::Forms::Label());
 			this->label16 = (gcnew System::Windows::Forms::Label());
@@ -386,37 +459,6 @@ private: System::Windows::Forms::PictureBox^ pictureBox9;
 			this->pictureBox7 = (gcnew System::Windows::Forms::PictureBox());
 			this->label27 = (gcnew System::Windows::Forms::Label());
 			this->pictureBox44 = (gcnew System::Windows::Forms::PictureBox());
-			this->pnlCoursedataedit = (gcnew System::Windows::Forms::Panel());
-			this->label34 = (gcnew System::Windows::Forms::Label());
-			this->label35 = (gcnew System::Windows::Forms::Label());
-			this->button2 = (gcnew System::Windows::Forms::Button());
-			this->flowLayoutPanel1 = (gcnew System::Windows::Forms::FlowLayoutPanel());
-			this->label36 = (gcnew System::Windows::Forms::Label());
-			this->label39 = (gcnew System::Windows::Forms::Label());
-			this->textBox7 = (gcnew System::Windows::Forms::TextBox());
-			this->pnlOfAddCourse = (gcnew System::Windows::Forms::Panel());
-			this->label33 = (gcnew System::Windows::Forms::Label());
-			this->label15 = (gcnew System::Windows::Forms::Label());
-			this->slabel = (gcnew System::Windows::Forms::Label());
-			this->label11 = (gcnew System::Windows::Forms::Label());
-			this->addCourseBtn = (gcnew System::Windows::Forms::Button());
-			this->hlabel = (gcnew System::Windows::Forms::Label());
-			this->mlabel = (gcnew System::Windows::Forms::Label());
-			this->Eradio = (gcnew System::Windows::Forms::RadioButton());
-			this->Rradio = (gcnew System::Windows::Forms::RadioButton());
-			this->lblfgd = (gcnew System::Windows::Forms::Label());
-			this->ctxt = (gcnew System::Windows::Forms::TextBox());
-			this->ptxt = (gcnew System::Windows::Forms::TextBox());
-			this->itxt = (gcnew System::Windows::Forms::TextBox());
-			this->mtxt = (gcnew System::Windows::Forms::TextBox());
-			this->htxt = (gcnew System::Windows::Forms::TextBox());
-			this->nTxt = (gcnew System::Windows::Forms::TextBox());
-			this->lbl7 = (gcnew System::Windows::Forms::Label());
-			this->lbl5 = (gcnew System::Windows::Forms::Label());
-			this->lbl4 = (gcnew System::Windows::Forms::Label());
-			this->lbl37 = (gcnew System::Windows::Forms::Label());
-			this->lbl2 = (gcnew System::Windows::Forms::Label());
-			this->lbl1 = (gcnew System::Windows::Forms::Label());
 			this->sideBar->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox6))->BeginInit();
 			this->pnlOfbtns->SuspendLayout();
@@ -428,6 +470,11 @@ private: System::Windows::Forms::PictureBox^ pictureBox9;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->BeginInit();
 			this->pnlOfPanels->SuspendLayout();
+			this->pnlCoursedataedit->SuspendLayout();
+			this->panel12->SuspendLayout();
+			this->panel13->SuspendLayout();
+			this->flowLayoutPanel2->SuspendLayout();
+			this->pnlOfAddCourse->SuspendLayout();
 			this->pnlOfAddStudent->SuspendLayout();
 			this->pnlOfData->SuspendLayout();
 			this->pnlOfEditCourse->SuspendLayout();
@@ -443,8 +490,6 @@ private: System::Windows::Forms::PictureBox^ pictureBox9;
 			this->panel9->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox7))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox44))->BeginInit();
-			this->pnlCoursedataedit->SuspendLayout();
-			this->pnlOfAddCourse->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// sideBar
@@ -457,10 +502,9 @@ private: System::Windows::Forms::PictureBox^ pictureBox9;
 			this->sideBar->Controls->Add(this->StudentData);
 			this->sideBar->Location = System::Drawing::Point(0, 0);
 			this->sideBar->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
-			this->sideBar->MaximumSize = System::Drawing::Size(287, 473);
 			this->sideBar->MinimumSize = System::Drawing::Size(60, 473);
 			this->sideBar->Name = L"sideBar";
-			this->sideBar->Size = System::Drawing::Size(60, 473);
+			this->sideBar->Size = System::Drawing::Size(64, 520);
 			this->sideBar->TabIndex = 0;
 			this->sideBar->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &adminHome::sideBar_Paint);
 			// 
@@ -500,7 +544,7 @@ private: System::Windows::Forms::PictureBox^ pictureBox9;
 			this->pnlOfbtns->Location = System::Drawing::Point(0, 128);
 			this->pnlOfbtns->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->pnlOfbtns->Name = L"pnlOfbtns";
-			this->pnlOfbtns->Size = System::Drawing::Size(275, 332);
+			this->pnlOfbtns->Size = System::Drawing::Size(275, 390);
 			this->pnlOfbtns->TabIndex = 2;
 			// 
 			// button4
@@ -529,7 +573,7 @@ private: System::Windows::Forms::PictureBox^ pictureBox9;
 			// 
 			this->pictureBox9->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->pictureBox9->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox9.Image")));
-			this->pictureBox9->Location = System::Drawing::Point(12, 218);
+			this->pictureBox9->Location = System::Drawing::Point(16, 219);
 			this->pictureBox9->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->pictureBox9->Name = L"pictureBox9";
 			this->pictureBox9->Size = System::Drawing::Size(39, 46);
@@ -818,8 +862,684 @@ private: System::Windows::Forms::PictureBox^ pictureBox9;
 			this->pnlOfPanels->Location = System::Drawing::Point(61, 0);
 			this->pnlOfPanels->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->pnlOfPanels->Name = L"pnlOfPanels";
-			this->pnlOfPanels->Size = System::Drawing::Size(983, 472);
+			this->pnlOfPanels->Size = System::Drawing::Size(1121, 520);
 			this->pnlOfPanels->TabIndex = 1;
+			// 
+			// pnlCoursedataedit
+			// 
+			this->pnlCoursedataedit->AutoScroll = true;
+			this->pnlCoursedataedit->BackColor = System::Drawing::Color::Transparent;
+			this->pnlCoursedataedit->Controls->Add(this->panel12);
+			this->pnlCoursedataedit->Controls->Add(this->label34);
+			this->pnlCoursedataedit->Controls->Add(this->label35);
+			this->pnlCoursedataedit->Controls->Add(this->button2);
+			this->pnlCoursedataedit->Controls->Add(this->flowLayoutPanel1);
+			this->pnlCoursedataedit->Controls->Add(this->label36);
+			this->pnlCoursedataedit->Controls->Add(this->label39);
+			this->pnlCoursedataedit->Controls->Add(this->textBox7);
+			this->pnlCoursedataedit->Location = System::Drawing::Point(0, -33);
+			this->pnlCoursedataedit->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->pnlCoursedataedit->Name = L"pnlCoursedataedit";
+			this->pnlCoursedataedit->Size = System::Drawing::Size(1120, 553);
+			this->pnlCoursedataedit->TabIndex = 7;
+			this->pnlCoursedataedit->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &adminHome::pnlCoursedataedit_Paint);
+			// 
+			// panel12
+			// 
+			this->panel12->Controls->Add(this->label40);
+			this->panel12->Controls->Add(this->label41);
+			this->panel12->Controls->Add(this->label44);
+			this->panel12->Controls->Add(this->panel13);
+			this->panel12->Controls->Add(this->label38);
+			this->panel12->Controls->Add(this->button5);
+			this->panel12->Controls->Add(this->label37);
+			this->panel12->Controls->Add(this->label42);
+			this->panel12->Controls->Add(this->flowLayoutPanel2);
+			this->panel12->Location = System::Drawing::Point(43, 268);
+			this->panel12->Name = L"panel12";
+			this->panel12->Size = System::Drawing::Size(591, 532);
+			this->panel12->TabIndex = 23;
+			this->panel12->Visible = false;
+			this->panel12->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &adminHome::panel12_Paint);
+			// 
+			// label44
+			// 
+			this->label44->AutoSize = true;
+			this->label44->BackColor = System::Drawing::Color::Transparent;
+			this->label44->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F));
+			this->label44->ForeColor = System::Drawing::Color::Brown;
+			this->label44->Location = System::Drawing::Point(134, 185);
+			this->label44->Name = L"label44";
+			this->label44->Size = System::Drawing::Size(305, 20);
+			this->label44->TabIndex = 31;
+			this->label44->Text = L"instructor can only contain letters";
+			this->label44->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			this->label44->Visible = false;
+			// 
+			// panel13
+			// 
+			this->panel13->Controls->Add(this->textBox8);
+			this->panel13->Controls->Add(this->button6);
+			this->panel13->Controls->Add(this->label43);
+			this->panel13->Location = System::Drawing::Point(14, 233);
+			this->panel13->Name = L"panel13";
+			this->panel13->Size = System::Drawing::Size(566, 228);
+			this->panel13->TabIndex = 30;
+			this->panel13->Visible = false;
+			// 
+			// textBox8
+			// 
+			this->textBox8->BackColor = System::Drawing::Color::Linen;
+			this->textBox8->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->textBox8->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F));
+			this->textBox8->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
+				static_cast<System::Int32>(static_cast<System::Byte>(31)));
+			this->textBox8->Location = System::Drawing::Point(8, 18);
+			this->textBox8->Name = L"textBox8";
+			this->textBox8->Size = System::Drawing::Size(543, 27);
+			this->textBox8->TabIndex = 24;
+			// 
+			// button6
+			// 
+			this->button6->BackColor = System::Drawing::Color::Brown;
+			this->button6->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->button6->FlatAppearance->BorderColor = System::Drawing::Color::Tan;
+			this->button6->FlatAppearance->BorderSize = 3;
+			this->button6->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button6->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F));
+			this->button6->ForeColor = System::Drawing::Color::Tan;
+			this->button6->Location = System::Drawing::Point(220, 54);
+			this->button6->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->button6->Name = L"button6";
+			this->button6->Size = System::Drawing::Size(117, 38);
+			this->button6->TabIndex = 28;
+			this->button6->Text = L"Done";
+			this->button6->UseVisualStyleBackColor = false;
+			this->button6->Click += gcnew System::EventHandler(this, &adminHome::button6_Click);
+			// 
+			// label43
+			// 
+			this->label43->AutoSize = true;
+			this->label43->BackColor = System::Drawing::Color::Transparent;
+			this->label43->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F));
+			this->label43->ForeColor = System::Drawing::Color::Brown;
+			this->label43->Location = System::Drawing::Point(343, 63);
+			this->label43->Name = L"label43";
+			this->label43->Size = System::Drawing::Size(109, 20);
+			this->label43->TabIndex = 29;
+			this->label43->Text = L"wrong data";
+			this->label43->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			this->label43->Visible = false;
+			// 
+			// label38
+			// 
+			this->label38->AutoSize = true;
+			this->label38->BackColor = System::Drawing::Color::Transparent;
+			this->label38->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F));
+			this->label38->ForeColor = System::Drawing::Color::Brown;
+			this->label38->Location = System::Drawing::Point(424, 136);
+			this->label38->Name = L"label38";
+			this->label38->Size = System::Drawing::Size(160, 20);
+			this->label38->TabIndex = 25;
+			this->label38->Text = L"no button clicked";
+			this->label38->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			this->label38->Visible = false;
+			// 
+			// label41
+			// 
+			this->label41->AutoSize = true;
+			this->label41->BackColor = System::Drawing::Color::Transparent;
+			this->label41->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F));
+			this->label41->ForeColor = System::Drawing::Color::Brown;
+			this->label41->Location = System::Drawing::Point(39, 180);
+			this->label41->Name = L"label41";
+			this->label41->Size = System::Drawing::Size(534, 40);
+			this->label41->TabIndex = 26;
+			this->label41->Text = L"if you want the course to be required please enter \"required\" \r\nif you want it to"
+				L" be elective please write \"elective\"";
+			this->label41->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			this->label41->Visible = false;
+			// 
+			// label40
+			// 
+			this->label40->AutoSize = true;
+			this->label40->BackColor = System::Drawing::Color::Transparent;
+			this->label40->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F));
+			this->label40->ForeColor = System::Drawing::Color::Brown;
+			this->label40->Location = System::Drawing::Point(150, 192);
+			this->label40->Name = L"label40";
+			this->label40->Size = System::Drawing::Size(267, 40);
+			this->label40->TabIndex = 21;
+			this->label40->Text = L"maximum number of students\r\ncan\'t be decremented";
+			this->label40->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			this->label40->Visible = false;
+			// 
+			// button5
+			// 
+			this->button5->BackColor = System::Drawing::Color::Brown;
+			this->button5->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->button5->FlatAppearance->BorderColor = System::Drawing::Color::Tan;
+			this->button5->FlatAppearance->BorderSize = 3;
+			this->button5->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button5->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F));
+			this->button5->ForeColor = System::Drawing::Color::Tan;
+			this->button5->Location = System::Drawing::Point(453, 65);
+			this->button5->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->button5->Name = L"button5";
+			this->button5->Size = System::Drawing::Size(117, 38);
+			this->button5->TabIndex = 24;
+			this->button5->Text = L"edit";
+			this->button5->UseVisualStyleBackColor = false;
+			this->button5->Click += gcnew System::EventHandler(this, &adminHome::button5_Click);
+			// 
+			// label37
+			// 
+			this->label37->AutoSize = true;
+			this->label37->BackColor = System::Drawing::Color::Transparent;
+			this->label37->Font = (gcnew System::Drawing::Font(L"Cooper Black", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label37->ForeColor = System::Drawing::Color::Brown;
+			this->label37->Location = System::Drawing::Point(123, 7);
+			this->label37->Name = L"label37";
+			this->label37->Size = System::Drawing::Size(322, 26);
+			this->label37->TabIndex = 19;
+			this->label37->Text = L"what do you want to edit\?";
+			// 
+			// label42
+			// 
+			this->label42->AutoSize = true;
+			this->label42->BackColor = System::Drawing::Color::Transparent;
+			this->label42->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F));
+			this->label42->ForeColor = System::Drawing::Color::Brown;
+			this->label42->Location = System::Drawing::Point(219, 185);
+			this->label42->Name = L"label42";
+			this->label42->Size = System::Drawing::Size(129, 20);
+			this->label42->TabIndex = 27;
+			this->label42->Text = L"course edited!";
+			this->label42->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			this->label42->Visible = false;
+			// 
+			// flowLayoutPanel2
+			// 
+			this->flowLayoutPanel2->Controls->Add(this->instbt);
+			this->flowLayoutPanel2->Controls->Add(this->reqbt);
+			this->flowLayoutPanel2->Controls->Add(this->maxstd);
+			this->flowLayoutPanel2->Location = System::Drawing::Point(148, 43);
+			this->flowLayoutPanel2->Name = L"flowLayoutPanel2";
+			this->flowLayoutPanel2->Size = System::Drawing::Size(268, 132);
+			this->flowLayoutPanel2->TabIndex = 18;
+			// 
+			// instbt
+			// 
+			this->instbt->BackColor = System::Drawing::Color::Tan;
+			this->instbt->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->instbt->FlatAppearance->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(26)),
+				static_cast<System::Int32>(static_cast<System::Byte>(11)), static_cast<System::Int32>(static_cast<System::Byte>(69)));
+			this->instbt->FlatAppearance->BorderSize = 3;
+			this->instbt->FlatAppearance->MouseDownBackColor = System::Drawing::Color::Brown;
+			this->instbt->FlatAppearance->MouseOverBackColor = System::Drawing::Color::Brown;
+			this->instbt->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->instbt->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F));
+			this->instbt->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(26)), static_cast<System::Int32>(static_cast<System::Byte>(11)),
+				static_cast<System::Int32>(static_cast<System::Byte>(69)));
+			this->instbt->Location = System::Drawing::Point(3, 2);
+			this->instbt->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->instbt->Name = L"instbt";
+			this->instbt->Size = System::Drawing::Size(255, 38);
+			this->instbt->TabIndex = 20;
+			this->instbt->Text = L"instructor";
+			this->instbt->UseVisualStyleBackColor = false;
+			this->instbt->Click += gcnew System::EventHandler(this, &adminHome::instbt_Click);
+			this->instbt->MouseClick += gcnew System::Windows::Forms::MouseEventHandler(this, &adminHome::instbt_MouseClick);
+			// 
+			// reqbt
+			// 
+			this->reqbt->BackColor = System::Drawing::Color::Tan;
+			this->reqbt->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->reqbt->FlatAppearance->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(26)),
+				static_cast<System::Int32>(static_cast<System::Byte>(11)), static_cast<System::Int32>(static_cast<System::Byte>(69)));
+			this->reqbt->FlatAppearance->BorderSize = 3;
+			this->reqbt->FlatAppearance->MouseDownBackColor = System::Drawing::Color::Brown;
+			this->reqbt->FlatAppearance->MouseOverBackColor = System::Drawing::Color::Brown;
+			this->reqbt->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->reqbt->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F));
+			this->reqbt->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(26)), static_cast<System::Int32>(static_cast<System::Byte>(11)),
+				static_cast<System::Int32>(static_cast<System::Byte>(69)));
+			this->reqbt->Location = System::Drawing::Point(3, 44);
+			this->reqbt->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->reqbt->Name = L"reqbt";
+			this->reqbt->Size = System::Drawing::Size(255, 38);
+			this->reqbt->TabIndex = 21;
+			this->reqbt->Text = L"required or elective";
+			this->reqbt->UseCompatibleTextRendering = true;
+			this->reqbt->UseVisualStyleBackColor = false;
+			this->reqbt->Click += gcnew System::EventHandler(this, &adminHome::reqbt_Click);
+			// 
+			// maxstd
+			// 
+			this->maxstd->BackColor = System::Drawing::Color::Tan;
+			this->maxstd->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->maxstd->FlatAppearance->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(26)),
+				static_cast<System::Int32>(static_cast<System::Byte>(11)), static_cast<System::Int32>(static_cast<System::Byte>(69)));
+			this->maxstd->FlatAppearance->BorderSize = 3;
+			this->maxstd->FlatAppearance->MouseDownBackColor = System::Drawing::Color::Brown;
+			this->maxstd->FlatAppearance->MouseOverBackColor = System::Drawing::Color::Brown;
+			this->maxstd->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->maxstd->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F));
+			this->maxstd->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(26)), static_cast<System::Int32>(static_cast<System::Byte>(11)),
+				static_cast<System::Int32>(static_cast<System::Byte>(69)));
+			this->maxstd->Location = System::Drawing::Point(3, 86);
+			this->maxstd->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->maxstd->Name = L"maxstd";
+			this->maxstd->Size = System::Drawing::Size(255, 38);
+			this->maxstd->TabIndex = 22;
+			this->maxstd->Text = L"max students";
+			this->maxstd->UseVisualStyleBackColor = false;
+			this->maxstd->Click += gcnew System::EventHandler(this, &adminHome::maxstd_Click);
+			// 
+			// label34
+			// 
+			this->label34->AutoSize = true;
+			this->label34->BackColor = System::Drawing::Color::Transparent;
+			this->label34->Font = (gcnew System::Drawing::Font(L"Cooper Black", 19.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label34->ForeColor = System::Drawing::Color::Brown;
+			this->label34->Location = System::Drawing::Point(9, 58);
+			this->label34->Name = L"label34";
+			this->label34->Size = System::Drawing::Size(298, 38);
+			this->label34->TabIndex = 17;
+			this->label34->Text = L"Edit course data:";
+			// 
+			// label35
+			// 
+			this->label35->AutoSize = true;
+			this->label35->BackColor = System::Drawing::Color::Tan;
+			this->label35->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F));
+			this->label35->Location = System::Drawing::Point(12, 81);
+			this->label35->Name = L"label35";
+			this->label35->Size = System::Drawing::Size(0, 20);
+			this->label35->TabIndex = 16;
+			// 
+			// button2
+			// 
+			this->button2->BackColor = System::Drawing::Color::Tan;
+			this->button2->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->button2->FlatAppearance->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(26)),
+				static_cast<System::Int32>(static_cast<System::Byte>(11)), static_cast<System::Int32>(static_cast<System::Byte>(69)));
+			this->button2->FlatAppearance->BorderSize = 3;
+			this->button2->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button2->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F));
+			this->button2->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(26)), static_cast<System::Int32>(static_cast<System::Byte>(11)),
+				static_cast<System::Int32>(static_cast<System::Byte>(69)));
+			this->button2->Location = System::Drawing::Point(301, 221);
+			this->button2->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->button2->Name = L"button2";
+			this->button2->Size = System::Drawing::Size(117, 38);
+			this->button2->TabIndex = 15;
+			this->button2->Text = L"view";
+			this->button2->UseVisualStyleBackColor = false;
+			this->button2->Click += gcnew System::EventHandler(this, &adminHome::button2_Click_2);
+			// 
+			// flowLayoutPanel1
+			// 
+			this->flowLayoutPanel1->AutoScroll = true;
+			this->flowLayoutPanel1->BackColor = System::Drawing::Color::Transparent;
+			this->flowLayoutPanel1->Location = System::Drawing::Point(647, 90);
+			this->flowLayoutPanel1->Name = L"flowLayoutPanel1";
+			this->flowLayoutPanel1->Size = System::Drawing::Size(563, 462);
+			this->flowLayoutPanel1->TabIndex = 4;
+			this->flowLayoutPanel1->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &adminHome::flowLayoutPanel1_Paint);
+			// 
+			// label36
+			// 
+			this->label36->AutoSize = true;
+			this->label36->BackColor = System::Drawing::Color::Transparent;
+			this->label36->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F));
+			this->label36->ForeColor = System::Drawing::Color::Brown;
+			this->label36->Location = System::Drawing::Point(145, 194);
+			this->label36->Name = L"label36";
+			this->label36->Size = System::Drawing::Size(403, 20);
+			this->label36->TabIndex = 13;
+			this->label36->Text = L"not found:-> please enter another course name";
+			this->label36->Visible = false;
+			// 
+			// label39
+			// 
+			this->label39->AutoSize = true;
+			this->label39->BackColor = System::Drawing::Color::Transparent;
+			this->label39->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F));
+			this->label39->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(26)), static_cast<System::Int32>(static_cast<System::Byte>(11)),
+				static_cast<System::Int32>(static_cast<System::Byte>(69)));
+			this->label39->Location = System::Drawing::Point(10, 128);
+			this->label39->Name = L"label39";
+			this->label39->Size = System::Drawing::Size(462, 20);
+			this->label39->TabIndex = 7;
+			this->label39->Text = L"please enter the name of the course you want to edit:";
+			// 
+			// textBox7
+			// 
+			this->textBox7->BackColor = System::Drawing::Color::Linen;
+			this->textBox7->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->textBox7->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F));
+			this->textBox7->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
+				static_cast<System::Int32>(static_cast<System::Byte>(31)));
+			this->textBox7->Location = System::Drawing::Point(54, 154);
+			this->textBox7->Name = L"textBox7";
+			this->textBox7->Size = System::Drawing::Size(587, 27);
+			this->textBox7->TabIndex = 0;
+			// 
+			// pnlOfAddCourse
+			// 
+			this->pnlOfAddCourse->BackColor = System::Drawing::Color::White;
+			this->pnlOfAddCourse->Controls->Add(this->label33);
+			this->pnlOfAddCourse->Controls->Add(this->label15);
+			this->pnlOfAddCourse->Controls->Add(this->slabel);
+			this->pnlOfAddCourse->Controls->Add(this->label11);
+			this->pnlOfAddCourse->Controls->Add(this->addCourseBtn);
+			this->pnlOfAddCourse->Controls->Add(this->hlabel);
+			this->pnlOfAddCourse->Controls->Add(this->mlabel);
+			this->pnlOfAddCourse->Controls->Add(this->Eradio);
+			this->pnlOfAddCourse->Controls->Add(this->Rradio);
+			this->pnlOfAddCourse->Controls->Add(this->lblfgd);
+			this->pnlOfAddCourse->Controls->Add(this->ctxt);
+			this->pnlOfAddCourse->Controls->Add(this->ptxt);
+			this->pnlOfAddCourse->Controls->Add(this->itxt);
+			this->pnlOfAddCourse->Controls->Add(this->mtxt);
+			this->pnlOfAddCourse->Controls->Add(this->htxt);
+			this->pnlOfAddCourse->Controls->Add(this->nTxt);
+			this->pnlOfAddCourse->Controls->Add(this->lbl7);
+			this->pnlOfAddCourse->Controls->Add(this->lbl5);
+			this->pnlOfAddCourse->Controls->Add(this->lbl4);
+			this->pnlOfAddCourse->Controls->Add(this->lbl37);
+			this->pnlOfAddCourse->Controls->Add(this->lbl2);
+			this->pnlOfAddCourse->Controls->Add(this->lbl1);
+			this->pnlOfAddCourse->Dock = System::Windows::Forms::DockStyle::Bottom;
+			this->pnlOfAddCourse->Location = System::Drawing::Point(0, 0);
+			this->pnlOfAddCourse->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->pnlOfAddCourse->Name = L"pnlOfAddCourse";
+			this->pnlOfAddCourse->Size = System::Drawing::Size(1121, 520);
+			this->pnlOfAddCourse->TabIndex = 2;
+			this->pnlOfAddCourse->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &adminHome::pnlOfAddCourse_Paint);
+			// 
+			// label33
+			// 
+			this->label33->AutoSize = true;
+			this->label33->BackColor = System::Drawing::Color::Transparent;
+			this->label33->ForeColor = System::Drawing::Color::Red;
+			this->label33->Location = System::Drawing::Point(514, 118);
+			this->label33->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label33->Name = L"label33";
+			this->label33->Size = System::Drawing::Size(266, 16);
+			this->label33->TabIndex = 37;
+			this->label33->Text = L"A course with the same name already exists";
+			this->label33->Visible = false;
+			// 
+			// label15
+			// 
+			this->label15->AutoSize = true;
+			this->label15->Font = (gcnew System::Drawing::Font(L"Cooper Black", 22.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label15->ForeColor = System::Drawing::Color::Tan;
+			this->label15->Location = System::Drawing::Point(9, 13);
+			this->label15->Name = L"label15";
+			this->label15->Size = System::Drawing::Size(241, 42);
+			this->label15->TabIndex = 36;
+			this->label15->Text = L"Add course:";
+			// 
+			// slabel
+			// 
+			this->slabel->AutoSize = true;
+			this->slabel->BackColor = System::Drawing::Color::Transparent;
+			this->slabel->ForeColor = System::Drawing::Color::Blue;
+			this->slabel->Location = System::Drawing::Point(630, 444);
+			this->slabel->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->slabel->Name = L"slabel";
+			this->slabel->Size = System::Drawing::Size(175, 16);
+			this->slabel->TabIndex = 35;
+			this->slabel->Text = L"Course Added Successfully!";
+			this->slabel->Visible = false;
+			// 
+			// label11
+			// 
+			this->label11->AutoSize = true;
+			this->label11->BackColor = System::Drawing::Color::Transparent;
+			this->label11->ForeColor = System::Drawing::Color::Red;
+			this->label11->Location = System::Drawing::Point(614, 354);
+			this->label11->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label11->Name = L"label11";
+			this->label11->Size = System::Drawing::Size(214, 16);
+			this->label11->TabIndex = 34;
+			this->label11->Text = L"Sorry , you must fill all the textboxes";
+			this->label11->Visible = false;
+			// 
+			// addCourseBtn
+			// 
+			this->addCourseBtn->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
+				static_cast<System::Int32>(static_cast<System::Byte>(31)));
+			this->addCourseBtn->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->addCourseBtn->FlatAppearance->BorderSize = 0;
+			this->addCourseBtn->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->addCourseBtn->Font = (gcnew System::Drawing::Font(L"Segoe UI", 11.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->addCourseBtn->ForeColor = System::Drawing::Color::Tan;
+			this->addCourseBtn->Location = System::Drawing::Point(632, 377);
+			this->addCourseBtn->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->addCourseBtn->Name = L"addCourseBtn";
+			this->addCourseBtn->Size = System::Drawing::Size(173, 55);
+			this->addCourseBtn->TabIndex = 33;
+			this->addCourseBtn->Text = L"ADD";
+			this->addCourseBtn->UseVisualStyleBackColor = false;
+			this->addCourseBtn->Click += gcnew System::EventHandler(this, &adminHome::addCourseBtn_Click);
+			// 
+			// hlabel
+			// 
+			this->hlabel->AutoSize = true;
+			this->hlabel->BackColor = System::Drawing::Color::Transparent;
+			this->hlabel->ForeColor = System::Drawing::Color::Red;
+			this->hlabel->Location = System::Drawing::Point(514, 158);
+			this->hlabel->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->hlabel->Name = L"hlabel";
+			this->hlabel->Size = System::Drawing::Size(329, 16);
+			this->hlabel->TabIndex = 32;
+			this->hlabel->Text = L"please enter numbers that ranges between 1 to 25 only";
+			this->hlabel->Visible = false;
+			// 
+			// mlabel
+			// 
+			this->mlabel->AutoSize = true;
+			this->mlabel->BackColor = System::Drawing::Color::Transparent;
+			this->mlabel->ForeColor = System::Drawing::Color::Red;
+			this->mlabel->Location = System::Drawing::Point(514, 200);
+			this->mlabel->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->mlabel->Name = L"mlabel";
+			this->mlabel->Size = System::Drawing::Size(322, 16);
+			this->mlabel->TabIndex = 31;
+			this->mlabel->Text = L"please enter numbers that ranges between 0 to 4 only";
+			this->mlabel->Visible = false;
+			// 
+			// Eradio
+			// 
+			this->Eradio->AutoSize = true;
+			this->Eradio->Font = (gcnew System::Drawing::Font(L"Cooper Black", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->Eradio->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(26)), static_cast<System::Int32>(static_cast<System::Byte>(11)),
+				static_cast<System::Int32>(static_cast<System::Byte>(69)));
+			this->Eradio->Location = System::Drawing::Point(404, 425);
+			this->Eradio->Margin = System::Windows::Forms::Padding(4);
+			this->Eradio->Name = L"Eradio";
+			this->Eradio->Size = System::Drawing::Size(84, 19);
+			this->Eradio->TabIndex = 30;
+			this->Eradio->Text = L"Elective";
+			this->Eradio->UseVisualStyleBackColor = true;
+			// 
+			// Rradio
+			// 
+			this->Rradio->AutoSize = true;
+			this->Rradio->Checked = true;
+			this->Rradio->Font = (gcnew System::Drawing::Font(L"Cooper Black", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->Rradio->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(26)), static_cast<System::Int32>(static_cast<System::Byte>(11)),
+				static_cast<System::Int32>(static_cast<System::Byte>(69)));
+			this->Rradio->Location = System::Drawing::Point(404, 398);
+			this->Rradio->Margin = System::Windows::Forms::Padding(4);
+			this->Rradio->Name = L"Rradio";
+			this->Rradio->Size = System::Drawing::Size(117, 19);
+			this->Rradio->TabIndex = 29;
+			this->Rradio->TabStop = true;
+			this->Rradio->Text = L"Requirement";
+			this->Rradio->UseVisualStyleBackColor = true;
+			// 
+			// lblfgd
+			// 
+			this->lblfgd->AutoSize = true;
+			this->lblfgd->Font = (gcnew System::Drawing::Font(L"Cooper Black", 9));
+			this->lblfgd->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(26)), static_cast<System::Int32>(static_cast<System::Byte>(11)),
+				static_cast<System::Int32>(static_cast<System::Byte>(69)));
+			this->lblfgd->Location = System::Drawing::Point(75, 399);
+			this->lblfgd->Name = L"lblfgd";
+			this->lblfgd->Size = System::Drawing::Size(308, 17);
+			this->lblfgd->TabIndex = 28;
+			this->lblfgd->Text = L"Is this course Requirement or Elective \?";
+			// 
+			// ctxt
+			// 
+			this->ctxt->Location = System::Drawing::Point(227, 340);
+			this->ctxt->Margin = System::Windows::Forms::Padding(4);
+			this->ctxt->MaxLength = 10;
+			this->ctxt->Multiline = true;
+			this->ctxt->Name = L"ctxt";
+			this->ctxt->Size = System::Drawing::Size(265, 30);
+			this->ctxt->TabIndex = 27;
+			// 
+			// ptxt
+			// 
+			this->ptxt->Location = System::Drawing::Point(227, 295);
+			this->ptxt->Margin = System::Windows::Forms::Padding(4);
+			this->ptxt->Multiline = true;
+			this->ptxt->Name = L"ptxt";
+			this->ptxt->Size = System::Drawing::Size(265, 30);
+			this->ptxt->TabIndex = 26;
+			// 
+			// itxt
+			// 
+			this->itxt->Location = System::Drawing::Point(227, 243);
+			this->itxt->Margin = System::Windows::Forms::Padding(4);
+			this->itxt->MaxLength = 20;
+			this->itxt->Multiline = true;
+			this->itxt->Name = L"itxt";
+			this->itxt->Size = System::Drawing::Size(265, 30);
+			this->itxt->TabIndex = 25;
+			// 
+			// mtxt
+			// 
+			this->mtxt->Location = System::Drawing::Point(227, 194);
+			this->mtxt->Margin = System::Windows::Forms::Padding(4);
+			this->mtxt->Multiline = true;
+			this->mtxt->Name = L"mtxt";
+			this->mtxt->Size = System::Drawing::Size(265, 30);
+			this->mtxt->TabIndex = 24;
+			// 
+			// htxt
+			// 
+			this->htxt->Location = System::Drawing::Point(227, 151);
+			this->htxt->Margin = System::Windows::Forms::Padding(4);
+			this->htxt->Multiline = true;
+			this->htxt->Name = L"htxt";
+			this->htxt->Size = System::Drawing::Size(265, 30);
+			this->htxt->TabIndex = 23;
+			this->htxt->TextChanged += gcnew System::EventHandler(this, &adminHome::htxt_TextChanged);
+			// 
+			// nTxt
+			// 
+			this->nTxt->Location = System::Drawing::Point(227, 104);
+			this->nTxt->Margin = System::Windows::Forms::Padding(4);
+			this->nTxt->MaxLength = 200;
+			this->nTxt->Multiline = true;
+			this->nTxt->Name = L"nTxt";
+			this->nTxt->Size = System::Drawing::Size(265, 30);
+			this->nTxt->TabIndex = 22;
+			// 
+			// lbl7
+			// 
+			this->lbl7->AutoSize = true;
+			this->lbl7->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->lbl7->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(26)), static_cast<System::Int32>(static_cast<System::Byte>(11)),
+				static_cast<System::Int32>(static_cast<System::Byte>(69)));
+			this->lbl7->Location = System::Drawing::Point(84, 346);
+			this->lbl7->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->lbl7->Name = L"lbl7";
+			this->lbl7->Size = System::Drawing::Size(53, 20);
+			this->lbl7->TabIndex = 21;
+			this->lbl7->Text = L"code:";
+			this->lbl7->Click += gcnew System::EventHandler(this, &adminHome::lbl7_Click);
+			// 
+			// lbl5
+			// 
+			this->lbl5->AutoSize = true;
+			this->lbl5->Font = (gcnew System::Drawing::Font(L"Cooper Black", 9));
+			this->lbl5->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(26)), static_cast<System::Int32>(static_cast<System::Byte>(11)),
+				static_cast<System::Int32>(static_cast<System::Byte>(69)));
+			this->lbl5->Location = System::Drawing::Point(83, 299);
+			this->lbl5->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->lbl5->Name = L"lbl5";
+			this->lbl5->Size = System::Drawing::Size(114, 17);
+			this->lbl5->TabIndex = 20;
+			this->lbl5->Text = L"Prerequisites:";
+			// 
+			// lbl4
+			// 
+			this->lbl4->AutoSize = true;
+			this->lbl4->Font = (gcnew System::Drawing::Font(L"Cooper Black", 9));
+			this->lbl4->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(26)), static_cast<System::Int32>(static_cast<System::Byte>(11)),
+				static_cast<System::Int32>(static_cast<System::Byte>(69)));
+			this->lbl4->Location = System::Drawing::Point(85, 247);
+			this->lbl4->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->lbl4->Name = L"lbl4";
+			this->lbl4->Size = System::Drawing::Size(93, 17);
+			this->lbl4->TabIndex = 19;
+			this->lbl4->Text = L"Instructor:";
+			// 
+			// lbl37
+			// 
+			this->lbl37->AutoSize = true;
+			this->lbl37->Font = (gcnew System::Drawing::Font(L"Cooper Black", 9));
+			this->lbl37->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(26)), static_cast<System::Int32>(static_cast<System::Byte>(11)),
+				static_cast<System::Int32>(static_cast<System::Byte>(69)));
+			this->lbl37->Location = System::Drawing::Point(83, 199);
+			this->lbl37->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->lbl37->Name = L"lbl37";
+			this->lbl37->Size = System::Drawing::Size(117, 17);
+			this->lbl37->TabIndex = 18;
+			this->lbl37->Text = L"Max Students:";
+			this->lbl37->Click += gcnew System::EventHandler(this, &adminHome::lbl37_Click);
+			// 
+			// lbl2
+			// 
+			this->lbl2->AutoSize = true;
+			this->lbl2->Font = (gcnew System::Drawing::Font(L"Cooper Black", 9));
+			this->lbl2->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(26)), static_cast<System::Int32>(static_cast<System::Byte>(11)),
+				static_cast<System::Int32>(static_cast<System::Byte>(69)));
+			this->lbl2->Location = System::Drawing::Point(83, 157);
+			this->lbl2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->lbl2->Name = L"lbl2";
+			this->lbl2->Size = System::Drawing::Size(59, 17);
+			this->lbl2->TabIndex = 17;
+			this->lbl2->Text = L"Hours:";
+			// 
+			// lbl1
+			// 
+			this->lbl1->AutoSize = true;
+			this->lbl1->Font = (gcnew System::Drawing::Font(L"Cooper Black", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->lbl1->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(26)), static_cast<System::Int32>(static_cast<System::Byte>(11)),
+				static_cast<System::Int32>(static_cast<System::Byte>(69)));
+			this->lbl1->Location = System::Drawing::Point(84, 112);
+			this->lbl1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->lbl1->Name = L"lbl1";
+			this->lbl1->Size = System::Drawing::Size(113, 17);
+			this->lbl1->TabIndex = 16;
+			this->lbl1->Text = L"Course Name:";
 			// 
 			// pnlOfAddStudent
 			// 
@@ -837,7 +1557,7 @@ private: System::Windows::Forms::PictureBox^ pictureBox9;
 			this->pnlOfAddStudent->Location = System::Drawing::Point(0, -64);
 			this->pnlOfAddStudent->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->pnlOfAddStudent->Name = L"pnlOfAddStudent";
-			this->pnlOfAddStudent->Size = System::Drawing::Size(978, 534);
+			this->pnlOfAddStudent->Size = System::Drawing::Size(1121, 584);
 			this->pnlOfAddStudent->TabIndex = 2;
 			this->pnlOfAddStudent->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &adminHome::pnlOfAddStudent_Paint);
 			// 
@@ -1221,7 +1941,7 @@ private: System::Windows::Forms::PictureBox^ pictureBox9;
 			this->pnlOfEditCourse->Location = System::Drawing::Point(0, -62);
 			this->pnlOfEditCourse->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->pnlOfEditCourse->Name = L"pnlOfEditCourse";
-			this->pnlOfEditCourse->Size = System::Drawing::Size(980, 535);
+			this->pnlOfEditCourse->Size = System::Drawing::Size(1118, 582);
 			this->pnlOfEditCourse->TabIndex = 3;
 			this->pnlOfEditCourse->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &adminHome::pnlOfEditCourse_Paint);
 			// 
@@ -1444,7 +2164,7 @@ private: System::Windows::Forms::PictureBox^ pictureBox9;
 			this->pnlOfStudentOfCourse->Location = System::Drawing::Point(0, -68);
 			this->pnlOfStudentOfCourse->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->pnlOfStudentOfCourse->Name = L"pnlOfStudentOfCourse";
-			this->pnlOfStudentOfCourse->Size = System::Drawing::Size(980, 538);
+			this->pnlOfStudentOfCourse->Size = System::Drawing::Size(1121, 586);
 			this->pnlOfStudentOfCourse->TabIndex = 5;
 			this->pnlOfStudentOfCourse->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &adminHome::pnlOfStudentOfCourse_Paint);
 			// 
@@ -1602,7 +2322,7 @@ private: System::Windows::Forms::PictureBox^ pictureBox9;
 			this->pnlEditStudent->Location = System::Drawing::Point(0, -68);
 			this->pnlEditStudent->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->pnlEditStudent->Name = L"pnlEditStudent";
-			this->pnlEditStudent->Size = System::Drawing::Size(909, 541);
+			this->pnlEditStudent->Size = System::Drawing::Size(1121, 588);
 			this->pnlEditStudent->TabIndex = 4;
 			this->pnlEditStudent->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &adminHome::pnlEditStudent_Paint);
 			// 
@@ -1615,7 +2335,7 @@ private: System::Windows::Forms::PictureBox^ pictureBox9;
 			this->panel11->Controls->Add(this->pictureBox44);
 			this->panel11->Location = System::Drawing::Point(9, 81);
 			this->panel11->Name = L"panel11";
-			this->panel11->Size = System::Drawing::Size(853, 436);
+			this->panel11->Size = System::Drawing::Size(1060, 436);
 			this->panel11->TabIndex = 9;
 			// 
 			// panel10
@@ -1840,433 +2560,13 @@ private: System::Windows::Forms::PictureBox^ pictureBox9;
 			this->pictureBox44->TabIndex = 3;
 			this->pictureBox44->TabStop = false;
 			// 
-			// pnlCoursedataedit
-			// 
-			this->pnlCoursedataedit->BackColor = System::Drawing::Color::Transparent;
-			this->pnlCoursedataedit->Controls->Add(this->label34);
-			this->pnlCoursedataedit->Controls->Add(this->label35);
-			this->pnlCoursedataedit->Controls->Add(this->button2);
-			this->pnlCoursedataedit->Controls->Add(this->flowLayoutPanel1);
-			this->pnlCoursedataedit->Controls->Add(this->label36);
-			this->pnlCoursedataedit->Controls->Add(this->label39);
-			this->pnlCoursedataedit->Controls->Add(this->textBox7);
-			this->pnlCoursedataedit->Location = System::Drawing::Point(1, -33);
-			this->pnlCoursedataedit->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
-			this->pnlCoursedataedit->Name = L"pnlCoursedataedit";
-			this->pnlCoursedataedit->Size = System::Drawing::Size(980, 538);
-			this->pnlCoursedataedit->TabIndex = 7;
-			// 
-			// label34
-			// 
-			this->label34->AutoSize = true;
-			this->label34->BackColor = System::Drawing::Color::Transparent;
-			this->label34->Font = (gcnew System::Drawing::Font(L"Cooper Black", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->label34->ForeColor = System::Drawing::Color::Tan;
-			this->label34->Location = System::Drawing::Point(3, 77);
-			this->label34->Name = L"label34";
-			this->label34->Size = System::Drawing::Size(274, 35);
-			this->label34->TabIndex = 17;
-			this->label34->Text = L"Edit course data:";
-			// 
-			// label35
-			// 
-			this->label35->AutoSize = true;
-			this->label35->BackColor = System::Drawing::Color::Tan;
-			this->label35->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F));
-			this->label35->Location = System::Drawing::Point(12, 81);
-			this->label35->Name = L"label35";
-			this->label35->Size = System::Drawing::Size(0, 20);
-			this->label35->TabIndex = 16;
-			// 
-			// button2
-			// 
-			this->button2->BackColor = System::Drawing::Color::Tan;
-			this->button2->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->button2->FlatAppearance->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(26)),
-				static_cast<System::Int32>(static_cast<System::Byte>(11)), static_cast<System::Int32>(static_cast<System::Byte>(69)));
-			this->button2->FlatAppearance->BorderSize = 3;
-			this->button2->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button2->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F));
-			this->button2->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(26)), static_cast<System::Int32>(static_cast<System::Byte>(11)),
-				static_cast<System::Int32>(static_cast<System::Byte>(69)));
-			this->button2->Location = System::Drawing::Point(255, 218);
-			this->button2->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
-			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(117, 38);
-			this->button2->TabIndex = 15;
-			this->button2->Text = L"view";
-			this->button2->UseVisualStyleBackColor = false;
-			this->button2->Click += gcnew System::EventHandler(this, &adminHome::button2_Click_2);
-			// 
-			// flowLayoutPanel1
-			// 
-			this->flowLayoutPanel1->AutoScroll = true;
-			this->flowLayoutPanel1->BackColor = System::Drawing::Color::Transparent;
-			this->flowLayoutPanel1->Location = System::Drawing::Point(647, 67);
-			this->flowLayoutPanel1->Name = L"flowLayoutPanel1";
-			this->flowLayoutPanel1->Size = System::Drawing::Size(277, 417);
-			this->flowLayoutPanel1->TabIndex = 4;
-			// 
-			// label36
-			// 
-			this->label36->AutoSize = true;
-			this->label36->BackColor = System::Drawing::Color::Transparent;
-			this->label36->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F));
-			this->label36->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(26)), static_cast<System::Int32>(static_cast<System::Byte>(11)),
-				static_cast<System::Int32>(static_cast<System::Byte>(69)));
-			this->label36->Location = System::Drawing::Point(114, 192);
-			this->label36->Name = L"label36";
-			this->label36->Size = System::Drawing::Size(403, 20);
-			this->label36->TabIndex = 13;
-			this->label36->Text = L"not found:-> please enter another course name";
-			this->label36->Visible = false;
-			// 
-			// label39
-			// 
-			this->label39->AutoSize = true;
-			this->label39->BackColor = System::Drawing::Color::Transparent;
-			this->label39->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F));
-			this->label39->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(26)), static_cast<System::Int32>(static_cast<System::Byte>(11)),
-				static_cast<System::Int32>(static_cast<System::Byte>(69)));
-			this->label39->Location = System::Drawing::Point(10, 128);
-			this->label39->Name = L"label39";
-			this->label39->Size = System::Drawing::Size(462, 20);
-			this->label39->TabIndex = 7;
-			this->label39->Text = L"please enter the name of the course you want to edit:";
-			// 
-			// textBox7
-			// 
-			this->textBox7->BackColor = System::Drawing::Color::Linen;
-			this->textBox7->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->textBox7->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F));
-			this->textBox7->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
-				static_cast<System::Int32>(static_cast<System::Byte>(31)));
-			this->textBox7->Location = System::Drawing::Point(54, 154);
-			this->textBox7->Name = L"textBox7";
-			this->textBox7->Size = System::Drawing::Size(587, 27);
-			this->textBox7->TabIndex = 0;
-			// 
-			// pnlOfAddCourse
-			// 
-			this->pnlOfAddCourse->BackColor = System::Drawing::Color::White;
-			this->pnlOfAddCourse->Controls->Add(this->label33);
-			this->pnlOfAddCourse->Controls->Add(this->label15);
-			this->pnlOfAddCourse->Controls->Add(this->slabel);
-			this->pnlOfAddCourse->Controls->Add(this->label11);
-			this->pnlOfAddCourse->Controls->Add(this->addCourseBtn);
-			this->pnlOfAddCourse->Controls->Add(this->hlabel);
-			this->pnlOfAddCourse->Controls->Add(this->mlabel);
-			this->pnlOfAddCourse->Controls->Add(this->Eradio);
-			this->pnlOfAddCourse->Controls->Add(this->Rradio);
-			this->pnlOfAddCourse->Controls->Add(this->lblfgd);
-			this->pnlOfAddCourse->Controls->Add(this->ctxt);
-			this->pnlOfAddCourse->Controls->Add(this->ptxt);
-			this->pnlOfAddCourse->Controls->Add(this->itxt);
-			this->pnlOfAddCourse->Controls->Add(this->mtxt);
-			this->pnlOfAddCourse->Controls->Add(this->htxt);
-			this->pnlOfAddCourse->Controls->Add(this->nTxt);
-			this->pnlOfAddCourse->Controls->Add(this->lbl7);
-			this->pnlOfAddCourse->Controls->Add(this->lbl5);
-			this->pnlOfAddCourse->Controls->Add(this->lbl4);
-			this->pnlOfAddCourse->Controls->Add(this->lbl37);
-			this->pnlOfAddCourse->Controls->Add(this->lbl2);
-			this->pnlOfAddCourse->Controls->Add(this->lbl1);
-			this->pnlOfAddCourse->Dock = System::Windows::Forms::DockStyle::Bottom;
-			this->pnlOfAddCourse->Location = System::Drawing::Point(0, 0);
-			this->pnlOfAddCourse->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
-			this->pnlOfAddCourse->Name = L"pnlOfAddCourse";
-			this->pnlOfAddCourse->Size = System::Drawing::Size(983, 472);
-			this->pnlOfAddCourse->TabIndex = 2;
-			this->pnlOfAddCourse->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &adminHome::pnlOfAddCourse_Paint);
-			// 
-			// label33
-			// 
-			this->label33->AutoSize = true;
-			this->label33->BackColor = System::Drawing::Color::Transparent;
-			this->label33->ForeColor = System::Drawing::Color::Red;
-			this->label33->Location = System::Drawing::Point(514, 118);
-			this->label33->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
-			this->label33->Name = L"label33";
-			this->label33->Size = System::Drawing::Size(266, 16);
-			this->label33->TabIndex = 37;
-			this->label33->Text = L"A course with the same name already exists";
-			this->label33->Visible = false;
-			// 
-			// label15
-			// 
-			this->label15->AutoSize = true;
-			this->label15->Font = (gcnew System::Drawing::Font(L"Cooper Black", 22.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->label15->ForeColor = System::Drawing::Color::Tan;
-			this->label15->Location = System::Drawing::Point(9, 13);
-			this->label15->Name = L"label15";
-			this->label15->Size = System::Drawing::Size(241, 42);
-			this->label15->TabIndex = 36;
-			this->label15->Text = L"Add course:";
-			// 
-			// slabel
-			// 
-			this->slabel->AutoSize = true;
-			this->slabel->BackColor = System::Drawing::Color::Transparent;
-			this->slabel->ForeColor = System::Drawing::Color::Blue;
-			this->slabel->Location = System::Drawing::Point(630, 444);
-			this->slabel->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
-			this->slabel->Name = L"slabel";
-			this->slabel->Size = System::Drawing::Size(175, 16);
-			this->slabel->TabIndex = 35;
-			this->slabel->Text = L"Course Added Successfully!";
-			this->slabel->Visible = false;
-			// 
-			// label11
-			// 
-			this->label11->AutoSize = true;
-			this->label11->BackColor = System::Drawing::Color::Transparent;
-			this->label11->ForeColor = System::Drawing::Color::Red;
-			this->label11->Location = System::Drawing::Point(614, 354);
-			this->label11->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
-			this->label11->Name = L"label11";
-			this->label11->Size = System::Drawing::Size(214, 16);
-			this->label11->TabIndex = 34;
-			this->label11->Text = L"Sorry , you must fill all the textboxes";
-			this->label11->Visible = false;
-			// 
-			// addCourseBtn
-			// 
-			this->addCourseBtn->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
-				static_cast<System::Int32>(static_cast<System::Byte>(31)));
-			this->addCourseBtn->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->addCourseBtn->FlatAppearance->BorderSize = 0;
-			this->addCourseBtn->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->addCourseBtn->Font = (gcnew System::Drawing::Font(L"Segoe UI", 11.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->addCourseBtn->ForeColor = System::Drawing::Color::Tan;
-			this->addCourseBtn->Location = System::Drawing::Point(632, 377);
-			this->addCourseBtn->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
-			this->addCourseBtn->Name = L"addCourseBtn";
-			this->addCourseBtn->Size = System::Drawing::Size(173, 55);
-			this->addCourseBtn->TabIndex = 33;
-			this->addCourseBtn->Text = L"ADD";
-			this->addCourseBtn->UseVisualStyleBackColor = false;
-			this->addCourseBtn->Click += gcnew System::EventHandler(this, &adminHome::addCourseBtn_Click);
-			// 
-			// hlabel
-			// 
-			this->hlabel->AutoSize = true;
-			this->hlabel->BackColor = System::Drawing::Color::Transparent;
-			this->hlabel->ForeColor = System::Drawing::Color::Red;
-			this->hlabel->Location = System::Drawing::Point(514, 158);
-			this->hlabel->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
-			this->hlabel->Name = L"hlabel";
-			this->hlabel->Size = System::Drawing::Size(329, 16);
-			this->hlabel->TabIndex = 32;
-			this->hlabel->Text = L"please enter numbers that ranges between 1 to 25 only";
-			this->hlabel->Visible = false;
-			// 
-			// mlabel
-			// 
-			this->mlabel->AutoSize = true;
-			this->mlabel->BackColor = System::Drawing::Color::Transparent;
-			this->mlabel->ForeColor = System::Drawing::Color::Red;
-			this->mlabel->Location = System::Drawing::Point(514, 200);
-			this->mlabel->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
-			this->mlabel->Name = L"mlabel";
-			this->mlabel->Size = System::Drawing::Size(322, 16);
-			this->mlabel->TabIndex = 31;
-			this->mlabel->Text = L"please enter numbers that ranges between 0 to 4 only";
-			this->mlabel->Visible = false;
-			// 
-			// Eradio
-			// 
-			this->Eradio->AutoSize = true;
-			this->Eradio->Font = (gcnew System::Drawing::Font(L"Cooper Black", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->Eradio->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(26)), static_cast<System::Int32>(static_cast<System::Byte>(11)),
-				static_cast<System::Int32>(static_cast<System::Byte>(69)));
-			this->Eradio->Location = System::Drawing::Point(404, 425);
-			this->Eradio->Margin = System::Windows::Forms::Padding(4);
-			this->Eradio->Name = L"Eradio";
-			this->Eradio->Size = System::Drawing::Size(84, 19);
-			this->Eradio->TabIndex = 30;
-			this->Eradio->Text = L"Elective";
-			this->Eradio->UseVisualStyleBackColor = true;
-			// 
-			// Rradio
-			// 
-			this->Rradio->AutoSize = true;
-			this->Rradio->Checked = true;
-			this->Rradio->Font = (gcnew System::Drawing::Font(L"Cooper Black", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->Rradio->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(26)), static_cast<System::Int32>(static_cast<System::Byte>(11)),
-				static_cast<System::Int32>(static_cast<System::Byte>(69)));
-			this->Rradio->Location = System::Drawing::Point(404, 398);
-			this->Rradio->Margin = System::Windows::Forms::Padding(4);
-			this->Rradio->Name = L"Rradio";
-			this->Rradio->Size = System::Drawing::Size(117, 19);
-			this->Rradio->TabIndex = 29;
-			this->Rradio->TabStop = true;
-			this->Rradio->Text = L"Requirement";
-			this->Rradio->UseVisualStyleBackColor = true;
-			// 
-			// lblfgd
-			// 
-			this->lblfgd->AutoSize = true;
-			this->lblfgd->Font = (gcnew System::Drawing::Font(L"Cooper Black", 9));
-			this->lblfgd->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(26)), static_cast<System::Int32>(static_cast<System::Byte>(11)),
-				static_cast<System::Int32>(static_cast<System::Byte>(69)));
-			this->lblfgd->Location = System::Drawing::Point(75, 399);
-			this->lblfgd->Name = L"lblfgd";
-			this->lblfgd->Size = System::Drawing::Size(308, 17);
-			this->lblfgd->TabIndex = 28;
-			this->lblfgd->Text = L"Is this course Requirement or Elective \?";
-			// 
-			// ctxt
-			// 
-			this->ctxt->Location = System::Drawing::Point(227, 340);
-			this->ctxt->Margin = System::Windows::Forms::Padding(4);
-			this->ctxt->MaxLength = 10;
-			this->ctxt->Multiline = true;
-			this->ctxt->Name = L"ctxt";
-			this->ctxt->Size = System::Drawing::Size(265, 30);
-			this->ctxt->TabIndex = 27;
-			// 
-			// ptxt
-			// 
-			this->ptxt->Location = System::Drawing::Point(227, 295);
-			this->ptxt->Margin = System::Windows::Forms::Padding(4);
-			this->ptxt->Multiline = true;
-			this->ptxt->Name = L"ptxt";
-			this->ptxt->Size = System::Drawing::Size(265, 30);
-			this->ptxt->TabIndex = 26;
-			// 
-			// itxt
-			// 
-			this->itxt->Location = System::Drawing::Point(227, 243);
-			this->itxt->Margin = System::Windows::Forms::Padding(4);
-			this->itxt->MaxLength = 20;
-			this->itxt->Multiline = true;
-			this->itxt->Name = L"itxt";
-			this->itxt->Size = System::Drawing::Size(265, 30);
-			this->itxt->TabIndex = 25;
-			// 
-			// mtxt
-			// 
-			this->mtxt->Location = System::Drawing::Point(227, 194);
-			this->mtxt->Margin = System::Windows::Forms::Padding(4);
-			this->mtxt->Multiline = true;
-			this->mtxt->Name = L"mtxt";
-			this->mtxt->Size = System::Drawing::Size(265, 30);
-			this->mtxt->TabIndex = 24;
-			// 
-			// htxt
-			// 
-			this->htxt->Location = System::Drawing::Point(227, 151);
-			this->htxt->Margin = System::Windows::Forms::Padding(4);
-			this->htxt->Multiline = true;
-			this->htxt->Name = L"htxt";
-			this->htxt->Size = System::Drawing::Size(265, 30);
-			this->htxt->TabIndex = 23;
-			this->htxt->TextChanged += gcnew System::EventHandler(this, &adminHome::htxt_TextChanged);
-			// 
-			// nTxt
-			// 
-			this->nTxt->Location = System::Drawing::Point(227, 104);
-			this->nTxt->Margin = System::Windows::Forms::Padding(4);
-			this->nTxt->MaxLength = 200;
-			this->nTxt->Multiline = true;
-			this->nTxt->Name = L"nTxt";
-			this->nTxt->Size = System::Drawing::Size(265, 30);
-			this->nTxt->TabIndex = 22;
-			// 
-			// lbl7
-			// 
-			this->lbl7->AutoSize = true;
-			this->lbl7->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->lbl7->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(26)), static_cast<System::Int32>(static_cast<System::Byte>(11)),
-				static_cast<System::Int32>(static_cast<System::Byte>(69)));
-			this->lbl7->Location = System::Drawing::Point(84, 346);
-			this->lbl7->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
-			this->lbl7->Name = L"lbl7";
-			this->lbl7->Size = System::Drawing::Size(53, 20);
-			this->lbl7->TabIndex = 21;
-			this->lbl7->Text = L"code:";
-			this->lbl7->Click += gcnew System::EventHandler(this, &adminHome::lbl7_Click);
-			// 
-			// lbl5
-			// 
-			this->lbl5->AutoSize = true;
-			this->lbl5->Font = (gcnew System::Drawing::Font(L"Cooper Black", 9));
-			this->lbl5->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(26)), static_cast<System::Int32>(static_cast<System::Byte>(11)),
-				static_cast<System::Int32>(static_cast<System::Byte>(69)));
-			this->lbl5->Location = System::Drawing::Point(83, 299);
-			this->lbl5->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
-			this->lbl5->Name = L"lbl5";
-			this->lbl5->Size = System::Drawing::Size(114, 17);
-			this->lbl5->TabIndex = 20;
-			this->lbl5->Text = L"Prerequisites:";
-			// 
-			// lbl4
-			// 
-			this->lbl4->AutoSize = true;
-			this->lbl4->Font = (gcnew System::Drawing::Font(L"Cooper Black", 9));
-			this->lbl4->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(26)), static_cast<System::Int32>(static_cast<System::Byte>(11)),
-				static_cast<System::Int32>(static_cast<System::Byte>(69)));
-			this->lbl4->Location = System::Drawing::Point(85, 247);
-			this->lbl4->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
-			this->lbl4->Name = L"lbl4";
-			this->lbl4->Size = System::Drawing::Size(93, 17);
-			this->lbl4->TabIndex = 19;
-			this->lbl4->Text = L"Instructor:";
-			// 
-			// lbl37
-			// 
-			this->lbl37->AutoSize = true;
-			this->lbl37->Font = (gcnew System::Drawing::Font(L"Cooper Black", 9));
-			this->lbl37->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(26)), static_cast<System::Int32>(static_cast<System::Byte>(11)),
-				static_cast<System::Int32>(static_cast<System::Byte>(69)));
-			this->lbl37->Location = System::Drawing::Point(83, 199);
-			this->lbl37->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
-			this->lbl37->Name = L"lbl37";
-			this->lbl37->Size = System::Drawing::Size(117, 17);
-			this->lbl37->TabIndex = 18;
-			this->lbl37->Text = L"Max Students:";
-			this->lbl37->Click += gcnew System::EventHandler(this, &adminHome::lbl37_Click);
-			// 
-			// lbl2
-			// 
-			this->lbl2->AutoSize = true;
-			this->lbl2->Font = (gcnew System::Drawing::Font(L"Cooper Black", 9));
-			this->lbl2->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(26)), static_cast<System::Int32>(static_cast<System::Byte>(11)),
-				static_cast<System::Int32>(static_cast<System::Byte>(69)));
-			this->lbl2->Location = System::Drawing::Point(83, 157);
-			this->lbl2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
-			this->lbl2->Name = L"lbl2";
-			this->lbl2->Size = System::Drawing::Size(59, 17);
-			this->lbl2->TabIndex = 17;
-			this->lbl2->Text = L"Hours:";
-			// 
-			// lbl1
-			// 
-			this->lbl1->AutoSize = true;
-			this->lbl1->Font = (gcnew System::Drawing::Font(L"Cooper Black", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->lbl1->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(26)), static_cast<System::Int32>(static_cast<System::Byte>(11)),
-				static_cast<System::Int32>(static_cast<System::Byte>(69)));
-			this->lbl1->Location = System::Drawing::Point(84, 112);
-			this->lbl1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
-			this->lbl1->Name = L"lbl1";
-			this->lbl1->Size = System::Drawing::Size(113, 17);
-			this->lbl1->TabIndex = 16;
-			this->lbl1->Text = L"Course Name:";
-			// 
 			// adminHome
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->AutoValidate = System::Windows::Forms::AutoValidate::EnablePreventFocusChange;
 			this->BackColor = System::Drawing::SystemColors::ButtonFace;
-			this->ClientSize = System::Drawing::Size(982, 472);
+			this->ClientSize = System::Drawing::Size(1182, 519);
 			this->Controls->Add(this->sideBar);
 			this->Controls->Add(this->pnlOfPanels);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
@@ -2288,6 +2588,15 @@ private: System::Windows::Forms::PictureBox^ pictureBox9;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->EndInit();
 			this->pnlOfPanels->ResumeLayout(false);
+			this->pnlCoursedataedit->ResumeLayout(false);
+			this->pnlCoursedataedit->PerformLayout();
+			this->panel12->ResumeLayout(false);
+			this->panel12->PerformLayout();
+			this->panel13->ResumeLayout(false);
+			this->panel13->PerformLayout();
+			this->flowLayoutPanel2->ResumeLayout(false);
+			this->pnlOfAddCourse->ResumeLayout(false);
+			this->pnlOfAddCourse->PerformLayout();
 			this->pnlOfAddStudent->ResumeLayout(false);
 			this->pnlOfAddStudent->PerformLayout();
 			this->pnlOfData->ResumeLayout(false);
@@ -2312,10 +2621,6 @@ private: System::Windows::Forms::PictureBox^ pictureBox9;
 			this->panel9->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox7))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox44))->EndInit();
-			this->pnlCoursedataedit->ResumeLayout(false);
-			this->pnlCoursedataedit->PerformLayout();
-			this->pnlOfAddCourse->ResumeLayout(false);
-			this->pnlOfAddCourse->PerformLayout();
 			this->ResumeLayout(false);
 
 		}
@@ -2725,88 +3030,256 @@ public: Course^ searchforCourse(String^ courseName)
 
 	return nullptr;
 }
-public: void getstudentinAcourse(String^ courseName, FlowLayoutPanel^ yourFlow, Label^ entercourse,Label^ notfoundlab,Label^ tcc,Label^ num , Label^ st,Panel^ holder)
-{	Course^ searchedcourse = gcnew Course;
-	  found = false;
-	searchedcourse = searchforCourse(courseName);
-	if (searchedcourse == nullptr)
-	{
-		notfoundlab->Visible = true;
-		tcc->Visible = false;
-		num->Visible = false;
-		st->Visible = false;
-		holder->Visible = false;
+	  void getstudentinAcourse(String^ courseName, FlowLayoutPanel^ yourFlow, Label^ entercourse, Label^ notfoundlab, Label^ tcc, Label^ num, Label^ st, Panel^ holder)
+	  {
+		  Course^ searchedcourse = gcnew Course;
+		  found = false;
+		  searchedcourse = searchforCourse(courseName);
+		  if (searchedcourse == nullptr)
+		  {
+			  notfoundlab->Visible = true;
+			  tcc->Visible = false;
+			  num->Visible = false;
+			  st->Visible = false;
+			  holder->Visible = false;
 
-		choosestdbt->Visible = false;
-		textBox3->Visible = false;
-		label26->Visible = false;
-		button3->Visible = false;
-		choosestdbt->Visible = false;
-		textBox3->Text="";
-		yourFlow->Controls->Clear();
-		studentname::allbtns->Clear();
-		yourFlow->Visible = false;
-		temps->Clear();
-		return;
-	}
-	else {
-		notfoundlab->Visible = false;
-		tcc->Visible = false;
-		num->Visible = false;
-		st->Visible = false;
-		holder->Visible = false;
+			  choosestdbt->Visible = false;
+			  textBox3->Visible = false;
+			  label26->Visible = false;
+			  button3->Visible = false;
+			  choosestdbt->Visible = false;
+			  textBox3->Text = "";
+			  yourFlow->Controls->Clear();
+			  studentname::allbtns->Clear();
+			  yourFlow->Visible = false;
+			  temps->Clear();
+			  return;
+		  }
+		  else {
+			  notfoundlab->Visible = false;
+			  tcc->Visible = false;
+			  num->Visible = false;
+			  st->Visible = false;
+			  holder->Visible = false;
 
-		choosestdbt->Visible = false;
-		textBox3->Visible = false;
-		label26->Visible = false;
-		button3->Visible = false;
-		choosestdbt->Visible = false;
-		textBox3->Text = "";
-		yourFlow->Controls->Clear();
-		studentname::allbtns->Clear();
-		yourFlow->Visible = false;
-		temps->Clear();
-		searchedcourse->setAllStudentsInCourse();
-		yourFlow->Controls->Clear();
-		temps->Clear();
-		for each (auto i in  searchedcourse->getAllStudentsInCourse())
-		{
-			for each (auto student in Student::allStudents)
-			{
-				studentname^ temp = gcnew studentname;
-				if (student->getID() == i) {
-					found = true;
-					temp->setStudentname(student->getName());
-					yourFlow->Controls->Add(temp);
-					temps->Add(temp);
-					
-					
-				}
-				
-			}
-			
-		}
+			  choosestdbt->Visible = false;
+			  textBox3->Visible = false;
+			  label26->Visible = false;
+			  button3->Visible = false;
+			  choosestdbt->Visible = false;
+			  textBox3->Text = "";
+			  yourFlow->Controls->Clear();
+			  studentname::allbtns->Clear();
+			  yourFlow->Visible = false;
+			  temps->Clear();
+			  searchedcourse->setAllStudentsInCourse();
+			  yourFlow->Controls->Clear();
+			  temps->Clear();
+			  for each (auto i in  searchedcourse->getAllStudentsInCourse())
+			  {
+				  for each (auto student in Student::allStudents)
+				  {
+					  studentname^ temp = gcnew studentname;
+					  if (student->getID() == i) {
+						  found = true;
+						  temp->setStudentname(student->getName());
+						  yourFlow->Controls->Add(temp);
+						  temps->Add(temp);
+
+
+					  }
+
+				  }
+
+			  }
+
+			  if (found)
+			  {
+				  num->Text = Convert::ToString(temps->Count);
+				  holder->Visible = true;
+
+				  yourFlow->Visible = true;
+				  tcc->Visible = true;
+				  num->Visible = true;
+				  st->Visible = true;
+
+				  yourFlow->Height = 60 * temps->Count;
+			  }
+			  else
+			  {
+				  num->Text = "no";
+				  holder->Visible = true;
+			  }
+		  }
+
+	  }
+	  courselistitem^ getcourselistitem(String^ courseName)
+	  {
+		  Course^ course = gcnew Course;
+		  course = searchforCourse(courseName);
+		  if (course != nullptr)
+		  {
+			  courselistitem^ tempp = gcnew courselistitem;
+			  tempp->setName(course->getName());
+			  tempp->setCode(course->getCode());
+			  tempp->setInstructor(course->getInstructor());
+			  tempp->setIsRequirement(course->getIsRequirement());
+			  tempp->setHours(course->getHours());
+			  tempp->setMaxNumberOfStudents(course->getMaxNumberOfStudents());
+			  
+			  return tempp;
+			 
+		  }
+		  else {
+			  return nullptr;
+		  }
+		  
+	 }
+	  void getcourselistitemInpanel(FlowLayoutPanel^ fp, String^ coursename)
+	  {
+		  fp->Controls->Clear();
+		  if (getcourselistitem(coursename)) {
+
+		  fp->Controls->Add(getcourselistitem(coursename));
 		
-		if (found)
-		{
-		    num->Text = Convert::ToString(temps->Count);
-			holder->Visible = true;
-			
-			yourFlow->Visible = true;
-			tcc->Visible = true;
-			num->Visible = true;
-			st->Visible = true;
-			
-			yourFlow->Height = 60 * temps->Count;
-		}
-		else
-		{
-			num->Text = "no";
-			holder->Visible = true;
-		}
-	}
+		  }
+		 
+	  }
+	  void editcourse(Course^ course,String^ temp )
+	  {
+		  if (temp != "no button clicked")
+		  {
+			  if (temp == "instructor")
+			  {
 
-}
+				  bool valid = true;
+				  for each (auto i  in textBox8->Text)
+				  {
+					  if (!((i >= 'a' && i <= 'z')|| (i >= 'A' && i <= 'Z')))
+					  {
+						  valid = false;
+						  break;
+					  }
+				  }
+				  if (!valid)
+				  {
+				  label43->Visible = true;
+				  panel13->Visible = false;
+				  label44->Visible = true;
+				  textBox8->Visible = false;
+				  button6->Visible = false;
+				  }
+				  else {
+
+					  label43->Visible = false;
+					  label42->Visible = true;
+					  panel13->Visible = false;
+					  textBox8->Visible = false;
+					  button6->Visible = false;
+					  label44->Visible = false;
+				  course->setInstructor(textBox8->Text);
+				  }
+			  }
+			  else if (temp == "requirment")
+			  {
+				  if (textBox8->Text == "required" || textBox8->Text == "Required")
+				  {
+					  label42->Visible = true;
+					  panel13->Visible = false;
+				  course->setIsRequirement(true);
+				  }
+				  else if(textBox8->Text == "elective" || textBox8->Text == "Elective"){
+
+					  label42->Visible = true;
+					  panel13->Visible = false;
+					  course->setIsRequirement(false);
+				  }
+				  else {
+					  label43->Visible = true;
+					  label41->Visible = true;
+				  }
+			  }
+			  else if (temp == "max students")
+			  {
+				  bool valid = true;
+				  for each (auto i  in textBox8->Text)
+				  {
+					  if (((i >= 'a' && i <= 'z') || (i >= 'A' && i <= 'Z')))
+					  {
+						  valid = false;
+
+						  label43->Visible = true;
+						  label40->Visible = true;
+						  break;
+					  }
+				  }
+				  if (valid)
+				  {
+					  if (course->getMaxNumberOfStudents() < Convert::ToInt32(textBox8->Text))
+					  {
+						  label42->Visible = true;
+
+						  panel13->Visible = false;
+						  course->setMaxNumberOfStudents(Convert::ToInt32(textBox8->Text));
+
+					  }
+					  else {
+						  label43->Visible = true;
+						  label40->Visible = true;
+
+					  }
+				  }
+				 
+			  }
+
+			  label38->Visible = false;
+			  panel13->Visible = true;
+		  }
+	
+	 }
+	  String^ getclickedbteditcourse()
+	  {
+
+		  label44->Visible = false;
+		  label41->Visible = false;
+		  label40->Visible = false;
+		  label43->Visible = false;
+
+		  if (instbt->BackColor == Color::Brown)
+		  {
+			  label38->Visible = false;
+			  panel13->Visible = true;
+			  textBox8->Visible = true;
+			  button6->Visible = true;
+			  return "instructor";
+
+		  }
+		  else  if (reqbt->BackColor == Color::Brown)
+		  {
+			  label38->Visible = false;
+			  panel13->Visible = true;
+			  textBox8->Visible = true;
+			  button6->Visible = true;
+			  return "requirment";
+
+		  }
+		  else if (maxstd->BackColor == Color::Brown)
+		  {
+			  label38->Visible = false;
+			  panel13->Visible = true;
+			  textBox8->Visible = true;
+			  button6->Visible = true;
+
+			  return "max students";
+
+		  }
+
+		  label38->Visible = true;
+		  panel13->Visible = false;
+		  textBox8->Visible = false;
+		  button6->Visible = false;
+		  return "no button clicked";
+	  }
 private: System::Void label13_Click(System::Object^ sender, System::EventArgs^ e) {
 
 }
@@ -2872,40 +3345,16 @@ private: System::Void pictureBox8_Click(System::Object^ sender, System::EventArg
 }
 private: System::Void button2_Click_1(System::Object^ sender, System::EventArgs^ e) {
 }
+
 private: System::Void button2_Click_2(System::Object^ sender, System::EventArgs^ e) {
-	bool foundd = false;
-	flowLayoutPanel1->Controls->Clear();
-
-	courselistitem^ tempp = gcnew courselistitem;
-
-	for each (auto course in Course::allCourses)
-	{
-		if (textBox7->Text == course->getName()) {
-			foundd = true;
-		}
-
+	getcourselistitemInpanel(flowLayoutPanel1, textBox7->Text);
+	if (getcourselistitem(textBox7->Text)) {
+		panel12->Visible = true;
+		label36->Visible = false;
 	}
-	if (foundd == true) {
-		for each (auto course in Course::allCourses)
-		{
-			if (textBox7->Text == course->getName())
-			{
-				tempp->setName(course->getName());
-				tempp->setCode(course->getCode());
-				tempp->setInstructor(course->getInstructor());
-				tempp->setIsRequirement(course->getIsRequirement());
-				tempp->setHours(course->getHours());
-				tempp->setMaxNumberOfStudents(course->getMaxNumberOfStudents());
-			}
-
-		}
-
-		flowLayoutPanel1->Controls->Add(tempp);
-		label35->Visible = false;
-	}
-	else
-	{
-		label35->Visible = true;
+	else {
+		label36->Visible = true;
+		panel12->Visible = false;
 	}
 
 }
@@ -2926,6 +3375,66 @@ private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e
 	pnlOfAddStudent->Visible = false;
 }
 private: System::Void lbl37_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void pnlCoursedataedit_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
+}
+private: System::Void flowLayoutPanel1_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
+}
+private: System::Void panel12_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
+}
+private: System::Void instbt_Click(System::Object^ sender, System::EventArgs^ e) {
+	if (instbt->BackColor == Color::Tan)
+	{
+		instbt->BackColor = Color::Brown;
+		reqbt->BackColor = Color::Tan;
+		maxstd->BackColor = Color::Tan;
+
+	}
+	else {
+		instbt->BackColor = Color::Tan;
+	}
+}
+private: System::Void reqbt_Click(System::Object^ sender, System::EventArgs^ e) {
+	if (reqbt->BackColor == Color::Tan)
+	{
+		instbt->BackColor = Color::Tan;
+		reqbt->BackColor = Color::Brown;
+		maxstd->BackColor = Color::Tan;
+
+	}
+	else {
+		reqbt->BackColor = Color::Tan;
+	}
+}
+private: System::Void maxstd_Click(System::Object^ sender, System::EventArgs^ e) {
+	if (maxstd->BackColor == Color::Tan)
+	{
+		instbt->BackColor = Color::Tan;
+		reqbt->BackColor = Color::Tan;
+		maxstd->BackColor = Color::Brown;
+	}
+	else {
+		maxstd->BackColor = Color::Tan;
+	}
+}
+private: System::Void instbt_MouseClick(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e) {
+
+}
+	   String^ editchoice = "no button clicked";
+
+private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {
+	editchoice = getclickedbteditcourse();
+	label42->Visible = false;
+
+}
+private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) {
+	button6->Visible = false;
+	textBox8->Visible = false;
+	panel13->Visible = false;
+	editcourse(searchforCourse(textBox7->Text), editchoice);
+	Course::saveCourseContentToFile();
+	Course::saveCourseDataToFile();
+	Course::saveCourseHoursToFile();
 }
 };
 }
