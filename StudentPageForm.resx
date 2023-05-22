@@ -2205,14 +2205,6 @@
         +atAPFlMTEYXqmwUMDAAAC7IOtOfVbfHAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="label25.Text" xml:space="preserve">
-    <value>click Select course to view a list for your available courses 
-after clicking on the desired course 
-click select to select the course and view 
-the course's hours and it's maximum students allowed 
-click save to register for the selected course if wanted
-</value>
-  </data>
   <data name="button1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABQAAAAVCAYAAABG1c6oAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
@@ -2224,6 +2216,14 @@ click save to register for the selected course if wanted
         /f+nV3f8P7Om87+ZgSGGPBQ3Qo1BAFFReQmgK79iUfw/xNP5f6QvarjBMCg7CglJy0CNQQXAcCzDpgkf
         lpFRaYFqxwqYgIoWo2vCjeXWgfRAtOIGzECFvUANfzANgGOQXLeKigo7VA9hACy+NIGaJgDD6BoQv4Jg
         +atAPFlMTEYXqmwUMDAAAC7IOtOfVbfHAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="label25.Text" xml:space="preserve">
+    <value>click Select course to view a list for your available courses 
+after clicking on the desired course 
+click select to select the course and view 
+the course's hours and it's maximum students allowed 
+click save to register for the selected course if wanted
 </value>
   </data>
   <data name="pictureBox50.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

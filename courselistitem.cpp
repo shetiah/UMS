@@ -16,10 +16,10 @@ void UMS::courselistitem::setIsRequirement(bool isRequirement) {
 	this->isRequirement = isRequirement;
 	if (isRequirement)
 	{
-		isreqdata->Text = "yes";
+		isreqdata->Text = "REQUIRED";
 	}
 	else
-		isreqdata->Text = "no";
+		isreqdata->Text = "ELECTIVE";
 }
 void UMS::courselistitem::setMaxNumberOfStudents(int maxNumberOfStudents) {
 	this->maxNumberOfStudents = maxNumberOfStudents;

@@ -1,23 +1,15 @@
-Structured Programming-3
 intro to cs-3
-operation systems-4
-saba7saba7-10
-mabad2First-100
-eletadab-2
-muhtramelarub3-4
-veryToxic-20
-aleeeuuuu-5
-ra33333333-5
-yaa33333333-5
-bhaaaaaaaaaymmmmm-5
-salmayaslama-5
-gamilakulay-5
-halland-5
-hallabelkhamees-5
-weeeeshtby-5
-barca-5
-eshta2tlkkkteeer-5
-yarab-3
-x-12
-xx-12
-ttt-3
+structured programming-3
+physics 1-3
+physics 2-3
+probability-3
+statistical analysis-3
+electronics-4
+archi-3
+report writing-2
+business-2
+oop-3
+data structures-3
+algorithms-3
+physics 3-4
+math 1-3

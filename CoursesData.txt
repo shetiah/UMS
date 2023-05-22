@@ -1,23 +1,15 @@
-Structured Programming-intro to cs
 intro to cs-0
-operation systems-rgola,adab,trbya
-saba7saba7-Structured Programming,intro to cs
-mabad2First-0
-eletadab-0
-muhtramelarub3-eletadab
-veryToxic-mabad2First
-aleeeuuuu-0
-ra33333333-0
-yaa33333333-0
-bhaaaaaaaaaymmmmm-0
-salmayaslama-0
-gamilakulay-0
-halland-0
-hallabelkhamees-0
-weeeeshtby-0
-barca-0
-eshta2tlkkkteeer-0
-yarab-a,b,c
-x-a
-xx-a
-ttt-0
+structured programming-intro to cs
+physics 1-0
+physics 2-physics 1
+probability-0
+statistical analysis-probability
+electronics-0
+archi-electronics,physics 1
+report writing-0
+business-0
+oop-intro to cs
+data structures-intro to cs,oop
+algorithms-intro to cs,oop
+physics 3-physics 1, physics 2
+math 1-math 0,math 2

@@ -117,8 +117,8 @@ namespace UMS {
 			this->isreqdata = (gcnew System::Windows::Forms::Label());
 			this->maxstdDt = (gcnew System::Windows::Forms::Label());
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
-			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->coursenamelb = (gcnew System::Windows::Forms::Label());
+			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->panel1->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->SuspendLayout();
@@ -201,6 +201,7 @@ namespace UMS {
 			this->isreqdata->TabIndex = 10;
 			this->isreqdata->Text = L"isrequired";
 			this->isreqdata->TextAlign = System::Drawing::ContentAlignment::BottomCenter;
+			this->isreqdata->Click += gcnew System::EventHandler(this, &courselistitem::isreqdata_Click);
 			// 
 			// maxstdDt
 			// 
@@ -235,16 +236,6 @@ namespace UMS {
 			this->panel1->TabIndex = 12;
 			this->panel1->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &courselistitem::panel1_Paint);
 			// 
-			// pictureBox1
-			// 
-			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
-			this->pictureBox1->Location = System::Drawing::Point(169, 13);
-			this->pictureBox1->Name = L"pictureBox1";
-			this->pictureBox1->Size = System::Drawing::Size(179, 141);
-			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
-			this->pictureBox1->TabIndex = 12;
-			this->pictureBox1->TabStop = false;
-			// 
 			// coursenamelb
 			// 
 			this->coursenamelb->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
@@ -258,6 +249,16 @@ namespace UMS {
 			this->coursenamelb->Text = L"cname";
 			this->coursenamelb->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			this->coursenamelb->Click += gcnew System::EventHandler(this, &courselistitem::coursenamelb_Click);
+			// 
+			// pictureBox1
+			// 
+			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
+			this->pictureBox1->Location = System::Drawing::Point(169, 13);
+			this->pictureBox1->Name = L"pictureBox1";
+			this->pictureBox1->Size = System::Drawing::Size(179, 141);
+			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->pictureBox1->TabIndex = 12;
+			this->pictureBox1->TabStop = false;
 			// 
 			// courselistitem
 			// 
@@ -284,6 +285,8 @@ private: System::Void maxstdslb_Click(System::Object^ sender, System::EventArgs^
 private: System::Void pictureBox18_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void panel1_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
+}
+private: System::Void isreqdata_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }

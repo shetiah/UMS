@@ -1,121 +1,55 @@
+1)hassan muhammad
+2)2023047@cis.com
+3)1234
+4)2023047
+5)2
+6)20
+7)3.4125
+8)intro to cs,report writing,probability,statistical analysis
+9)3.4,3.3,3.5,3.5
+c)physics 1,structured programming
+x
 1)shetiah
-2)2023020@cis.com
-3)mmmm
-4)2023020
-5)2
-6)18
-7)3.9
-8)intro to cs,rgola,adab,trbya,mabad2First,eletadab
-9)3.7,2.2,2.5,3,3.4,3.7
-c)halland,muhtramelarub3,veryToxic,operation systems,aleeeuuuu,Structured Programming
-x
-1)Hassan Muhammad
-2)2023021@cis.com
-3)123456
-4)2023021
+2)2023048@cis.com
+3)1234
+4)2023048
 5)1
-6)50
-7)3.6
-8)0
-9)0
-c)halland,teuty,operation systems
+6)20
+7)3.43
+8)intro to cs,physics 1,electronics
+9)3.4,2.7,4
+c)business
 x
-1)maya mohamed
-2)2023025@cis.com
-3)123
-4)2023025
-5)2
-6)21
-7)4
-8)Structured Programming,intro to cs
-9)4,3.7
-c)halland,archi
-x
-1)Osama
-2)2023026@cis.com
+1)maya
+2)2023049@cis.com
 3)1234
-4)2023026
-5)2000
-6)21
-7)3.9
-8)x
-9)3
-c)x
-x
-1)Osama
-2)2023027@cis.com
-3)1234
-4)2023027
-5)2000
-6)21
-7)3.9
-8)x
-9)3
-c)x
-x
-1)shetoo
-2)2023028@cis.com
-3)1111
-4)2023028
-5)1998
-6)18
-7)4
-8)x
-9)1.3
-c)x
-x
-1)fkUsheto
-2)2023029@cis.com
-3)1234
-4)2023029
-5)1999
-6)12
-7)2
-8)x,y
-9)4,2.7
-c)a,b
-x
-1)memss
-2)2023035@cis.com
-3)aooo
-4)2023035
-5)2023
-6)3
-7)2.7
-8)halland
-9)7
-c)veryToxic
-x
-1)hassan
-2)2023039@cis.com
-3)1234
-4)2023039
-5)6
-6)10
-7)3.2
-8)intro to cs
-9)3.2
-c)ab
-x
-1)hassan
-2)2023040@cis.com
-3)1234
-4)2023040
-5)2
-6)10
-7)3.2
-8)intro to cs
-9)3.2
-c)ab
-x
-1)finalTest
-2)2023043@cis.com
-3)12
-4)2023043
+4)2023049
 5)3
-6)18
-7)3.2
-8)intro to cs,operation systems,Structured Programming
-9)3.2,3.5,2.9
-c)eletadab
+6)17
+7)3.1
+8)intro to cs,structured programming,oop,physics 1,oop,probability
+9)3,4,2.7,3,4,2.8
+c)statistical analysis,data structures
+x
+1)seif
+2)2023080@cis.com
+3)1234
+4)2023080
+5)2
+6)16
+7)3
+8)intro to cs,physics 1
+9)3.4,3.6
+c)structured programming
+x
+1)Beshoy
+2)2023081@cis.com
+3)1
+4)2023081
+5)4
+6)20
+7)4
+8)intro to cs
+9)4
+c)physics 1,structured programming
 x

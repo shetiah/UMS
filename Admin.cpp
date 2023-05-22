@@ -216,7 +216,9 @@ Dictionary<Course^, float>^ Admin::conversionFinishedCourseGpa(List<float>^ fini
 	}*/
 	for (int i =0;i<Courses->Count;i++)
 	{
-			temp->Add(Courses[i], finishedcoursesGPAs[i]);
+		if (temp->ContainsKey(Courses[i]))
+			continue;
+		temp->Add(Courses[i], finishedcoursesGPAs[i]);
 
 	}
 	return temp;
@@ -235,6 +237,7 @@ float Admin::calc_CGPA(Student^ s)
 		cgpa += i.Value * hours;
 	}
 	cgpa /= totalHours;
+	s->setGPA(cgpa);
 	return cgpa;
 }
 
