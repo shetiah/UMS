@@ -1431,7 +1431,7 @@
     <value>Cooper Black, 10.2pt</value>
   </data>
   <data name="exitbt.Location" type="System.Drawing.Point, System.Drawing">
-    <value>107, 308</value>
+    <value>123, 308</value>
   </data>
   <data name="exitbt.Size" type="System.Drawing.Size, System.Drawing">
     <value>62, 45</value>
@@ -3535,7 +3535,7 @@
     <value>3, 2, 3, 2</value>
   </data>
   <data name="pnlbuttons.Size" type="System.Drawing.Size, System.Drawing">
-    <value>222, 370</value>
+    <value>238, 370</value>
   </data>
   <data name="pnlbuttons.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -3562,13 +3562,13 @@
     <value>3, 2, 3, 2</value>
   </data>
   <data name="sideBar.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>225, 519</value>
+    <value>241, 519</value>
   </data>
   <data name="sideBar.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>61, 519</value>
   </data>
   <data name="sideBar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>225, 519</value>
+    <value>61, 519</value>
   </data>
   <data name="sideBar.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
