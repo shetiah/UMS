@@ -263,7 +263,7 @@ private: System::Windows::Forms::Label^ label48;
 private: System::Windows::Forms::Button^ button8;
 private: System::Windows::Forms::Label^ gradesSizeLabel;
 private: System::Windows::Forms::Label^ label49;
-private: System::Windows::Forms::Panel^ exitpp;
+
 
 
 
@@ -370,7 +370,6 @@ private: System::Windows::Forms::Panel^ exitpp;
 			this->pictureBox4 = (gcnew System::Windows::Forms::PictureBox());
 			this->EditCourseData = (gcnew System::Windows::Forms::Button());
 			this->StudentsOfCourse = (gcnew System::Windows::Forms::Button());
-			this->exitpp = (gcnew System::Windows::Forms::Panel());
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->btnLogOut = (gcnew System::Windows::Forms::Button());
 			this->btnAddCourse = (gcnew System::Windows::Forms::Button());
@@ -589,7 +588,6 @@ private: System::Windows::Forms::Panel^ exitpp;
 			this->pnlOfbtns->Controls->Add(this->pictureBox4);
 			this->pnlOfbtns->Controls->Add(this->EditCourseData);
 			this->pnlOfbtns->Controls->Add(this->StudentsOfCourse);
-			this->pnlOfbtns->Controls->Add(this->exitpp);
 			this->pnlOfbtns->Controls->Add(this->pictureBox1);
 			this->pnlOfbtns->Controls->Add(this->btnLogOut);
 			this->pnlOfbtns->Controls->Add(this->btnAddCourse);
@@ -722,12 +720,6 @@ private: System::Windows::Forms::Panel^ exitpp;
 			this->StudentsOfCourse->UseCompatibleTextRendering = true;
 			this->StudentsOfCourse->UseVisualStyleBackColor = true;
 			this->StudentsOfCourse->Click += gcnew System::EventHandler(this, &adminHome::StudentsOfCourse_Click);
-			// 
-			// exitpp
-			// 
-			this->exitpp->BackColor = System::Drawing::Color::Tan;
-			resources->ApplyResources(this->exitpp, L"exitpp");
-			this->exitpp->Name = L"exitpp";
 			// 
 			// pictureBox1
 			// 
