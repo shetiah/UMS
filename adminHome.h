@@ -2934,7 +2934,7 @@ private: System::Void btnLogOut_Click(System::Object^ sender, System::EventArgs^
 	addStudentpp->BackColor = Color::Tan;
 	stdofCoursepp->BackColor = Color::Tan;
 	courseDatapp->BackColor = Color::Tan;
-	EditCourseData->BackColor = Color::Tan;
+	editCoursepp->BackColor = Color::Tan;
 	studentDatapp->BackColor = Color::Tan;
 }
 private: System::Void pictureBox8_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -2943,7 +2943,7 @@ private: System::Void pictureBox8_Click(System::Object^ sender, System::EventArg
 	addStudentpp->BackColor = Color::Tan;
 	stdofCoursepp->BackColor = Color::Tan;
 	courseDatapp->BackColor = Color::Tan;
-	EditCourseData->BackColor = Color::Tan;
+	editCoursepp->BackColor = Color::Tan;
 	studentDatapp->BackColor = Color::Tan;
 }
 private: System::Void button2_Click_1(System::Object^ sender, System::EventArgs^ e) {
