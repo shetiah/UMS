@@ -1096,7 +1096,7 @@ private: System::Windows::Forms::Panel^ exitpp;
 			this->label32->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label32->ForeColor = System::Drawing::Color::Brown;
-			this->label32->Location = System::Drawing::Point(54, 16);
+			this->label32->Location = System::Drawing::Point(47, 16);
 			this->label32->Name = L"label32";
 			this->label32->Size = System::Drawing::Size(105, 25);
 			this->label32->TabIndex = 8;
@@ -2964,24 +2964,32 @@ private: System::Windows::Forms::Panel^ exitpp;
 	private: System::Void adminHome_Load(System::Object^ sender, System::EventArgs^ e) {
 	}
 
-		   bool slideBarExpand = false;
+		   bool sideBarExpand ;
 private: System::Void slideBarTimer_Tick(System::Object^ sender, System::EventArgs^ e) {
 
-	if (!slideBarExpand) {
-		sideBar->Width -= 20;
-		if (sideBar->Width <=60) {
-			slideBarExpand = true;
+	if (sideBarExpand) {
+		if (sideBar->Width == sideBar->MinimumSize.Width) {
+			sideBarExpand = false;
 			slideBarTimer->Stop();
 		}
+		else {
+			sideBar->Width -= 20;
+		}
+
+
 	}
 	else
 	{
-		sideBar->Width += 20;
-		if (sideBar->Width >= 281)
+		if (sideBar->Width == sideBar->MaximumSize.Width)
 		{
-			slideBarExpand = false;
+			sideBarExpand = true;
 			slideBarTimer->Stop();
 		}
+		else
+		{
+			sideBar->Width += 20;
+		}
+
 	}
 }
 private: System::Void btnAddStudent_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -2998,7 +3006,7 @@ private: System::Void btnAddStudent_Click(System::Object^ sender, System::EventA
 	exitpp->BackColor = Color::Tan;
 	stdofCoursepp->BackColor = Color::Tan;
 	courseDatapp->BackColor = Color::Tan;
-	EditCourseData->BackColor = Color::Tan;
+	editCoursepp->BackColor = Color::Tan;
 	studentDatapp->BackColor = Color::Tan;
 }
 private: System::Void btnAddCourse_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -3015,7 +3023,7 @@ private: System::Void btnAddCourse_Click(System::Object^ sender, System::EventAr
 	exitpp->BackColor = Color::Tan;
 	stdofCoursepp->BackColor = Color::Tan;
 	courseDatapp->BackColor = Color::Tan;
-	EditCourseData->BackColor = Color::Tan;
+	editCoursepp->BackColor = Color::Tan;
 	studentDatapp->BackColor = Color::Tan;
 }
 private: System::Void pictureBox1_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -3034,7 +3042,7 @@ private: System::Void pictureBox1_Click(System::Object^ sender, System::EventArg
 	exitpp->BackColor = Color::Tan;
 	stdofCoursepp->BackColor = Color::Tan;
 	courseDatapp->BackColor = Color::Tan;
-	EditCourseData->BackColor = Color::Tan;
+	editCoursepp->BackColor = Color::Tan;
 	studentDatapp->BackColor = Color::Tan;
 }
 private: System::Void pictureBox2_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -3054,7 +3062,7 @@ private: System::Void pictureBox2_Click(System::Object^ sender, System::EventArg
 	exitpp->BackColor = Color::Tan;
 	stdofCoursepp->BackColor = Color::Tan;
 	courseDatapp->BackColor = Color::Tan;
-	EditCourseData->BackColor = Color::Tan;
+	editCoursepp->BackColor = Color::Tan;
 	studentDatapp->BackColor = Color::Tan;
 }
 private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -3073,7 +3081,7 @@ private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e
 	exitpp->BackColor = Color::Tan;
 	stdofCoursepp->BackColor = Color::Tan;
 	courseDatapp->BackColor = Color::Brown;
-	EditCourseData->BackColor = Color::Tan;
+	editCoursepp->BackColor = Color::Tan;
 	studentDatapp->BackColor = Color::Tan;
 }
 private: System::Void StudentData_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -3093,7 +3101,7 @@ private: System::Void StudentData_Click(System::Object^ sender, System::EventArg
 	exitpp->BackColor = Color::Tan;
 	stdofCoursepp->BackColor = Color::Tan;
 	courseDatapp->BackColor = Color::Tan;
-	EditCourseData->BackColor = Color::Tan;
+	editCoursepp->BackColor = Color::Tan;
 	studentDatapp->BackColor = Color::Tan;
 }
 private: System::Void StudentsOfCourse_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -3112,7 +3120,7 @@ private: System::Void StudentsOfCourse_Click(System::Object^ sender, System::Eve
 	exitpp->BackColor = Color::Tan;
 	stdofCoursepp->BackColor = Color::Brown;
 	courseDatapp->BackColor = Color::Tan;
-	EditCourseData->BackColor = Color::Tan;
+	editCoursepp->BackColor = Color::Tan;
 	studentDatapp->BackColor = Color::Tan;
 }
 private: System::Void pictureBox5_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -3132,7 +3140,7 @@ private: System::Void pictureBox5_Click(System::Object^ sender, System::EventArg
 	exitpp->BackColor = Color::Tan;
 	stdofCoursepp->BackColor = Color::Brown;
 	courseDatapp->BackColor = Color::Tan;
-	EditCourseData->BackColor = Color::Tan;
+	editCoursepp->BackColor = Color::Tan;
 	studentDatapp->BackColor = Color::Tan;
 }
 private: System::Void pictureBox4_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -3148,6 +3156,14 @@ private: System::Void pictureBox4_Click(System::Object^ sender, System::EventArg
 	pnlCoursedataedit->Visible = false;
 	label24->Visible = false;
 	StudentDatapanel->Visible = false;
+	StudentDatapanel->Visible = false;
+	addCoursepp->BackColor = Color::Tan;
+	addStudentpp->BackColor = Color::Tan;
+	exitpp->BackColor = Color::Tan;
+	stdofCoursepp->BackColor = Color::Tan;
+	courseDatapp->BackColor = Color::Brown;
+	editCoursepp->BackColor = Color::Tan;
+	studentDatapp->BackColor = Color::Tan;
 }
 private: System::Void pictureBox3_Click(System::Object^ sender, System::EventArgs^ e) {
 	l1->Visible = false;
@@ -3164,7 +3180,7 @@ private: System::Void pictureBox3_Click(System::Object^ sender, System::EventArg
 	exitpp->BackColor = Color::Tan;
 	stdofCoursepp->BackColor = Color::Tan;
 	courseDatapp->BackColor = Color::Tan;
-	EditCourseData->BackColor = Color::Tan;
+	editCoursepp->BackColor = Color::Tan;
 	studentDatapp->BackColor = Color::Tan;
 }
 private: System::Void pnlOfStudentOfCourse_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
@@ -3819,7 +3835,7 @@ private: System::Void pictureBox9_Click(System::Object^ sender, System::EventArg
 	exitpp->BackColor = Color::Tan;
 	stdofCoursepp->BackColor = Color::Tan;
 	courseDatapp->BackColor = Color::Tan;
-	EditCourseData->BackColor = Color::Brown;
+	editCoursepp->BackColor = Color::Brown;
 	studentDatapp->BackColor = Color::Tan;
 }
 private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -3830,6 +3846,14 @@ private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e
 	pnlOfStudentOfCourse->Visible = false;
 	pnlOfAddStudent->Visible = false;
 	StudentDatapanel->Visible = false;
+
+	addCoursepp->BackColor = Color::Tan;
+	addStudentpp->BackColor = Color::Tan;
+	exitpp->BackColor = Color::Tan;
+	stdofCoursepp->BackColor = Color::Tan;
+	courseDatapp->BackColor = Color::Tan;
+	editCoursepp->BackColor = Color::Brown;
+	studentDatapp->BackColor = Color::Tan;
 }
 private: System::Void lbl37_Click(System::Object^ sender, System::EventArgs^ e) {
 }
@@ -3907,7 +3931,7 @@ private: System::Void pictureBox11_Click(System::Object^ sender, System::EventAr
 	exitpp->BackColor = Color::Tan;
 	stdofCoursepp->BackColor = Color::Tan;
 	courseDatapp->BackColor = Color::Tan;
-	EditCourseData->BackColor = Color::Tan;
+	editCoursepp->BackColor = Color::Tan;
 	studentDatapp->BackColor = Color::Brown;
 }
 private: System::Void StudentDataPanel_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
@@ -3920,7 +3944,7 @@ private: System::Void button7_Click(System::Object^ sender, System::EventArgs^ e
 	exitpp->BackColor = Color::Tan;
 	stdofCoursepp->BackColor = Color::Tan;
 	courseDatapp->BackColor = Color::Tan;
-	EditCourseData->BackColor = Color::Tan;
+	editCoursepp->BackColor = Color::Tan;
 	studentDatapp->BackColor = Color::Brown;
 	pnlOfAddCourse->Visible = false;
 	pnlOfEditCourse->Visible = false;

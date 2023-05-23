@@ -3742,7 +3742,7 @@ private: System::Void btnregister_Click(System::Object^ sender, System::EventArg
 	filterp->BackColor = Color::Tan;
 	yourgradesp->BackColor = Color::Tan;
 	allcoursesp->BackColor = Color::Tan;
-	yourcoursesP->BackColor = Color::Tan;
+	yourcoursesP->BackColor = Color::Tan; 
 	registercoursep->BackColor = Color::Brown;
 	editcoursep->BackColor = Color::Tan;
 	sideBarTimer->Start();
