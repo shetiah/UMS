@@ -264,38 +264,23 @@ namespace UMS {
 			this->panel3->Controls->Add(this->lbemail);
 			this->panel3->Controls->Add(this->label1);
 			this->panel3->Controls->Add(this->textBox2);
-			this->panel3->Location = System::Drawing::Point(720, 118);
-			this->panel3->Margin = System::Windows::Forms::Padding(4);
+			resources->ApplyResources(this->panel3, L"panel3");
 			this->panel3->Name = L"panel3";
-			this->panel3->Size = System::Drawing::Size(604, 560);
-			this->panel3->TabIndex = 2;
 			this->panel3->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &AdminForm::panel3_Paint);
 			// 
 			// pictureBox3
 			// 
-			this->pictureBox3->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox3.Image")));
-			this->pictureBox3->ImeMode = System::Windows::Forms::ImeMode::NoControl;
-			this->pictureBox3->Location = System::Drawing::Point(512, 198);
-			this->pictureBox3->Margin = System::Windows::Forms::Padding(4);
+			resources->ApplyResources(this->pictureBox3, L"pictureBox3");
 			this->pictureBox3->Name = L"pictureBox3";
-			this->pictureBox3->Size = System::Drawing::Size(59, 36);
-			this->pictureBox3->SizeMode = System::Windows::Forms::PictureBoxSizeMode::CenterImage;
-			this->pictureBox3->TabIndex = 7;
 			this->pictureBox3->TabStop = false;
 			this->pictureBox3->Click += gcnew System::EventHandler(this, &AdminForm::pictureBox3_Click);
 			// 
 			// textBox1
 			// 
 			this->textBox1->Cursor = System::Windows::Forms::Cursors::IBeam;
-			this->textBox1->Font = (gcnew System::Drawing::Font(L"High Tower Text", 13.8F));
+			resources->ApplyResources(this->textBox1, L"textBox1");
 			this->textBox1->ForeColor = System::Drawing::SystemColors::GrayText;
-			this->textBox1->Location = System::Drawing::Point(3, 198);
-			this->textBox1->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
-			this->textBox1->Multiline = true;
 			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(568, 36);
-			this->textBox1->TabIndex = 11;
-			this->textBox1->Text = L"Enter your name";
 			this->textBox1->TextChanged += gcnew System::EventHandler(this, &AdminForm::textBox1_TextChanged);
 			this->textBox1->Enter += gcnew System::EventHandler(this, &AdminForm::tbnameEnter);
 			this->textBox1->Leave += gcnew System::EventHandler(this, &AdminForm::tbname_leave);
@@ -306,16 +291,9 @@ namespace UMS {
 			this->Cancelbt->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->Cancelbt->FlatAppearance->BorderSize = 0;
 			this->Cancelbt->FlatAppearance->MouseOverBackColor = System::Drawing::Color::Navy;
-			this->Cancelbt->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->Cancelbt->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F));
+			resources->ApplyResources(this->Cancelbt, L"Cancelbt");
 			this->Cancelbt->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
-			this->Cancelbt->ImeMode = System::Windows::Forms::ImeMode::NoControl;
-			this->Cancelbt->Location = System::Drawing::Point(183, 473);
-			this->Cancelbt->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->Cancelbt->Name = L"Cancelbt";
-			this->Cancelbt->Size = System::Drawing::Size(231, 59);
-			this->Cancelbt->TabIndex = 1;
-			this->Cancelbt->Text = L"Cancel";
 			this->Cancelbt->UseVisualStyleBackColor = false;
 			this->Cancelbt->Click += gcnew System::EventHandler(this, &AdminForm::Cancelbt_Click);
 			// 
@@ -326,89 +304,50 @@ namespace UMS {
 			this->LOGINbt->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->LOGINbt->FlatAppearance->BorderSize = 0;
 			this->LOGINbt->FlatAppearance->MouseOverBackColor = System::Drawing::Color::Navy;
-			this->LOGINbt->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->LOGINbt->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F));
+			resources->ApplyResources(this->LOGINbt, L"LOGINbt");
 			this->LOGINbt->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
-			this->LOGINbt->ImeMode = System::Windows::Forms::ImeMode::NoControl;
-			this->LOGINbt->Location = System::Drawing::Point(183, 395);
-			this->LOGINbt->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->LOGINbt->Name = L"LOGINbt";
-			this->LOGINbt->Size = System::Drawing::Size(231, 55);
-			this->LOGINbt->TabIndex = 0;
-			this->LOGINbt->Text = L"LOGIN";
 			this->LOGINbt->UseVisualStyleBackColor = false;
 			this->LOGINbt->Click += gcnew System::EventHandler(this, &AdminForm::LOGINbt_Click_1);
 			// 
 			// label3
 			// 
-			this->label3->AutoSize = true;
+			resources->ApplyResources(this->label3, L"label3");
 			this->label3->BackColor = System::Drawing::Color::Transparent;
-			this->label3->Font = (gcnew System::Drawing::Font(L"Cooper Black", 28.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
 			this->label3->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(26)), static_cast<System::Int32>(static_cast<System::Byte>(11)),
 				static_cast<System::Int32>(static_cast<System::Byte>(69)));
-			this->label3->ImeMode = System::Windows::Forms::ImeMode::NoControl;
-			this->label3->Location = System::Drawing::Point(200, 61);
-			this->label3->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(157, 54);
-			this->label3->TabIndex = 10;
-			this->label3->Text = L"Login";
 			// 
 			// pictureBox4
 			// 
-			this->pictureBox4->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox4.Image")));
-			this->pictureBox4->ImeMode = System::Windows::Forms::ImeMode::NoControl;
-			this->pictureBox4->Location = System::Drawing::Point(512, 314);
-			this->pictureBox4->Margin = System::Windows::Forms::Padding(4);
+			resources->ApplyResources(this->pictureBox4, L"pictureBox4");
 			this->pictureBox4->Name = L"pictureBox4";
-			this->pictureBox4->Size = System::Drawing::Size(65, 36);
-			this->pictureBox4->SizeMode = System::Windows::Forms::PictureBoxSizeMode::CenterImage;
-			this->pictureBox4->TabIndex = 8;
 			this->pictureBox4->TabStop = false;
 			this->pictureBox4->Click += gcnew System::EventHandler(this, &AdminForm::pictureBox4_Click);
 			// 
 			// lbemail
 			// 
 			this->lbemail->Cursor = System::Windows::Forms::Cursors::Default;
-			this->lbemail->Font = (gcnew System::Drawing::Font(L"Cooper Black", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
+			resources->ApplyResources(this->lbemail, L"lbemail");
 			this->lbemail->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(26)), static_cast<System::Int32>(static_cast<System::Byte>(11)),
 				static_cast<System::Int32>(static_cast<System::Byte>(69)));
-			this->lbemail->ImeMode = System::Windows::Forms::ImeMode::NoControl;
-			this->lbemail->Location = System::Drawing::Point(3, 158);
 			this->lbemail->Name = L"lbemail";
-			this->lbemail->Size = System::Drawing::Size(131, 38);
-			this->lbemail->TabIndex = 2;
-			this->lbemail->Text = L"Name";
 			// 
 			// label1
 			// 
 			this->label1->Cursor = System::Windows::Forms::Cursors::Default;
-			this->label1->Font = (gcnew System::Drawing::Font(L"Cooper Black", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
+			resources->ApplyResources(this->label1, L"label1");
 			this->label1->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(26)), static_cast<System::Int32>(static_cast<System::Byte>(11)),
 				static_cast<System::Int32>(static_cast<System::Byte>(69)));
-			this->label1->ImeMode = System::Windows::Forms::ImeMode::NoControl;
-			this->label1->Location = System::Drawing::Point(5, 274);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(135, 38);
-			this->label1->TabIndex = 3;
-			this->label1->Text = L"Password";
 			this->label1->Click += gcnew System::EventHandler(this, &AdminForm::label1_Click);
 			// 
 			// textBox2
 			// 
 			this->textBox2->Cursor = System::Windows::Forms::Cursors::IBeam;
-			this->textBox2->Font = (gcnew System::Drawing::Font(L"High Tower Text", 13.8F));
+			resources->ApplyResources(this->textBox2, L"textBox2");
 			this->textBox2->ForeColor = System::Drawing::SystemColors::GrayText;
-			this->textBox2->Location = System::Drawing::Point(9, 314);
-			this->textBox2->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
-			this->textBox2->Multiline = true;
 			this->textBox2->Name = L"textBox2";
-			this->textBox2->Size = System::Drawing::Size(568, 36);
-			this->textBox2->TabIndex = 12;
-			this->textBox2->Text = L"Enter your password";
 			this->textBox2->TextChanged += gcnew System::EventHandler(this, &AdminForm::textBox2_TextChanged);
 			this->textBox2->Enter += gcnew System::EventHandler(this, &AdminForm::tbpassword_enter);
 			this->textBox2->Leave += gcnew System::EventHandler(this, &AdminForm::tbpassword_leave);
@@ -417,12 +356,8 @@ namespace UMS {
 			// 
 			this->pictureBox1->BackColor = System::Drawing::Color::Transparent;
 			this->pictureBox1->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
-			this->pictureBox1->Location = System::Drawing::Point(-7, -17);
+			resources->ApplyResources(this->pictureBox1, L"pictureBox1");
 			this->pictureBox1->Name = L"pictureBox1";
-			this->pictureBox1->Size = System::Drawing::Size(95, 119);
-			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
-			this->pictureBox1->TabIndex = 3;
 			this->pictureBox1->TabStop = false;
 			this->pictureBox1->Click += gcnew System::EventHandler(this, &AdminForm::pictureBox1_Click);
 			// 
@@ -430,44 +365,29 @@ namespace UMS {
 			// 
 			this->pictureBox2->BackColor = System::Drawing::Color::Transparent;
 			this->pictureBox2->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->pictureBox2->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox2.Image")));
-			this->pictureBox2->Location = System::Drawing::Point(1336, -2);
+			resources->ApplyResources(this->pictureBox2, L"pictureBox2");
 			this->pictureBox2->Name = L"pictureBox2";
-			this->pictureBox2->Size = System::Drawing::Size(82, 88);
-			this->pictureBox2->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
-			this->pictureBox2->TabIndex = 4;
 			this->pictureBox2->TabStop = false;
 			this->pictureBox2->Click += gcnew System::EventHandler(this, &AdminForm::pictureBox2_Click_1);
 			// 
 			// pictureBox5
 			// 
-			this->pictureBox5->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox5.Image")));
-			this->pictureBox5->Location = System::Drawing::Point(101, 118);
+			resources->ApplyResources(this->pictureBox5, L"pictureBox5");
 			this->pictureBox5->Name = L"pictureBox5";
-			this->pictureBox5->Size = System::Drawing::Size(601, 561);
-			this->pictureBox5->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
-			this->pictureBox5->TabIndex = 5;
 			this->pictureBox5->TabStop = false;
 			// 
 			// AdminForm
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
+			resources->ApplyResources(this, L"$this");
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::White;
-			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
-			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->ClientSize = System::Drawing::Size(1420, 800);
 			this->Controls->Add(this->pictureBox5);
 			this->Controls->Add(this->pictureBox2);
 			this->Controls->Add(this->pictureBox1);
 			this->Controls->Add(this->panel3);
 			this->DoubleBuffered = true;
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
-			this->MaximumSize = System::Drawing::Size(1777, 970);
 			this->Name = L"AdminForm";
-			this->ShowIcon = false;
-			this->ShowInTaskbar = false;
-			this->Text = L"AdminForm";
 			this->Load += gcnew System::EventHandler(this, &AdminForm::AdminForm_Load);
 			this->panel3->ResumeLayout(false);
 			this->panel3->PerformLayout();

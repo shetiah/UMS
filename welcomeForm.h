@@ -89,16 +89,10 @@ namespace UMS {
 			// 
 			// label1
 			// 
-			this->label1->AutoSize = true;
+			resources->ApplyResources(this->label1, L"label1");
 			this->label1->BackColor = System::Drawing::Color::Transparent;
-			this->label1->Font = (gcnew System::Drawing::Font(L"Rockwell", 12, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)),
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->label1->ForeColor = System::Drawing::Color::DarkOrchid;
-			this->label1->Location = System::Drawing::Point(838, 475);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(138, 25);
-			this->label1->TabIndex = 1;
-			this->label1->Text = L"Who you are\?";
 			// 
 			// tostudentbt
 			// 
@@ -108,16 +102,9 @@ namespace UMS {
 			this->tostudentbt->FlatAppearance->BorderSize = 0;
 			this->tostudentbt->FlatAppearance->MouseDownBackColor = System::Drawing::Color::Olive;
 			this->tostudentbt->FlatAppearance->MouseOverBackColor = System::Drawing::Color::Navy;
-			this->tostudentbt->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->tostudentbt->Font = (gcnew System::Drawing::Font(L"Segoe UI", 12, System::Drawing::FontStyle::Bold));
+			resources->ApplyResources(this->tostudentbt, L"tostudentbt");
 			this->tostudentbt->ForeColor = System::Drawing::Color::White;
-			this->tostudentbt->ImeMode = System::Windows::Forms::ImeMode::NoControl;
-			this->tostudentbt->Location = System::Drawing::Point(944, 531);
-			this->tostudentbt->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->tostudentbt->Name = L"tostudentbt";
-			this->tostudentbt->Size = System::Drawing::Size(117, 59);
-			this->tostudentbt->TabIndex = 5;
-			this->tostudentbt->Text = L"Student";
 			this->tostudentbt->UseVisualStyleBackColor = false;
 			this->tostudentbt->Click += gcnew System::EventHandler(this, &welcomeForm::tostudentbt_Click);
 			// 
@@ -129,16 +116,9 @@ namespace UMS {
 			this->toadminbt->FlatAppearance->BorderSize = 0;
 			this->toadminbt->FlatAppearance->MouseDownBackColor = System::Drawing::Color::Olive;
 			this->toadminbt->FlatAppearance->MouseOverBackColor = System::Drawing::Color::Navy;
-			this->toadminbt->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->toadminbt->Font = (gcnew System::Drawing::Font(L"Segoe UI", 12, System::Drawing::FontStyle::Bold));
+			resources->ApplyResources(this->toadminbt, L"toadminbt");
 			this->toadminbt->ForeColor = System::Drawing::Color::White;
-			this->toadminbt->ImeMode = System::Windows::Forms::ImeMode::NoControl;
-			this->toadminbt->Location = System::Drawing::Point(746, 531);
-			this->toadminbt->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->toadminbt->Name = L"toadminbt";
-			this->toadminbt->Size = System::Drawing::Size(117, 59);
-			this->toadminbt->TabIndex = 6;
-			this->toadminbt->Text = L"Admin";
 			this->toadminbt->UseVisualStyleBackColor = false;
 			this->toadminbt->Click += gcnew System::EventHandler(this, &welcomeForm::toadminbt_Click);
 			// 
@@ -146,32 +126,22 @@ namespace UMS {
 			// 
 			this->pictureBox2->BackColor = System::Drawing::Color::Transparent;
 			this->pictureBox2->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->pictureBox2->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox2.Image")));
-			this->pictureBox2->Location = System::Drawing::Point(1130, 1);
+			resources->ApplyResources(this->pictureBox2, L"pictureBox2");
 			this->pictureBox2->Name = L"pictureBox2";
-			this->pictureBox2->Size = System::Drawing::Size(73, 76);
-			this->pictureBox2->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
-			this->pictureBox2->TabIndex = 7;
 			this->pictureBox2->TabStop = false;
 			this->pictureBox2->Click += gcnew System::EventHandler(this, &welcomeForm::pictureBox2_Click_1);
 			// 
 			// welcomeForm
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
+			resources->ApplyResources(this, L"$this");
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::White;
-			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
-			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->ClientSize = System::Drawing::Size(1206, 718);
 			this->Controls->Add(this->pictureBox2);
 			this->Controls->Add(this->toadminbt);
 			this->Controls->Add(this->tostudentbt);
 			this->Controls->Add(this->label1);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
-			this->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->Name = L"welcomeForm";
-			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
-			this->Text = L"welcomeForm";
 			this->Load += gcnew System::EventHandler(this, &welcomeForm::welcomeForm_Load);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->EndInit();
 			this->ResumeLayout(false);
