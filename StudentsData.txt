@@ -4,7 +4,7 @@
 4)2023047
 5)2
 6)20
-7)3.4125
+7)3.43636
 8)intro to cs,report writing,probability,statistical analysis
 9)3.4,3.3,3.5,3.5
 c)physics 1,structured programming

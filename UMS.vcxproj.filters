@@ -33,12 +33,6 @@
     <ClCompile Include="Student.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SignUp.cpp">
-      <Filter>Header Files</Filter>
-    </ClCompile>
-    <ClCompile Include="StudentDataForm.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="messagebox.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -49,9 +43,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="welcomeForm.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="testtest.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="adminHome.cpp">
@@ -83,12 +74,6 @@
     <ClInclude Include="Admin.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SignUp.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="StudentDataForm.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="messagebox.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -99,9 +84,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="welcomeForm.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="testtest.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="adminHome.h">

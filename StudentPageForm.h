@@ -1,4 +1,5 @@
-﻿#pragma once
+﻿
+#pragma once
 #include "Student.h"
 #include "Login.h"
 #include "Admin.h"
@@ -55,18 +56,18 @@ namespace UMS {
 
 	protected:
 	private: System::Windows::Forms::Panel^ pnlbuttons;
-	private: System::Windows::Forms::Button^ btnCourseInProgress;
 
 
 
 
 
 
-	private: System::Windows::Forms::Button^ btnCourseGrade;
 
 
 
-	private: System::Windows::Forms::Button^ btnregister;
+
+
+
 
 	private: System::Windows::Forms::Panel^ PnlOfFilter;
 
@@ -94,7 +95,7 @@ namespace UMS {
 
 
 
-	private: System::Windows::Forms::Button^ btnDetailsOfCourse;
+
 	private: System::Windows::Forms::Panel^ pnlOfPanels;
 
 	private: System::Windows::Forms::Timer^ sideBarTimer;
@@ -132,8 +133,8 @@ namespace UMS {
 
 private: System::Windows::Forms::Panel^ panel1;
 
-private: System::Windows::Forms::PictureBox^ pictureBox13;
-private: System::Windows::Forms::PictureBox^ pictureBox16;
+
+
 
 
 
@@ -164,7 +165,7 @@ private: System::Windows::Forms::FlowLayoutPanel^ flwpnldetCourse;
 private: System::Windows::Forms::Button^ viewbt;
 
 
-private: System::Windows::Forms::Button^ Exit;
+
 private: System::Windows::Forms::FlowLayoutPanel^ filterflowlytpnl;
 
 
@@ -182,7 +183,7 @@ private: System::Windows::Forms::FlowLayoutPanel^ flowLayoutPanel4;
 private: System::Windows::Forms::Button^ viewerbt;
 
 private: System::Windows::Forms::Timer^ selectCoursetimer;
-private: System::Windows::Forms::Button^ btnFilter;
+
 private: System::Windows::Forms::Button^ viewgradesBt;
 private: System::Windows::Forms::FlowLayoutPanel^ flowLayoutPanel6;
 private: System::Windows::Forms::FlowLayoutPanel^ flowLayoutPanel5;
@@ -223,7 +224,7 @@ private: System::Windows::Forms::TextBox^ textBox4;
 private: System::Windows::Forms::Label^ label15;
 private: System::Windows::Forms::PictureBox^ pictureBox48;
 private: System::Windows::Forms::PictureBox^ pictureBox47;
-private: System::Windows::Forms::Label^ label16;
+
 private: System::Windows::Forms::Label^ label17;
 private: System::Windows::Forms::Label^ label18;
 private: System::Windows::Forms::PictureBox^ pictureBox50;
@@ -256,8 +257,8 @@ private: System::Windows::Forms::Label^ label19;
 private: System::Windows::Forms::Label^ savedcourse;
 private: System::Windows::Forms::Label^ hoursrem;
 private: System::Windows::Forms::Label^ label26;
-private: System::Windows::Forms::Label^ label27;
-private: System::Windows::Forms::Label^ label29;
+
+
 private: System::Windows::Forms::Label^ label30;
 private: System::Windows::Forms::Label^ reglb;
 private: System::Windows::Forms::Label^ cshours;
@@ -267,6 +268,43 @@ private: System::Windows::Forms::Label^ label22;
 private: System::Windows::Forms::Label^ label23;
 private: System::Windows::Forms::Label^ courseMaxstds;
 private: System::Windows::Forms::Label^ label45;
+private: System::Windows::Forms::Button^ btnregister;
+private: System::Windows::Forms::Button^ btnCourseInProgress;
+private: System::Windows::Forms::Button^ btnDetailsOfCourse;
+private: System::Windows::Forms::Button^ btnCourseGrade;
+private: System::Windows::Forms::Button^ btnFilter;
+private: System::Windows::Forms::PictureBox^ pictureBox5;
+private: System::Windows::Forms::PictureBox^ pictureBox4;
+private: System::Windows::Forms::PictureBox^ pictureBox3;
+private: System::Windows::Forms::PictureBox^ pictureBox2;
+private: System::Windows::Forms::PictureBox^ pictureBox1;
+private: System::Windows::Forms::Panel^ panel2;
+private: System::Windows::Forms::Panel^ panel8;
+private: System::Windows::Forms::Panel^ filterp;
+private: System::Windows::Forms::Panel^ yourgradesp;
+private: System::Windows::Forms::Panel^ allcoursesp;
+
+private: System::Windows::Forms::Panel^ yourcoursesP;
+private: System::Windows::Forms::Panel^ registercoursep;
+private: System::Windows::Forms::PictureBox^ homePicture;
+
+
+
+
+
+
+
+
+
+
+
+private: System::Windows::Forms::PictureBox^ pictureBox7;
+
+private: System::Windows::Forms::PictureBox^ pictureBox8;
+private: System::Windows::Forms::PictureBox^ pictureBox9;
+private: System::Windows::Forms::Button^ exitbt;
+private: System::Windows::Forms::Panel^ editcoursep;
+
 
 
 
@@ -363,18 +401,32 @@ private: System::Windows::Forms::Label^ label45;
 			this->components = (gcnew System::ComponentModel::Container());
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(StudentPageForm::typeid));
 			this->sideBar = (gcnew System::Windows::Forms::Panel());
-			this->editp = (gcnew System::Windows::Forms::Button());
 			this->pictureBox46 = (gcnew System::Windows::Forms::PictureBox());
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
-			this->pictureBox13 = (gcnew System::Windows::Forms::PictureBox());
-			this->pictureBox16 = (gcnew System::Windows::Forms::PictureBox());
+			this->pictureBox7 = (gcnew System::Windows::Forms::PictureBox());
+			this->homePicture = (gcnew System::Windows::Forms::PictureBox());
 			this->pnlbuttons = (gcnew System::Windows::Forms::Panel());
-			this->btnFilter = (gcnew System::Windows::Forms::Button());
+			this->exitbt = (gcnew System::Windows::Forms::Button());
+			this->editp = (gcnew System::Windows::Forms::Button());
 			this->btnregister = (gcnew System::Windows::Forms::Button());
-			this->Exit = (gcnew System::Windows::Forms::Button());
-			this->btnCourseGrade = (gcnew System::Windows::Forms::Button());
-			this->btnDetailsOfCourse = (gcnew System::Windows::Forms::Button());
 			this->btnCourseInProgress = (gcnew System::Windows::Forms::Button());
+			this->btnDetailsOfCourse = (gcnew System::Windows::Forms::Button());
+			this->btnCourseGrade = (gcnew System::Windows::Forms::Button());
+			this->btnFilter = (gcnew System::Windows::Forms::Button());
+			this->panel2 = (gcnew System::Windows::Forms::Panel());
+			this->editcoursep = (gcnew System::Windows::Forms::Panel());
+			this->pictureBox8 = (gcnew System::Windows::Forms::PictureBox());
+			this->pictureBox9 = (gcnew System::Windows::Forms::PictureBox());
+			this->filterp = (gcnew System::Windows::Forms::Panel());
+			this->yourgradesp = (gcnew System::Windows::Forms::Panel());
+			this->allcoursesp = (gcnew System::Windows::Forms::Panel());
+			this->yourcoursesP = (gcnew System::Windows::Forms::Panel());
+			this->registercoursep = (gcnew System::Windows::Forms::Panel());
+			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
+			this->pictureBox2 = (gcnew System::Windows::Forms::PictureBox());
+			this->pictureBox3 = (gcnew System::Windows::Forms::PictureBox());
+			this->pictureBox4 = (gcnew System::Windows::Forms::PictureBox());
+			this->pictureBox5 = (gcnew System::Windows::Forms::PictureBox());
 			this->PnlOfFilter = (gcnew System::Windows::Forms::Panel());
 			this->viewerbt = (gcnew System::Windows::Forms::Button());
 			this->flowLayoutPanel4 = (gcnew System::Windows::Forms::FlowLayoutPanel());
@@ -413,6 +465,7 @@ private: System::Windows::Forms::Label^ label45;
 			this->viewbt = (gcnew System::Windows::Forms::Button());
 			this->flwpnldetCourse = (gcnew System::Windows::Forms::FlowLayoutPanel());
 			this->pnlOfCoursesInProgress = (gcnew System::Windows::Forms::Panel());
+			this->panel8 = (gcnew System::Windows::Forms::Panel());
 			this->label45 = (gcnew System::Windows::Forms::Label());
 			this->flowLayoutPanel1 = (gcnew System::Windows::Forms::FlowLayoutPanel());
 			this->pnlOfregCourse = (gcnew System::Windows::Forms::Panel());
@@ -446,12 +499,9 @@ private: System::Windows::Forms::Label^ label45;
 			this->pictureBox50 = (gcnew System::Windows::Forms::PictureBox());
 			this->pictureBox49 = (gcnew System::Windows::Forms::PictureBox());
 			this->panel4 = (gcnew System::Windows::Forms::Panel());
-			this->label27 = (gcnew System::Windows::Forms::Label());
 			this->label17 = (gcnew System::Windows::Forms::Label());
-			this->label29 = (gcnew System::Windows::Forms::Label());
 			this->label18 = (gcnew System::Windows::Forms::Label());
 			this->label30 = (gcnew System::Windows::Forms::Label());
-			this->label16 = (gcnew System::Windows::Forms::Label());
 			this->pictureBox48 = (gcnew System::Windows::Forms::PictureBox());
 			this->pictureBox47 = (gcnew System::Windows::Forms::PictureBox());
 			this->pictureBox44 = (gcnew System::Windows::Forms::PictureBox());
@@ -473,9 +523,17 @@ private: System::Windows::Forms::Label^ label45;
 			this->sideBar->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox46))->BeginInit();
 			this->panel1->SuspendLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox13))->BeginInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox16))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox7))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->homePicture))->BeginInit();
 			this->pnlbuttons->SuspendLayout();
+			this->panel2->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox8))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox9))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox4))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox5))->BeginInit();
 			this->PnlOfFilter->SuspendLayout();
 			this->filterflowlytpnl->SuspendLayout();
 			this->pnlOfCourseGrades->SuspendLayout();
@@ -504,7 +562,6 @@ private: System::Windows::Forms::Label^ label45;
 			this->sideBar->AllowDrop = true;
 			this->sideBar->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
 				static_cast<System::Int32>(static_cast<System::Byte>(31)));
-			this->sideBar->Controls->Add(this->editp);
 			this->sideBar->Controls->Add(this->pictureBox46);
 			this->sideBar->Controls->Add(this->panel1);
 			this->sideBar->Controls->Add(this->pnlbuttons);
@@ -512,42 +569,19 @@ private: System::Windows::Forms::Label^ label45;
 			this->sideBar->ForeColor = System::Drawing::SystemColors::ControlLightLight;
 			this->sideBar->Location = System::Drawing::Point(0, 0);
 			this->sideBar->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
-			this->sideBar->MaximumSize = System::Drawing::Size(289, 521);
-			this->sideBar->MinimumSize = System::Drawing::Size(67, 521);
+			this->sideBar->MaximumSize = System::Drawing::Size(225, 519);
+			this->sideBar->MinimumSize = System::Drawing::Size(61, 519);
 			this->sideBar->Name = L"sideBar";
-			this->sideBar->Size = System::Drawing::Size(68, 521);
+			this->sideBar->Size = System::Drawing::Size(61, 519);
 			this->sideBar->TabIndex = 0;
 			this->sideBar->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &StudentPageForm::sideBar_Paint);
-			// 
-			// editp
-			// 
-			this->editp->AutoSize = true;
-			this->editp->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->editp->FlatAppearance->BorderColor = System::Drawing::Color::Tan;
-			this->editp->FlatAppearance->BorderSize = 2;
-			this->editp->FlatAppearance->MouseDownBackColor = System::Drawing::Color::Brown;
-			this->editp->FlatAppearance->MouseOverBackColor = System::Drawing::Color::LightSlateGray;
-			this->editp->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->editp->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F));
-			this->editp->ForeColor = System::Drawing::Color::Tan;
-			this->editp->Location = System::Drawing::Point(101, 126);
-			this->editp->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
-			this->editp->Name = L"editp";
-			this->editp->Size = System::Drawing::Size(104, 36);
-			this->editp->TabIndex = 5;
-			this->editp->Text = L"Edit Data";
-			this->editp->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->editp->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageBeforeText;
-			this->editp->UseCompatibleTextRendering = true;
-			this->editp->UseVisualStyleBackColor = true;
-			this->editp->Click += gcnew System::EventHandler(this, &StudentPageForm::editp_Click);
 			// 
 			// pictureBox46
 			// 
 			this->pictureBox46->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox46.Image")));
-			this->pictureBox46->Location = System::Drawing::Point(71, -1);
+			this->pictureBox46->Location = System::Drawing::Point(71, 31);
 			this->pictureBox46->Name = L"pictureBox46";
-			this->pictureBox46->Size = System::Drawing::Size(170, 117);
+			this->pictureBox46->Size = System::Drawing::Size(107, 85);
 			this->pictureBox46->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->pictureBox46->TabIndex = 5;
 			this->pictureBox46->TabStop = false;
@@ -555,179 +589,377 @@ private: System::Windows::Forms::Label^ label45;
 			// 
 			// panel1
 			// 
-			this->panel1->Controls->Add(this->pictureBox13);
-			this->panel1->Controls->Add(this->pictureBox16);
+			this->panel1->Controls->Add(this->pictureBox7);
+			this->panel1->Controls->Add(this->homePicture);
 			this->panel1->Location = System::Drawing::Point(0, 3);
 			this->panel1->Name = L"panel1";
 			this->panel1->Size = System::Drawing::Size(58, 138);
 			this->panel1->TabIndex = 4;
 			// 
-			// pictureBox13
+			// pictureBox7
 			// 
-			this->pictureBox13->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox13.Image")));
-			this->pictureBox13->Location = System::Drawing::Point(0, 72);
-			this->pictureBox13->Name = L"pictureBox13";
-			this->pictureBox13->Size = System::Drawing::Size(55, 63);
-			this->pictureBox13->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
-			this->pictureBox13->TabIndex = 4;
-			this->pictureBox13->TabStop = false;
-			this->pictureBox13->Click += gcnew System::EventHandler(this, &StudentPageForm::pictureBox13_Click);
+			this->pictureBox7->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->pictureBox7->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox7.Image")));
+			this->pictureBox7->Location = System::Drawing::Point(12, 28);
+			this->pictureBox7->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->pictureBox7->Name = L"pictureBox7";
+			this->pictureBox7->Size = System::Drawing::Size(39, 35);
+			this->pictureBox7->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->pictureBox7->TabIndex = 14;
+			this->pictureBox7->TabStop = false;
+			this->pictureBox7->Click += gcnew System::EventHandler(this, &StudentPageForm::pictureBox7_Click);
 			// 
-			// pictureBox16
+			// homePicture
 			// 
-			this->pictureBox16->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox16.Image")));
-			this->pictureBox16->Location = System::Drawing::Point(3, 10);
-			this->pictureBox16->Name = L"pictureBox16";
-			this->pictureBox16->Size = System::Drawing::Size(40, 63);
-			this->pictureBox16->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
-			this->pictureBox16->TabIndex = 6;
-			this->pictureBox16->TabStop = false;
-			this->pictureBox16->Click += gcnew System::EventHandler(this, &StudentPageForm::pictureBox16_Click);
+			this->homePicture->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->homePicture->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"homePicture.Image")));
+			this->homePicture->Location = System::Drawing::Point(12, 75);
+			this->homePicture->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->homePicture->Name = L"homePicture";
+			this->homePicture->Size = System::Drawing::Size(39, 38);
+			this->homePicture->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->homePicture->TabIndex = 13;
+			this->homePicture->TabStop = false;
+			this->homePicture->Click += gcnew System::EventHandler(this, &StudentPageForm::homepicture_click);
 			// 
 			// pnlbuttons
 			// 
 			this->pnlbuttons->BackColor = System::Drawing::Color::Transparent;
-			this->pnlbuttons->Controls->Add(this->btnFilter);
+			this->pnlbuttons->Controls->Add(this->exitbt);
+			this->pnlbuttons->Controls->Add(this->editp);
 			this->pnlbuttons->Controls->Add(this->btnregister);
-			this->pnlbuttons->Controls->Add(this->Exit);
-			this->pnlbuttons->Controls->Add(this->btnCourseGrade);
-			this->pnlbuttons->Controls->Add(this->btnDetailsOfCourse);
 			this->pnlbuttons->Controls->Add(this->btnCourseInProgress);
-			this->pnlbuttons->Location = System::Drawing::Point(0, 164);
+			this->pnlbuttons->Controls->Add(this->btnDetailsOfCourse);
+			this->pnlbuttons->Controls->Add(this->btnCourseGrade);
+			this->pnlbuttons->Controls->Add(this->btnFilter);
+			this->pnlbuttons->Controls->Add(this->panel2);
+			this->pnlbuttons->Location = System::Drawing::Point(0, 140);
 			this->pnlbuttons->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->pnlbuttons->Name = L"pnlbuttons";
-			this->pnlbuttons->Size = System::Drawing::Size(289, 344);
+			this->pnlbuttons->Size = System::Drawing::Size(222, 370);
 			this->pnlbuttons->TabIndex = 0;
 			this->pnlbuttons->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &StudentPageForm::pnlbuttons_Paint);
 			// 
-			// btnFilter
+			// exitbt
 			// 
-			this->btnFilter->AutoSize = true;
-			this->btnFilter->FlatAppearance->BorderColor = System::Drawing::Color::Tan;
-			this->btnFilter->FlatAppearance->BorderSize = 2;
-			this->btnFilter->FlatAppearance->MouseDownBackColor = System::Drawing::Color::Brown;
-			this->btnFilter->FlatAppearance->MouseOverBackColor = System::Drawing::Color::LightSlateGray;
-			this->btnFilter->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->btnFilter->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F));
-			this->btnFilter->ForeColor = System::Drawing::Color::Tan;
-			this->btnFilter->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"btnFilter.Image")));
-			this->btnFilter->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->btnFilter->Location = System::Drawing::Point(18, 30);
-			this->btnFilter->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
-			this->btnFilter->Name = L"btnFilter";
-			this->btnFilter->Size = System::Drawing::Size(264, 43);
-			this->btnFilter->TabIndex = 0;
-			this->btnFilter->Text = L"   Filter Courses";
-			this->btnFilter->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
-			this->btnFilter->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageBeforeText;
-			this->btnFilter->UseCompatibleTextRendering = true;
-			this->btnFilter->UseVisualStyleBackColor = true;
-			this->btnFilter->Click += gcnew System::EventHandler(this, &StudentPageForm::btnFilter_Click);
+			this->exitbt->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
+			this->exitbt->BackColor = System::Drawing::Color::Transparent;
+			this->exitbt->FlatAppearance->BorderSize = 0;
+			this->exitbt->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->exitbt->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F));
+			this->exitbt->ForeColor = System::Drawing::Color::Tan;
+			this->exitbt->Location = System::Drawing::Point(107, 308);
+			this->exitbt->Name = L"exitbt";
+			this->exitbt->Size = System::Drawing::Size(62, 45);
+			this->exitbt->TabIndex = 18;
+			this->exitbt->Text = L"Exit";
+			this->exitbt->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->exitbt->UseVisualStyleBackColor = false;
+			this->exitbt->Click += gcnew System::EventHandler(this, &StudentPageForm::exitbt_Click);
+			// 
+			// editp
+			// 
+			this->editp->AutoSize = true;
+			this->editp->BackColor = System::Drawing::Color::Transparent;
+			this->editp->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->editp->FlatAppearance->BorderColor = System::Drawing::Color::Tan;
+			this->editp->FlatAppearance->BorderSize = 0;
+			this->editp->FlatAppearance->MouseDownBackColor = System::Drawing::Color::Brown;
+			this->editp->FlatAppearance->MouseOverBackColor = System::Drawing::Color::LightSlateGray;
+			this->editp->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->editp->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F));
+			this->editp->ForeColor = System::Drawing::Color::Tan;
+			this->editp->Location = System::Drawing::Point(73, 22);
+			this->editp->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->editp->Name = L"editp";
+			this->editp->Size = System::Drawing::Size(137, 36);
+			this->editp->TabIndex = 5;
+			this->editp->Text = L"Edit Data";
+			this->editp->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->editp->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageBeforeText;
+			this->editp->UseCompatibleTextRendering = true;
+			this->editp->UseVisualStyleBackColor = false;
+			this->editp->Click += gcnew System::EventHandler(this, &StudentPageForm::editpp_Click);
 			// 
 			// btnregister
 			// 
 			this->btnregister->AutoSize = true;
-			this->btnregister->FlatAppearance->BorderSize = 2;
+			this->btnregister->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btnregister->FlatAppearance->BorderColor = System::Drawing::Color::Brown;
+			this->btnregister->FlatAppearance->BorderSize = 0;
 			this->btnregister->FlatAppearance->MouseDownBackColor = System::Drawing::Color::Brown;
 			this->btnregister->FlatAppearance->MouseOverBackColor = System::Drawing::Color::LightSlateGray;
 			this->btnregister->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->btnregister->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F));
 			this->btnregister->ForeColor = System::Drawing::Color::Tan;
-			this->btnregister->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"btnregister.Image")));
-			this->btnregister->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->btnregister->Location = System::Drawing::Point(18, 229);
+			this->btnregister->Location = System::Drawing::Point(70, 252);
 			this->btnregister->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->btnregister->Name = L"btnregister";
-			this->btnregister->Size = System::Drawing::Size(264, 43);
-			this->btnregister->TabIndex = 4;
-			this->btnregister->Text = L"     Register Course";
-			this->btnregister->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
+			this->btnregister->Size = System::Drawing::Size(157, 36);
+			this->btnregister->TabIndex = 11;
+			this->btnregister->Text = L"Register Course";
+			this->btnregister->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->btnregister->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageBeforeText;
+			this->btnregister->UseCompatibleTextRendering = true;
 			this->btnregister->UseVisualStyleBackColor = true;
-			this->btnregister->Click += gcnew System::EventHandler(this, &StudentPageForm::btnGPA_Click);
-			// 
-			// Exit
-			// 
-			this->Exit->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
-			this->Exit->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
-				static_cast<System::Int32>(static_cast<System::Byte>(31)));
-			this->Exit->FlatAppearance->BorderSize = 3;
-			this->Exit->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->Exit->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F));
-			this->Exit->ForeColor = System::Drawing::Color::Tan;
-			this->Exit->Location = System::Drawing::Point(107, 279);
-			this->Exit->Name = L"Exit";
-			this->Exit->Size = System::Drawing::Size(74, 45);
-			this->Exit->TabIndex = 6;
-			this->Exit->Text = L"Exit";
-			this->Exit->UseVisualStyleBackColor = false;
-			this->Exit->Click += gcnew System::EventHandler(this, &StudentPageForm::Exit_Click);
-			// 
-			// btnCourseGrade
-			// 
-			this->btnCourseGrade->AutoSize = true;
-			this->btnCourseGrade->FlatAppearance->BorderSize = 2;
-			this->btnCourseGrade->FlatAppearance->MouseDownBackColor = System::Drawing::Color::Brown;
-			this->btnCourseGrade->FlatAppearance->MouseOverBackColor = System::Drawing::Color::LightSlateGray;
-			this->btnCourseGrade->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->btnCourseGrade->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F));
-			this->btnCourseGrade->ForeColor = System::Drawing::Color::Tan;
-			this->btnCourseGrade->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"btnCourseGrade.Image")));
-			this->btnCourseGrade->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->btnCourseGrade->Location = System::Drawing::Point(18, 77);
-			this->btnCourseGrade->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
-			this->btnCourseGrade->Name = L"btnCourseGrade";
-			this->btnCourseGrade->Size = System::Drawing::Size(264, 43);
-			this->btnCourseGrade->TabIndex = 0;
-			this->btnCourseGrade->Text = L"    Courses Grades";
-			this->btnCourseGrade->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
-			this->btnCourseGrade->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageBeforeText;
-			this->btnCourseGrade->UseVisualStyleBackColor = true;
-			this->btnCourseGrade->Click += gcnew System::EventHandler(this, &StudentPageForm::btnCourseGrade_Click);
-			// 
-			// btnDetailsOfCourse
-			// 
-			this->btnDetailsOfCourse->AutoSize = true;
-			this->btnDetailsOfCourse->FlatAppearance->BorderSize = 2;
-			this->btnDetailsOfCourse->FlatAppearance->MouseDownBackColor = System::Drawing::Color::Brown;
-			this->btnDetailsOfCourse->FlatAppearance->MouseOverBackColor = System::Drawing::Color::LightSlateGray;
-			this->btnDetailsOfCourse->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->btnDetailsOfCourse->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F));
-			this->btnDetailsOfCourse->ForeColor = System::Drawing::Color::Tan;
-			this->btnDetailsOfCourse->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"btnDetailsOfCourse.Image")));
-			this->btnDetailsOfCourse->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->btnDetailsOfCourse->Location = System::Drawing::Point(18, 125);
-			this->btnDetailsOfCourse->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
-			this->btnDetailsOfCourse->Name = L"btnDetailsOfCourse";
-			this->btnDetailsOfCourse->Size = System::Drawing::Size(264, 43);
-			this->btnDetailsOfCourse->TabIndex = 7;
-			this->btnDetailsOfCourse->Text = L"    Courses Details";
-			this->btnDetailsOfCourse->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->btnDetailsOfCourse->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageBeforeText;
-			this->btnDetailsOfCourse->UseVisualStyleBackColor = true;
-			this->btnDetailsOfCourse->Click += gcnew System::EventHandler(this, &StudentPageForm::btnDetailsOfCourse_Click_1);
+			this->btnregister->Click += gcnew System::EventHandler(this, &StudentPageForm::btnregister_Click);
 			// 
 			// btnCourseInProgress
 			// 
 			this->btnCourseInProgress->AutoSize = true;
-			this->btnCourseInProgress->FlatAppearance->BorderSize = 2;
+			this->btnCourseInProgress->BackColor = System::Drawing::Color::Transparent;
+			this->btnCourseInProgress->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btnCourseInProgress->FlatAppearance->BorderColor = System::Drawing::Color::Brown;
+			this->btnCourseInProgress->FlatAppearance->BorderSize = 0;
 			this->btnCourseInProgress->FlatAppearance->MouseDownBackColor = System::Drawing::Color::Brown;
 			this->btnCourseInProgress->FlatAppearance->MouseOverBackColor = System::Drawing::Color::LightSlateGray;
 			this->btnCourseInProgress->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->btnCourseInProgress->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F));
 			this->btnCourseInProgress->ForeColor = System::Drawing::Color::Tan;
-			this->btnCourseInProgress->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"btnCourseInProgress.Image")));
-			this->btnCourseInProgress->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->btnCourseInProgress->Location = System::Drawing::Point(18, 176);
+			this->btnCourseInProgress->Location = System::Drawing::Point(70, 208);
 			this->btnCourseInProgress->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->btnCourseInProgress->Name = L"btnCourseInProgress";
-			this->btnCourseInProgress->Size = System::Drawing::Size(264, 43);
-			this->btnCourseInProgress->TabIndex = 0;
-			this->btnCourseInProgress->Text = L"  Courses in Progress";
-			this->btnCourseInProgress->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
+			this->btnCourseInProgress->Size = System::Drawing::Size(155, 36);
+			this->btnCourseInProgress->TabIndex = 10;
+			this->btnCourseInProgress->Text = L"Your Courses";
+			this->btnCourseInProgress->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->btnCourseInProgress->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageBeforeText;
-			this->btnCourseInProgress->UseVisualStyleBackColor = true;
-			this->btnCourseInProgress->Click += gcnew System::EventHandler(this, &StudentPageForm::btnCourseInProgress_Click);
+			this->btnCourseInProgress->UseCompatibleTextRendering = true;
+			this->btnCourseInProgress->UseVisualStyleBackColor = false;
+			this->btnCourseInProgress->Click += gcnew System::EventHandler(this, &StudentPageForm::btnCourseInProgress_Click_1);
+			// 
+			// btnDetailsOfCourse
+			// 
+			this->btnDetailsOfCourse->AutoSize = true;
+			this->btnDetailsOfCourse->BackColor = System::Drawing::Color::Transparent;
+			this->btnDetailsOfCourse->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btnDetailsOfCourse->FlatAppearance->BorderColor = System::Drawing::Color::Tan;
+			this->btnDetailsOfCourse->FlatAppearance->BorderSize = 0;
+			this->btnDetailsOfCourse->FlatAppearance->MouseDownBackColor = System::Drawing::Color::Brown;
+			this->btnDetailsOfCourse->FlatAppearance->MouseOverBackColor = System::Drawing::Color::LightSlateGray;
+			this->btnDetailsOfCourse->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->btnDetailsOfCourse->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F));
+			this->btnDetailsOfCourse->ForeColor = System::Drawing::Color::Tan;
+			this->btnDetailsOfCourse->Location = System::Drawing::Point(70, 163);
+			this->btnDetailsOfCourse->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->btnDetailsOfCourse->Name = L"btnDetailsOfCourse";
+			this->btnDetailsOfCourse->Size = System::Drawing::Size(152, 36);
+			this->btnDetailsOfCourse->TabIndex = 9;
+			this->btnDetailsOfCourse->Text = L"All Courses";
+			this->btnDetailsOfCourse->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->btnDetailsOfCourse->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageBeforeText;
+			this->btnDetailsOfCourse->UseCompatibleTextRendering = true;
+			this->btnDetailsOfCourse->UseVisualStyleBackColor = false;
+			this->btnDetailsOfCourse->Click += gcnew System::EventHandler(this, &StudentPageForm::btnDetailsOfCourse_Click_2);
+			// 
+			// btnCourseGrade
+			// 
+			this->btnCourseGrade->AutoSize = true;
+			this->btnCourseGrade->BackColor = System::Drawing::Color::Transparent;
+			this->btnCourseGrade->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btnCourseGrade->FlatAppearance->BorderColor = System::Drawing::Color::Tan;
+			this->btnCourseGrade->FlatAppearance->BorderSize = 0;
+			this->btnCourseGrade->FlatAppearance->MouseDownBackColor = System::Drawing::Color::Brown;
+			this->btnCourseGrade->FlatAppearance->MouseOverBackColor = System::Drawing::Color::LightSlateGray;
+			this->btnCourseGrade->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->btnCourseGrade->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F));
+			this->btnCourseGrade->ForeColor = System::Drawing::Color::Tan;
+			this->btnCourseGrade->Location = System::Drawing::Point(72, 115);
+			this->btnCourseGrade->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->btnCourseGrade->Name = L"btnCourseGrade";
+			this->btnCourseGrade->Size = System::Drawing::Size(153, 36);
+			this->btnCourseGrade->TabIndex = 8;
+			this->btnCourseGrade->Text = L"Your Grades";
+			this->btnCourseGrade->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->btnCourseGrade->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageBeforeText;
+			this->btnCourseGrade->UseCompatibleTextRendering = true;
+			this->btnCourseGrade->UseVisualStyleBackColor = false;
+			this->btnCourseGrade->Click += gcnew System::EventHandler(this, &StudentPageForm::btnCourseGrade_Click_1);
+			// 
+			// btnFilter
+			// 
+			this->btnFilter->AutoSize = true;
+			this->btnFilter->BackColor = System::Drawing::Color::Transparent;
+			this->btnFilter->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btnFilter->FlatAppearance->BorderColor = System::Drawing::Color::Tan;
+			this->btnFilter->FlatAppearance->BorderSize = 0;
+			this->btnFilter->FlatAppearance->MouseDownBackColor = System::Drawing::Color::Brown;
+			this->btnFilter->FlatAppearance->MouseOverBackColor = System::Drawing::Color::LightSlateGray;
+			this->btnFilter->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->btnFilter->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F));
+			this->btnFilter->ForeColor = System::Drawing::Color::Tan;
+			this->btnFilter->Location = System::Drawing::Point(70, 72);
+			this->btnFilter->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->btnFilter->Name = L"btnFilter";
+			this->btnFilter->Size = System::Drawing::Size(155, 36);
+			this->btnFilter->TabIndex = 6;
+			this->btnFilter->Text = L"Filter Courses";
+			this->btnFilter->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->btnFilter->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageBeforeText;
+			this->btnFilter->UseCompatibleTextRendering = true;
+			this->btnFilter->UseVisualStyleBackColor = false;
+			this->btnFilter->Click += gcnew System::EventHandler(this, &StudentPageForm::btnFilter_Click_1);
+			// 
+			// panel2
+			// 
+			this->panel2->Controls->Add(this->editcoursep);
+			this->panel2->Controls->Add(this->pictureBox8);
+			this->panel2->Controls->Add(this->pictureBox9);
+			this->panel2->Controls->Add(this->filterp);
+			this->panel2->Controls->Add(this->yourgradesp);
+			this->panel2->Controls->Add(this->allcoursesp);
+			this->panel2->Controls->Add(this->yourcoursesP);
+			this->panel2->Controls->Add(this->registercoursep);
+			this->panel2->Controls->Add(this->pictureBox1);
+			this->panel2->Controls->Add(this->pictureBox2);
+			this->panel2->Controls->Add(this->pictureBox3);
+			this->panel2->Controls->Add(this->pictureBox4);
+			this->panel2->Controls->Add(this->pictureBox5);
+			this->panel2->Location = System::Drawing::Point(3, 7);
+			this->panel2->Name = L"panel2";
+			this->panel2->Size = System::Drawing::Size(55, 360);
+			this->panel2->TabIndex = 17;
+			this->panel2->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &StudentPageForm::panel2_Paint_1);
+			// 
+			// editcoursep
+			// 
+			this->editcoursep->BackColor = System::Drawing::Color::Tan;
+			this->editcoursep->Location = System::Drawing::Point(3, 18);
+			this->editcoursep->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->editcoursep->Name = L"editcoursep";
+			this->editcoursep->Size = System::Drawing::Size(10, 29);
+			this->editcoursep->TabIndex = 23;
+			// 
+			// pictureBox8
+			// 
+			this->pictureBox8->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->pictureBox8->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox8.Image")));
+			this->pictureBox8->Location = System::Drawing::Point(3, 302);
+			this->pictureBox8->Name = L"pictureBox8";
+			this->pictureBox8->Size = System::Drawing::Size(42, 44);
+			this->pictureBox8->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->pictureBox8->TabIndex = 23;
+			this->pictureBox8->TabStop = false;
+			this->pictureBox8->Click += gcnew System::EventHandler(this, &StudentPageForm::pictureBox8_Click);
+			// 
+			// pictureBox9
+			// 
+			this->pictureBox9->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->pictureBox9->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox9.Image")));
+			this->pictureBox9->Location = System::Drawing::Point(19, 18);
+			this->pictureBox9->Name = L"pictureBox9";
+			this->pictureBox9->Size = System::Drawing::Size(33, 32);
+			this->pictureBox9->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->pictureBox9->TabIndex = 24;
+			this->pictureBox9->TabStop = false;
+			this->pictureBox9->Click += gcnew System::EventHandler(this, &StudentPageForm::pictureBox99_Click);
+			// 
+			// filterp
+			// 
+			this->filterp->BackColor = System::Drawing::Color::Tan;
+			this->filterp->Location = System::Drawing::Point(3, 62);
+			this->filterp->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->filterp->Name = L"filterp";
+			this->filterp->Size = System::Drawing::Size(10, 29);
+			this->filterp->TabIndex = 22;
+			// 
+			// yourgradesp
+			// 
+			this->yourgradesp->BackColor = System::Drawing::Color::Tan;
+			this->yourgradesp->Location = System::Drawing::Point(3, 108);
+			this->yourgradesp->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->yourgradesp->Name = L"yourgradesp";
+			this->yourgradesp->Size = System::Drawing::Size(10, 31);
+			this->yourgradesp->TabIndex = 21;
+			this->yourgradesp->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &StudentPageForm::yourgradesp_Paint);
+			// 
+			// allcoursesp
+			// 
+			this->allcoursesp->BackColor = System::Drawing::Color::Tan;
+			this->allcoursesp->Location = System::Drawing::Point(3, 158);
+			this->allcoursesp->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->allcoursesp->Name = L"allcoursesp";
+			this->allcoursesp->Size = System::Drawing::Size(10, 31);
+			this->allcoursesp->TabIndex = 20;
+			this->allcoursesp->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &StudentPageForm::allcoursesp_Paint);
+			// 
+			// yourcoursesP
+			// 
+			this->yourcoursesP->BackColor = System::Drawing::Color::Tan;
+			this->yourcoursesP->Location = System::Drawing::Point(3, 205);
+			this->yourcoursesP->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->yourcoursesP->Name = L"yourcoursesP";
+			this->yourcoursesP->Size = System::Drawing::Size(10, 31);
+			this->yourcoursesP->TabIndex = 19;
+			// 
+			// registercoursep
+			// 
+			this->registercoursep->BackColor = System::Drawing::Color::Tan;
+			this->registercoursep->Location = System::Drawing::Point(3, 245);
+			this->registercoursep->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->registercoursep->Name = L"registercoursep";
+			this->registercoursep->Size = System::Drawing::Size(10, 35);
+			this->registercoursep->TabIndex = 18;
+			// 
+			// pictureBox1
+			// 
+			this->pictureBox1->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
+			this->pictureBox1->Location = System::Drawing::Point(21, 60);
+			this->pictureBox1->Name = L"pictureBox1";
+			this->pictureBox1->Size = System::Drawing::Size(31, 35);
+			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->pictureBox1->TabIndex = 12;
+			this->pictureBox1->TabStop = false;
+			this->pictureBox1->Click += gcnew System::EventHandler(this, &StudentPageForm::pictureBox1_Click);
+			// 
+			// pictureBox2
+			// 
+			this->pictureBox2->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->pictureBox2->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox2.Image")));
+			this->pictureBox2->Location = System::Drawing::Point(19, 108);
+			this->pictureBox2->Name = L"pictureBox2";
+			this->pictureBox2->Size = System::Drawing::Size(33, 33);
+			this->pictureBox2->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->pictureBox2->TabIndex = 13;
+			this->pictureBox2->TabStop = false;
+			this->pictureBox2->Click += gcnew System::EventHandler(this, &StudentPageForm::pictureBox2_Click);
+			// 
+			// pictureBox3
+			// 
+			this->pictureBox3->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->pictureBox3->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox3.Image")));
+			this->pictureBox3->Location = System::Drawing::Point(21, 201);
+			this->pictureBox3->Name = L"pictureBox3";
+			this->pictureBox3->Size = System::Drawing::Size(31, 35);
+			this->pictureBox3->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->pictureBox3->TabIndex = 14;
+			this->pictureBox3->TabStop = false;
+			this->pictureBox3->Click += gcnew System::EventHandler(this, &StudentPageForm::yourcoursespic_Click);
+			// 
+			// pictureBox4
+			// 
+			this->pictureBox4->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->pictureBox4->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox4.Image")));
+			this->pictureBox4->Location = System::Drawing::Point(21, 156);
+			this->pictureBox4->Name = L"pictureBox4";
+			this->pictureBox4->Size = System::Drawing::Size(31, 33);
+			this->pictureBox4->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->pictureBox4->TabIndex = 15;
+			this->pictureBox4->TabStop = false;
+			this->pictureBox4->Click += gcnew System::EventHandler(this, &StudentPageForm::pictureBox4_Click);
+			// 
+			// pictureBox5
+			// 
+			this->pictureBox5->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->pictureBox5->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox5.Image")));
+			this->pictureBox5->Location = System::Drawing::Point(22, 244);
+			this->pictureBox5->Name = L"pictureBox5";
+			this->pictureBox5->Size = System::Drawing::Size(30, 36);
+			this->pictureBox5->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->pictureBox5->TabIndex = 16;
+			this->pictureBox5->TabStop = false;
+			this->pictureBox5->Click += gcnew System::EventHandler(this, &StudentPageForm::pictureBox5_Click_1);
 			// 
 			// PnlOfFilter
 			// 
@@ -1277,6 +1509,7 @@ private: System::Windows::Forms::Label^ label45;
 			// pnlOfCoursesInProgress
 			// 
 			this->pnlOfCoursesInProgress->AutoScroll = true;
+			this->pnlOfCoursesInProgress->Controls->Add(this->panel8);
 			this->pnlOfCoursesInProgress->Controls->Add(this->label45);
 			this->pnlOfCoursesInProgress->Controls->Add(this->flowLayoutPanel1);
 			this->pnlOfCoursesInProgress->Dock = System::Windows::Forms::DockStyle::Right;
@@ -1286,6 +1519,13 @@ private: System::Windows::Forms::Label^ label45;
 			this->pnlOfCoursesInProgress->Size = System::Drawing::Size(1115, 521);
 			this->pnlOfCoursesInProgress->TabIndex = 4;
 			this->pnlOfCoursesInProgress->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &StudentPageForm::pnlOfCoursesInProgress_Paint);
+			// 
+			// panel8
+			// 
+			this->panel8->Location = System::Drawing::Point(-18, 188);
+			this->panel8->Name = L"panel8";
+			this->panel8->Size = System::Drawing::Size(15, 231);
+			this->panel8->TabIndex = 8;
 			// 
 			// label45
 			// 
@@ -1345,6 +1585,7 @@ private: System::Windows::Forms::Label^ label45;
 			this->reglb->Size = System::Drawing::Size(601, 35);
 			this->reglb->TabIndex = 27;
 			this->reglb->Text = L"Please choose the courses to register:->";
+			this->reglb->Click += gcnew System::EventHandler(this, &StudentPageForm::reglb_Click);
 			// 
 			// label20
 			// 
@@ -1679,13 +1920,13 @@ private: System::Windows::Forms::Label^ label45;
 			// 
 			// pnlOfPanels
 			// 
-			this->pnlOfPanels->Controls->Add(this->pnlOfregCourse);
-			this->pnlOfPanels->Controls->Add(this->pnlOfDetailsOfCourse);
-			this->pnlOfPanels->Controls->Add(this->pnlOfCoursesInProgress);
 			this->pnlOfPanels->Controls->Add(this->homepanel);
 			this->pnlOfPanels->Controls->Add(this->editpanel);
 			this->pnlOfPanels->Controls->Add(this->pnlOfCourseGrades);
 			this->pnlOfPanels->Controls->Add(this->PnlOfFilter);
+			this->pnlOfPanels->Controls->Add(this->pnlOfregCourse);
+			this->pnlOfPanels->Controls->Add(this->pnlOfDetailsOfCourse);
+			this->pnlOfPanels->Controls->Add(this->pnlOfCoursesInProgress);
 			this->pnlOfPanels->Location = System::Drawing::Point(-13, 0);
 			this->pnlOfPanels->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->pnlOfPanels->Name = L"pnlOfPanels";
@@ -1731,12 +1972,9 @@ private: System::Windows::Forms::Label^ label45;
 			// 
 			// panel4
 			// 
-			this->panel4->Controls->Add(this->label27);
 			this->panel4->Controls->Add(this->label17);
-			this->panel4->Controls->Add(this->label29);
 			this->panel4->Controls->Add(this->label18);
 			this->panel4->Controls->Add(this->label30);
-			this->panel4->Controls->Add(this->label16);
 			this->panel4->Controls->Add(this->pictureBox48);
 			this->panel4->Controls->Add(this->pictureBox47);
 			this->panel4->Controls->Add(this->pictureBox44);
@@ -1748,20 +1986,6 @@ private: System::Windows::Forms::Label^ label45;
 			this->panel4->Size = System::Drawing::Size(440, 259);
 			this->panel4->TabIndex = 7;
 			// 
-			// label27
-			// 
-			this->label27->AutoSize = true;
-			this->label27->BackColor = System::Drawing::Color::Transparent;
-			this->label27->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->label27->ForeColor = System::Drawing::Color::Brown;
-			this->label27->Location = System::Drawing::Point(59, 148);
-			this->label27->Name = L"label27";
-			this->label27->Size = System::Drawing::Size(46, 25);
-			this->label27->TabIndex = 9;
-			this->label27->Text = L"Join";
-			this->label27->UseCompatibleTextRendering = true;
-			// 
 			// label17
 			// 
 			this->label17->AutoSize = true;
@@ -1769,26 +1993,12 @@ private: System::Windows::Forms::Label^ label45;
 			this->label17->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label17->ForeColor = System::Drawing::Color::Brown;
-			this->label17->Location = System::Drawing::Point(62, 147);
+			this->label17->Location = System::Drawing::Point(59, 148);
 			this->label17->Name = L"label17";
 			this->label17->Size = System::Drawing::Size(46, 25);
 			this->label17->TabIndex = 9;
 			this->label17->Text = L"Join";
 			this->label17->UseCompatibleTextRendering = true;
-			// 
-			// label29
-			// 
-			this->label29->AutoSize = true;
-			this->label29->BackColor = System::Drawing::Color::Transparent;
-			this->label29->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->label29->ForeColor = System::Drawing::Color::Brown;
-			this->label29->Location = System::Drawing::Point(59, 79);
-			this->label29->Name = L"label29";
-			this->label29->Size = System::Drawing::Size(46, 25);
-			this->label29->TabIndex = 10;
-			this->label29->Text = L"Stay";
-			this->label29->UseCompatibleTextRendering = true;
 			// 
 			// label18
 			// 
@@ -1797,7 +2007,7 @@ private: System::Windows::Forms::Label^ label45;
 			this->label18->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label18->ForeColor = System::Drawing::Color::Brown;
-			this->label18->Location = System::Drawing::Point(54, 79);
+			this->label18->Location = System::Drawing::Point(59, 78);
 			this->label18->Name = L"label18";
 			this->label18->Size = System::Drawing::Size(46, 25);
 			this->label18->TabIndex = 10;
@@ -1811,27 +2021,13 @@ private: System::Windows::Forms::Label^ label45;
 			this->label30->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label30->ForeColor = System::Drawing::Color::Brown;
-			this->label30->Location = System::Drawing::Point(54, 15);
+			this->label30->Location = System::Drawing::Point(54, 14);
 			this->label30->Name = L"label30";
 			this->label30->Size = System::Drawing::Size(83, 25);
 			this->label30->TabIndex = 8;
 			this->label30->Text = L"Simplify";
 			this->label30->UseCompatibleTextRendering = true;
 			this->label30->Click += gcnew System::EventHandler(this, &StudentPageForm::label30_Click);
-			// 
-			// label16
-			// 
-			this->label16->AutoSize = true;
-			this->label16->BackColor = System::Drawing::Color::Transparent;
-			this->label16->Font = (gcnew System::Drawing::Font(L"Cooper Black", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->label16->ForeColor = System::Drawing::Color::Brown;
-			this->label16->Location = System::Drawing::Point(49, 14);
-			this->label16->Name = L"label16";
-			this->label16->Size = System::Drawing::Size(83, 25);
-			this->label16->TabIndex = 8;
-			this->label16->Text = L"Simplify";
-			this->label16->UseCompatibleTextRendering = true;
 			// 
 			// pictureBox48
 			// 
@@ -2040,13 +2236,20 @@ private: System::Windows::Forms::Label^ label45;
 			this->Text = L"StudentPageForm";
 			this->Load += gcnew System::EventHandler(this, &StudentPageForm::StudentPageForm_Load);
 			this->sideBar->ResumeLayout(false);
-			this->sideBar->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox46))->EndInit();
 			this->panel1->ResumeLayout(false);
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox13))->EndInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox16))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox7))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->homePicture))->EndInit();
 			this->pnlbuttons->ResumeLayout(false);
 			this->pnlbuttons->PerformLayout();
+			this->panel2->ResumeLayout(false);
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox8))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox9))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox4))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox5))->EndInit();
 			this->PnlOfFilter->ResumeLayout(false);
 			this->PnlOfFilter->PerformLayout();
 			this->filterflowlytpnl->ResumeLayout(false);
@@ -2268,20 +2471,28 @@ PnlOfFilter->Visible = false;
 	private: System::Void sideBarTimer_Tick(System::Object^ sender, System::EventArgs^ e)
 	{
 		if (sideBarExpand) {
-			sideBar->Width -= 20;
 			if (sideBar->Width == sideBar->MinimumSize.Width) {
 				sideBarExpand = false;
 				sideBarTimer->Stop();
 			}
+			else {
+				sideBar->Width -= 20;
+			}
+
+
 		}
 		else
 		{
-			sideBar->Width += 20;
-			if(sideBar->Width == sideBar->MaximumSize.Width)
+			if (sideBar->Width == sideBar->MaximumSize.Width)
 			{
 				sideBarExpand = true;
 				sideBarTimer->Stop();
 			}
+			else
+			{
+				sideBar->Width += 20;
+			}
+
 		}
 	}
 private: System::Void btnMenu_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -3251,6 +3462,370 @@ private: System::Void panel2_Paint(System::Object^ sender, System::Windows::Form
 private: System::Void flowLayoutPanel1_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
 }
 private: System::Void label30_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void pictureBox3_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+
+private: System::Void label27_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void panel2_Paint_1(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
+
+}
+private: System::Void pictureBox6_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void pictureBox9_Click(System::Object^ sender, System::EventArgs^ e) {
+	PnlOfFilter->Visible = false;
+	pnlOfDetailsOfCourse->Visible = false;
+	pnlOfCoursesInProgress->Visible = false;
+	pnlOfCourseGrades->Visible = false;
+	pnlOfregCourse->Visible = false;
+	homepanel->Visible = false;
+	editpanel->Visible = true;
+}
+private: System::Void btnFilter_Click_1(System::Object^ sender, System::EventArgs^ e) {
+	flowLayoutPanel5->Controls->Clear();
+
+	PnlOfFilter->Visible = true;
+	pnlOfDetailsOfCourse->Visible = false;
+	pnlOfCoursesInProgress->Visible = false;
+	pnlOfCourseGrades->Visible = false;
+	pnlOfregCourse->Visible = false;
+	homepanel->Visible = false;
+	editpanel->Visible = false;
+	courseButton::alldetailsbtns->Clear();
+	filterp->BackColor = Color::Brown;
+	yourgradesp->BackColor = Color::Tan;
+	allcoursesp->BackColor = Color::Tan;
+	yourcoursesP->BackColor = Color::Tan;
+	registercoursep->BackColor = Color::Tan;
+	editcoursep->BackColor = Color::Tan;
+	sideBarTimer->Start();
+	sideBarExpand = true;
+}
+private: System::Void btnCourseGrade_Click_1(System::Object^ sender, System::EventArgs^ e) {
+	flowLayoutPanel5->Controls->Clear();
+	courseButton::courseDetails = true;
+	PnlOfFilter->Visible = false;
+	pnlOfDetailsOfCourse->Visible = false;
+	pnlOfCoursesInProgress->Visible = false;
+	pnlOfCourseGrades->Visible = true;
+	pnlOfregCourse->Visible = false;
+	homepanel->Visible = false;
+	editpanel->Visible = false;
+	courseButton::alldetailsbtns->Clear();
+
+	filterp->BackColor = Color::Tan;
+	yourgradesp->BackColor = Color::Brown;
+	allcoursesp->BackColor = Color::Tan;
+	yourcoursesP->BackColor = Color::Tan;
+	registercoursep->BackColor = Color::Tan;
+	editcoursep->BackColor = Color::Tan;
+	sideBarTimer->Start();
+	sideBarExpand = true;
+}
+private: System::Void pictureBox1_Click(System::Object^ sender, System::EventArgs^ e) {
+	flowLayoutPanel5->Controls->Clear();
+
+	PnlOfFilter->Visible = true;
+	pnlOfDetailsOfCourse->Visible = false;
+	pnlOfCoursesInProgress->Visible = false;
+	pnlOfCourseGrades->Visible = false;
+	pnlOfregCourse->Visible = false;
+	homepanel->Visible = false;
+	editpanel->Visible = false;
+	courseButton::alldetailsbtns->Clear();
+
+	filterp->BackColor = Color::Brown;
+	yourgradesp->BackColor = Color::Tan;
+	allcoursesp->BackColor = Color::Tan;
+	yourcoursesP->BackColor = Color::Tan;
+	registercoursep->BackColor = Color::Tan;
+	editcoursep->BackColor = Color::Tan;
+	sideBarTimer->Start();
+	sideBarExpand = true;
+}private: System::Void pictureBox2_Click(System::Object^ sender, System::EventArgs^ e) {
+	flowLayoutPanel5->Controls->Clear();
+	courseButton::courseDetails = true;
+	PnlOfFilter->Visible = false;
+	pnlOfDetailsOfCourse->Visible = false;
+	pnlOfCoursesInProgress->Visible = false;
+	pnlOfCourseGrades->Visible = true;
+	pnlOfregCourse->Visible = false;
+	homepanel->Visible = false;
+	editpanel->Visible = false;
+	courseButton::alldetailsbtns->Clear();
+
+	filterp->BackColor = Color::Tan;
+	yourgradesp->BackColor = Color::Brown;
+	allcoursesp->BackColor = Color::Tan;
+	yourcoursesP->BackColor = Color::Tan;
+	registercoursep->BackColor = Color::Tan;
+	editcoursep->BackColor = Color::Tan;
+	sideBarTimer->Start();
+	sideBarExpand = true;
+}
+private: System::Void pictureBox99_Click(System::Object^ sender, System::EventArgs^ e) {
+	PnlOfFilter->Visible = false;
+	pnlOfDetailsOfCourse->Visible = false;
+	pnlOfCoursesInProgress->Visible = false;
+	pnlOfCourseGrades->Visible = false;
+	pnlOfregCourse->Visible = false;
+	homepanel->Visible = false;
+	editpanel->Visible = true;
+
+
+	filterp->BackColor = Color::Tan;
+	yourgradesp->BackColor = Color::Tan;
+	allcoursesp->BackColor = Color::Tan;
+	yourcoursesP->BackColor = Color::Tan;
+	registercoursep->BackColor = Color::Tan;
+	editcoursep->BackColor = Color::Brown;
+	sideBarTimer->Start();
+	sideBarExpand = true;
+}
+private: System::Void editpp_Click(System::Object^ sender, System::EventArgs^ e) {
+	PnlOfFilter->Visible = false;
+	pnlOfDetailsOfCourse->Visible = false;
+	pnlOfCoursesInProgress->Visible = false;
+	pnlOfCourseGrades->Visible = false;
+	pnlOfregCourse->Visible = false;
+	homepanel->Visible = false;
+	editpanel->Visible = true;
+
+	filterp->BackColor = Color::Tan;
+	yourgradesp->BackColor = Color::Tan;
+	allcoursesp->BackColor = Color::Tan;
+	yourcoursesP->BackColor = Color::Tan;
+	registercoursep->BackColor = Color::Tan;
+	editcoursep->BackColor = Color::Brown;
+	sideBarTimer->Start();
+	sideBarExpand = true;
+}
+private: System::Void homepic_click(System::Object^ sender, System::EventArgs^ e) {
+	PnlOfFilter->Visible = false;
+	pnlOfDetailsOfCourse->Visible = false;
+	pnlOfCoursesInProgress->Visible = false;
+	pnlOfCourseGrades->Visible = false;
+	pnlOfregCourse->Visible = false;
+	homepanel->Visible = true;
+	editpanel->Visible = false;
+}
+private: System::Void pictureBox7_Click(System::Object^ sender, System::EventArgs^ e) {
+	sideBarTimer->Start();
+}
+private: System::Void btnDetailsOfCourse_Click_2(System::Object^ sender, System::EventArgs^ e) {
+	flowLayoutPanel5->Controls->Clear();
+	courseButton::courseDetails = true;
+	PnlOfFilter->Visible = false;
+	pnlOfDetailsOfCourse->Visible = true;
+	pnlOfCoursesInProgress->Visible = false;
+	pnlOfCourseGrades->Visible = false;
+	pnlOfregCourse->Visible = false;
+	editpanel->Visible = false;
+	homepanel->Visible = false;
+	flowLayoutPanel3->Height = 0;
+	courseButton::alldetailsbtns->Clear();
+
+	filterp->BackColor = Color::Tan;
+	yourgradesp->BackColor = Color::Tan;
+	allcoursesp->BackColor = Color::Brown;
+	yourcoursesP->BackColor = Color::Tan;
+	registercoursep->BackColor = Color::Tan;
+	editcoursep->BackColor = Color::Tan;
+	sideBarTimer->Start();
+	sideBarExpand = true;
+
+}
+private: System::Void pictureBox4_Click(System::Object^ sender, System::EventArgs^ e) {
+	flowLayoutPanel5->Controls->Clear();
+	courseButton::courseDetails = true;
+	PnlOfFilter->Visible = false;
+	pnlOfDetailsOfCourse->Visible = true;
+	pnlOfCoursesInProgress->Visible = false;
+	pnlOfCourseGrades->Visible = false;
+	pnlOfregCourse->Visible = false;
+	editpanel->Visible = false;
+	homepanel->Visible = false;
+	flowLayoutPanel3->Height = 0;
+	courseButton::alldetailsbtns->Clear();
+
+	filterp->BackColor = Color::Tan;
+	yourgradesp->BackColor = Color::Tan;
+	allcoursesp->BackColor = Color::Brown;
+	yourcoursesP->BackColor = Color::Tan;
+	registercoursep->BackColor = Color::Tan;
+	editcoursep->BackColor = Color::Tan;
+	sideBarTimer->Start();
+	sideBarExpand = true;
+}
+
+private: System::Void btnCourseInProgress_Click_1(System::Object^ sender, System::EventArgs^ e) {
+	flowLayoutPanel5->Controls->Clear();
+	viewcoursesinprog(flowLayoutPanel1);
+	courseButton::courseDetails = true;
+	PnlOfFilter->Visible = false;
+	pnlOfDetailsOfCourse->Visible = false;
+	pnlOfCoursesInProgress->Visible = true;
+	pnlOfCourseGrades->Visible = false;
+	pnlOfregCourse->Visible = false;
+	homepanel->Visible = false;
+	editpanel->Visible = false;
+	courseButton::alldetailsbtns->Clear();
+
+	filterp->BackColor = Color::Tan;
+	yourgradesp->BackColor = Color::Tan;
+	allcoursesp->BackColor = Color::Tan;
+	yourcoursesP->BackColor = Color::Brown;
+	registercoursep->BackColor = Color::Tan;
+	editcoursep->BackColor = Color::Tan;
+	sideBarTimer->Start();
+	sideBarExpand = true;
+}
+private: System::Void yourcoursespic_Click(System::Object^ sender, System::EventArgs^ e) {
+	flowLayoutPanel5->Controls->Clear();
+	viewcoursesinprog(flowLayoutPanel1);
+	courseButton::courseDetails = true;
+	PnlOfFilter->Visible = false;
+	pnlOfDetailsOfCourse->Visible = false;
+	pnlOfCoursesInProgress->Visible = true;
+	pnlOfCourseGrades->Visible = false;
+	pnlOfregCourse->Visible = false;
+	homepanel->Visible = false;
+	editpanel->Visible = false;
+	courseButton::alldetailsbtns->Clear();
+	filterp->BackColor = Color::Tan;
+	yourgradesp->BackColor = Color::Tan;
+	allcoursesp->BackColor = Color::Tan;
+	yourcoursesP->BackColor = Color::Brown;
+	registercoursep->BackColor = Color::Tan;
+	editcoursep->BackColor = Color::Tan;
+	sideBarTimer->Start();
+	sideBarExpand = true;
+}
+
+private: System::Void btnregister_Click(System::Object^ sender, System::EventArgs^ e) {
+	flowLayoutPanel5->Controls->Clear();
+	sideBarTimer->Start();
+	if (selectedcourse->getAllStudentsInCourse() != nullptr)
+	{
+		currstds->Text = Convert::ToString(selectedcourse->getAllStudentsInCourse()->Count);
+	}
+	else {
+		currstds->Text = "0";
+	}
+
+	hoursrem->Text = Convert::ToString(student->getMaxHoursAllowed() - student->calculatecourseshours());
+	myhours->Text = Convert::ToString(student->calculatecourseshours());
+	savedcourse->Visible = false;
+	panel7->Visible = false;
+	myhours->Text = Convert::ToString(student->calculatecourseshours());
+	label20->Visible = false;
+	label28->Visible = false;
+	currstds->Visible = false;
+	cshours->Visible = false;
+	courseMaxstds->Visible = false;
+	label19->Visible = false;
+	savebt->Visible = false;
+	flowLayoutPanel2->Height = 0;
+	RegisterCourseList->Clear();
+	PnlOfFilter->Visible = false;
+	pnlOfDetailsOfCourse->Visible = false;
+	pnlOfCoursesInProgress->Visible = false;
+	pnlOfCourseGrades->Visible = false;
+	pnlOfregCourse->Visible = true;
+	homepanel->Visible = false;
+	editpanel->Visible = false;
+	avcoursecount->Text = Convert::ToString(student->CoursesAV()->Count);
+	myhours->Text = Convert::ToString(student->calculatecourseshours());
+	flowLayoutPanel2->Controls->Clear();
+	courseButton::alldetailsbtns->Clear();
+	filterp->BackColor = Color::Tan;
+	yourgradesp->BackColor = Color::Tan;
+	allcoursesp->BackColor = Color::Tan;
+	yourcoursesP->BackColor = Color::Tan;
+	registercoursep->BackColor = Color::Brown;
+	editcoursep->BackColor = Color::Tan;
+	sideBarTimer->Start();
+	sideBarExpand = true;
+
+}
+private: System::Void pictureBox5_Click_1(System::Object^ sender, System::EventArgs^ e) {
+	flowLayoutPanel5->Controls->Clear();
+	sideBarTimer->Start();
+	if (selectedcourse->getAllStudentsInCourse() != nullptr)
+	{
+		currstds->Text = Convert::ToString(selectedcourse->getAllStudentsInCourse()->Count);
+	}
+	else {
+		currstds->Text = "0";
+	}
+
+	hoursrem->Text = Convert::ToString(student->getMaxHoursAllowed() - student->calculatecourseshours());
+	myhours->Text = Convert::ToString(student->calculatecourseshours());
+	savedcourse->Visible = false;
+	panel7->Visible = false;
+	myhours->Text = Convert::ToString(student->calculatecourseshours());
+	label20->Visible = false;
+	label28->Visible = false;
+	currstds->Visible = false;
+	cshours->Visible = false;
+	courseMaxstds->Visible = false;
+	label19->Visible = false;
+	savebt->Visible = false;
+	flowLayoutPanel2->Height = 0;
+	RegisterCourseList->Clear();
+	PnlOfFilter->Visible = false;
+	pnlOfDetailsOfCourse->Visible = false;
+	pnlOfCoursesInProgress->Visible = false;
+	pnlOfCourseGrades->Visible = false;
+	pnlOfregCourse->Visible = true;
+	homepanel->Visible = false;
+	editpanel->Visible = false;
+	avcoursecount->Text = Convert::ToString(student->CoursesAV()->Count);
+	myhours->Text = Convert::ToString(student->calculatecourseshours());
+	flowLayoutPanel2->Controls->Clear();
+	courseButton::alldetailsbtns->Clear();
+
+	filterp->BackColor = Color::Tan;
+	yourgradesp->BackColor = Color::Tan;
+	allcoursesp->BackColor = Color::Tan;
+	yourcoursesP->BackColor = Color::Tan;
+	registercoursep->BackColor = Color::Brown;
+	editcoursep->BackColor = Color::Tan;
+	sideBarTimer->Start();
+	sideBarExpand = true;
+}
+private: System::Void pictureBox8_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->Close();
+}
+private: System::Void exitbt_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->Close();
+}
+private: System::Void homepicture_click(System::Object^ sender, System::EventArgs^ e) {
+	PnlOfFilter->Visible = false;
+	pnlOfDetailsOfCourse->Visible = false;
+	pnlOfCoursesInProgress->Visible = false;
+	pnlOfCourseGrades->Visible = false;
+	pnlOfregCourse->Visible = false;
+	homepanel->Visible = true;
+	editpanel->Visible = false;
+
+
+	filterp->BackColor = Color::Tan;
+	yourgradesp->BackColor = Color::Tan;
+	allcoursesp->BackColor = Color::Tan;
+	yourcoursesP->BackColor = Color::Tan;
+	registercoursep->BackColor = Color::Tan;
+	editcoursep->BackColor = Color::Tan;
+	sideBarExpand = true;
+	sideBarTimer->Start();
+}
+private: System::Void allcoursesp_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
+}
+private: System::Void yourgradesp_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
+	
+}
+private: System::Void reglb_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 };

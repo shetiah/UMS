@@ -2,9 +2,7 @@
 #pragma once
 #include "Course.h"
 #include "Login.h"
-#include "SignUp.h"
 #include "AddCourseForm.h"
-#include "StudentDataForm.h"
 #include "Admin.h"
 #include "StudentPageForm.h"
 #include "welcomeForm.h"
@@ -114,7 +112,6 @@ int main()
 
 
 
-	Student::saveStudentDataToFile();
 
 	return 0;
 }

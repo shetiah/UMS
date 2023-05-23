@@ -131,13 +131,10 @@
     <ClCompile Include="courselistitem.cpp" />
     <ClCompile Include="Login.cpp" />
     <ClCompile Include="messagebox.cpp" />
-    <ClCompile Include="SignUp.cpp" />
     <ClCompile Include="Source.cpp" />
     <ClCompile Include="Student.cpp" />
-    <ClCompile Include="StudentDataForm.cpp" />
     <ClCompile Include="studentname.cpp" />
     <ClCompile Include="StudentPageForm.cpp" />
-    <ClCompile Include="testtest.cpp" />
     <ClCompile Include="welcomeForm.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -167,20 +164,11 @@
     <ClInclude Include="messagebox.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="SignUp.h">
-      <FileType>CppForm</FileType>
-    </ClInclude>
     <ClInclude Include="Student.h" />
-    <ClInclude Include="StudentDataForm.h">
-      <FileType>CppForm</FileType>
-    </ClInclude>
     <ClInclude Include="studentname.h">
       <FileType>CppControl</FileType>
     </ClInclude>
     <ClInclude Include="StudentPageForm.h">
-      <FileType>CppForm</FileType>
-    </ClInclude>
-    <ClInclude Include="testtest.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="welcomeForm.h">
@@ -221,20 +209,11 @@
     <EmbeddedResource Include="messagebox.resx">
       <DependentUpon>messagebox.h</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SignUp.resx">
-      <DependentUpon>SignUp.h</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="StudentDataForm.resx">
-      <DependentUpon>StudentDataForm.h</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="studentname.resx">
       <DependentUpon>studentname.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StudentPageForm.resx">
       <DependentUpon>StudentPageForm.h</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="testtest.resx">
-      <DependentUpon>testtest.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="welcomeForm.resx">
       <DependentUpon>welcomeForm.h</DependentUpon>
