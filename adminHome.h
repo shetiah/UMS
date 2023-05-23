@@ -654,7 +654,7 @@ private: System::Windows::Forms::Panel^ exitpp;
 			this->pictureBox11->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->pictureBox11->TabIndex = 18;
 			this->pictureBox11->TabStop = false;
-			this->pictureBox11->Click += gcnew System::EventHandler(this, &adminHome::pictureBox11_Click);
+			this->pictureBox11->Click += gcnew System::EventHandler(this, &adminHome::stdpic_Click);
 			// 
 			// button4
 			// 
@@ -3008,6 +3008,8 @@ private: System::Void btnAddStudent_Click(System::Object^ sender, System::EventA
 	courseDatapp->BackColor = Color::Tan;
 	editCoursepp->BackColor = Color::Tan;
 	studentDatapp->BackColor = Color::Tan;
+	sideBarExpand = true;
+	slideBarTimer->Start();
 }
 private: System::Void btnAddCourse_Click(System::Object^ sender, System::EventArgs^ e) {
 	pnlOfEditCourse->Visible = false;
@@ -3025,6 +3027,8 @@ private: System::Void btnAddCourse_Click(System::Object^ sender, System::EventAr
 	courseDatapp->BackColor = Color::Tan;
 	editCoursepp->BackColor = Color::Tan;
 	studentDatapp->BackColor = Color::Tan;
+	sideBarExpand = true;
+	slideBarTimer->Start();
 }
 private: System::Void pictureBox1_Click(System::Object^ sender, System::EventArgs^ e) {
 	l1->Visible = false;
@@ -3044,6 +3048,8 @@ private: System::Void pictureBox1_Click(System::Object^ sender, System::EventArg
 	courseDatapp->BackColor = Color::Tan;
 	editCoursepp->BackColor = Color::Tan;
 	studentDatapp->BackColor = Color::Tan;
+	sideBarExpand = true;
+	slideBarTimer->Start();
 }
 private: System::Void pictureBox2_Click(System::Object^ sender, System::EventArgs^ e) {
 	l1->Visible = false;
@@ -3064,6 +3070,8 @@ private: System::Void pictureBox2_Click(System::Object^ sender, System::EventArg
 	courseDatapp->BackColor = Color::Tan;
 	editCoursepp->BackColor = Color::Tan;
 	studentDatapp->BackColor = Color::Tan;
+	sideBarExpand = true;
+	slideBarTimer->Start();
 }
 private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
 	l1->Visible = false;
@@ -3083,6 +3091,8 @@ private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e
 	courseDatapp->BackColor = Color::Brown;
 	editCoursepp->BackColor = Color::Tan;
 	studentDatapp->BackColor = Color::Tan;
+	sideBarExpand = true;
+	slideBarTimer->Start();
 }
 private: System::Void StudentData_Click(System::Object^ sender, System::EventArgs^ e) {
 	l1->Visible = false;
@@ -3103,6 +3113,8 @@ private: System::Void StudentData_Click(System::Object^ sender, System::EventArg
 	courseDatapp->BackColor = Color::Tan;
 	editCoursepp->BackColor = Color::Tan;
 	studentDatapp->BackColor = Color::Tan;
+	sideBarExpand = true;
+	slideBarTimer->Start();
 }
 private: System::Void StudentsOfCourse_Click(System::Object^ sender, System::EventArgs^ e) {
 	l1->Visible = false;
@@ -3122,6 +3134,8 @@ private: System::Void StudentsOfCourse_Click(System::Object^ sender, System::Eve
 	courseDatapp->BackColor = Color::Tan;
 	editCoursepp->BackColor = Color::Tan;
 	studentDatapp->BackColor = Color::Tan;
+	sideBarExpand = true;
+	slideBarTimer->Start();
 }
 private: System::Void pictureBox5_Click(System::Object^ sender, System::EventArgs^ e) {
 	l1->Visible = false;
@@ -3142,6 +3156,8 @@ private: System::Void pictureBox5_Click(System::Object^ sender, System::EventArg
 	courseDatapp->BackColor = Color::Tan;
 	editCoursepp->BackColor = Color::Tan;
 	studentDatapp->BackColor = Color::Tan;
+	sideBarExpand = true;
+	slideBarTimer->Start();
 }
 private: System::Void pictureBox4_Click(System::Object^ sender, System::EventArgs^ e) {
 	l1->Visible = false;
@@ -3164,6 +3180,8 @@ private: System::Void pictureBox4_Click(System::Object^ sender, System::EventArg
 	courseDatapp->BackColor = Color::Brown;
 	editCoursepp->BackColor = Color::Tan;
 	studentDatapp->BackColor = Color::Tan;
+	sideBarExpand = true;
+	slideBarTimer->Start();
 }
 private: System::Void pictureBox3_Click(System::Object^ sender, System::EventArgs^ e) {
 	l1->Visible = false;
@@ -3182,6 +3200,8 @@ private: System::Void pictureBox3_Click(System::Object^ sender, System::EventArg
 	courseDatapp->BackColor = Color::Tan;
 	editCoursepp->BackColor = Color::Tan;
 	studentDatapp->BackColor = Color::Tan;
+	sideBarExpand = true;
+	slideBarTimer->Start();
 }
 private: System::Void pnlOfStudentOfCourse_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
 }
@@ -3837,6 +3857,9 @@ private: System::Void pictureBox9_Click(System::Object^ sender, System::EventArg
 	courseDatapp->BackColor = Color::Tan;
 	editCoursepp->BackColor = Color::Brown;
 	studentDatapp->BackColor = Color::Tan;
+
+	sideBarExpand = true;
+	slideBarTimer->Start();
 }
 private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
 	pnlCoursedataedit->Visible = true;
@@ -3854,6 +3877,9 @@ private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e
 	courseDatapp->BackColor = Color::Tan;
 	editCoursepp->BackColor = Color::Brown;
 	studentDatapp->BackColor = Color::Tan;
+
+	sideBarExpand = true;
+	slideBarTimer->Start();
 }
 private: System::Void lbl37_Click(System::Object^ sender, System::EventArgs^ e) {
 }
@@ -3953,6 +3979,9 @@ private: System::Void button7_Click(System::Object^ sender, System::EventArgs^ e
 	pnlOfAddStudent->Visible = false;
 	pnlCoursedataedit->Visible = false;
 	StudentDatapanel->Visible = true;
+
+	sideBarExpand = true;
+	slideBarTimer->Start();
 }
 	   Student^ searchStudent(String^ stdname)
 	   {
@@ -4013,6 +4042,26 @@ private: System::Void label47_Click(System::Object^ sender, System::EventArgs^ e
 private: System::Void coursesinprogflowlayoutpanel_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
 }
 private: System::Void panel11_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
+}
+private: System::Void stdpic_Click(System::Object^ sender, System::EventArgs^ e) {
+
+	addCoursepp->BackColor = Color::Tan;
+	addStudentpp->BackColor = Color::Tan;
+	exitpp->BackColor = Color::Tan;
+	stdofCoursepp->BackColor = Color::Tan;
+	courseDatapp->BackColor = Color::Tan;
+	editCoursepp->BackColor = Color::Tan;
+	studentDatapp->BackColor = Color::Brown;
+	pnlOfAddCourse->Visible = false;
+	pnlOfEditCourse->Visible = false;
+	pnlEditStudent->Visible = false;
+	pnlOfStudentOfCourse->Visible = false;
+	pnlOfAddStudent->Visible = false;
+	pnlCoursedataedit->Visible = false;
+	StudentDatapanel->Visible = true;
+
+	sideBarExpand = true;
+	slideBarTimer->Start();
 }
 };
 }
