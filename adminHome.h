@@ -2127,7 +2127,6 @@ private: System::Void btnAddStudent_Click(System::Object^ sender, System::EventA
 
 	addCoursepp->BackColor = Color::Tan;
 	addStudentpp->BackColor = Color::Brown;
-	exitpp->BackColor = Color::Tan;
 	stdofCoursepp->BackColor = Color::Tan;
 	courseDatapp->BackColor = Color::Tan;
 	editCoursepp->BackColor = Color::Tan;
@@ -2146,7 +2145,6 @@ private: System::Void btnAddCourse_Click(System::Object^ sender, System::EventAr
 	StudentDatapanel->Visible = false;
 	addCoursepp->BackColor = Color::Brown;
 	addStudentpp->BackColor = Color::Tan;
-	exitpp->BackColor = Color::Tan;
 	stdofCoursepp->BackColor = Color::Tan;
 	courseDatapp->BackColor = Color::Tan;
 	editCoursepp->BackColor = Color::Tan;
@@ -2167,7 +2165,6 @@ private: System::Void pictureBox1_Click(System::Object^ sender, System::EventArg
 	StudentDatapanel->Visible = false;
 	addCoursepp->BackColor = Color::Brown;
 	addStudentpp->BackColor = Color::Tan;
-	exitpp->BackColor = Color::Tan;
 	stdofCoursepp->BackColor = Color::Tan;
 	courseDatapp->BackColor = Color::Tan;
 	editCoursepp->BackColor = Color::Tan;
@@ -2189,7 +2186,7 @@ private: System::Void pictureBox2_Click(System::Object^ sender, System::EventArg
 
 	addCoursepp->BackColor = Color::Tan;
 	addStudentpp->BackColor = Color::Brown;
-	exitpp->BackColor = Color::Tan;
+	   
 	stdofCoursepp->BackColor = Color::Tan;
 	courseDatapp->BackColor = Color::Tan;
 	editCoursepp->BackColor = Color::Tan;
@@ -2210,7 +2207,7 @@ private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e
 
 	addCoursepp->BackColor = Color::Tan;
 	addStudentpp->BackColor = Color::Tan;
-	exitpp->BackColor = Color::Tan;
+	
 	stdofCoursepp->BackColor = Color::Tan;
 	courseDatapp->BackColor = Color::Brown;
 	editCoursepp->BackColor = Color::Tan;
@@ -2232,7 +2229,7 @@ private: System::Void StudentData_Click(System::Object^ sender, System::EventArg
 
 	addCoursepp->BackColor = Color::Tan;
 	addStudentpp->BackColor = Color::Tan;
-	exitpp->BackColor = Color::Tan;
+	   
 	stdofCoursepp->BackColor = Color::Tan;
 	courseDatapp->BackColor = Color::Tan;
 	editCoursepp->BackColor = Color::Tan;
@@ -2253,7 +2250,7 @@ private: System::Void StudentsOfCourse_Click(System::Object^ sender, System::Eve
 	
 	addCoursepp->BackColor = Color::Tan;
 	addStudentpp->BackColor = Color::Tan;
-	exitpp->BackColor = Color::Tan;
+	   
 	stdofCoursepp->BackColor = Color::Brown;
 	courseDatapp->BackColor = Color::Tan;
 	editCoursepp->BackColor = Color::Tan;
@@ -2275,7 +2272,7 @@ private: System::Void pictureBox5_Click(System::Object^ sender, System::EventArg
 	StudentDatapanel->Visible = false;
 	addCoursepp->BackColor = Color::Tan;
 	addStudentpp->BackColor = Color::Tan;
-	exitpp->BackColor = Color::Tan;
+	   
 	stdofCoursepp->BackColor = Color::Brown;
 	courseDatapp->BackColor = Color::Tan;
 	editCoursepp->BackColor = Color::Tan;
@@ -2299,7 +2296,7 @@ private: System::Void pictureBox4_Click(System::Object^ sender, System::EventArg
 	StudentDatapanel->Visible = false;
 	addCoursepp->BackColor = Color::Tan;
 	addStudentpp->BackColor = Color::Tan;
-	exitpp->BackColor = Color::Tan;
+	   
 	stdofCoursepp->BackColor = Color::Tan;
 	courseDatapp->BackColor = Color::Brown;
 	editCoursepp->BackColor = Color::Tan;
@@ -2319,7 +2316,7 @@ private: System::Void pictureBox3_Click(System::Object^ sender, System::EventArg
 	StudentDatapanel->Visible = false;
 	addCoursepp->BackColor = Color::Tan;
 	addStudentpp->BackColor = Color::Tan;
-	exitpp->BackColor = Color::Tan;
+	   
 	stdofCoursepp->BackColor = Color::Tan;
 	courseDatapp->BackColor = Color::Tan;
 	editCoursepp->BackColor = Color::Tan;
@@ -2935,7 +2932,6 @@ private: System::Void btnLogOut_Click(System::Object^ sender, System::EventArgs^
 	this->Close();
 	addCoursepp->BackColor = Color::Tan;
 	addStudentpp->BackColor = Color::Tan;
-	exitpp->BackColor = Color::Brown;
 	stdofCoursepp->BackColor = Color::Tan;
 	courseDatapp->BackColor = Color::Tan;
 	EditCourseData->BackColor = Color::Tan;
@@ -2945,7 +2941,6 @@ private: System::Void pictureBox8_Click(System::Object^ sender, System::EventArg
 	this->Close();
 	addCoursepp->BackColor = Color::Tan;
 	addStudentpp->BackColor = Color::Tan;
-	exitpp->BackColor = Color::Brown;
 	stdofCoursepp->BackColor = Color::Tan;
 	courseDatapp->BackColor = Color::Tan;
 	EditCourseData->BackColor = Color::Tan;
@@ -2976,7 +2971,7 @@ private: System::Void pictureBox9_Click(System::Object^ sender, System::EventArg
 	StudentDatapanel->Visible = false;
 	addCoursepp->BackColor = Color::Tan;
 	addStudentpp->BackColor = Color::Tan;
-	exitpp->BackColor = Color::Tan;
+	   
 	stdofCoursepp->BackColor = Color::Tan;
 	courseDatapp->BackColor = Color::Tan;
 	editCoursepp->BackColor = Color::Brown;
@@ -2996,7 +2991,7 @@ private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e
 
 	addCoursepp->BackColor = Color::Tan;
 	addStudentpp->BackColor = Color::Tan;
-	exitpp->BackColor = Color::Tan;
+	   
 	stdofCoursepp->BackColor = Color::Tan;
 	courseDatapp->BackColor = Color::Tan;
 	editCoursepp->BackColor = Color::Brown;
@@ -3078,7 +3073,7 @@ private: System::Void pictureBox11_Click(System::Object^ sender, System::EventAr
 	StudentDatapanel->Visible = true;
 	addCoursepp->BackColor = Color::Tan;
 	addStudentpp->BackColor = Color::Tan;
-	exitpp->BackColor = Color::Tan;
+	   
 	stdofCoursepp->BackColor = Color::Tan;
 	courseDatapp->BackColor = Color::Tan;
 	editCoursepp->BackColor = Color::Tan;
@@ -3091,7 +3086,7 @@ private: System::Void StudentDatapanel_Paint_1(System::Object^ sender, System::W
 private: System::Void button7_Click(System::Object^ sender, System::EventArgs^ e) {
 	addCoursepp->BackColor = Color::Tan;
 	addStudentpp->BackColor = Color::Tan;
-	exitpp->BackColor = Color::Tan;
+	   
 	stdofCoursepp->BackColor = Color::Tan;
 	courseDatapp->BackColor = Color::Tan;
 	editCoursepp->BackColor = Color::Tan;
@@ -3171,7 +3166,7 @@ private: System::Void stdpic_Click(System::Object^ sender, System::EventArgs^ e)
 
 	addCoursepp->BackColor = Color::Tan;
 	addStudentpp->BackColor = Color::Tan;
-	exitpp->BackColor = Color::Tan;
+	   
 	stdofCoursepp->BackColor = Color::Tan;
 	courseDatapp->BackColor = Color::Tan;
 	editCoursepp->BackColor = Color::Tan;
