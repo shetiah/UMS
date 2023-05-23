@@ -380,6 +380,47 @@ private: System::Windows::Forms::Label^ label49;
 			this->Home = (gcnew System::Windows::Forms::Button());
 			this->slideBarTimer = (gcnew System::Windows::Forms::Timer(this->components));
 			this->pnlOfPanels = (gcnew System::Windows::Forms::Panel());
+			this->pnlOfEditCourse = (gcnew System::Windows::Forms::Panel());
+			this->label26 = (gcnew System::Windows::Forms::Label());
+			this->button3 = (gcnew System::Windows::Forms::Button());
+			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
+			this->choosestdbt = (gcnew System::Windows::Forms::Button());
+			this->stdpanel = (gcnew System::Windows::Forms::FlowLayoutPanel());
+			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->panel8 = (gcnew System::Windows::Forms::Panel());
+			this->label25 = (gcnew System::Windows::Forms::Label());
+			this->label24 = (gcnew System::Windows::Forms::Label());
+			this->label23 = (gcnew System::Windows::Forms::Label());
+			this->label22 = (gcnew System::Windows::Forms::Label());
+			this->label21 = (gcnew System::Windows::Forms::Label());
+			this->label20 = (gcnew System::Windows::Forms::Label());
+			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
+			this->StudentDatapanel = (gcnew System::Windows::Forms::Panel());
+			this->panel15 = (gcnew System::Windows::Forms::Panel());
+			this->l1 = (gcnew System::Windows::Forms::Label());
+			this->l2 = (gcnew System::Windows::Forms::Label());
+			this->finishedflowlaypanel = (gcnew System::Windows::Forms::FlowLayoutPanel());
+			this->coursesinprogflowlayoutpanel = (gcnew System::Windows::Forms::FlowLayoutPanel());
+			this->label50 = (gcnew System::Windows::Forms::Label());
+			this->label48 = (gcnew System::Windows::Forms::Label());
+			this->label49 = (gcnew System::Windows::Forms::Label());
+			this->button8 = (gcnew System::Windows::Forms::Button());
+			this->label47 = (gcnew System::Windows::Forms::Label());
+			this->label46 = (gcnew System::Windows::Forms::Label());
+			this->label45 = (gcnew System::Windows::Forms::Label());
+			this->textBox9 = (gcnew System::Windows::Forms::TextBox());
+			this->pnlOfStudentOfCourse = (gcnew System::Windows::Forms::Panel());
+			this->label19 = (gcnew System::Windows::Forms::Label());
+			this->label18 = (gcnew System::Windows::Forms::Label());
+			this->viewbt = (gcnew System::Windows::Forms::Button());
+			this->studentnamepanel = (gcnew System::Windows::Forms::FlowLayoutPanel());
+			this->label14 = (gcnew System::Windows::Forms::Label());
+			this->panel6 = (gcnew System::Windows::Forms::Panel());
+			this->label12 = (gcnew System::Windows::Forms::Label());
+			this->label13 = (gcnew System::Windows::Forms::Label());
+			this->label9 = (gcnew System::Windows::Forms::Label());
+			this->label10 = (gcnew System::Windows::Forms::Label());
+			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->pnlEditStudent = (gcnew System::Windows::Forms::Panel());
 			this->panel11 = (gcnew System::Windows::Forms::Panel());
 			this->panel10 = (gcnew System::Windows::Forms::Panel());
@@ -474,47 +515,6 @@ private: System::Windows::Forms::Label^ label49;
 			this->yearText = (gcnew System::Windows::Forms::TextBox());
 			this->passText = (gcnew System::Windows::Forms::TextBox());
 			this->nameText = (gcnew System::Windows::Forms::TextBox());
-			this->pnlOfEditCourse = (gcnew System::Windows::Forms::Panel());
-			this->label26 = (gcnew System::Windows::Forms::Label());
-			this->button3 = (gcnew System::Windows::Forms::Button());
-			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
-			this->choosestdbt = (gcnew System::Windows::Forms::Button());
-			this->stdpanel = (gcnew System::Windows::Forms::FlowLayoutPanel());
-			this->button1 = (gcnew System::Windows::Forms::Button());
-			this->panel8 = (gcnew System::Windows::Forms::Panel());
-			this->label25 = (gcnew System::Windows::Forms::Label());
-			this->label24 = (gcnew System::Windows::Forms::Label());
-			this->label23 = (gcnew System::Windows::Forms::Label());
-			this->label22 = (gcnew System::Windows::Forms::Label());
-			this->label21 = (gcnew System::Windows::Forms::Label());
-			this->label20 = (gcnew System::Windows::Forms::Label());
-			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
-			this->StudentDatapanel = (gcnew System::Windows::Forms::Panel());
-			this->panel15 = (gcnew System::Windows::Forms::Panel());
-			this->l1 = (gcnew System::Windows::Forms::Label());
-			this->l2 = (gcnew System::Windows::Forms::Label());
-			this->finishedflowlaypanel = (gcnew System::Windows::Forms::FlowLayoutPanel());
-			this->coursesinprogflowlayoutpanel = (gcnew System::Windows::Forms::FlowLayoutPanel());
-			this->label50 = (gcnew System::Windows::Forms::Label());
-			this->label48 = (gcnew System::Windows::Forms::Label());
-			this->label49 = (gcnew System::Windows::Forms::Label());
-			this->button8 = (gcnew System::Windows::Forms::Button());
-			this->label47 = (gcnew System::Windows::Forms::Label());
-			this->label46 = (gcnew System::Windows::Forms::Label());
-			this->label45 = (gcnew System::Windows::Forms::Label());
-			this->textBox9 = (gcnew System::Windows::Forms::TextBox());
-			this->pnlOfStudentOfCourse = (gcnew System::Windows::Forms::Panel());
-			this->label19 = (gcnew System::Windows::Forms::Label());
-			this->label18 = (gcnew System::Windows::Forms::Label());
-			this->viewbt = (gcnew System::Windows::Forms::Button());
-			this->studentnamepanel = (gcnew System::Windows::Forms::FlowLayoutPanel());
-			this->label14 = (gcnew System::Windows::Forms::Label());
-			this->panel6 = (gcnew System::Windows::Forms::Panel());
-			this->label12 = (gcnew System::Windows::Forms::Label());
-			this->label13 = (gcnew System::Windows::Forms::Label());
-			this->label9 = (gcnew System::Windows::Forms::Label());
-			this->label10 = (gcnew System::Windows::Forms::Label());
-			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->sideBar->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox6))->BeginInit();
 			this->pnlOfbtns->SuspendLayout();
@@ -527,6 +527,12 @@ private: System::Windows::Forms::Label^ label49;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->BeginInit();
 			this->pnlOfPanels->SuspendLayout();
+			this->pnlOfEditCourse->SuspendLayout();
+			this->panel8->SuspendLayout();
+			this->StudentDatapanel->SuspendLayout();
+			this->panel15->SuspendLayout();
+			this->pnlOfStudentOfCourse->SuspendLayout();
+			this->panel6->SuspendLayout();
 			this->pnlEditStudent->SuspendLayout();
 			this->panel11->SuspendLayout();
 			this->panel10->SuspendLayout();
@@ -544,12 +550,6 @@ private: System::Windows::Forms::Label^ label49;
 			this->addcoursepanel->SuspendLayout();
 			this->pnlOfAddStudent->SuspendLayout();
 			this->pnlOfData->SuspendLayout();
-			this->pnlOfEditCourse->SuspendLayout();
-			this->panel8->SuspendLayout();
-			this->StudentDatapanel->SuspendLayout();
-			this->panel15->SuspendLayout();
-			this->pnlOfStudentOfCourse->SuspendLayout();
-			this->panel6->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// sideBar
@@ -817,6 +817,392 @@ private: System::Windows::Forms::Label^ label49;
 			this->pnlOfPanels->Controls->Add(this->pnlOfStudentOfCourse);
 			resources->ApplyResources(this->pnlOfPanels, L"pnlOfPanels");
 			this->pnlOfPanels->Name = L"pnlOfPanels";
+			// 
+			// pnlOfEditCourse
+			// 
+			this->pnlOfEditCourse->BackColor = System::Drawing::Color::Transparent;
+			this->pnlOfEditCourse->Controls->Add(this->label26);
+			this->pnlOfEditCourse->Controls->Add(this->button3);
+			this->pnlOfEditCourse->Controls->Add(this->textBox3);
+			this->pnlOfEditCourse->Controls->Add(this->choosestdbt);
+			this->pnlOfEditCourse->Controls->Add(this->stdpanel);
+			this->pnlOfEditCourse->Controls->Add(this->button1);
+			this->pnlOfEditCourse->Controls->Add(this->panel8);
+			this->pnlOfEditCourse->Controls->Add(this->label22);
+			this->pnlOfEditCourse->Controls->Add(this->label21);
+			this->pnlOfEditCourse->Controls->Add(this->label20);
+			this->pnlOfEditCourse->Controls->Add(this->textBox2);
+			resources->ApplyResources(this->pnlOfEditCourse, L"pnlOfEditCourse");
+			this->pnlOfEditCourse->Name = L"pnlOfEditCourse";
+			this->pnlOfEditCourse->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &adminHome::pnlOfEditCourse_Paint);
+			// 
+			// label26
+			// 
+			resources->ApplyResources(this->label26, L"label26");
+			this->label26->BackColor = System::Drawing::Color::Transparent;
+			this->label26->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(25)), static_cast<System::Int32>(static_cast<System::Byte>(31)),
+				static_cast<System::Int32>(static_cast<System::Byte>(31)));
+			this->label26->Name = L"label26";
+			this->label26->UseCompatibleTextRendering = true;
+			this->label26->Click += gcnew System::EventHandler(this, &adminHome::label26_Click);
+			// 
+			// button3
+			// 
+			this->button3->BackColor = System::Drawing::Color::Tan;
+			this->button3->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->button3->FlatAppearance->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(23)),
+				static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(31)));
+			this->button3->FlatAppearance->BorderSize = 3;
+			resources->ApplyResources(this->button3, L"button3");
+			this->button3->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
+				static_cast<System::Int32>(static_cast<System::Byte>(31)));
+			this->button3->Name = L"button3";
+			this->button3->UseVisualStyleBackColor = false;
+			this->button3->Click += gcnew System::EventHandler(this, &adminHome::button3_Click);
+			// 
+			// textBox3
+			// 
+			this->textBox3->BackColor = System::Drawing::Color::Linen;
+			this->textBox3->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			resources->ApplyResources(this->textBox3, L"textBox3");
+			this->textBox3->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
+				static_cast<System::Int32>(static_cast<System::Byte>(31)));
+			this->textBox3->Name = L"textBox3";
+			// 
+			// choosestdbt
+			// 
+			this->choosestdbt->BackColor = System::Drawing::Color::Tan;
+			this->choosestdbt->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->choosestdbt->FlatAppearance->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(23)),
+				static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(31)));
+			this->choosestdbt->FlatAppearance->BorderSize = 3;
+			resources->ApplyResources(this->choosestdbt, L"choosestdbt");
+			this->choosestdbt->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
+				static_cast<System::Int32>(static_cast<System::Byte>(31)));
+			this->choosestdbt->Name = L"choosestdbt";
+			this->choosestdbt->UseCompatibleTextRendering = true;
+			this->choosestdbt->UseVisualStyleBackColor = false;
+			this->choosestdbt->Click += gcnew System::EventHandler(this, &adminHome::choosestdbt_Click);
+			// 
+			// stdpanel
+			// 
+			resources->ApplyResources(this->stdpanel, L"stdpanel");
+			this->stdpanel->Name = L"stdpanel";
+			// 
+			// button1
+			// 
+			this->button1->BackColor = System::Drawing::Color::Tan;
+			this->button1->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->button1->FlatAppearance->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(23)),
+				static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(31)));
+			this->button1->FlatAppearance->BorderSize = 3;
+			resources->ApplyResources(this->button1, L"button1");
+			this->button1->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
+				static_cast<System::Int32>(static_cast<System::Byte>(31)));
+			this->button1->Name = L"button1";
+			this->button1->UseVisualStyleBackColor = false;
+			this->button1->Click += gcnew System::EventHandler(this, &adminHome::button1_Click);
+			// 
+			// panel8
+			// 
+			this->panel8->BackColor = System::Drawing::Color::Transparent;
+			this->panel8->Controls->Add(this->label25);
+			this->panel8->Controls->Add(this->label24);
+			this->panel8->Controls->Add(this->label23);
+			resources->ApplyResources(this->panel8, L"panel8");
+			this->panel8->Name = L"panel8";
+			// 
+			// label25
+			// 
+			resources->ApplyResources(this->label25, L"label25");
+			this->label25->BackColor = System::Drawing::Color::Transparent;
+			this->label25->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(26)), static_cast<System::Int32>(static_cast<System::Byte>(11)),
+				static_cast<System::Int32>(static_cast<System::Byte>(69)));
+			this->label25->Name = L"label25";
+			this->label25->Click += gcnew System::EventHandler(this, &adminHome::label25_Click);
+			// 
+			// label24
+			// 
+			resources->ApplyResources(this->label24, L"label24");
+			this->label24->BackColor = System::Drawing::Color::Transparent;
+			this->label24->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(26)), static_cast<System::Int32>(static_cast<System::Byte>(11)),
+				static_cast<System::Int32>(static_cast<System::Byte>(69)));
+			this->label24->Name = L"label24";
+			// 
+			// label23
+			// 
+			resources->ApplyResources(this->label23, L"label23");
+			this->label23->BackColor = System::Drawing::Color::Transparent;
+			this->label23->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(26)), static_cast<System::Int32>(static_cast<System::Byte>(11)),
+				static_cast<System::Int32>(static_cast<System::Byte>(69)));
+			this->label23->Name = L"label23";
+			// 
+			// label22
+			// 
+			resources->ApplyResources(this->label22, L"label22");
+			this->label22->BackColor = System::Drawing::Color::Transparent;
+			this->label22->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(26)), static_cast<System::Int32>(static_cast<System::Byte>(11)),
+				static_cast<System::Int32>(static_cast<System::Byte>(69)));
+			this->label22->Name = L"label22";
+			// 
+			// label21
+			// 
+			resources->ApplyResources(this->label21, L"label21");
+			this->label21->BackColor = System::Drawing::Color::Transparent;
+			this->label21->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(26)), static_cast<System::Int32>(static_cast<System::Byte>(11)),
+				static_cast<System::Int32>(static_cast<System::Byte>(69)));
+			this->label21->Name = L"label21";
+			// 
+			// label20
+			// 
+			resources->ApplyResources(this->label20, L"label20");
+			this->label20->ForeColor = System::Drawing::Color::Tan;
+			this->label20->Name = L"label20";
+			// 
+			// textBox2
+			// 
+			this->textBox2->BackColor = System::Drawing::Color::Linen;
+			this->textBox2->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			resources->ApplyResources(this->textBox2, L"textBox2");
+			this->textBox2->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
+				static_cast<System::Int32>(static_cast<System::Byte>(31)));
+			this->textBox2->Name = L"textBox2";
+			// 
+			// StudentDatapanel
+			// 
+			this->StudentDatapanel->BackColor = System::Drawing::Color::White;
+			this->StudentDatapanel->Controls->Add(this->panel15);
+			this->StudentDatapanel->Controls->Add(this->label49);
+			this->StudentDatapanel->Controls->Add(this->button8);
+			this->StudentDatapanel->Controls->Add(this->label47);
+			this->StudentDatapanel->Controls->Add(this->label46);
+			this->StudentDatapanel->Controls->Add(this->label45);
+			this->StudentDatapanel->Controls->Add(this->textBox9);
+			resources->ApplyResources(this->StudentDatapanel, L"StudentDatapanel");
+			this->StudentDatapanel->Name = L"StudentDatapanel";
+			this->StudentDatapanel->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &adminHome::StudentDatapanel_Paint_1);
+			// 
+			// panel15
+			// 
+			resources->ApplyResources(this->panel15, L"panel15");
+			this->panel15->Controls->Add(this->l1);
+			this->panel15->Controls->Add(this->l2);
+			this->panel15->Controls->Add(this->finishedflowlaypanel);
+			this->panel15->Controls->Add(this->coursesinprogflowlayoutpanel);
+			this->panel15->Controls->Add(this->label50);
+			this->panel15->Controls->Add(this->label48);
+			this->panel15->Name = L"panel15";
+			// 
+			// l1
+			// 
+			resources->ApplyResources(this->l1, L"l1");
+			this->l1->BackColor = System::Drawing::Color::Transparent;
+			this->l1->ForeColor = System::Drawing::Color::Brown;
+			this->l1->Name = L"l1";
+			this->l1->UseCompatibleTextRendering = true;
+			// 
+			// l2
+			// 
+			resources->ApplyResources(this->l2, L"l2");
+			this->l2->BackColor = System::Drawing::Color::Transparent;
+			this->l2->ForeColor = System::Drawing::Color::Brown;
+			this->l2->Name = L"l2";
+			this->l2->UseCompatibleTextRendering = true;
+			// 
+			// finishedflowlaypanel
+			// 
+			resources->ApplyResources(this->finishedflowlaypanel, L"finishedflowlaypanel");
+			this->finishedflowlaypanel->Name = L"finishedflowlaypanel";
+			// 
+			// coursesinprogflowlayoutpanel
+			// 
+			resources->ApplyResources(this->coursesinprogflowlayoutpanel, L"coursesinprogflowlayoutpanel");
+			this->coursesinprogflowlayoutpanel->Name = L"coursesinprogflowlayoutpanel";
+			this->coursesinprogflowlayoutpanel->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &adminHome::coursesinprogflowlayoutpanel_Paint);
+			// 
+			// label50
+			// 
+			resources->ApplyResources(this->label50, L"label50");
+			this->label50->BackColor = System::Drawing::Color::Transparent;
+			this->label50->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
+				static_cast<System::Int32>(static_cast<System::Byte>(31)));
+			this->label50->Name = L"label50";
+			this->label50->UseCompatibleTextRendering = true;
+			// 
+			// label48
+			// 
+			resources->ApplyResources(this->label48, L"label48");
+			this->label48->BackColor = System::Drawing::Color::Transparent;
+			this->label48->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
+				static_cast<System::Int32>(static_cast<System::Byte>(31)));
+			this->label48->Name = L"label48";
+			this->label48->UseCompatibleTextRendering = true;
+			// 
+			// label49
+			// 
+			resources->ApplyResources(this->label49, L"label49");
+			this->label49->BackColor = System::Drawing::Color::Transparent;
+			this->label49->ForeColor = System::Drawing::Color::Tan;
+			this->label49->Name = L"label49";
+			this->label49->UseCompatibleTextRendering = true;
+			// 
+			// button8
+			// 
+			this->button8->BackColor = System::Drawing::Color::Brown;
+			this->button8->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->button8->FlatAppearance->BorderColor = System::Drawing::Color::Tan;
+			this->button8->FlatAppearance->BorderSize = 5;
+			resources->ApplyResources(this->button8, L"button8");
+			this->button8->ForeColor = System::Drawing::Color::Tan;
+			this->button8->Name = L"button8";
+			this->button8->UseVisualStyleBackColor = false;
+			this->button8->Click += gcnew System::EventHandler(this, &adminHome::button8_Click);
+			// 
+			// label47
+			// 
+			resources->ApplyResources(this->label47, L"label47");
+			this->label47->BackColor = System::Drawing::Color::Transparent;
+			this->label47->ForeColor = System::Drawing::Color::Brown;
+			this->label47->Name = L"label47";
+			this->label47->UseCompatibleTextRendering = true;
+			this->label47->Click += gcnew System::EventHandler(this, &adminHome::label47_Click);
+			// 
+			// label46
+			// 
+			resources->ApplyResources(this->label46, L"label46");
+			this->label46->BackColor = System::Drawing::Color::Transparent;
+			this->label46->ForeColor = System::Drawing::Color::Brown;
+			this->label46->Name = L"label46";
+			this->label46->UseCompatibleTextRendering = true;
+			// 
+			// label45
+			// 
+			resources->ApplyResources(this->label45, L"label45");
+			this->label45->BackColor = System::Drawing::Color::Transparent;
+			this->label45->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
+				static_cast<System::Int32>(static_cast<System::Byte>(31)));
+			this->label45->Name = L"label45";
+			this->label45->UseCompatibleTextRendering = true;
+			this->label45->Click += gcnew System::EventHandler(this, &adminHome::label45_Click);
+			// 
+			// textBox9
+			// 
+			this->textBox9->BackColor = System::Drawing::Color::Linen;
+			this->textBox9->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			resources->ApplyResources(this->textBox9, L"textBox9");
+			this->textBox9->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
+				static_cast<System::Int32>(static_cast<System::Byte>(31)));
+			this->textBox9->Name = L"textBox9";
+			// 
+			// pnlOfStudentOfCourse
+			// 
+			this->pnlOfStudentOfCourse->BackColor = System::Drawing::Color::Transparent;
+			this->pnlOfStudentOfCourse->Controls->Add(this->label19);
+			this->pnlOfStudentOfCourse->Controls->Add(this->label18);
+			this->pnlOfStudentOfCourse->Controls->Add(this->viewbt);
+			this->pnlOfStudentOfCourse->Controls->Add(this->studentnamepanel);
+			this->pnlOfStudentOfCourse->Controls->Add(this->label14);
+			this->pnlOfStudentOfCourse->Controls->Add(this->panel6);
+			this->pnlOfStudentOfCourse->Controls->Add(this->label10);
+			this->pnlOfStudentOfCourse->Controls->Add(this->textBox1);
+			resources->ApplyResources(this->pnlOfStudentOfCourse, L"pnlOfStudentOfCourse");
+			this->pnlOfStudentOfCourse->Name = L"pnlOfStudentOfCourse";
+			this->pnlOfStudentOfCourse->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &adminHome::pnlOfStudentOfCourse_Paint);
+			// 
+			// label19
+			// 
+			resources->ApplyResources(this->label19, L"label19");
+			this->label19->BackColor = System::Drawing::Color::Transparent;
+			this->label19->ForeColor = System::Drawing::Color::Tan;
+			this->label19->Name = L"label19";
+			// 
+			// label18
+			// 
+			resources->ApplyResources(this->label18, L"label18");
+			this->label18->BackColor = System::Drawing::Color::Tan;
+			this->label18->Name = L"label18";
+			// 
+			// viewbt
+			// 
+			this->viewbt->BackColor = System::Drawing::Color::Tan;
+			this->viewbt->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->viewbt->FlatAppearance->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(26)),
+				static_cast<System::Int32>(static_cast<System::Byte>(11)), static_cast<System::Int32>(static_cast<System::Byte>(69)));
+			this->viewbt->FlatAppearance->BorderSize = 3;
+			resources->ApplyResources(this->viewbt, L"viewbt");
+			this->viewbt->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(26)), static_cast<System::Int32>(static_cast<System::Byte>(11)),
+				static_cast<System::Int32>(static_cast<System::Byte>(69)));
+			this->viewbt->Name = L"viewbt";
+			this->viewbt->UseVisualStyleBackColor = false;
+			this->viewbt->Click += gcnew System::EventHandler(this, &adminHome::viewbt_Click);
+			// 
+			// studentnamepanel
+			// 
+			resources->ApplyResources(this->studentnamepanel, L"studentnamepanel");
+			this->studentnamepanel->BackColor = System::Drawing::Color::Transparent;
+			this->studentnamepanel->Name = L"studentnamepanel";
+			this->studentnamepanel->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &adminHome::studentnamepanel_Paint);
+			// 
+			// label14
+			// 
+			resources->ApplyResources(this->label14, L"label14");
+			this->label14->BackColor = System::Drawing::Color::Transparent;
+			this->label14->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(26)), static_cast<System::Int32>(static_cast<System::Byte>(11)),
+				static_cast<System::Int32>(static_cast<System::Byte>(69)));
+			this->label14->Name = L"label14";
+			this->label14->Click += gcnew System::EventHandler(this, &adminHome::label14_Click);
+			// 
+			// panel6
+			// 
+			this->panel6->BackColor = System::Drawing::Color::Transparent;
+			this->panel6->Controls->Add(this->label12);
+			this->panel6->Controls->Add(this->label13);
+			this->panel6->Controls->Add(this->label9);
+			resources->ApplyResources(this->panel6, L"panel6");
+			this->panel6->Name = L"panel6";
+			// 
+			// label12
+			// 
+			resources->ApplyResources(this->label12, L"label12");
+			this->label12->BackColor = System::Drawing::Color::Transparent;
+			this->label12->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(26)), static_cast<System::Int32>(static_cast<System::Byte>(11)),
+				static_cast<System::Int32>(static_cast<System::Byte>(69)));
+			this->label12->Name = L"label12";
+			// 
+			// label13
+			// 
+			resources->ApplyResources(this->label13, L"label13");
+			this->label13->BackColor = System::Drawing::Color::Transparent;
+			this->label13->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(26)), static_cast<System::Int32>(static_cast<System::Byte>(11)),
+				static_cast<System::Int32>(static_cast<System::Byte>(69)));
+			this->label13->Name = L"label13";
+			this->label13->Click += gcnew System::EventHandler(this, &adminHome::label13_Click);
+			// 
+			// label9
+			// 
+			resources->ApplyResources(this->label9, L"label9");
+			this->label9->BackColor = System::Drawing::Color::Transparent;
+			this->label9->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(26)), static_cast<System::Int32>(static_cast<System::Byte>(11)),
+				static_cast<System::Int32>(static_cast<System::Byte>(69)));
+			this->label9->Name = L"label9";
+			// 
+			// label10
+			// 
+			resources->ApplyResources(this->label10, L"label10");
+			this->label10->BackColor = System::Drawing::Color::Transparent;
+			this->label10->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(26)), static_cast<System::Int32>(static_cast<System::Byte>(11)),
+				static_cast<System::Int32>(static_cast<System::Byte>(69)));
+			this->label10->Name = L"label10";
+			// 
+			// textBox1
+			// 
+			this->textBox1->BackColor = System::Drawing::Color::Linen;
+			this->textBox1->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			resources->ApplyResources(this->textBox1, L"textBox1");
+			this->textBox1->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
+				static_cast<System::Int32>(static_cast<System::Byte>(31)));
+			this->textBox1->Name = L"textBox1";
+			this->textBox1->TextChanged += gcnew System::EventHandler(this, &adminHome::textBox1_TextChanged);
 			// 
 			// pnlEditStudent
 			// 
@@ -1632,392 +2018,6 @@ private: System::Windows::Forms::Label^ label49;
 			this->nameText->Name = L"nameText";
 			this->nameText->TextChanged += gcnew System::EventHandler(this, &adminHome::txtStudentName_TextChanged);
 			// 
-			// pnlOfEditCourse
-			// 
-			this->pnlOfEditCourse->BackColor = System::Drawing::Color::Transparent;
-			this->pnlOfEditCourse->Controls->Add(this->label26);
-			this->pnlOfEditCourse->Controls->Add(this->button3);
-			this->pnlOfEditCourse->Controls->Add(this->textBox3);
-			this->pnlOfEditCourse->Controls->Add(this->choosestdbt);
-			this->pnlOfEditCourse->Controls->Add(this->stdpanel);
-			this->pnlOfEditCourse->Controls->Add(this->button1);
-			this->pnlOfEditCourse->Controls->Add(this->panel8);
-			this->pnlOfEditCourse->Controls->Add(this->label22);
-			this->pnlOfEditCourse->Controls->Add(this->label21);
-			this->pnlOfEditCourse->Controls->Add(this->label20);
-			this->pnlOfEditCourse->Controls->Add(this->textBox2);
-			resources->ApplyResources(this->pnlOfEditCourse, L"pnlOfEditCourse");
-			this->pnlOfEditCourse->Name = L"pnlOfEditCourse";
-			this->pnlOfEditCourse->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &adminHome::pnlOfEditCourse_Paint);
-			// 
-			// label26
-			// 
-			resources->ApplyResources(this->label26, L"label26");
-			this->label26->BackColor = System::Drawing::Color::Transparent;
-			this->label26->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(25)), static_cast<System::Int32>(static_cast<System::Byte>(31)),
-				static_cast<System::Int32>(static_cast<System::Byte>(31)));
-			this->label26->Name = L"label26";
-			this->label26->UseCompatibleTextRendering = true;
-			this->label26->Click += gcnew System::EventHandler(this, &adminHome::label26_Click);
-			// 
-			// button3
-			// 
-			this->button3->BackColor = System::Drawing::Color::Tan;
-			this->button3->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->button3->FlatAppearance->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(23)),
-				static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(31)));
-			this->button3->FlatAppearance->BorderSize = 3;
-			resources->ApplyResources(this->button3, L"button3");
-			this->button3->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
-				static_cast<System::Int32>(static_cast<System::Byte>(31)));
-			this->button3->Name = L"button3";
-			this->button3->UseVisualStyleBackColor = false;
-			this->button3->Click += gcnew System::EventHandler(this, &adminHome::button3_Click);
-			// 
-			// textBox3
-			// 
-			this->textBox3->BackColor = System::Drawing::Color::Linen;
-			this->textBox3->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			resources->ApplyResources(this->textBox3, L"textBox3");
-			this->textBox3->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
-				static_cast<System::Int32>(static_cast<System::Byte>(31)));
-			this->textBox3->Name = L"textBox3";
-			// 
-			// choosestdbt
-			// 
-			this->choosestdbt->BackColor = System::Drawing::Color::Tan;
-			this->choosestdbt->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->choosestdbt->FlatAppearance->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(23)),
-				static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(31)));
-			this->choosestdbt->FlatAppearance->BorderSize = 3;
-			resources->ApplyResources(this->choosestdbt, L"choosestdbt");
-			this->choosestdbt->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
-				static_cast<System::Int32>(static_cast<System::Byte>(31)));
-			this->choosestdbt->Name = L"choosestdbt";
-			this->choosestdbt->UseCompatibleTextRendering = true;
-			this->choosestdbt->UseVisualStyleBackColor = false;
-			this->choosestdbt->Click += gcnew System::EventHandler(this, &adminHome::choosestdbt_Click);
-			// 
-			// stdpanel
-			// 
-			resources->ApplyResources(this->stdpanel, L"stdpanel");
-			this->stdpanel->Name = L"stdpanel";
-			// 
-			// button1
-			// 
-			this->button1->BackColor = System::Drawing::Color::Tan;
-			this->button1->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->button1->FlatAppearance->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(23)),
-				static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(31)));
-			this->button1->FlatAppearance->BorderSize = 3;
-			resources->ApplyResources(this->button1, L"button1");
-			this->button1->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
-				static_cast<System::Int32>(static_cast<System::Byte>(31)));
-			this->button1->Name = L"button1";
-			this->button1->UseVisualStyleBackColor = false;
-			this->button1->Click += gcnew System::EventHandler(this, &adminHome::button1_Click);
-			// 
-			// panel8
-			// 
-			this->panel8->BackColor = System::Drawing::Color::Transparent;
-			this->panel8->Controls->Add(this->label25);
-			this->panel8->Controls->Add(this->label24);
-			this->panel8->Controls->Add(this->label23);
-			resources->ApplyResources(this->panel8, L"panel8");
-			this->panel8->Name = L"panel8";
-			// 
-			// label25
-			// 
-			resources->ApplyResources(this->label25, L"label25");
-			this->label25->BackColor = System::Drawing::Color::Transparent;
-			this->label25->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(26)), static_cast<System::Int32>(static_cast<System::Byte>(11)),
-				static_cast<System::Int32>(static_cast<System::Byte>(69)));
-			this->label25->Name = L"label25";
-			this->label25->Click += gcnew System::EventHandler(this, &adminHome::label25_Click);
-			// 
-			// label24
-			// 
-			resources->ApplyResources(this->label24, L"label24");
-			this->label24->BackColor = System::Drawing::Color::Transparent;
-			this->label24->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(26)), static_cast<System::Int32>(static_cast<System::Byte>(11)),
-				static_cast<System::Int32>(static_cast<System::Byte>(69)));
-			this->label24->Name = L"label24";
-			// 
-			// label23
-			// 
-			resources->ApplyResources(this->label23, L"label23");
-			this->label23->BackColor = System::Drawing::Color::Transparent;
-			this->label23->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(26)), static_cast<System::Int32>(static_cast<System::Byte>(11)),
-				static_cast<System::Int32>(static_cast<System::Byte>(69)));
-			this->label23->Name = L"label23";
-			// 
-			// label22
-			// 
-			resources->ApplyResources(this->label22, L"label22");
-			this->label22->BackColor = System::Drawing::Color::Transparent;
-			this->label22->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(26)), static_cast<System::Int32>(static_cast<System::Byte>(11)),
-				static_cast<System::Int32>(static_cast<System::Byte>(69)));
-			this->label22->Name = L"label22";
-			// 
-			// label21
-			// 
-			resources->ApplyResources(this->label21, L"label21");
-			this->label21->BackColor = System::Drawing::Color::Transparent;
-			this->label21->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(26)), static_cast<System::Int32>(static_cast<System::Byte>(11)),
-				static_cast<System::Int32>(static_cast<System::Byte>(69)));
-			this->label21->Name = L"label21";
-			// 
-			// label20
-			// 
-			resources->ApplyResources(this->label20, L"label20");
-			this->label20->ForeColor = System::Drawing::Color::Tan;
-			this->label20->Name = L"label20";
-			// 
-			// textBox2
-			// 
-			this->textBox2->BackColor = System::Drawing::Color::Linen;
-			this->textBox2->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			resources->ApplyResources(this->textBox2, L"textBox2");
-			this->textBox2->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
-				static_cast<System::Int32>(static_cast<System::Byte>(31)));
-			this->textBox2->Name = L"textBox2";
-			// 
-			// StudentDatapanel
-			// 
-			this->StudentDatapanel->BackColor = System::Drawing::Color::White;
-			this->StudentDatapanel->Controls->Add(this->panel15);
-			this->StudentDatapanel->Controls->Add(this->label49);
-			this->StudentDatapanel->Controls->Add(this->button8);
-			this->StudentDatapanel->Controls->Add(this->label47);
-			this->StudentDatapanel->Controls->Add(this->label46);
-			this->StudentDatapanel->Controls->Add(this->label45);
-			this->StudentDatapanel->Controls->Add(this->textBox9);
-			resources->ApplyResources(this->StudentDatapanel, L"StudentDatapanel");
-			this->StudentDatapanel->Name = L"StudentDatapanel";
-			this->StudentDatapanel->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &adminHome::StudentDatapanel_Paint_1);
-			// 
-			// panel15
-			// 
-			resources->ApplyResources(this->panel15, L"panel15");
-			this->panel15->Controls->Add(this->l1);
-			this->panel15->Controls->Add(this->l2);
-			this->panel15->Controls->Add(this->finishedflowlaypanel);
-			this->panel15->Controls->Add(this->coursesinprogflowlayoutpanel);
-			this->panel15->Controls->Add(this->label50);
-			this->panel15->Controls->Add(this->label48);
-			this->panel15->Name = L"panel15";
-			// 
-			// l1
-			// 
-			resources->ApplyResources(this->l1, L"l1");
-			this->l1->BackColor = System::Drawing::Color::Transparent;
-			this->l1->ForeColor = System::Drawing::Color::Brown;
-			this->l1->Name = L"l1";
-			this->l1->UseCompatibleTextRendering = true;
-			// 
-			// l2
-			// 
-			resources->ApplyResources(this->l2, L"l2");
-			this->l2->BackColor = System::Drawing::Color::Transparent;
-			this->l2->ForeColor = System::Drawing::Color::Brown;
-			this->l2->Name = L"l2";
-			this->l2->UseCompatibleTextRendering = true;
-			// 
-			// finishedflowlaypanel
-			// 
-			resources->ApplyResources(this->finishedflowlaypanel, L"finishedflowlaypanel");
-			this->finishedflowlaypanel->Name = L"finishedflowlaypanel";
-			// 
-			// coursesinprogflowlayoutpanel
-			// 
-			resources->ApplyResources(this->coursesinprogflowlayoutpanel, L"coursesinprogflowlayoutpanel");
-			this->coursesinprogflowlayoutpanel->Name = L"coursesinprogflowlayoutpanel";
-			this->coursesinprogflowlayoutpanel->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &adminHome::coursesinprogflowlayoutpanel_Paint);
-			// 
-			// label50
-			// 
-			resources->ApplyResources(this->label50, L"label50");
-			this->label50->BackColor = System::Drawing::Color::Transparent;
-			this->label50->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
-				static_cast<System::Int32>(static_cast<System::Byte>(31)));
-			this->label50->Name = L"label50";
-			this->label50->UseCompatibleTextRendering = true;
-			// 
-			// label48
-			// 
-			resources->ApplyResources(this->label48, L"label48");
-			this->label48->BackColor = System::Drawing::Color::Transparent;
-			this->label48->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
-				static_cast<System::Int32>(static_cast<System::Byte>(31)));
-			this->label48->Name = L"label48";
-			this->label48->UseCompatibleTextRendering = true;
-			// 
-			// label49
-			// 
-			resources->ApplyResources(this->label49, L"label49");
-			this->label49->BackColor = System::Drawing::Color::Transparent;
-			this->label49->ForeColor = System::Drawing::Color::Tan;
-			this->label49->Name = L"label49";
-			this->label49->UseCompatibleTextRendering = true;
-			// 
-			// button8
-			// 
-			this->button8->BackColor = System::Drawing::Color::Brown;
-			this->button8->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->button8->FlatAppearance->BorderColor = System::Drawing::Color::Tan;
-			this->button8->FlatAppearance->BorderSize = 5;
-			resources->ApplyResources(this->button8, L"button8");
-			this->button8->ForeColor = System::Drawing::Color::Tan;
-			this->button8->Name = L"button8";
-			this->button8->UseVisualStyleBackColor = false;
-			this->button8->Click += gcnew System::EventHandler(this, &adminHome::button8_Click);
-			// 
-			// label47
-			// 
-			resources->ApplyResources(this->label47, L"label47");
-			this->label47->BackColor = System::Drawing::Color::Transparent;
-			this->label47->ForeColor = System::Drawing::Color::Brown;
-			this->label47->Name = L"label47";
-			this->label47->UseCompatibleTextRendering = true;
-			this->label47->Click += gcnew System::EventHandler(this, &adminHome::label47_Click);
-			// 
-			// label46
-			// 
-			resources->ApplyResources(this->label46, L"label46");
-			this->label46->BackColor = System::Drawing::Color::Transparent;
-			this->label46->ForeColor = System::Drawing::Color::Brown;
-			this->label46->Name = L"label46";
-			this->label46->UseCompatibleTextRendering = true;
-			// 
-			// label45
-			// 
-			resources->ApplyResources(this->label45, L"label45");
-			this->label45->BackColor = System::Drawing::Color::Transparent;
-			this->label45->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
-				static_cast<System::Int32>(static_cast<System::Byte>(31)));
-			this->label45->Name = L"label45";
-			this->label45->UseCompatibleTextRendering = true;
-			this->label45->Click += gcnew System::EventHandler(this, &adminHome::label45_Click);
-			// 
-			// textBox9
-			// 
-			this->textBox9->BackColor = System::Drawing::Color::Linen;
-			this->textBox9->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			resources->ApplyResources(this->textBox9, L"textBox9");
-			this->textBox9->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
-				static_cast<System::Int32>(static_cast<System::Byte>(31)));
-			this->textBox9->Name = L"textBox9";
-			// 
-			// pnlOfStudentOfCourse
-			// 
-			this->pnlOfStudentOfCourse->BackColor = System::Drawing::Color::Transparent;
-			this->pnlOfStudentOfCourse->Controls->Add(this->label19);
-			this->pnlOfStudentOfCourse->Controls->Add(this->label18);
-			this->pnlOfStudentOfCourse->Controls->Add(this->viewbt);
-			this->pnlOfStudentOfCourse->Controls->Add(this->studentnamepanel);
-			this->pnlOfStudentOfCourse->Controls->Add(this->label14);
-			this->pnlOfStudentOfCourse->Controls->Add(this->panel6);
-			this->pnlOfStudentOfCourse->Controls->Add(this->label10);
-			this->pnlOfStudentOfCourse->Controls->Add(this->textBox1);
-			resources->ApplyResources(this->pnlOfStudentOfCourse, L"pnlOfStudentOfCourse");
-			this->pnlOfStudentOfCourse->Name = L"pnlOfStudentOfCourse";
-			this->pnlOfStudentOfCourse->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &adminHome::pnlOfStudentOfCourse_Paint);
-			// 
-			// label19
-			// 
-			resources->ApplyResources(this->label19, L"label19");
-			this->label19->BackColor = System::Drawing::Color::Transparent;
-			this->label19->ForeColor = System::Drawing::Color::Tan;
-			this->label19->Name = L"label19";
-			// 
-			// label18
-			// 
-			resources->ApplyResources(this->label18, L"label18");
-			this->label18->BackColor = System::Drawing::Color::Tan;
-			this->label18->Name = L"label18";
-			// 
-			// viewbt
-			// 
-			this->viewbt->BackColor = System::Drawing::Color::Tan;
-			this->viewbt->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->viewbt->FlatAppearance->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(26)),
-				static_cast<System::Int32>(static_cast<System::Byte>(11)), static_cast<System::Int32>(static_cast<System::Byte>(69)));
-			this->viewbt->FlatAppearance->BorderSize = 3;
-			resources->ApplyResources(this->viewbt, L"viewbt");
-			this->viewbt->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(26)), static_cast<System::Int32>(static_cast<System::Byte>(11)),
-				static_cast<System::Int32>(static_cast<System::Byte>(69)));
-			this->viewbt->Name = L"viewbt";
-			this->viewbt->UseVisualStyleBackColor = false;
-			this->viewbt->Click += gcnew System::EventHandler(this, &adminHome::viewbt_Click);
-			// 
-			// studentnamepanel
-			// 
-			resources->ApplyResources(this->studentnamepanel, L"studentnamepanel");
-			this->studentnamepanel->BackColor = System::Drawing::Color::Transparent;
-			this->studentnamepanel->Name = L"studentnamepanel";
-			this->studentnamepanel->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &adminHome::studentnamepanel_Paint);
-			// 
-			// label14
-			// 
-			resources->ApplyResources(this->label14, L"label14");
-			this->label14->BackColor = System::Drawing::Color::Transparent;
-			this->label14->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(26)), static_cast<System::Int32>(static_cast<System::Byte>(11)),
-				static_cast<System::Int32>(static_cast<System::Byte>(69)));
-			this->label14->Name = L"label14";
-			this->label14->Click += gcnew System::EventHandler(this, &adminHome::label14_Click);
-			// 
-			// panel6
-			// 
-			this->panel6->BackColor = System::Drawing::Color::Transparent;
-			this->panel6->Controls->Add(this->label12);
-			this->panel6->Controls->Add(this->label13);
-			this->panel6->Controls->Add(this->label9);
-			resources->ApplyResources(this->panel6, L"panel6");
-			this->panel6->Name = L"panel6";
-			// 
-			// label12
-			// 
-			resources->ApplyResources(this->label12, L"label12");
-			this->label12->BackColor = System::Drawing::Color::Transparent;
-			this->label12->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(26)), static_cast<System::Int32>(static_cast<System::Byte>(11)),
-				static_cast<System::Int32>(static_cast<System::Byte>(69)));
-			this->label12->Name = L"label12";
-			// 
-			// label13
-			// 
-			resources->ApplyResources(this->label13, L"label13");
-			this->label13->BackColor = System::Drawing::Color::Transparent;
-			this->label13->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(26)), static_cast<System::Int32>(static_cast<System::Byte>(11)),
-				static_cast<System::Int32>(static_cast<System::Byte>(69)));
-			this->label13->Name = L"label13";
-			this->label13->Click += gcnew System::EventHandler(this, &adminHome::label13_Click);
-			// 
-			// label9
-			// 
-			resources->ApplyResources(this->label9, L"label9");
-			this->label9->BackColor = System::Drawing::Color::Transparent;
-			this->label9->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(26)), static_cast<System::Int32>(static_cast<System::Byte>(11)),
-				static_cast<System::Int32>(static_cast<System::Byte>(69)));
-			this->label9->Name = L"label9";
-			// 
-			// label10
-			// 
-			resources->ApplyResources(this->label10, L"label10");
-			this->label10->BackColor = System::Drawing::Color::Transparent;
-			this->label10->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(26)), static_cast<System::Int32>(static_cast<System::Byte>(11)),
-				static_cast<System::Int32>(static_cast<System::Byte>(69)));
-			this->label10->Name = L"label10";
-			// 
-			// textBox1
-			// 
-			this->textBox1->BackColor = System::Drawing::Color::Linen;
-			this->textBox1->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			resources->ApplyResources(this->textBox1, L"textBox1");
-			this->textBox1->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
-				static_cast<System::Int32>(static_cast<System::Byte>(31)));
-			this->textBox1->Name = L"textBox1";
-			this->textBox1->TextChanged += gcnew System::EventHandler(this, &adminHome::textBox1_TextChanged);
-			// 
 			// adminHome
 			// 
 			resources->ApplyResources(this, L"$this");
@@ -2043,6 +2043,18 @@ private: System::Windows::Forms::Label^ label49;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->EndInit();
 			this->pnlOfPanels->ResumeLayout(false);
+			this->pnlOfEditCourse->ResumeLayout(false);
+			this->pnlOfEditCourse->PerformLayout();
+			this->panel8->ResumeLayout(false);
+			this->panel8->PerformLayout();
+			this->StudentDatapanel->ResumeLayout(false);
+			this->StudentDatapanel->PerformLayout();
+			this->panel15->ResumeLayout(false);
+			this->panel15->PerformLayout();
+			this->pnlOfStudentOfCourse->ResumeLayout(false);
+			this->pnlOfStudentOfCourse->PerformLayout();
+			this->panel6->ResumeLayout(false);
+			this->panel6->PerformLayout();
 			this->pnlEditStudent->ResumeLayout(false);
 			this->panel11->ResumeLayout(false);
 			this->panel11->PerformLayout();
@@ -2069,18 +2081,6 @@ private: System::Windows::Forms::Label^ label49;
 			this->pnlOfAddStudent->PerformLayout();
 			this->pnlOfData->ResumeLayout(false);
 			this->pnlOfData->PerformLayout();
-			this->pnlOfEditCourse->ResumeLayout(false);
-			this->pnlOfEditCourse->PerformLayout();
-			this->panel8->ResumeLayout(false);
-			this->panel8->PerformLayout();
-			this->StudentDatapanel->ResumeLayout(false);
-			this->StudentDatapanel->PerformLayout();
-			this->panel15->ResumeLayout(false);
-			this->panel15->PerformLayout();
-			this->pnlOfStudentOfCourse->ResumeLayout(false);
-			this->pnlOfStudentOfCourse->PerformLayout();
-			this->panel6->ResumeLayout(false);
-			this->panel6->PerformLayout();
 			this->ResumeLayout(false);
 
 		}
@@ -2198,10 +2198,10 @@ private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e
 	l1->Visible = false;
 	l2->Visible = false;
 	pnlOfAddCourse->Visible = false;
-	pnlOfEditCourse->Visible = false;
+	pnlOfEditCourse->Visible = true;
 	pnlEditStudent->Visible = false;
 	pnlOfStudentOfCourse->Visible = false;
-	pnlOfAddStudent->Visible = true;
+	pnlOfAddStudent->Visible = false;
 	pnlCoursedataedit->Visible = false;
 	StudentDatapanel->Visible = false;
 
